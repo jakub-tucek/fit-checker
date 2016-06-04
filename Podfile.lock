@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (3.4.0)
+  - Kanna (1.0.6)
+  - SnapKit (0.21.0)
+  - SwiftLoader (0.2.5)
+  - SwiftyJSON (2.3.2)
+  - XCGLogger (3.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kanna
+  - SnapKit
+  - SwiftLoader
+  - SwiftyJSON
+  - XCGLogger
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Kanna: 9f30945bbd293a609f698ea164687ccc0990ff60
+  SnapKit: 2756fe24b706367af224c9c508d2f9166d03354c
+  SwiftLoader: 12d7a6f661f5e9a2c9a72003e7dd6162f4ff0cc4
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  XCGLogger: d6e196e78940ff6daab17d6917107876f973fa31
+
+PODFILE CHECKSUM: b798b1a2ae6c9c847e1d3bf22f23970b483aeb67
+
+COCOAPODS: 1.0.1

@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380D1122DFA42380AC7E27E5 /* Pods_fit_checker_2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CE8B6FAD38CB24EF0F2FAD /* Pods_fit_checker_2_0Tests.framework */; };
+		4A440637AA2137BD497EA885 /* Pods_fit_checker_2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597D72C349EB70CBBD6C4076 /* Pods_fit_checker_2_0UITests.framework */; };
 		4DF6D18B1D019A210017D144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D18A1D019A210017D144 /* AppDelegate.swift */; };
 		4DF6D1941D019A210017D144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6D1931D019A210017D144 /* Assets.xcassets */; };
 		4DF6D1A21D019A210017D144 /* fit_checker_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D1A11D019A210017D144 /* fit_checker_2_0Tests.swift */; };
 		4DF6D1AD1D019A210017D144 /* fit_checker_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D1AC1D019A210017D144 /* fit_checker_2_0UITests.swift */; };
 		4DF6D1C01D02B9110017D144 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D1BF1D02B9110017D144 /* LoginView.swift */; };
 		4DF6D1C21D02BA020017D144 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D1C11D02BA020017D144 /* LoginViewModel.swift */; };
+		A59AFD4AB3367104BC53A0B7 /* Pods_fit_checker_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766854B2830EB000B2D9BFB7 /* Pods_fit_checker_2_0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CE8B6FAD38CB24EF0F2FAD /* Pods_fit_checker_2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fit_checker_2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C75F977A330EF4DC260F85 /* Pods-fit-checker-2.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0UITests/Pods-fit-checker-2.0UITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DF6D1871D019A210017D144 /* fit-checker-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF6D18A1D019A210017D144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF6D1931D019A210017D144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +50,14 @@
 		4DF6D1AE1D019A210017D144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DF6D1BF1D02B9110017D144 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = View/LoginView.swift; sourceTree = "<group>"; };
 		4DF6D1C11D02BA020017D144 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = ViewModel/LoginViewModel.swift; sourceTree = "<group>"; };
+		597D72C349EB70CBBD6C4076 /* Pods_fit_checker_2_0UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fit_checker_2_0UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4AD94D957627C163629D15 /* Pods-fit-checker-2.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0Tests/Pods-fit-checker-2.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		766854B2830EB000B2D9BFB7 /* Pods_fit_checker_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fit_checker_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90DB3C6DCF1E76BE485ED52A /* Pods-fit-checker-2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0/Pods-fit-checker-2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		AF7E98321E4B75FDE5B7A20F /* Pods-fit-checker-2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0Tests/Pods-fit-checker-2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BC0892DFEED2BDF0431D46D8 /* Pods-fit-checker-2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0/Pods-fit-checker-2.0.release.xcconfig"; sourceTree = "<group>"; };
+		F8117FE255FCD4F997D235E6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9E6EC95833B4EBA71AAE7C /* Pods-fit-checker-2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0UITests/Pods-fit-checker-2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59AFD4AB3367104BC53A0B7 /* Pods_fit_checker_2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380D1122DFA42380AC7E27E5 /* Pods_fit_checker_2_0Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A440637AA2137BD497EA885 /* Pods_fit_checker_2_0UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +95,8 @@
 				4DF6D1A01D019A210017D144 /* fit-checker-2.0Tests */,
 				4DF6D1AB1D019A210017D144 /* fit-checker-2.0UITests */,
 				4DF6D1881D019A210017D144 /* Products */,
+				F18B1556F9FA3FAFE49A5004 /* Frameworks */,
+				75CC817F086243E2A1EC2609 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +164,30 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		75CC817F086243E2A1EC2609 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90DB3C6DCF1E76BE485ED52A /* Pods-fit-checker-2.0.debug.xcconfig */,
+				BC0892DFEED2BDF0431D46D8 /* Pods-fit-checker-2.0.release.xcconfig */,
+				6A4AD94D957627C163629D15 /* Pods-fit-checker-2.0Tests.debug.xcconfig */,
+				AF7E98321E4B75FDE5B7A20F /* Pods-fit-checker-2.0Tests.release.xcconfig */,
+				FE9E6EC95833B4EBA71AAE7C /* Pods-fit-checker-2.0UITests.debug.xcconfig */,
+				07C75F977A330EF4DC260F85 /* Pods-fit-checker-2.0UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F18B1556F9FA3FAFE49A5004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8117FE255FCD4F997D235E6 /* Pods.framework */,
+				766854B2830EB000B2D9BFB7 /* Pods_fit_checker_2_0.framework */,
+				03CE8B6FAD38CB24EF0F2FAD /* Pods_fit_checker_2_0Tests.framework */,
+				597D72C349EB70CBBD6C4076 /* Pods_fit_checker_2_0UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF6D1B11D019A210017D144 /* Build configuration list for PBXNativeTarget "fit-checker-2.0" */;
 			buildPhases = (
+				27A549299C0426C1F8930A20 /* [CP] Check Pods Manifest.lock */,
 				4DF6D1831D019A210017D144 /* Sources */,
 				4DF6D1841D019A210017D144 /* Frameworks */,
 				4DF6D1851D019A210017D144 /* Resources */,
+				AADF6B89BC014F6B39D5AFD8 /* [CP] Embed Pods Frameworks */,
+				23696229B74E3A0F587E87F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF6D1B41D019A210017D144 /* Build configuration list for PBXNativeTarget "fit-checker-2.0Tests" */;
 			buildPhases = (
+				EEF3B8011BBC0F6C9A8EC865 /* [CP] Check Pods Manifest.lock */,
 				4DF6D1991D019A210017D144 /* Sources */,
 				4DF6D19A1D019A210017D144 /* Frameworks */,
 				4DF6D19B1D019A210017D144 /* Resources */,
+				B73B9421371E87EA6A98B2DE /* [CP] Embed Pods Frameworks */,
+				0E3FCBC64C4E08CF52651E57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF6D1B71D019A210017D144 /* Build configuration list for PBXNativeTarget "fit-checker-2.0UITests" */;
 			buildPhases = (
+				622C9F5BDE7ACEE4D03F0339 /* [CP] Check Pods Manifest.lock */,
 				4DF6D1A41D019A210017D144 /* Sources */,
 				4DF6D1A51D019A210017D144 /* Frameworks */,
 				4DF6D1A61D019A210017D144 /* Resources */,
+				989DFF7F6962249A18850676 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +322,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E3FCBC64C4E08CF52651E57 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fit-checker-2.0Tests/Pods-fit-checker-2.0Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23696229B74E3A0F587E87F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fit-checker-2.0/Pods-fit-checker-2.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27A549299C0426C1F8930A20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		622C9F5BDE7ACEE4D03F0339 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		989DFF7F6962249A18850676 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fit-checker-2.0UITests/Pods-fit-checker-2.0UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AADF6B89BC014F6B39D5AFD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fit-checker-2.0/Pods-fit-checker-2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B73B9421371E87EA6A98B2DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fit-checker-2.0Tests/Pods-fit-checker-2.0Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF3B8011BBC0F6C9A8EC865 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DF6D1831D019A210017D144 /* Sources */ = {
@@ -403,6 +576,7 @@
 		};
 		4DF6D1B21D019A210017D144 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90DB3C6DCF1E76BE485ED52A /* Pods-fit-checker-2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "fit-checker-2.0/Info.plist";
@@ -414,6 +588,7 @@
 		};
 		4DF6D1B31D019A210017D144 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC0892DFEED2BDF0431D46D8 /* Pods-fit-checker-2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "fit-checker-2.0/Info.plist";
@@ -425,6 +600,7 @@
 		};
 		4DF6D1B51D019A210017D144 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A4AD94D957627C163629D15 /* Pods-fit-checker-2.0Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "fit-checker-2.0Tests/Info.plist";
@@ -437,6 +613,7 @@
 		};
 		4DF6D1B61D019A210017D144 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7E98321E4B75FDE5B7A20F /* Pods-fit-checker-2.0Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "fit-checker-2.0Tests/Info.plist";
@@ -449,6 +626,7 @@
 		};
 		4DF6D1B81D019A210017D144 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE9E6EC95833B4EBA71AAE7C /* Pods-fit-checker-2.0UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "fit-checker-2.0UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -460,6 +638,7 @@
 		};
 		4DF6D1B91D019A210017D144 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C75F977A330EF4DC260F85 /* Pods-fit-checker-2.0UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "fit-checker-2.0UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
