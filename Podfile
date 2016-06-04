@@ -16,7 +16,7 @@ pod 'SwiftyJSON'
 pod 'SnapKit'
 pod 'Kanna'
 pod 'SwiftLoader'
-pod 'XCGLogger'
+pod 'SwiftyBeaver'
 
 target 'fit-checker-2.0' do
 
