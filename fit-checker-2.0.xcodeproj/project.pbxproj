@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E1C5A366790F30B4126F27E /* Pods_fit_checker_2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EECE3E3FE174127DB525A5 /* Pods_fit_checker_2_0UITests.framework */; };
 		1BC21FD6D3E4111AC67906AC /* Pods_fit_checker_2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AA800B9320A3CC8984C1CB /* Pods_fit_checker_2_0Tests.framework */; };
+		4D3FDD611D04CD0C00AFD598 /* EduxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */; };
 		4DF6D18B1D019A210017D144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D18A1D019A210017D144 /* AppDelegate.swift */; };
 		4DF6D1941D019A210017D144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6D1931D019A210017D144 /* Assets.xcassets */; };
 		4DF6D1A21D019A210017D144 /* fit_checker_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D1A11D019A210017D144 /* fit_checker_2_0Tests.swift */; };
@@ -39,6 +40,7 @@
 		1F914323B628A899D25B94FB /* Pods_fit_checker_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fit_checker_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB44E1007FE7C770C70266 /* Pods-fit-checker-2.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0UITests/Pods-fit-checker-2.0UITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B07DDCA5C79EB0D4CA51CA7 /* Pods-fit-checker-2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0/Pods-fit-checker-2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EduxParser.swift; path = Model/EduxParser.swift; sourceTree = "<group>"; };
 		4DF6D1871D019A210017D144 /* fit-checker-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF6D18A1D019A210017D144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF6D1931D019A210017D144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +103,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4D3FDD5E1D04CC1200AFD598 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
 		4DF6D17E1D019A200017D144 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +135,7 @@
 		4DF6D1891D019A210017D144 /* fit-checker-2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				4D3FDD5E1D04CC1200AFD598 /* Stores */,
 				4DF6D1BE1D02B8890017D144 /* Model */,
 				4DF6D1BD1D02B8820017D144 /* ViewModel */,
 				4DF6D1BC1D02B87E0017D144 /* View */,
@@ -172,6 +182,7 @@
 		4DF6D1BE1D02B8890017D144 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -459,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3FDD611D04CD0C00AFD598 /* EduxParser.swift in Sources */,
 				4DF6D18B1D019A210017D144 /* AppDelegate.swift in Sources */,
 				4DF6D1C01D02B9110017D144 /* LoginView.swift in Sources */,
 				4DF6D1C21D02BA020017D144 /* LoginViewModel.swift in Sources */,
