@@ -13,6 +13,9 @@
 		4DE38DCB1D0574DD0058AF7C /* EduxParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE38DCA1D0574DD0058AF7C /* EduxParserTests.swift */; };
 		4DE38DCC1D0575930058AF7C /* EduxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */; };
 		4DE38DD61D0581190058AF7C /* lectureList.html in Resources */ = {isa = PBXBuildFile; fileRef = 4DE38DD51D0581190058AF7C /* lectureList.html */; };
+		4DE38DDA1D058A750058AF7C /* classificationTwoGroups.html in Resources */ = {isa = PBXBuildFile; fileRef = 4DE38DD91D058A750058AF7C /* classificationTwoGroups.html */; };
+		4DE38DDC1D058A870058AF7C /* classificationEmpty.html in Resources */ = {isa = PBXBuildFile; fileRef = 4DE38DDB1D058A870058AF7C /* classificationEmpty.html */; };
+		4DE38DDE1D058A9C0058AF7C /* classification404.html in Resources */ = {isa = PBXBuildFile; fileRef = 4DE38DDD1D058A9C0058AF7C /* classification404.html */; };
 		4DF6D18B1D019A210017D144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D18A1D019A210017D144 /* AppDelegate.swift */; };
 		4DF6D1941D019A210017D144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6D1931D019A210017D144 /* Assets.xcassets */; };
 		4DF6D1A21D019A210017D144 /* fit_checker_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D1A11D019A210017D144 /* fit_checker_2_0Tests.swift */; };
@@ -46,6 +49,9 @@
 		4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EduxParser.swift; path = Model/EduxParser.swift; sourceTree = "<group>"; };
 		4DE38DCA1D0574DD0058AF7C /* EduxParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserTests.swift; sourceTree = "<group>"; };
 		4DE38DD51D0581190058AF7C /* lectureList.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = lectureList.html; path = TestData/ParserData/lectureList.html; sourceTree = "<group>"; };
+		4DE38DD91D058A750058AF7C /* classificationTwoGroups.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = classificationTwoGroups.html; path = TestData/ParserData/classificationTwoGroups.html; sourceTree = "<group>"; };
+		4DE38DDB1D058A870058AF7C /* classificationEmpty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = classificationEmpty.html; path = TestData/ParserData/classificationEmpty.html; sourceTree = "<group>"; };
+		4DE38DDD1D058A9C0058AF7C /* classification404.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = classification404.html; path = TestData/ParserData/classification404.html; sourceTree = "<group>"; };
 		4DF6D1871D019A210017D144 /* fit-checker-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF6D18A1D019A210017D144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF6D1931D019A210017D144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				4DE38DD51D0581190058AF7C /* lectureList.html */,
+				4DE38DD91D058A750058AF7C /* classificationTwoGroups.html */,
+				4DE38DDB1D058A870058AF7C /* classificationEmpty.html */,
+				4DE38DDD1D058A9C0058AF7C /* classification404.html */,
 			);
 			name = ParserData;
 			sourceTree = "<group>";
@@ -354,7 +363,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE38DDC1D058A870058AF7C /* classificationEmpty.html in Resources */,
+				4DE38DDE1D058A9C0058AF7C /* classification404.html in Resources */,
 				4DE38DD61D0581190058AF7C /* lectureList.html in Resources */,
+				4DE38DDA1D058A750058AF7C /* classificationTwoGroups.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,11 +24,7 @@ class EduxParser {
         if let doc = Kanna.HTML(html: html, encoding: NSUTF8StringEncoding) {
             for node in doc.xpath("//li") {
                 if let text = node.text {
-                    //Stripping new lines
-                    var text = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-                    
-                    //Stripping multiple whitespaces
-                    text = text.stringByReplacingOccurrencesOfString(" ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                    let text = cleanText(text)
                     
                     lectures.append(text)
                 }
@@ -44,59 +40,87 @@ class EduxParser {
      
      - returns: returns parsed output
      */
-    func parseClassification(html: String)-> [(String,[[String]])] {
-        var classification = [(String(),[[String]]())]
+    func parseClassification(html: String)-> [(String,[(String,String)])] {
+        var classification = [(String,[(String,String)])]()
         
-        if let doc = Kanna.HTML(html: html, encoding: NSUTF8StringEncoding) {
-            for contentDiv in doc.xpath("//div[contains(@class,'page_with_sidebar')]") {
-                var titles = loadTitles(contentDiv)
-                
-                if (titles.count == 0) {
-                    titles.append("")
-                }
-                
-                var titleCounter = 0;
-                for table in contentDiv.xpath("//table") {
-                    let results = loadResultsForTable(table)
-                    classification.append( (titles[titleCounter], results) )
-                    
-                    titleCounter += 1
-                }
-            }
-        }
-        return classification
-    }
-    func loadTitles(contentDiv : XMLElement) -> [String] {
-        var titles = [String]()
-        for title in contentDiv.xpath("//h2") {
-            if let t = title.text {
-                titles.append(t)
-            }
-        }
-        return titles
-    }
-    func loadResultsForTable(table : XMLElement) -> [[String]] {
-        var results = [[String]]()
-        
-        for row in table.xpath("//tr") {
-            var first = true
-            var tmp = [" ","-"]
-            
-            for colWrap in row.xpath("//td") {
-                if let col = colWrap.text {
-                    if col != "" {
-                        let colStripped = col.stringByReplacingOccurrencesOfString("\n", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
-                        if first {
-                            tmp[0] = colStripped
-                            first = false
-                        } else {
-                            tmp[1] = colStripped
+        if let htmlElement = Kanna.HTML(html: html, encoding: NSUTF8StringEncoding) {
+            for divContent in htmlElement.xpath("//div[contains(@class,'page_with_sidebar')]") {
+                if let divContentHTML = divContent.innerHTML {
+                    if let divContentElement = Kanna.HTML(html: divContentHTML, encoding: NSUTF8StringEncoding) {
+                        var titles = loadTitles(divContentElement)
+                        if (titles.count == 0) {
+                            titles.append("")
+                        }
+                        //print("titles")
+                        //print(titles)
+                        var titleCounter = 0;
+                        //print(classification)
+
+                        for table in divContentElement.xpath("//table") {
+                            if let tableHtml = table.innerHTML {
+                                if let tableElement = Kanna.HTML(html: tableHtml, encoding: NSUTF8StringEncoding) {
+                                    let results = loadResultsForTable(tableElement)
+                                    
+                                    classification.append((titles[titleCounter], results))
+                                    titleCounter += 1
+                                }
+                            }
                         }
                     }
                 }
             }
-            results.append(tmp)
+        }
+
+        return classification
+    }
+    func loadTitles(divContentElement : HTMLDocument) -> [String] {
+        var titles = [String]()
+        for title in divContentElement.xpath("//h2") {
+            if let t = title.text {
+                let cleanTitle = cleanText(t)
+                titles.append(cleanTitle)
+            }
+        }
+        return titles
+    }
+    func loadResultsForTable(table : HTMLDocument) -> [(String,String)] {
+        var results = [(String,String)]()
+        
+        for row in table.xpath("//tr") {
+            var first = true
+            var tmp = (" ", "-")
+            //print(row.text!)
+            if let rowHTML = row.innerHTML {
+                if let rowElement = Kanna.HTML(html: rowHTML, encoding: NSUTF8StringEncoding) {
+                    for colWrap in rowElement.xpath("//td") {
+                        if let col = colWrap.text {
+                            if col != "" {
+                                let colClean = cleanText(col)
+                                if first {
+                                    tmp.0 = colClean
+                                    first = false
+                                } else {
+                                    tmp.1 = colClean
+                                    break
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (tmp.0 != " ") {
+                results.append(tmp)
+            }
         }
         return results
+    }
+    
+    func cleanText(text : String) -> String {
+        //Stripping new lines
+        var cleanText = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        //Stripping multiple whitespaces
+        cleanText = cleanText.stringByReplacingOccurrencesOfString("  ", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        return cleanText
     }
 }

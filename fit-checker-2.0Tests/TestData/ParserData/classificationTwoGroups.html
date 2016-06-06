@@ -1,0 +1,835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="cs" xml:lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+            <title>
+                Tuček Jakub    [BI-GRA Grafové algoritmy a základy teorie složitosti]
+            </title>
+            <meta content="DokuWiki snapshot? unknown" name="generator">
+                <meta content="noindex,nofollow" name="robots">
+                    <meta content="2016-06-05T05:09:16+0200" name="date">
+                        <meta content="classification,student,tucekja6,start" name="keywords">
+                            <link href="https://edux.fit.cvut.cz/courses/BI-GRA/lib/exe/opensearch.php" rel="search" title="BI-GRA Grafové algoritmy a základy teorie složitosti" type="application/opensearchdescription+xml">
+                                <link href="https://edux.fit.cvut.cz/courses/BI-GRA/" rel="start">
+                                    <link href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/student/tucekja6/start?do=index" rel="contents" title="Index">
+                                        <link href="https://edux.fit.cvut.cz/courses/BI-GRA/feed.php" rel="alternate" title="Recent Changes" type="application/rss+xml">
+                                            <link href="https://edux.fit.cvut.cz/courses/BI-GRA/feed.php?mode=list&ns=classification:student:tucekja6" rel="alternate" title="Current Namespace" type="application/rss+xml">
+                                                <link href="https://edux.fit.cvut.cz/courses/BI-GRA/_export/xhtml/classification/student/tucekja6/start" rel="alternate" title="Plain HTML" type="text/html">
+                                                    <link href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/student/tucekja6/start" rel="canonical">
+                                                        <link href="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/css_003.css" media="all" rel="stylesheet" type="text/css">
+                                                            <link href="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/css.css" media="screen" rel="stylesheet" type="text/css">
+                                                                <link href="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/css_002.css" media="print" rel="stylesheet" type="text/css">
+                                                                    <script charset="utf-8" type="text/javascript">
+                                                                        <!--//--><![CDATA[//><!--
+                                                                        var NS='classification:student:tucekja6';var SIG=' --- //[[tucekja6@fit.cvut.cz|tucekja6]] 2016/06/06 00:05//';var JSINFO = {"id":"classification:student:tucekja6:start","namespace":"classification:student:tucekja6"};
+                                                                        //--><!]]>
+                                                                        </script>
+                                                                    <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/js.php" type="text/javascript">
+                                                                        </script>
+                                                                    <script charset="utf-8" type="text/x-mathjax-config;executed=true">
+                                                                        <!--//--><![CDATA[//><!--
+                                                                        //MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+                                                                        //MathJax.Hub.Config({  TeX: { equationNumbers: {autoNumber: "all"} } });
+                                                                        MathJax.Hub.Config({
+                                                                                           tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+                                                                                           TeX: {
+                                                                                           equationNumbers: {autoNumber: "AMS"},
+                                                                                           extensions: ["AMSmath.js", "AMSsymbols.js"]
+                                                                                           }
+                                                                                           });
+                                                                                           
+                                                                                           //--><!]]>
+                                                                        </script>
+                                                                    <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/MathJax.js" type="text/javascript">
+                                                                        </script>
+                                                                    <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/usrmenu.js" type="text/javascript">
+                                                                        </script>
+                                                                    <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/indexmenu.js" type="text/javascript">
+                                                                        </script>
+                                                                    <script charset="utf-8" type="text/javascript">
+                                                                        <!--//--><![CDATA[//><!--
+                                                                        var indexmenu_ID='classification/student/tucekja6/start'
+                                                                        //--><!]]>
+                                                                        </script>
+                                                                    <script charset="utf-8" type="text/javascript">
+                                                                        <!--//--><![CDATA[//><!--
+                                                                        jQuery.noConflict();
+                                                                        
+                                                                        //--><!]]>
+                                                                        </script>
+                                                                    <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/jsapi" type="text/javascript">
+                                                                        </script>
+                                                                    <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/results.js" type="text/javascript">
+                                                                        </script>
+                                                                    <script src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/a" type="text/javascript">
+                                                                        </script>
+                                                                    <link href="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/uien.css" rel="stylesheet" type="text/css">
+                                                                        <script src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/formatendefaultenuiencorecharten.js" type="text/javascript">
+                                                                            </script>
+                                                                        <style type="text/css">
+                                                                            .MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+                                                                            .MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+                                                                            .MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+                                                                            .MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+                                                                            .MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+                                                                            </style>
+                                                                        <style type="text/css">
+                                                                            #MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+                                                                            #MathJax_About.MathJax_MousePost {outline: none}
+                                                                            .MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+                                                                            .MathJax_MenuItem {padding: 2px 2em; background: transparent}
+                                                                            .MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+                                                                            .MathJax_MenuActive .MathJax_MenuArrow {color: white}
+                                                                            .MathJax_MenuArrow.RTL {left: .5em; right: auto}
+                                                                            .MathJax_MenuCheck {position: absolute; left: .7em}
+                                                                            .MathJax_MenuCheck.RTL {right: .7em; left: auto}
+                                                                            .MathJax_MenuRadioCheck {position: absolute; left: 1em}
+                                                                            .MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+                                                                            .MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+                                                                            .MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+                                                                            .MathJax_MenuDisabled {color: GrayText}
+                                                                            .MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+                                                                            .MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+                                                                            .MathJax_ContextMenu:focus {outline: none}
+                                                                            .MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+                                                                            #MathJax_AboutClose {top: .2em; right: .2em}
+                                                                            .MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+                                                                            .MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+                                                                            .MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+                                                                            .MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+                                                                            .MathJax_MenuClose:hover span {background-color: #CCC!important}
+                                                                            .MathJax_MenuClose:hover:focus {outline: none}
+                                                                            </style>
+                                                                        <style type="text/css">
+                                                                            .MathJax_Preview .MJXf-math {color: inherit!important}
+                                                                            </style>
+                                                                        <style type="text/css">
+                                                                            .MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+                                                                            .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+                                                                            </style>
+                                                                        <style type="text/css">
+                                                                            #MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+                                                                            #MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+                                                                            #MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+                                                                            #MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+                                                                            </style>
+                                                                        <style type="text/css">
+                                                                            .MathJax_Preview {color: #888}
+                                                                            #MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+                                                                            #MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+                                                                            .MathJax_Error {color: #CC0000; font-style: italic}
+                                                                            </style>
+                                                                        <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/anketa.js" type="text/javascript">
+                                                                            </script>
+                                                                        <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/voting.js" type="text/javascript">
+                                                                            </script>
+                                                                        <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/editing_template.js" type="text/javascript">
+                                                                            </script>
+                                                                        <script charset="utf-8" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/harmonogram.js" type="text/javascript">
+                                                                            </script>
+                                                                        <link href="https://edux.fit.cvut.cz/courses/BI-GRA/lib/tpl/edux/images/favicon-cvut.ico" rel="shortcut icon">
+                                                                            <link href="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/font-awesome.css" rel="stylesheet">
+                                                                                <script type="text/javascript">
+                                                                                    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                                                                                    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                                                                                    </script>
+                                                                                <script type="text/javascript">
+                                                                                    try {
+                                                                                        var pageTracker = _gat._getTracker("UA-10844012-1");
+                                                                                        pageTracker._trackPageview();
+                                                                                    } catch(err) {}
+                                                                                </script>
+                                                                                <style type="text/css">
+                                                                                    .MJXp-script {font-size: .8em}
+                                                                                    .MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+                                                                                    .MJXp-bold {font-weight: bold}
+                                                                                    .MJXp-italic {font-style: italic}
+                                                                                    .MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+                                                                                    .MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+                                                                                    .MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+                                                                                    .MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+                                                                                    .MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+                                                                                    .MJXp-largeop {font-size: 150%}
+                                                                                    .MJXp-largeop.MJXp-int {vertical-align: -.2em}
+                                                                                    .MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+                                                                                    .MJXp-display {display: block; text-align: center; margin: 1em 0}
+                                                                                    .MJXp-math span {display: inline-block}
+                                                                                    .MJXp-box {display: block!important; text-align: center}
+                                                                                    .MJXp-box:after {content: " "}
+                                                                                    .MJXp-rule {display: block!important; margin-top: .1em}
+                                                                                    .MJXp-char {display: block!important}
+                                                                                    .MJXp-mo {margin: 0 .15em}
+                                                                                    .MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+                                                                                    .MJXp-denom {display: inline-table!important; width: 100%}
+                                                                                    .MJXp-denom > * {display: table-row!important}
+                                                                                    .MJXp-surd {vertical-align: top}
+                                                                                    .MJXp-surd > * {display: block!important}
+                                                                                    .MJXp-script-box > *  {display: table!important; height: 50%}
+                                                                                    .MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+                                                                                    .MJXp-script-box > *:last-child > * {vertical-align: bottom}
+                                                                                    .MJXp-script-box > * > * > * {display: block!important}
+                                                                                    .MJXp-mphantom {visibility: hidden}
+                                                                                    .MJXp-munderover {display: inline-table!important}
+                                                                                    .MJXp-over {display: inline-block!important; text-align: center}
+                                                                                    .MJXp-over > * {display: block!important}
+                                                                                    .MJXp-munderover > * {display: table-row!important}
+                                                                                    .MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+                                                                                    .MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+                                                                                    .MJXp-mtr {display: table-row!important}
+                                                                                    .MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+                                                                                    .MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+                                                                                    .MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+                                                                                    .MJXp-mlabeledtr {display: table-row!important}
+                                                                                    .MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+                                                                                    .MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+                                                                                    .MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+                                                                                    .MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+                                                                                    .MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+                                                                                    .MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+                                                                                    .MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+                                                                                    .MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+                                                                                    .MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+                                                                                    .MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+                                                                                    .MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+                                                                                    .MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+                                                                                    .MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+                                                                                    .MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+                                                                                    </style>
+                                                                            </link>
+                                                                        </link>
+                                                                    </link>
+                                                                </link>
+                                                            </link>
+                                                        </link>
+                                                    </link>
+                                                </link>
+                                            </link>
+                                        </link>
+                                    </link>
+                                </link>
+                            </link>
+                        </meta>
+                    </meta>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <div class="dokuwiki">
+            <div class="stylehead">
+                <div class="header">
+                    <div class="logo">
+                        <a accesskey="h" href="https://edux.fit.cvut.cz/courses/BI-GRA/" id="dokuwiki__top" name="dokuwiki__top" title="[ALT+H]">
+                            BI-GRA Grafové algoritmy a základy teorie složitosti
+                        </a>
+                    </div>
+                    <div class="tagline">
+                    </div>
+                    <div class="password_expiration">
+                        <div class="normal">
+                            <span>
+                                Platnost vašeho
+                                <a class="urlextern" href="http://intranet.cvut.cz/informace-pro-studenty/is/uzivatele-a-pristup/heslo-cvut">
+                                    HESLA ČVUT
+                                </a>
+                                vyprší
+                            </span>
+                            <strong>
+                                04.04.2017
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="pagename">
+                        [[
+                        <a href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/student/tucekja6/start?do=backlink">
+                            classification:student:tucekja6:start
+                        </a>
+                        ]]
+                    </div>
+                    <div class="clearer">
+                    </div>
+                </div>
+                <div class="bar" id="bar__top">
+                    <div class="bar-left" id="bar__topleft">
+                        <form action="/courses/BI-GRA/classification/student/tucekja6/start" class="button btn_revs" method="get">
+                            <div class="no">
+                                <input name="do" type="hidden" value="revisions">
+                                    <input accesskey="o" class="button" title="Starší verze [O]" type="submit" value="Starší verze"/>
+                                </input>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bar-right" id="bar__topright">
+                        <form action="/courses/BI-GRA/classification/student/tucekja6/start" class="button btn_recent" method="get">
+                            <div class="no">
+                                <input name="do" type="hidden" value="recent">
+                                    <input accesskey="r" class="button" title="Poslední úpravy [R]" type="submit" value="Poslední úpravy"/>
+                                </input>
+                            </div>
+                        </form>
+                        <form accept-charset="utf-8" action="/courses/BI-GRA/" class="search" id="dw__search">
+                            <div class="no">
+                                <input name="do" type="hidden" value="search">
+                                    <input accesskey="f" class="edit" id="qsearch__in" name="id" title="[F]" type="text">
+                                        <input class="button" title="Hledat" type="submit" value="Hledat">
+                                            <div class="ajax_qsearch JSpopup" id="qsearch__out" style="display: none;">
+                                            </div>
+                                        </input>
+                                    </input>
+                                </input>
+                            </div>
+                        </form>
+                        <script src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/integration_button.js" type="text/javascript">
+                            </script>
+                        <style type="text/css">
+                            @font-face {                font-family: 'icomoon';                src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SDTQAAAC8AAAAYGNtYXAQS+BrAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5ZhYQkjoAAAFwAAACNGhlYWQFOCztAAADpAAAADZoaGVhB8IDxgAAA9wAAAAkaG10eAYAAAAAAAQAAAAAFGxvY2EAKAEuAAAEFAAAAAxtYXhwAA8AvwAABCAAAAAgbmFtZVcZpu4AAARAAAABRXBvc3QAAwAAAAAFiAAAACAAAwQAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADwCgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIPAK//3//wAAAAAAIPAK//3//wAB/+MP+gADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAACQAAAEkEAANuABQAKQA+AFMAaAB9AJIApwC8AAAlFRQHBisBIicmPQE0NzY7ATIXFhURFRQHBisBIicmPQE0NzY7ATIXFhUBFRQHBisBIicmPQE0NzY7ATIXFhUBFRQHBisBIicmPQE0NzY7ATIXFhUBFRQHBisBIicmPQE0NzY7ATIXFhUBFRQHBisBIicmPQE0NzY7ATIXFhUBFRQHBisBIicmPQE0NzY7ATIXFhUBFRQHBisBIicmPQE0NzY7ATIXFhURFRQHBisBIicmPQE0NzY7ATIXFhUBJRAQF7cXEBAQEBe3FxAQEBAXtxcQEBAQF7cXEBABbRAQF7YXEBAQEBe2FxAQ/pMQEBe3FxAQEBAXtxcQEAFtEBAXthcQEBAQF7YXEBABbhAQF7cXEBAQEBe3FxAQ/pIQEBe2FxAQEBAXthcQEAFuEBAXtxcQEBAQF7cXEBAQEBe3FxAQEBAXtxcQEO5uFxAQEBAXbhcQEBAQFwEkbRcQEBAQF20XEBAQEBf+3G4XEBAQEBduFxAQEBAXAkluFxAQEBAXbhcQEBAQF/7bbRcQEBAQF20XEBAQEBf+3G4XEBAQEBduFxAQEBAXAkluFxAQEBAXbhcQEBAQF/7bbRcQEBAQF20XEBAQEBcBJW4XEBAQEBduFxAQEBAXAAAAAQAAAAEAAP69X6pfDzz1AAsEAAAAAADRDPRBAAAAANEM9EEAAAAABAADbgAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAAEAAABAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAKABQAHgEaAAEAAAAFAL0ACQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAOAAAAAQAAAAAAAgAOAEcAAQAAAAAAAwAOACQAAQAAAAAABAAOAFUAAQAAAAAABQAWAA4AAQAAAAAABgAHADIAAQAAAAAACgA0AGMAAwABBAkAAQAOAAAAAwABBAkAAgAOAEcAAwABBAkAAwAOACQAAwABBAkABAAOAFUAAwABBAkABQAWAA4AAwABBAkABgAOADkAAwABBAkACgA0AGMAaQBjAG8AbQBvAG8AbgBWAGUAcgBzAGkAbwBuACAAMQAuADAAaQBjAG8AbQBvAG8Abmljb21vb24AaQBjAG8AbQBvAG8AbgBSAGUAZwB1AGwAYQByAGkAYwBvAG0AbwBvAG4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('truetype'),                url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAX0AAsAAAAABagAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDxINNGNtYXAAAAFoAAAATAAAAEwQS+BrZ2FzcAAAAbQAAAAIAAAACAAAABBnbHlmAAABvAAAAjQAAAI0FhCSOmhlYWQAAAPwAAAANgAAADYFOCztaGhlYQAABCgAAAAkAAAAJAfCA8ZobXR4AAAETAAAABQAAAAUBgAAAGxvY2EAAARgAAAADAAAAAwAKAEubWF4cAAABGwAAAAgAAAAIAAPAL9uYW1lAAAEjAAAAUUAAAFFVxmm7nBvc3QAAAXUAAAAIAAAACAAAwAAAAMEAAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA8AoDwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDwCv/9//8AAAAAACDwCv/9//8AAf/jD/oAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAkAAABJBAADbgAUACkAPgBTAGgAfQCSAKcAvAAAJRUUBwYrASInJj0BNDc2OwEyFxYVERUUBwYrASInJj0BNDc2OwEyFxYVARUUBwYrASInJj0BNDc2OwEyFxYVARUUBwYrASInJj0BNDc2OwEyFxYVARUUBwYrASInJj0BNDc2OwEyFxYVARUUBwYrASInJj0BNDc2OwEyFxYVARUUBwYrASInJj0BNDc2OwEyFxYVARUUBwYrASInJj0BNDc2OwEyFxYVERUUBwYrASInJj0BNDc2OwEyFxYVASUQEBe3FxAQEBAXtxcQEBAQF7cXEBAQEBe3FxAQAW0QEBe2FxAQEBAXthcQEP6TEBAXtxcQEBAQF7cXEBABbRAQF7YXEBAQEBe2FxAQAW4QEBe3FxAQEBAXtxcQEP6SEBAXthcQEBAQF7YXEBABbhAQF7cXEBAQEBe3FxAQEBAXtxcQEBAQF7cXEBDubhcQEBAQF24XEBAQEBcBJG0XEBAQEBdtFxAQEBAX/txuFxAQEBAXbhcQEBAQFwJJbhcQEBAQF24XEBAQEBf+220XEBAQEBdtFxAQEBAX/txuFxAQEBAXbhcQEBAQFwJJbhcQEBAQF24XEBAQEBf+220XEBAQEBdtFxAQEBAXASVuFxAQEBAXbhcQEBAQFwAAAAEAAAABAAD+vV+qXw889QALBAAAAAAA0Qz0QQAAAADRDPRBAAAAAAQAA24AAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAABAAAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAACAAAABAAAAAAAAAAACgAUAB4BGgABAAAABQC9AAkAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIADgBHAAEAAAAAAAMADgAkAAEAAAAAAAQADgBVAAEAAAAAAAUAFgAOAAEAAAAAAAYABwAyAAEAAAAAAAoANABjAAMAAQQJAAEADgAAAAMAAQQJAAIADgBHAAMAAQQJAAMADgAkAAMAAQQJAAQADgBVAAMAAQQJAAUAFgAOAAMAAQQJAAYADgA5AAMAAQQJAAoANABjAGkAYwBvAG0AbwBvAG4AVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG4AUgBlAGcAdQBsAGEAcgBpAGMAbwBtAG8AbwBuAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('woff');                font-weight: normal;                font-style: normal;            }            [class^="icon-"], [class*=" icon-"] {                font-family: 'icomoon';                speak: none;                font-style: normal;                font-weight: normal;                font-variant: normal;                text-transform: none;                line-height: 1;                -webkit-font-smoothing: antialiased;                -moz-osx-font-smoothing: grayscale;            }            .icon-th:before {                content: "\f00a";            }      .integration-bar {                display: -webkit-box;                display: -o-flex;                display: -moz-box;                display: -ms-flexbox;                display: -webkit-flex;                display: flex;                                -webkit-flex-flow: row wrap;                -moz-flex-flow: row wrap;                -ms-flex-flow: row wrap;                -o-flex-flow: row wrap;                flex-flow: row wrap;                                -webkit-justify-content: center;                -moz-justify-content: center;                -ms-justify-content: center;                -o-justify-content: center;                justify-content: center;                         position: relative;                background: #FAFAFA;                border: 0.1em solid #EEEEEE;                position: absolute;                padding: 0.6em;                width: 27em;                                font-size: 1em;                box-shadow: -0.3em 0.3em 0.5em #aaa;            }            .integration-bar > div.arrow {                position:absolute;                top: -1em;                left:50%;                margin-left:-1em;                width:0;                height:0;                border-left: 1em solid transparent;                border-right: 1em solid transparent;                border-bottom: 1em solid #eee;            }            .tile {                -webkit-flex: 0 1 auto;                -moz-flex: 0 1 auto;                -ms-flex: 0 1 auto;                -o-flex: 0 1 auto;                flex: 0 1 auto;                                border: 0.1em solid transparent;                width: 8em;                font-family: sans-serif;                margin: 0.2em;                padding: 1em;                text-decoration: none;                color: #696969;                vertical-align:top;            }            .tile:hover {                border: 0.1em solid #eee            }            .tile > span {                display: block;            }            .tile > span.icon {                text-align: center;                font-size: 2em;            }            .tile > span.icon span.tile-img {                overflow:hidden;            }            .tile > span.icon span.tile-img img {                vertical-align: middle;                max-height: 1em;            }            .tile > span.title {                padding: 0.8em 0 0 0;                text-align: center;            }
+                            </style>
+                        <script type="text/javascript">
+                            /*<![CDATA[*/
+                            jQuery(document).ready(function () {
+                                                   //jQuery('.btn_integrationButton input[type="submit"]').integrationButton({
+                                                   jQuery('.integration-button').integrationButton({
+                                                                                                   dataUrl: 'https://ict.fit.cvut.cz/integration/edux.jsonp',
+                                                                                                   locale: "cs"
+                                                                                                   });
+                                                   });
+                                                   /*!]]>*/
+                            </script>
+                        <div class="abutton integration-button">
+                            <span>
+                                <i class="icon-th">
+                                </i>
+                            </span>
+                        </div>
+                        <form action="/courses/BI-GRA/classification/student/tucekja6/start" class="button btn_logout" method="get">
+                            <div class="no">
+                                <input name="do" type="hidden" value="logout">
+                                    <input name="sectok" type="hidden" value="a86b0d5b994d250b88a38295c57b6439">
+                                        <input class="button" title="Odhlásit se" type="submit" value="Odhlásit se"/>
+                                    </input>
+                                </input>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clearer">
+                    </div>
+                </div>
+                <div class="breadcrumbs">
+                    <span class="bchead">
+                        Historie:
+                    </span>
+                    <span class="bcsep">
+                        »
+                    </span>
+                    <a class="breadcrumbs" href="https://edux.fit.cvut.cz/courses/BI-GRA/start" title="start">
+                        FI-FIL - Filosofie
+                    </a>
+                    <span class="bcsep">
+                        »
+                    </span>
+                    <span class="curid">
+                        <a class="breadcrumbs" href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/student/tucekja6/start" title="classification:student:tucekja6:start">
+                            Tuček Jakub
+                        </a>
+                    </span>
+                </div>
+                <div class="breadcrumbs">
+                    <span class="bchead">
+                        Umístění:
+                    </span>
+                    <a href="https://edux.fit.cvut.cz/courses/BI-GRA/start" title="start">
+                        BI-GRA - Grafové algoritmy a základy teorie složitosti
+                    </a>
+                    »
+                    <a href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/start" title="classification:start">
+                        Hodnocení
+                    </a>
+                    »
+                    <a href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/student/start" title="classification:student:start">
+                        Studenti
+                    </a>
+                    »
+                    <a href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/student/tucekja6/start" title="classification:student:tucekja6:start">
+                        Tuček Jakub
+                    </a>
+                </div>
+            </div>
+            <div id="sidebar">
+                <h2>
+                    <a id="bi-gra" name="bi-gra">
+                        BI-GRA
+                    </a>
+                </h2>
+                <div class="level2">
+                    <ul>
+                        <li class="level1">
+                            <span class="curid">
+                                <a class="wikilink1" href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/student/tucekja6/start" title="classification:student:tucekja6:start">
+                                    Studijní výsledky
+                                </a>
+                            </span>
+                        </li>
+                        <li class="level1">
+                            <a class="wikilink2" href="https://edux.fit.cvut.cz/courses/BI-GRA/student/tucekja6/start" rel="nofollow" title="student:tucekja6:start">
+                                Osobní namespace
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- SECTION "BI-GRA" [13-57] -->
+                <h2>
+                    <a id="obsah" name="obsah">
+                        Obsah
+                    </a>
+                </h2>
+                <div class="level2">
+                    <ul>
+                        <li class="level1">
+                            <div class="li">
+                                <a class="wikilink1" href="https://edux.fit.cvut.cz/courses/BI-GRA/start" title="start">
+                                    Hlavní stránka
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div>
+                        <ul class="idx">
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/annotation/start">
+                                        Anotace
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/news/start">
+                                        Aktuality
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="open">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/start">
+                                        Hodnocení
+                                    </a>
+                                </div>
+                                <ul class="idx">
+                                    <li class="level2">
+                                        <div class="li">
+                                            <a class="wikilink1" href="https://edux.fit.cvut.cz/courses/BI-GRA/classification/anketa" title="classification:anketa">
+                                                Hodnocení výuky
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/parttime/start">
+                                        Dálkové studium - Aktuality
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/av/start">
+                                        A/V záznam
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/lectures/start">
+                                        Přednášky
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/seminars/start">
+                                        Prosemináře
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/tutorials/start">
+                                        Cvičení
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/labs/start">
+                                        Laboratoře
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/teacher/start">
+                                        Učitelé
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/en/start">
+                                        BI-GRA - Grafové algoritmy a základy teorie složitosti
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx" href="https://edux.fit.cvut.cz/courses/BI-GRA/student?idx=student">
+                                        student
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="closed">
+                                <div class="li">
+                                    <a class="indexmenu_idx_head" href="https://edux.fit.cvut.cz/courses/BI-GRA/team/start">
+                                        Týmy
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- SECTION "Obsah" [58-] -->
+                <div class="funding">
+                    <p>
+                    <a class="media" href="https://edux.fit.cvut.cz/courses/BI-GRA/lib/exe/fetch.php?hash=79c566&media=http%3A%2F%2Fedux.fit.cvut.cz%2F_media%2Foppa.png" title="http://edux.fit.cvut.cz/_media/oppa.png">
+                        <img alt="'OPPA/PRAHA/EU'" class="media" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/fetch.png" title="'OPPA/PRAHA/EU'"/>
+                    </a>
+                    </p>
+                    <p>
+                    Příprava studijního programu Informatika je podporována projektem financovaným z
+                    <a class="urlextern" href="http://www.esfcr.cz/" rel="nofollow" target="_blank" title="http://www.esfcr.cz/">
+                        Evropského sociálního fondu
+                    </a>
+                    a rozpočtu
+                    <a class="urlextern" href="http://www.praha.eu/" rel="nofollow" target="_blank" title="http://www.praha.eu/">
+                        hlavního města Prahy
+                    </a>
+                    .
+                    </p>
+                    <p>
+                    Praha & EU: Investujeme do vaší budoucnosti
+                    </p>
+                    </div>
+                    </div>
+                    <div class="page_with_sidebar">
+                    <div class="plugin_translation">
+                    <span>
+                    Překlady této stránky:
+                    </span>
+                    <ul>
+                    <li>
+                    <div class="li">
+                    <a class="wikilink1" href="https://edux.fit.cvut.cz/courses/BI-GRA//classification/student/tucekja6/start" title="česky">
+                    cs
+                    </a>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="li">
+                    <a class="wikilink2" href="https://edux.fit.cvut.cz/courses/BI-GRA//en/classification/student/tucekja6/start" title="English">
+                    en
+                    </a>
+                    </div>
+                    </li>
+                    </ul>
+                    </div>
+                    <!-- wikipage start -->
+                    <h1>
+                    <a id="tucek_jakub" name="tucek_jakub">
+                    Tuček Jakub
+                    </a>
+                    </h1>
+                    <div class="level1">
+                    <ul>
+                    <li class="level1">
+                    <div class="li">
+                    namespace:
+                    <a class="wikilink2" href="https://edux.fit.cvut.cz/courses/BI-GRA/student/tucekja6/start" rel="nofollow" title="student:tucekja6:start">
+                    start
+                    </a>
+                    </div>
+                    </li>
+                    </ul>
+                    <h2>
+                    tutorial
+                    </h2>
+                    <div class="overTable" style="transition: transform 1s ease 0s;">
+                    <table border="1" class="inline hiRow">
+                        <thead>
+                            <tr>
+                                <th>
+                                    sloupec
+                                </th>
+                                <th>
+                                    hodnota
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    1. cvičení
+                                </td>
+                                <td class="" title="Tuček Jakub/1. cvičení : ano">
+                                    √
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2. cvičení
+                                </td>
+                                <td class="" title="Tuček Jakub/2. cvičení : ne">
+                                    -
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Celkem
+                                </td>
+                                <td class="" title="Tuček Jakub/Celkem">
+                                    52.71
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nárok na zápočet
+                                </td>
+                                <td class="" title="Tuček Jakub/Nárok na zápočet">
+                                    Z
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Zápočet
+                                </td>
+                                <td class="" title="Tuček Jakub/Zápočet : ne">
+                                    -
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2>
+                    lecture
+                </h2>
+                <div class="overTable">
+                    <table border="1" class="inline hiRow">
+                        <thead>
+                            <tr>
+                                <th>
+                                    sloupec
+                                </th>
+                                <th>
+                                    hodnota
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Midterm
+                                </td>
+                                <td class="" title="Tuček Jakub/Midterm">
+                                    26
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Velká písemka
+                                </td>
+                                <td class="" title="Tuček Jakub/Velká písemka">
+                                    12
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    celkem
+                                </td>
+                                <td class="" title="Tuček Jakub/celkem">
+                                    90
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Známka
+                                </td>
+                                <td class="" title="Tuček Jakub/Známka">
+                                    A
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- wikipage stop -->
+        </div>
+        <div class="clearer">
+        </div>
+        <div class="stylefoot">
+            <div class="meta">
+                <div class="user">
+                    Přihlášen(a) jako: tucekja6 (tucekja6)
+                </div>
+                <div class="doc">
+                    /mnt/www/courses/BI-GRA/data/pages/classification/student/tucekja6/start.txt
+                    · Poslední úprava: 2016/06/05 05:09 (upraveno mimo DokuWiki)
+                </div>
+            </div>
+            <div class="bar" id="bar__bottom">
+                <div class="bar-left" id="bar__bottomleft">
+                    <form action="/courses/BI-GRA/classification/student/tucekja6/start" class="button btn_revs" method="get">
+                        <div class="no">
+                            <input name="do" type="hidden" value="revisions">
+                                <input accesskey="o" class="button" title="Starší verze [O]" type="submit" value="Starší verze"/>
+                            </input>
+                        </div>
+                    </form>
+                </div>
+                <div class="bar-right" id="bar__bottomright">
+                    <form action="/courses/BI-GRA/classification/student/tucekja6/start" class="button btn_profile" method="get">
+                        <div class="no">
+                            <input name="do" type="hidden" value="profile">
+                                <input class="button" title="Upravit profil" type="submit" value="Upravit profil"/>
+                            </input>
+                        </div>
+                    </form>
+                    <form action="/courses/BI-GRA/classification/student/tucekja6/start" class="button btn_logout" method="get">
+                        <div class="no">
+                            <input name="do" type="hidden" value="logout">
+                                <input name="sectok" type="hidden" value="a86b0d5b994d250b88a38295c57b6439">
+                                    <input class="button" title="Odhlásit se" type="submit" value="Odhlásit se"/>
+                                </input>
+                            </input>
+                        </div>
+                    </form>
+                    <form action="/courses/BI-GRA/classification/student/tucekja6/start" class="button btn_index" method="get">
+                        <div class="no">
+                            <input name="do" type="hidden" value="index">
+                                <input accesskey="x" class="button" title="Index [X]" type="submit" value="Index"/>
+                            </input>
+                        </div>
+                    </form>
+                    <a class="nolink" href="#dokuwiki__top">
+                        <input class="button" onclick="window.scrollTo(0, 0)" title="Nahoru" type="button" value="Nahoru"/>
+                    </a>
+                </div>
+                <div class="clearer">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footerinc">
+            <a href="https://edux.fit.cvut.cz/courses/BI-GRA/feed.php" target="_blank" title="Recent changes RSS feed">
+                <img alt="Recent changes RSS feed" height="15" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/button-rss.png" width="80"/>
+            </a>
+            <!-- <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license" title="Creative Commons License"><img src="/courses/BI-GRA/lib/tpl/edux/images/button-cc.gif" width="80" height="15" alt="Creative Commons License" /></a> -->
+            <!-- <a target="_blank" href="https://www.paypal.com/xclick/business=andi%40splitbrain.org&amp;item_name=DokuWiki+Donation&amp;no_shipping=1&amp;no_note=1&amp;tax=0&amp;currency_code=EUR&amp;lc=US" title="Donate"><img src="/courses/BI-GRA/lib/tpl/edux/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>-->
+            <a href="http://www.php.net/" target="_blank" title="Powered by PHP">
+                <img alt="Powered by PHP" height="15" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/button-php.gif" width="80"/>
+            </a>
+            <a href="http://validator.w3.org/check/referer" target="_blank" title="Valid XHTML 1.0">
+                <img alt="Valid XHTML 1.0" height="15" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/button-xhtml.png" width="80"/>
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank" title="Valid CSS">
+                <img alt="Valid CSS" height="15" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/button-css.png" width="80"/>
+            </a>
+            <a href="http://wiki.splitbrain.org/wiki:dokuwiki" target="_blank" title="Driven by DokuWiki">
+                <img alt="Driven by DokuWiki" height="15" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/button-dw.png" width="80"/>
+            </a>
+            <!--
+             
+             <rdf:RDF xmlns="http://web.resource.org/cc/"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+             <Work rdf:about="">
+             <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+             <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+             </Work>
+             
+             <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+             <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+             <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+             <requires rdf:resource="http://web.resource.org/cc/Notice" />
+             <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+             <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+             <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+             <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+             </License>
+             
+             </rdf:RDF>
+             
+             -->
+        </div>
+        <div class="no">
+            <img alt="" height="1" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/indexer.gif" width="1"/>
+        </div>
+        <div id="gallery__overlay" style="display: none; position: fixed; top: 0px; left: 0px; z-index: 50; width: 100%; height: 100%;">
+            <img id="gallery__loadingImage" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/loading.gif" style="position: relative; cursor: pointer;"/>
+        </div>
+        <div id="gallery__lightbox" style="display: none; position: absolute; z-index: 60;">
+            <img id="gallery__lightboxImage" style="cursor: pointer;">
+                <img id="gallery__actionImage" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/expand.gif" style="display: none; position: absolute; top: 15px; left: 15px; z-index: 70; cursor: pointer;">
+                    <img id="gallery__closeButton" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/close.gif" style="display: inline; position: absolute; right: 10px; top: 10px; z-index: 80; cursor: pointer;">
+                        <img id="gallery__nextButton" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/next.gif" style="display: inline; position: absolute; right: 10px; bottom: 10px; z-index: 80; cursor: pointer;">
+                            <img id="gallery__prevButton" src="Tu%C4%8Dek%20Jakub%20[BI-GRA%20Grafov%C3%A9%20algoritmy%20a%20z%C3%A1klady%20teorie%20slo%C5%BEitosti]_files/prev.gif" style="display: inline; position: absolute; left: 10px; bottom: 10px; z-index: 80; cursor: pointer;">
+                                <span id="gallery__lightboxCaption" style="display: none; position: absolute; z-index: 80;">
+                                </span>
+                            </img>
+                        </img>
+                    </img>
+                </img>
+            </img>
+        </div>
+        <div class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible" id="ui-datepicker-div">
+        </div>
+        <div class="integration-bar" style="display: none; top: 74.3167px; left: 1540px;">
+            <div class="arrow" style="left: 263.8px;">
+            </div>
+            <a class="tile" href="https://timetable.fit.cvut.cz/">
+                <span class="icon">
+                    <i class="fa fa-calendar">
+                    </i>
+                </span>
+                <span class="title">
+                    Rozvrh
+                </span>
+            </a>
+            <a class="tile" href="https://ict.fit.cvut.cz/web">
+                <span class="icon">
+                    <i class="icon-th">
+                    </i>
+                </span>
+                <span class="title">
+                    Informace o ICT
+                </span>
+            </a>
+            <a class="tile" href="https://imap.fit.cvut.cz/">
+                <span class="icon">
+                    <i class="fa fa-envelope">
+                    </i>
+                </span>
+                <span class="title">
+                    Webmail
+                </span>
+            </a>
+            <a class="tile" href="https://kos.cvut.cz/">
+                <span class="icon">
+                    <i class="icon-th">
+                    </i>
+                </span>
+                <span class="title">
+                    KOmponenta Studium
+                </span>
+            </a>
+        </div>
+    </body>
+</html>
