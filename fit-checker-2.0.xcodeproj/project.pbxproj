@@ -10,6 +10,9 @@
 		0E1C5A366790F30B4126F27E /* Pods_fit_checker_2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EECE3E3FE174127DB525A5 /* Pods_fit_checker_2_0UITests.framework */; };
 		1BC21FD6D3E4111AC67906AC /* Pods_fit_checker_2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AA800B9320A3CC8984C1CB /* Pods_fit_checker_2_0Tests.framework */; };
 		4D3FDD611D04CD0C00AFD598 /* EduxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */; };
+		4DE38DCB1D0574DD0058AF7C /* EduxParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE38DCA1D0574DD0058AF7C /* EduxParserTests.swift */; };
+		4DE38DCC1D0575930058AF7C /* EduxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */; };
+		4DE38DD61D0581190058AF7C /* lectureList.html in Resources */ = {isa = PBXBuildFile; fileRef = 4DE38DD51D0581190058AF7C /* lectureList.html */; };
 		4DF6D18B1D019A210017D144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D18A1D019A210017D144 /* AppDelegate.swift */; };
 		4DF6D1941D019A210017D144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF6D1931D019A210017D144 /* Assets.xcassets */; };
 		4DF6D1A21D019A210017D144 /* fit_checker_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D1A11D019A210017D144 /* fit_checker_2_0Tests.swift */; };
@@ -41,6 +44,8 @@
 		41DB44E1007FE7C770C70266 /* Pods-fit-checker-2.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0UITests/Pods-fit-checker-2.0UITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B07DDCA5C79EB0D4CA51CA7 /* Pods-fit-checker-2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fit-checker-2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fit-checker-2.0/Pods-fit-checker-2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		4D3FDD601D04CD0C00AFD598 /* EduxParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EduxParser.swift; path = Model/EduxParser.swift; sourceTree = "<group>"; };
+		4DE38DCA1D0574DD0058AF7C /* EduxParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserTests.swift; sourceTree = "<group>"; };
+		4DE38DD51D0581190058AF7C /* lectureList.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = lectureList.html; path = TestData/ParserData/lectureList.html; sourceTree = "<group>"; };
 		4DF6D1871D019A210017D144 /* fit-checker-2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker-2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF6D18A1D019A210017D144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF6D1931D019A210017D144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +115,22 @@
 			name = Stores;
 			sourceTree = "<group>";
 		};
+		4DE38DCF1D057A8C0058AF7C /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				4DE38DD01D057A960058AF7C /* ParserData */,
+			);
+			name = TestData;
+			sourceTree = "<group>";
+		};
+		4DE38DD01D057A960058AF7C /* ParserData */ = {
+			isa = PBXGroup;
+			children = (
+				4DE38DD51D0581190058AF7C /* lectureList.html */,
+			);
+			name = ParserData;
+			sourceTree = "<group>";
+		};
 		4DF6D17E1D019A200017D144 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +171,8 @@
 			children = (
 				4DF6D1A11D019A210017D144 /* fit_checker_2_0Tests.swift */,
 				4DF6D1A31D019A210017D144 /* Info.plist */,
+				4DE38DCA1D0574DD0058AF7C /* EduxParserTests.swift */,
+				4DE38DCF1D057A8C0058AF7C /* TestData */,
 			);
 			path = "fit-checker-2.0Tests";
 			sourceTree = "<group>";
@@ -260,6 +283,7 @@
 				4DF6D1A51D019A210017D144 /* Frameworks */,
 				4DF6D1A61D019A210017D144 /* Resources */,
 				989DFF7F6962249A18850676 /* [CP] Copy Pods Resources */,
+				4DE38DD81D0582B40058AF7C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -330,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE38DD61D0581190058AF7C /* lectureList.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +412,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		4DE38DD81D0582B40058AF7C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fit-checker-2.0Tests/Pods-fit-checker-2.0Tests-frameworks.sh\"";
 		};
 		622C9F5BDE7ACEE4D03F0339 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -481,7 +519,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE38DCB1D0574DD0058AF7C /* EduxParserTests.swift in Sources */,
 				4DF6D1A21D019A210017D144 /* fit_checker_2_0Tests.swift in Sources */,
+				4DE38DCC1D0575930058AF7C /* EduxParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
