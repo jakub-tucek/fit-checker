@@ -10,6 +10,9 @@
 		4D7B0E321E27CAF10059A4CC /* fit-checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7B0E281E27CAF10059A4CC /* fit-checker.framework */; };
 		4D7B0E371E27CAF10059A4CC /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B0E361E27CAF10059A4CC /* fit_checkerTests.swift */; };
 		4D7B0E391E27CAF10059A4CC /* fit-checker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7B0E2B1E27CAF10059A4CC /* fit-checker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D7B0E471E27CCE90059A4CC /* EduxParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B0E461E27CCE90059A4CC /* EduxParserResult.swift */; };
+		4D7B0E491E27CD1D0059A4CC /* EduxParserResultTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B0E481E27CD1D0059A4CC /* EduxParserResultTable.swift */; };
+		4D7B0E4B1E27CD2B0059A4CC /* EduxParserResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B0E4A1E27CD2B0059A4CC /* EduxParserResultRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		4D7B0E311E27CAF10059A4CC /* fit-checkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7B0E361E27CAF10059A4CC /* fit_checkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fit_checkerTests.swift; sourceTree = "<group>"; };
 		4D7B0E381E27CAF10059A4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7B0E461E27CCE90059A4CC /* EduxParserResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserResult.swift; sourceTree = "<group>"; };
+		4D7B0E481E27CD1D0059A4CC /* EduxParserResultTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserResultTable.swift; sourceTree = "<group>"; };
+		4D7B0E4A1E27CD2B0059A4CC /* EduxParserResultRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserResultRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		4D7B0E421E27CBB80059A4CC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4D7B0E451E27CC830059A4CC /* parser */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -108,6 +115,16 @@
 			children = (
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		4D7B0E451E27CC830059A4CC /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				4D7B0E461E27CCE90059A4CC /* EduxParserResult.swift */,
+				4D7B0E481E27CD1D0059A4CC /* EduxParserResultTable.swift */,
+				4D7B0E4A1E27CD2B0059A4CC /* EduxParserResultRow.swift */,
+			);
+			name = parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +189,7 @@
 				TargetAttributes = {
 					4D7B0E271E27CAF10059A4CC = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					4D7B0E301E27CAF10059A4CC = {
@@ -220,6 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7B0E4B1E27CD2B0059A4CC /* EduxParserResultRow.swift in Sources */,
+				4D7B0E491E27CD1D0059A4CC /* EduxParserResultTable.swift in Sources */,
+				4D7B0E471E27CCE90059A4CC /* EduxParserResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +365,7 @@
 		4D7B0E3D1E27CAF10059A4CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cvut.fit.fit-checker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -362,6 +385,7 @@
 		4D7B0E3E1E27CAF10059A4CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -380,6 +404,7 @@
 		4D7B0E401E27CAF10059A4CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "fit-checkerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cvut.fit.fit-checkerTests";
@@ -391,6 +416,7 @@
 		4D7B0E411E27CAF10059A4CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "fit-checkerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cvut.fit.fit-checkerTests";
