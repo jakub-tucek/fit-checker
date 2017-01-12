@@ -12,6 +12,10 @@
 		D2352E101E27EC9C00303424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2352E0F1E27EC9C00303424 /* Assets.xcassets */; };
 		D2352E131E27EC9C00303424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */; };
 		D2352E1E1E27EC9D00303424 /* fit_checkerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E1D1E27EC9D00303424 /* fit_checkerUITests.swift */; };
+		D2352E321E27EFDF00303424 /* EduxParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2E1E27EFDF00303424 /* EduxParserResult.swift */; };
+		D2352E331E27EFDF00303424 /* EduxParserResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2F1E27EFDF00303424 /* EduxParserResultRow.swift */; };
+		D2352E341E27EFDF00303424 /* EduxParserResultTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E301E27EFDF00303424 /* EduxParserResultTable.swift */; };
+		D2352E351E27EFDF00303424 /* EduxParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* EduxParsing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		D2352E191E27EC9D00303424 /* fit-checkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E1D1E27EC9D00303424 /* fit_checkerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fit_checkerUITests.swift; sourceTree = "<group>"; };
 		D2352E1F1E27EC9D00303424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2352E2E1E27EFDF00303424 /* EduxParserResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserResult.swift; sourceTree = "<group>"; };
+		D2352E2F1E27EFDF00303424 /* EduxParserResultRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserResultRow.swift; sourceTree = "<group>"; };
+		D2352E301E27EFDF00303424 /* EduxParserResultTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParserResultTable.swift; sourceTree = "<group>"; };
+		D2352E311E27EFDF00303424 /* EduxParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParsing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				D2352E2B1E27EE7A00303424 /* supporting files */,
+				D2352E2C1E27EF8800303424 /* utils */,
 				D2352E281E27ECBF00303424 /* model */,
 				D2352E291E27ECC400303424 /* view */,
 				D2352E2A1E27ECCA00303424 /* controller */,
@@ -123,6 +132,25 @@
 				D2352E141E27EC9C00303424 /* Info.plist */,
 			);
 			name = "supporting files";
+			sourceTree = "<group>";
+		};
+		D2352E2C1E27EF8800303424 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				D2352E2D1E27EFA700303424 /* edux parser */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		D2352E2D1E27EFA700303424 /* edux parser */ = {
+			isa = PBXGroup;
+			children = (
+				D2352E2E1E27EFDF00303424 /* EduxParserResult.swift */,
+				D2352E2F1E27EFDF00303424 /* EduxParserResultRow.swift */,
+				D2352E301E27EFDF00303424 /* EduxParserResultTable.swift */,
+				D2352E311E27EFDF00303424 /* EduxParsing.swift */,
+			);
+			path = "edux parser";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2352E351E27EFDF00303424 /* EduxParsing.swift in Sources */,
+				D2352E321E27EFDF00303424 /* EduxParserResult.swift in Sources */,
 				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
+				D2352E331E27EFDF00303424 /* EduxParserResultRow.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
+				D2352E341E27EFDF00303424 /* EduxParserResultTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
