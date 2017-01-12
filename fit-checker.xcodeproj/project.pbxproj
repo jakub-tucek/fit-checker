@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D62FF111E27E8E400E8C793 /* EduxParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF101E27E8E400E8C793 /* EduxParsing.swift */; };
 		4D7B0E321E27CAF10059A4CC /* fit-checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7B0E281E27CAF10059A4CC /* fit-checker.framework */; };
 		4D7B0E371E27CAF10059A4CC /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B0E361E27CAF10059A4CC /* fit_checkerTests.swift */; };
 		4D7B0E391E27CAF10059A4CC /* fit-checker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D7B0E2B1E27CAF10059A4CC /* fit-checker.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D62FF101E27E8E400E8C793 /* EduxParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxParsing.swift; sourceTree = "<group>"; };
 		4D7B0E281E27CAF10059A4CC /* fit-checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "fit-checker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7B0E2B1E27CAF10059A4CC /* fit-checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fit-checker.h"; sourceTree = "<group>"; };
 		4D7B0E2C1E27CAF10059A4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				4D7B0E461E27CCE90059A4CC /* EduxParserResult.swift */,
 				4D7B0E481E27CD1D0059A4CC /* EduxParserResultTable.swift */,
 				4D7B0E4A1E27CD2B0059A4CC /* EduxParserResultRow.swift */,
+				4D62FF101E27E8E400E8C793 /* EduxParsing.swift */,
 			);
 			name = parser;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				4D7B0E4B1E27CD2B0059A4CC /* EduxParserResultRow.swift in Sources */,
 				4D7B0E491E27CD1D0059A4CC /* EduxParserResultTable.swift in Sources */,
+				4D62FF111E27E8E400E8C793 /* EduxParsing.swift in Sources */,
 				4D7B0E471E27CCE90059A4CC /* EduxParserResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
