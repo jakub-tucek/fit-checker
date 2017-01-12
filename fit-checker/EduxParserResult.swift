@@ -14,13 +14,15 @@ class EduxParserResult {
 
 
     /// All Tables
-    var tables = [EduxParserResultTable]()
+    private var tables = [EduxParserResultTable]()
 
 
     /// Timestamp when result was created
-    let timestamp = Date()
+    private let timestamp = Date()
 
     func addTables(newTable : [EduxParserResultTable]) {
         tables = tables + newTable
     }
+
+
 }

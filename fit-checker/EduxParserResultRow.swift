@@ -12,10 +12,10 @@ import Foundation
 class EduxParserResultRow {
     
     /// Represents first collumn in table
-    let name : String
+    private let name : String
     
     /// Represents second collumn in table - typically result of test, final grade
-    let value: String
+    private let value: String
     
     init(name : String, value : String) {
         self.name = name

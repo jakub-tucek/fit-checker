@@ -14,10 +14,10 @@ class EduxParserResultTable {
 
 
     /// Name of table if present
-    var name : String?
+    private var name : String?
 
     // All rows in table
-    var rows = [EduxParserResultRow]()
+    private var rows = [EduxParserResultRow]()
 
     init() {
         //Empty constructor
