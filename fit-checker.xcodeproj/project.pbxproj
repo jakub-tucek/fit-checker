@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		D2352E051E27EC9C00303424 /* fit-checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E081E27EC9C00303424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2352E0A1E27EC9C00303424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "fit-checker/controller/ViewController.swift"; sourceTree = "<group>"; };
+		D2352E0A1E27EC9C00303424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2352E0F1E27EC9C00303424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2352E121E27EC9C00303424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2352E141E27EC9C00303424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,13 +75,10 @@
 		D2352E071E27EC9C00303424 /* fit-checker */ = {
 			isa = PBXGroup;
 			children = (
+				D2352E2B1E27EE7A00303424 /* supporting files */,
 				D2352E281E27ECBF00303424 /* model */,
 				D2352E291E27ECC400303424 /* view */,
 				D2352E2A1E27ECCA00303424 /* controller */,
-				D2352E081E27EC9C00303424 /* AppDelegate.swift */,
-				D2352E0F1E27EC9C00303424 /* Assets.xcassets */,
-				D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */,
-				D2352E141E27EC9C00303424 /* Info.plist */,
 			);
 			path = "fit-checker";
 			sourceTree = "<group>";
@@ -114,8 +111,18 @@
 			children = (
 				D2352E0A1E27EC9C00303424 /* ViewController.swift */,
 			);
-			name = controller;
-			path = "controller]";
+			path = controller;
+			sourceTree = "<group>";
+		};
+		D2352E2B1E27EE7A00303424 /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D2352E081E27EC9C00303424 /* AppDelegate.swift */,
+				D2352E0F1E27EC9C00303424 /* Assets.xcassets */,
+				D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */,
+				D2352E141E27EC9C00303424 /* Info.plist */,
+			);
+			name = "supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.fit.cvut.fit-checker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -369,6 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.fit.cvut.fit-checker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -417,6 +426,7 @@
 				D2352E241E27EC9D00303424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2352E251E27EC9D00303424 /* Build configuration list for PBXNativeTarget "fit-checkerUITests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +435,7 @@
 				D2352E271E27EC9D00303424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
