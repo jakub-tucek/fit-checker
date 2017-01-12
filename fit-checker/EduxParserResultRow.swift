@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// EduxParserResultRow is structure storing data of one row.
-struct EduxParserResultRow {
+/// EduxParserResultRow is class storing data of one row.
+class EduxParserResultRow {
     
     /// Represents first collumn in table
     let name : String
