@@ -14,10 +14,10 @@ class EduxParserResultTable {
 
 
     /// Name of table if present
-    private var name : String?
+    var name : String?
 
     // All rows in table
-    private var rows = [EduxParserResultRow]()
+    var rows = [EduxParserResultRow]()
 
     init() {
         //Empty constructor
@@ -25,10 +25,6 @@ class EduxParserResultTable {
 
     init(name : String) {
         self.name = name
-    }
-    
-    func addRow(newRow : EduxParserResultRow) {
-        rows.append(newRow)
     }
     
     func addRows(newRows: [EduxParserResultRow]) {
