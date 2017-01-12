@@ -1,15 +1,15 @@
 //
-//  fit_checker_2_0Tests.swift
-//  fit-checker-2.0Tests
+//  fit_checkerTests.swift
+//  fit-checkerTests
 //
-//  Created by jakubtucek on 03/06/16.
-//  Copyright © 2016 jakubtucek. All rights reserved.
+//  Created by Jakub Tucek on 12/01/17.
+//  Copyright © 2017 JT-JD. All rights reserved.
 //
 
 import XCTest
-@testable import fit_checker_2_0
+@testable import fit_checker
 
-class fit_checker_2_0Tests: XCTestCase {
+class fit_checkerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -28,7 +28,7 @@ class fit_checker_2_0Tests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
