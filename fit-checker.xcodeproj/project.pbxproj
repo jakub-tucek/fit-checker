@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D62FF161E2942BA00E8C793 /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* ClassificationParser.swift */; };
+		4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */; };
+		4D62FF3F1E29561500E8C793 /* ClassificationParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */; };
+		4D62FF411E29562400E8C793 /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
+		4D62FF441E29587300E8C793 /* ClassificationParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */; };
 		D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E081E27EC9C00303424 /* AppDelegate.swift */; };
 		D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E0A1E27EC9C00303424 /* ViewController.swift */; };
 		D2352E101E27EC9C00303424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2352E0F1E27EC9C00303424 /* Assets.xcassets */; };
@@ -24,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4D62FF351E2955B100E8C793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2352DFD1E27EC9C00303424 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2352E041E27EC9C00303424;
+			remoteInfo = "fit-checker";
+		};
 		D2352E1A1E27EC9D00303424 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2352DFD1E27EC9C00303424 /* Project object */;
@@ -35,6 +46,12 @@
 
 /* Begin PBXFileReference section */
 		4D62FF151E2942BA00E8C793 /* ClassificationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationParser.swift; sourceTree = "<group>"; };
+		4D62FF2A1E29555300E8C793 /* fit-checkerUITests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "fit-checkerUITests copy-Info.plist"; path = "/Users/jakubtucek/Documents/fit-checker-2.0/fit-checkerUITests copy-Info.plist"; sourceTree = "<absolute>"; };
+		4D62FF301E2955B100E8C793 /* fit-checkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fit_checkerTests.swift; sourceTree = "<group>"; };
+		4D62FF341E2955B100E8C793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationParserTest.swift; sourceTree = "<group>"; };
+		4D62FF401E29562400E8C793 /* biomo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biomo.html; sourceTree = "<group>"; };
 		D2352E051E27EC9C00303424 /* fit-checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E081E27EC9C00303424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2352E0A1E27EC9C00303424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4D62FF2D1E2955B100E8C793 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2352E021E27EC9C00303424 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,13 +110,50 @@
 			name = entity;
 			sourceTree = "<group>";
 		};
+		4D62FF311E2955B100E8C793 /* fit-checkerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D62FF431E29565700E8C793 /* resources */,
+				4D62FF3B1E2955EF00E8C793 /* utils */,
+				4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */,
+				4D62FF341E2955B100E8C793 /* Info.plist */,
+			);
+			path = "fit-checkerTests";
+			sourceTree = "<group>";
+		};
+		4D62FF3B1E2955EF00E8C793 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4D62FF3C1E2955F800E8C793 /* edux-parser */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		4D62FF3C1E2955F800E8C793 /* edux-parser */ = {
+			isa = PBXGroup;
+			children = (
+				4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */,
+			);
+			name = "edux-parser";
+			sourceTree = "<group>";
+		};
+		4D62FF431E29565700E8C793 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D62FF401E29562400E8C793 /* biomo.html */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		D2352DFC1E27EC9C00303424 = {
 			isa = PBXGroup;
 			children = (
-				D2352E071E27EC9C00303424 /* fit-checker */,
 				D2352E1C1E27EC9D00303424 /* fit-checkerUITests */,
+				D2352E071E27EC9C00303424 /* fit-checker */,
+				4D62FF311E2955B100E8C793 /* fit-checkerTests */,
 				D2352E061E27EC9C00303424 /* Products */,
 				D2352E371E27F37100303424 /* Frameworks */,
+				4D62FF2A1E29555300E8C793 /* fit-checkerUITests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +162,7 @@
 			children = (
 				D2352E051E27EC9C00303424 /* fit-checker.app */,
 				D2352E191E27EC9D00303424 /* fit-checkerUITests.xctest */,
+				4D62FF301E2955B100E8C793 /* fit-checkerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +254,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4D62FF2F1E2955B100E8C793 /* fit-checkerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D62FF371E2955B100E8C793 /* Build configuration list for PBXNativeTarget "fit-checkerTests" */;
+			buildPhases = (
+				4D62FF2C1E2955B100E8C793 /* Sources */,
+				4D62FF2D1E2955B100E8C793 /* Frameworks */,
+				4D62FF2E1E2955B100E8C793 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D62FF361E2955B100E8C793 /* PBXTargetDependency */,
+			);
+			name = "fit-checkerTests";
+			productName = "fit-checkerTests";
+			productReference = 4D62FF301E2955B100E8C793 /* fit-checkerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D2352E041E27EC9C00303424 /* fit-checker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2352E221E27EC9D00303424 /* Build configuration list for PBXNativeTarget "fit-checker" */;
@@ -238,6 +318,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Josef Dolezal";
 				TargetAttributes = {
+					4D62FF2F1E2955B100E8C793 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D2352E041E27EC9C00303424;
+					};
 					D2352E041E27EC9C00303424 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -264,11 +349,20 @@
 			targets = (
 				D2352E041E27EC9C00303424 /* fit-checker */,
 				D2352E181E27EC9D00303424 /* fit-checkerUITests */,
+				4D62FF2F1E2955B100E8C793 /* fit-checkerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4D62FF2E1E2955B100E8C793 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D62FF411E29562400E8C793 /* biomo.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2352E031E27EC9C00303424 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,12 +403,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4D62FF2C1E2955B100E8C793 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D62FF3F1E29561500E8C793 /* ClassificationParserTest.swift in Sources */,
+				4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2352E011E27EC9C00303424 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D2352E351E27EFDF00303424 /* ClasificationParsing.swift in Sources */,
 				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
+				4D62FF441E29587300E8C793 /* ClassificationParserTest.swift in Sources */,
 				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
@@ -334,6 +438,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4D62FF361E2955B100E8C793 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2352E041E27EC9C00303424 /* fit-checker */;
+			targetProxy = 4D62FF351E2955B100E8C793 /* PBXContainerItemProxy */;
+		};
 		D2352E1B1E27EC9D00303424 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2352E041E27EC9C00303424 /* fit-checker */;
@@ -353,6 +462,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4D62FF381E2955B100E8C793 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "fit-checkerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cvut.fit.fit-checkerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fit-checker.app/fit-checker";
+			};
+			name = Debug;
+		};
+		4D62FF391E2955B100E8C793 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "fit-checkerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cvut.fit.fit-checkerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fit-checker.app/fit-checker";
+			};
+			name = Release;
+		};
 		D2352E201E27EC9D00303424 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,6 +646,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4D62FF371E2955B100E8C793 /* Build configuration list for PBXNativeTarget "fit-checkerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D62FF381E2955B100E8C793 /* Debug */,
+				4D62FF391E2955B100E8C793 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D2352E001E27EC9C00303424 /* Build configuration list for PBXProject "fit-checker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
