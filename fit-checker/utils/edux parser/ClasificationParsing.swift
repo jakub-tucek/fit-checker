@@ -10,13 +10,13 @@ import Foundation
 
 
 /// EduxParsing is protocol for parsing edux.
-protocol EduxParsing {
+protocol ClasificationParsing {
 
 
     /// Parses result from edux webpage.
     ///
     /// - Parameter html: downloaded html
     /// - Returns: parsed resut
-    func parseEdux(html: String) -> EduxParserResult
+    func parseEdux(html: String) -> ClassificationResult
 
 }

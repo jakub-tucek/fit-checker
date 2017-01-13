@@ -10,17 +10,17 @@ import Foundation
 
 
 /// EduxParserResult is class wrapping up result of parsing.
-class EduxParserResult {
+class ClassificationResult {
 
 
     /// All Tables
-    var tables = [EduxParserResultTable]()
+    var tables = [ClassificationTable]()
 
 
     /// Timestamp when result was created
     let timestamp = Date()
 
-    func addTables(newTable : [EduxParserResultTable]) {
+    func addTables(newTable : [ClassificationTable]) {
         tables = tables + newTable
     }
 

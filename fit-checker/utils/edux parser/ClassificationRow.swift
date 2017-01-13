@@ -9,7 +9,7 @@
 import Foundation
 
 /// EduxParserResultRow is class storing data of one row.
-class EduxParserResultRow {
+class ClassificationRow {
     
     /// Represents first collumn in table
     let name : String

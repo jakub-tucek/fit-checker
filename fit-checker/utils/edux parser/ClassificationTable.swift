@@ -10,20 +10,20 @@ import Foundation
 
 
 /// EduxParserResultTable is class keeping array of rows.
-class EduxParserResultTable {
+class ClassificationTable {
 
 
     /// Name of table if present
     var name : String?
 
     // All rows in table
-    var rows = [EduxParserResultRow]()
+    var rows = [ClassificationRow]()
 
     init(name : String) {
         self.name = name
     }
     
-    func addRows(newRows: [EduxParserResultRow]) {
+    func addRows(newRows: [ClassificationRow]) {
         rows = rows + newRows
     }
     
