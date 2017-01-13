@@ -17,14 +17,11 @@ class ClassificationTable {
     var name : String?
 
     // All rows in table
-    var rows = [ClassificationRow]()
+    var rows : [ClassificationRow]
 
-    init(name : String) {
+    init(name : String, rows : [ClassificationRow]) {
         self.name = name
-    }
-    
-    func addRows(newRows: [ClassificationRow]) {
-        rows = rows + newRows
+        self.rows = rows
     }
     
 }

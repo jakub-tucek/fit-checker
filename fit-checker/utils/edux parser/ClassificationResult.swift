@@ -20,9 +20,4 @@ class ClassificationResult {
     /// Timestamp when result was created
     let timestamp = Date()
 
-    func addTables(newTable : [ClassificationTable]) {
-        tables = tables + newTable
-    }
-
-
 }
