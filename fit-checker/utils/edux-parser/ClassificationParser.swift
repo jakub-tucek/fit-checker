@@ -16,21 +16,24 @@ import Kanna
 /// page. Result is returned in ClassificationResult object.
 class ClassificationParser: ClasificationParsing {
 
-    /// Selectors main div containing all data
-    let mainDivSelector = "//div[contains(@class, 'page_with_sidebar')]" +
-                                "/div[contains(@class, 'level1')]"
 
-    /// Selects table names
-    let tableNameSelector = "h2"
+    struct xpath {
+        /// Selectors main div containing all data
+        static let mainDivSelector = "//div[contains(@class, 'page_with_sidebar')]" +
+        "/div[contains(@class, 'level1')]"
 
-    /// Selects tbody containing row with data
-    let tableSelector = "div/table/tbody"
+        /// Selects table names
+        static let tableNameSelector = "h2"
 
-    /// One row in table
-    let rowSelector = "tr"
+        /// Selects tbody containing row with data
+        static let tableSelector = "div/table/tbody"
 
-    /// One col in row
-    let colSelector = "td"
+        /// One row in table
+        static let rowSelector = "tr"
+
+        /// One col in row
+        static let colSelector = "td"
+    }
 
 
 
@@ -42,9 +45,9 @@ class ClassificationParser: ClasificationParsing {
         let result = ClassificationResult()
 
         if let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
-            for node in doc.xpath(self.mainDivSelector) {
+            for node in doc.xpath(xpath.mainDivSelector) {
 
-                let tables = self.parseTables(node: node)
+                let tables = parseTables(node: node)
 
                 result.tables = tables
             }
@@ -62,7 +65,7 @@ class ClassificationParser: ClasificationParsing {
     private func parseTableNames(node: XMLElement) -> [String] {
         var names = [String]()
 
-        for titleNode in node.xpath(self.tableNameSelector) {
+        for titleNode in node.xpath(xpath.tableNameSelector) {
             if let title = titleNode.text {
                 names.append(title)
             } else {
@@ -83,8 +86,8 @@ class ClassificationParser: ClasificationParsing {
     /// - Returns: parsed table
     private func parseTable(tableNode: XMLElement, name: String) -> ClassificationTable {
         var rows = [ClassificationRow]()
-        for rowNode in tableNode.xpath(self.rowSelector) {
-            if let row = self.parseRow(rowNode: rowNode) {
+        for rowNode in tableNode.xpath(xpath.rowSelector) {
+            if let row = parseRow(rowNode: rowNode) {
                 rows.append(row)
             }
         }
@@ -102,9 +105,9 @@ class ClassificationParser: ClasificationParsing {
     private func parseTables(node: XMLElement) -> [ClassificationTable] {
         var tableCounter = 0
         var tables = [ClassificationTable]()
-        let names = self.parseTableNames(node: node)
+        let names = parseTableNames(node: node)
 
-        for tableNode in node.xpath(self.tableSelector) {
+        for tableNode in node.xpath(xpath.tableSelector) {
 
             tables.append(
                 self.parseTable(
@@ -129,7 +132,7 @@ class ClassificationParser: ClasificationParsing {
         var orderedCol = [String]()
         var limit = 0
 
-        for colNode in rowNode.xpath(self.colSelector) {
+        for colNode in rowNode.xpath(xpath.colSelector) {
 
             if (limit >= 2) {
                 break
