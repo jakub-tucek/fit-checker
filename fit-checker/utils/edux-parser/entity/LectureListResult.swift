@@ -16,6 +16,12 @@ class LectureListResult {
     /// Timestamp when result was created
     let timestamp = Date()
 
+    let semesterInfo : String
+
     var lectures = [Lecture]()
+
+    init(semesterInfo: String) {
+        self.semesterInfo = semesterInfo
+    }
     
 }
