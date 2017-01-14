@@ -24,6 +24,9 @@
 		4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* LectureListResult.swift */; };
 		4D52968A1E2A2AFF007677BA /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* Lecture.swift */; };
 		4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* Lecture.swift */; };
+		4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */; };
+		4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968E1E2A4C28007677BA /* FileLoader.swift */; };
+		4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968E1E2A4C28007677BA /* FileLoader.swift */; };
 		4D6201441E295D0E00E8C793 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E381E27F37100303424 /* Alamofire.framework */; };
 		4D6201451E295D0E00E8C793 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E391E27F37100303424 /* Kanna.framework */; };
 		4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
@@ -68,6 +71,8 @@
 		4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClasificationParsing.swift; sourceTree = "<group>"; };
 		4D5296861E2A2AF2007677BA /* LectureListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListResult.swift; path = entity/LectureListResult.swift; sourceTree = "<group>"; };
 		4D5296891E2A2AFF007677BA /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = entity/Lecture.swift; sourceTree = "<group>"; };
+		4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListParserTest.swift; path = "utils/edux-parser/LectureListParserTest.swift"; sourceTree = "<group>"; };
+		4D52968E1E2A4C28007677BA /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileLoader.swift; path = "utils/edux-parser/FileLoader.swift"; sourceTree = "<group>"; };
 		4D6200001E295C6500E8C793 /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
 		4D6200011E295C6500E8C793 /* libsystemstats.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsystemstats.tbd; path = usr/lib/libsystemstats.tbd; sourceTree = SDKROOT; };
 		4D6200021E295C6500E8C793 /* libtailspin.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtailspin.tbd; path = usr/lib/libtailspin.tbd; sourceTree = SDKROOT; };
@@ -414,6 +419,8 @@
 			isa = PBXGroup;
 			children = (
 				4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */,
+				4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */,
+				4D52968E1E2A4C28007677BA /* FileLoader.swift */,
 			);
 			name = "edux-parser";
 			sourceTree = "<group>";
@@ -951,6 +958,8 @@
 				4D5296811E2A27F4007677BA /* LectureListParsing.swift in Sources */,
 				4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */,
 				4D5296821E2A27F4007677BA /* LectureListParser.swift in Sources */,
+				4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */,
+				4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */,
 				4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */,
 				4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */,
 				4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */,
@@ -968,6 +977,7 @@
 				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
+				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
 				4D62FF161E2942BA00E8C793 /* LectureListParser.swift in Sources */,
 				4D52968A1E2A2AFF007677BA /* Lecture.swift in Sources */,
