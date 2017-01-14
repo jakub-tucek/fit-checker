@@ -14,13 +14,13 @@ class ClassificationParser: ClasificationParsing {
     let mainDivSelector = "//div[contains(@class, 'page_with_sidebar')]" +
                                 "/div[contains(@class, 'level1')]"
 
-    let tableNameSelector = "//h2"
+    let tableNameSelector = "h2"
 
-    let tableSelector = "//tbody"
+    let tableSelector = "div/table/tbody"
 
-    let rowSelector = "//tr"
+    let rowSelector = "tr"
 
-    let colSelector = "//td"
+    let colSelector = "td"
 
 
     func parseEdux(html: String) -> ClassificationResult {
@@ -94,8 +94,8 @@ class ClassificationParser: ClasificationParsing {
                 break
             }
 
-            if let value = colNode.text {
-                orderedCol.append(value)
+            if let value = colNode.innerHTML {
+                orderedCol.append(value.replacingOccurrences(of: "\n", with: ""))
             } else {
                 orderedCol.append("")
             }
@@ -103,7 +103,7 @@ class ClassificationParser: ClasificationParsing {
             limit += 1
         }
 
-        if (limit != 1) {
+        if (limit != 2) {
             return nil
         } else {
             return ClassificationRow(name: orderedCol[0], value: orderedCol[1])

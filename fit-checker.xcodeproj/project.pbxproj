@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D6201441E295D0E00E8C793 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E381E27F37100303424 /* Alamofire.framework */; };
+		4D6201451E295D0E00E8C793 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E391E27F37100303424 /* Kanna.framework */; };
+		4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
+		4D6201471E295D0E00E8C793 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3B1E27F37100303424 /* RealmSwift.framework */; };
+		4D62014C1E295DD600E8C793 /* ClassificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2E1E27EFDF00303424 /* ClassificationResult.swift */; };
+		4D62014D1E295DD600E8C793 /* ClassificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2F1E27EFDF00303424 /* ClassificationRow.swift */; };
+		4D62014E1E295DD600E8C793 /* ClassificationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E301E27EFDF00303424 /* ClassificationTable.swift */; };
+		4D62014F1E295DD600E8C793 /* ClasificationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* ClasificationParsing.swift */; };
+		4D6201501E295DD600E8C793 /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* ClassificationParser.swift */; };
 		4D62FF161E2942BA00E8C793 /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* ClassificationParser.swift */; };
 		4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */; };
-		4D62FF3F1E29561500E8C793 /* ClassificationParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */; };
 		4D62FF411E29562400E8C793 /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
-		4D62FF441E29587300E8C793 /* ClassificationParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */; };
+		4D62FF451E295A5600E8C793 /* ClassificationParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */; };
 		D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E081E27EC9C00303424 /* AppDelegate.swift */; };
 		D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E0A1E27EC9C00303424 /* ViewController.swift */; };
 		D2352E101E27EC9C00303424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2352E0F1E27EC9C00303424 /* Assets.xcassets */; };
@@ -45,6 +53,77 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D6200001E295C6500E8C793 /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
+		4D6200011E295C6500E8C793 /* libsystemstats.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsystemstats.tbd; path = usr/lib/libsystemstats.tbd; sourceTree = SDKROOT; };
+		4D6200021E295C6500E8C793 /* libtailspin.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtailspin.tbd; path = usr/lib/libtailspin.tbd; sourceTree = SDKROOT; };
+		4D6200031E295C6500E8C793 /* libTelephonyBasebandBulkUSBDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyBasebandBulkUSBDynamic.tbd; path = usr/lib/libTelephonyBasebandBulkUSBDynamic.tbd; sourceTree = SDKROOT; };
+		4D6200041E295C6500E8C793 /* libTelephonyBasebandDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyBasebandDynamic.tbd; path = usr/lib/libTelephonyBasebandDynamic.tbd; sourceTree = SDKROOT; };
+		4D6200051E295C6500E8C793 /* libTelephonyDebugDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyDebugDynamic.tbd; path = usr/lib/libTelephonyDebugDynamic.tbd; sourceTree = SDKROOT; };
+		4D6200061E295C6500E8C793 /* libTelephonyIOKitDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyIOKitDynamic.tbd; path = usr/lib/libTelephonyIOKitDynamic.tbd; sourceTree = SDKROOT; };
+		4D6200071E295C6500E8C793 /* libTelephonyUSBDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyUSBDynamic.tbd; path = usr/lib/libTelephonyUSBDynamic.tbd; sourceTree = SDKROOT; };
+		4D6200081E295C6500E8C793 /* libTelephonyUtilDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libTelephonyUtilDynamic.tbd; path = usr/lib/libTelephonyUtilDynamic.tbd; sourceTree = SDKROOT; };
+		4D6200091E295C6500E8C793 /* libThaiTokenizer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libThaiTokenizer.tbd; path = usr/lib/libThaiTokenizer.tbd; sourceTree = SDKROOT; };
+		4D62000A1E295C6500E8C793 /* libtidy.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtidy.A.tbd; path = usr/lib/libtidy.A.tbd; sourceTree = SDKROOT; };
+		4D62000B1E295C6500E8C793 /* libtidy.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtidy.tbd; path = usr/lib/libtidy.tbd; sourceTree = SDKROOT; };
+		4D62000C1E295C6600E8C793 /* libtzupdate.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtzupdate.tbd; path = usr/lib/libtzupdate.tbd; sourceTree = SDKROOT; };
+		4D62000D1E295C6600E8C793 /* libutil.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libutil.tbd; path = usr/lib/libutil.tbd; sourceTree = SDKROOT; };
+		4D62000E1E295C6600E8C793 /* libutil1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libutil1.0.tbd; path = usr/lib/libutil1.0.tbd; sourceTree = SDKROOT; };
+		4D62000F1E295C6600E8C793 /* libWAPI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libWAPI.tbd; path = usr/lib/libWAPI.tbd; sourceTree = SDKROOT; };
+		4D6200101E295C6600E8C793 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		4D6200111E295C6600E8C793 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		4D6200121E295C6600E8C793 /* libxslt.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxslt.1.tbd; path = usr/lib/libxslt.1.tbd; sourceTree = SDKROOT; };
+		4D6200131E295C6600E8C793 /* libxslt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxslt.tbd; path = usr/lib/libxslt.tbd; sourceTree = SDKROOT; };
+		4D6200141E295C6600E8C793 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		4D6200151E295C6600E8C793 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		4D6200161E295C6600E8C793 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		4D6200171E295C6600E8C793 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		4D6200181E295C6600E8C793 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4D6200191E295C6600E8C793 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		4D62001A1E295C6600E8C793 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4D62001B1E295C6600E8C793 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		4D62001C1E295C6600E8C793 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4D62001D1E295C6600E8C793 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		4D62001E1E295C6600E8C793 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		4D62001F1E295C6600E8C793 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4D6200201E295C6600E8C793 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		4D6200211E295C6600E8C793 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		4D6200221E295C6600E8C793 /* MetalPerformanceShaders.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalPerformanceShaders.framework; path = System/Library/Frameworks/MetalPerformanceShaders.framework; sourceTree = SDKROOT; };
+		4D6200231E295C6600E8C793 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4D6200241E295C6600E8C793 /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
+		4D6200251E295C6600E8C793 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		4D6200261E295C6600E8C793 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		4D6200271E295C6600E8C793 /* NewsstandKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NewsstandKit.framework; path = System/Library/Frameworks/NewsstandKit.framework; sourceTree = SDKROOT; };
+		4D6200281E295C6600E8C793 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		4D6200291E295C6600E8C793 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		4D62002A1E295C6600E8C793 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4D62002B1E295C6600E8C793 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		4D62002C1E295C6600E8C793 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		4D62002D1E295C6600E8C793 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		4D62002E1E295C6600E8C793 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		4D62002F1E295C6600E8C793 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4D6200301E295C6600E8C793 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		4D6200311E295C6600E8C793 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		4D6200321E295C6600E8C793 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		4D6200331E295C6600E8C793 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		4D6200341E295C6600E8C793 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4D6200351E295C6600E8C793 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4D6200361E295C6600E8C793 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		4D6200371E295C6600E8C793 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		4D6200381E295C6600E8C793 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4D6200391E295C6600E8C793 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4D62003A1E295C6600E8C793 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		4D62003B1E295C6600E8C793 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4D62003C1E295C6600E8C793 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		4D62003D1E295C6600E8C793 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		4D62003E1E295C6600E8C793 /* VideoSubscriberAccount.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoSubscriberAccount.framework; path = System/Library/Frameworks/VideoSubscriberAccount.framework; sourceTree = SDKROOT; };
+		4D62003F1E295C6600E8C793 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		4D6200401E295C6600E8C793 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		4D6200411E295C6600E8C793 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		4D6200421E295C6600E8C793 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4D6200431E295C6600E8C793 /* DTPerformanceSession.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTPerformanceSession.framework; path = Library/Frameworks/DTPerformanceSession.framework; sourceTree = DEVELOPER_DIR; };
+		4D6200441E295C6600E8C793 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
+		4D6200451E295C6600E8C793 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		4D6200461E295C6600E8C793 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4D62FF151E2942BA00E8C793 /* ClassificationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationParser.swift; sourceTree = "<group>"; };
 		4D62FF2A1E29555300E8C793 /* fit-checkerUITests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "fit-checkerUITests copy-Info.plist"; path = "/Users/jakubtucek/Documents/fit-checker-2.0/fit-checkerUITests copy-Info.plist"; sourceTree = "<absolute>"; };
 		4D62FF301E2955B100E8C793 /* fit-checkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +131,187 @@
 		4D62FF341E2955B100E8C793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationParserTest.swift; sourceTree = "<group>"; };
 		4D62FF401E29562400E8C793 /* biomo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = biomo.html; sourceTree = "<group>"; };
+		4D62FF4B1E295C6500E8C793 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		4D62FF4C1E295C6500E8C793 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		4D62FF4D1E295C6500E8C793 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		4D62FF4E1E295C6500E8C793 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		4D62FF4F1E295C6500E8C793 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4D62FF501E295C6500E8C793 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4D62FF511E295C6500E8C793 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4D62FF521E295C6500E8C793 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		4D62FF531E295C6500E8C793 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4D62FF541E295C6500E8C793 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		4D62FF551E295C6500E8C793 /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
+		4D62FF561E295C6500E8C793 /* CarrierBundleUtilities.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = CarrierBundleUtilities.tbd; path = usr/lib/CarrierBundleUtilities.tbd; sourceTree = SDKROOT; };
+		4D62FF571E295C6500E8C793 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4D62FF581E295C6500E8C793 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		4D62FF591E295C6500E8C793 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		4D62FF5A1E295C6500E8C793 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		4D62FF5B1E295C6500E8C793 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		4D62FF5C1E295C6500E8C793 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		4D62FF5D1E295C6500E8C793 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		4D62FF5E1E295C6500E8C793 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4D62FF5F1E295C6500E8C793 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		4D62FF601E295C6500E8C793 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4D62FF611E295C6500E8C793 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		4D62FF621E295C6500E8C793 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4D62FF631E295C6500E8C793 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4D62FF641E295C6500E8C793 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		4D62FF651E295C6500E8C793 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		4D62FF661E295C6500E8C793 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		4D62FF671E295C6500E8C793 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		4D62FF681E295C6500E8C793 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		4D62FF691E295C6500E8C793 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4D62FF6A1E295C6500E8C793 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		4D62FF6B1E295C6500E8C793 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		4D62FF6C1E295C6500E8C793 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		4D62FF6D1E295C6500E8C793 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4D62FF6E1E295C6500E8C793 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		4D62FF6F1E295C6500E8C793 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		4D62FF701E295C6500E8C793 /* GameplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameplayKit.framework; path = System/Library/Frameworks/GameplayKit.framework; sourceTree = SDKROOT; };
+		4D62FF711E295C6500E8C793 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		4D62FF721E295C6500E8C793 /* GSS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GSS.framework; path = System/Library/Frameworks/GSS.framework; sourceTree = SDKROOT; };
+		4D62FF731E295C6500E8C793 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		4D62FF741E295C6500E8C793 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
+		4D62FF751E295C6500E8C793 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		4D62FF761E295C6500E8C793 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		4D62FF771E295C6500E8C793 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		4D62FF781E295C6500E8C793 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		4D62FF791E295C6500E8C793 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		4D62FF7A1E295C6500E8C793 /* IOABPLib.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOABPLib.tbd; path = usr/lib/IOABPLib.tbd; sourceTree = SDKROOT; };
+		4D62FF7B1E295C6500E8C793 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		4D62FF7C1E295C6500E8C793 /* libAccessibility.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAccessibility.tbd; path = usr/lib/libAccessibility.tbd; sourceTree = SDKROOT; };
+		4D62FF7D1E295C6500E8C793 /* libacmobileshim.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libacmobileshim.tbd; path = usr/lib/libacmobileshim.tbd; sourceTree = SDKROOT; };
+		4D62FF7E1E295C6500E8C793 /* libafc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libafc.tbd; path = usr/lib/libafc.tbd; sourceTree = SDKROOT; };
+		4D62FF7F1E295C6500E8C793 /* libamsupport.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libamsupport.tbd; path = usr/lib/libamsupport.tbd; sourceTree = SDKROOT; };
+		4D62FF801E295C6500E8C793 /* libAppPatch.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAppPatch.tbd; path = usr/lib/libAppPatch.tbd; sourceTree = SDKROOT; };
+		4D62FF811E295C6500E8C793 /* libarchive.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libarchive.2.tbd; path = usr/lib/libarchive.2.tbd; sourceTree = SDKROOT; };
+		4D62FF821E295C6500E8C793 /* libarchive.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libarchive.tbd; path = usr/lib/libarchive.tbd; sourceTree = SDKROOT; };
+		4D62FF831E295C6500E8C793 /* libARI.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libARI.tbd; path = usr/lib/libARI.tbd; sourceTree = SDKROOT; };
+		4D62FF841E295C6500E8C793 /* libARIServer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libARIServer.tbd; path = usr/lib/libARIServer.tbd; sourceTree = SDKROOT; };
+		4D62FF851E295C6500E8C793 /* libassertion_launchd.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libassertion_launchd.tbd; path = usr/lib/libassertion_launchd.tbd; sourceTree = SDKROOT; };
+		4D62FF861E295C6500E8C793 /* libate.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libate.tbd; path = usr/lib/libate.tbd; sourceTree = SDKROOT; };
+		4D62FF871E295C6500E8C793 /* libauthinstall.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libauthinstall.tbd; path = usr/lib/libauthinstall.tbd; sourceTree = SDKROOT; };
+		4D62FF881E295C6500E8C793 /* libAWDProtobufBluetooth.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufBluetooth.tbd; path = usr/lib/libAWDProtobufBluetooth.tbd; sourceTree = SDKROOT; };
+		4D62FF891E295C6500E8C793 /* libAWDProtobufFacetime.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufFacetime.tbd; path = usr/lib/libAWDProtobufFacetime.tbd; sourceTree = SDKROOT; };
+		4D62FF8A1E295C6500E8C793 /* libAWDProtobufFacetimeiMessage.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufFacetimeiMessage.tbd; path = usr/lib/libAWDProtobufFacetimeiMessage.tbd; sourceTree = SDKROOT; };
+		4D62FF8B1E295C6500E8C793 /* libAWDProtobufGCK.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufGCK.tbd; path = usr/lib/libAWDProtobufGCK.tbd; sourceTree = SDKROOT; };
+		4D62FF8C1E295C6500E8C793 /* libAWDProtobufLocation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDProtobufLocation.tbd; path = usr/lib/libAWDProtobufLocation.tbd; sourceTree = SDKROOT; };
+		4D62FF8D1E295C6500E8C793 /* libAWDSupport.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDSupport.tbd; path = usr/lib/libAWDSupport.tbd; sourceTree = SDKROOT; };
+		4D62FF8E1E295C6500E8C793 /* libAWDSupportFramework.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAWDSupportFramework.tbd; path = usr/lib/libAWDSupportFramework.tbd; sourceTree = SDKROOT; };
+		4D62FF8F1E295C6500E8C793 /* libAXSafeCategoryBundle.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAXSafeCategoryBundle.tbd; path = usr/lib/libAXSafeCategoryBundle.tbd; sourceTree = SDKROOT; };
+		4D62FF901E295C6500E8C793 /* libAXSpeechManager.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libAXSpeechManager.tbd; path = usr/lib/libAXSpeechManager.tbd; sourceTree = SDKROOT; };
+		4D62FF911E295C6500E8C793 /* libBasebandManager.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libBasebandManager.tbd; path = usr/lib/libBasebandManager.tbd; sourceTree = SDKROOT; };
+		4D62FF921E295C6500E8C793 /* libBasebandUSB.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libBasebandUSB.tbd; path = usr/lib/libBasebandUSB.tbd; sourceTree = SDKROOT; };
+		4D62FF931E295C6500E8C793 /* libbsm.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.0.tbd; path = usr/lib/libbsm.0.tbd; sourceTree = SDKROOT; };
+		4D62FF941E295C6500E8C793 /* libbsm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbsm.tbd; path = usr/lib/libbsm.tbd; sourceTree = SDKROOT; };
+		4D62FF951E295C6500E8C793 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		4D62FF961E295C6500E8C793 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		4D62FF971E295C6500E8C793 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		4D62FF981E295C6500E8C793 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4D62FF991E295C6500E8C793 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		4D62FF9A1E295C6500E8C793 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		4D62FF9B1E295C6500E8C793 /* libcharset.1.0.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcharset.1.0.0.tbd; path = usr/lib/libcharset.1.0.0.tbd; sourceTree = SDKROOT; };
+		4D62FF9C1E295C6500E8C793 /* libcharset.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcharset.1.tbd; path = usr/lib/libcharset.1.tbd; sourceTree = SDKROOT; };
+		4D62FF9D1E295C6500E8C793 /* libcharset.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcharset.tbd; path = usr/lib/libcharset.tbd; sourceTree = SDKROOT; };
+		4D62FF9E1E295C6500E8C793 /* libChineseTokenizer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libChineseTokenizer.tbd; path = usr/lib/libChineseTokenizer.tbd; sourceTree = SDKROOT; };
+		4D62FF9F1E295C6500E8C793 /* libcmph.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcmph.tbd; path = usr/lib/libcmph.tbd; sourceTree = SDKROOT; };
+		4D62FFA01E295C6500E8C793 /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
+		4D62FFA11E295C6500E8C793 /* libcoretls.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcoretls.tbd; path = usr/lib/libcoretls.tbd; sourceTree = SDKROOT; };
+		4D62FFA21E295C6500E8C793 /* libcoretls_cfhelpers.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcoretls_cfhelpers.tbd; path = usr/lib/libcoretls_cfhelpers.tbd; sourceTree = SDKROOT; };
+		4D62FFA31E295C6500E8C793 /* libCRFSuite.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libCRFSuite.tbd; path = usr/lib/libCRFSuite.tbd; sourceTree = SDKROOT; };
+		4D62FFA41E295C6500E8C793 /* libCRFSuite0.12.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libCRFSuite0.12.tbd; path = usr/lib/libCRFSuite0.12.tbd; sourceTree = SDKROOT; };
+		4D62FFA51E295C6500E8C793 /* libCTLogHelper.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libCTLogHelper.tbd; path = usr/lib/libCTLogHelper.tbd; sourceTree = SDKROOT; };
+		4D62FFA61E295C6500E8C793 /* libcupolicy.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcupolicy.tbd; path = usr/lib/libcupolicy.tbd; sourceTree = SDKROOT; };
+		4D62FFA71E295C6500E8C793 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
+		4D62FFA81E295C6500E8C793 /* libdbm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdbm.tbd; path = usr/lib/libdbm.tbd; sourceTree = SDKROOT; };
+		4D62FFA91E295C6500E8C793 /* libDHCPServer.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libDHCPServer.A.tbd; path = usr/lib/libDHCPServer.A.tbd; sourceTree = SDKROOT; };
+		4D62FFAA1E295C6500E8C793 /* libDHCPServer.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libDHCPServer.tbd; path = usr/lib/libDHCPServer.tbd; sourceTree = SDKROOT; };
+		4D62FFAB1E295C6500E8C793 /* libdl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdl.tbd; path = usr/lib/libdl.tbd; sourceTree = SDKROOT; };
+		4D62FFAC1E295C6500E8C793 /* libdns_services.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdns_services.tbd; path = usr/lib/libdns_services.tbd; sourceTree = SDKROOT; };
+		4D62FFAD1E295C6500E8C793 /* libdscsym.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdscsym.tbd; path = usr/lib/libdscsym.tbd; sourceTree = SDKROOT; };
+		4D62FFAE1E295C6500E8C793 /* libedit.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.2.tbd; path = usr/lib/libedit.2.tbd; sourceTree = SDKROOT; };
+		4D62FFAF1E295C6500E8C793 /* libedit.3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.3.0.tbd; path = usr/lib/libedit.3.0.tbd; sourceTree = SDKROOT; };
+		4D62FFB01E295C6500E8C793 /* libedit.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.3.tbd; path = usr/lib/libedit.3.tbd; sourceTree = SDKROOT; };
+		4D62FFB11E295C6500E8C793 /* libedit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.tbd; path = usr/lib/libedit.tbd; sourceTree = SDKROOT; };
+		4D62FFB21E295C6500E8C793 /* libenergytrace.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libenergytrace.tbd; path = usr/lib/libenergytrace.tbd; sourceTree = SDKROOT; };
+		4D62FFB31E295C6500E8C793 /* libETLDIAGLoggingDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDIAGLoggingDynamic.tbd; path = usr/lib/libETLDIAGLoggingDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFB41E295C6500E8C793 /* libETLDLFDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDLFDynamic.tbd; path = usr/lib/libETLDLFDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFB51E295C6500E8C793 /* libETLDLOADCoreDumpDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDLOADCoreDumpDynamic.tbd; path = usr/lib/libETLDLOADCoreDumpDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFB61E295C6500E8C793 /* libETLDLOADDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDLOADDynamic.tbd; path = usr/lib/libETLDLOADDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFB71E295C6500E8C793 /* libETLDMCDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDMCDynamic.tbd; path = usr/lib/libETLDMCDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFB81E295C6500E8C793 /* libETLDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLDynamic.tbd; path = usr/lib/libETLDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFB91E295C6500E8C793 /* libETLEFSDumpDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLEFSDumpDynamic.tbd; path = usr/lib/libETLEFSDumpDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFBA1E295C6500E8C793 /* libETLSAHDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLSAHDynamic.tbd; path = usr/lib/libETLSAHDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFBB1E295C6500E8C793 /* libETLTransportDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libETLTransportDynamic.tbd; path = usr/lib/libETLTransportDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFBC1E295C6500E8C793 /* libexslt.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libexslt.0.tbd; path = usr/lib/libexslt.0.tbd; sourceTree = SDKROOT; };
+		4D62FFBD1E295C6500E8C793 /* libexslt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libexslt.tbd; path = usr/lib/libexslt.tbd; sourceTree = SDKROOT; };
+		4D62FFBE1E295C6500E8C793 /* libextension.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libextension.tbd; path = usr/lib/libextension.tbd; sourceTree = SDKROOT; };
+		4D62FFBF1E295C6500E8C793 /* libform.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libform.5.4.tbd; path = usr/lib/libform.5.4.tbd; sourceTree = SDKROOT; };
+		4D62FFC01E295C6500E8C793 /* libform.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libform.tbd; path = usr/lib/libform.tbd; sourceTree = SDKROOT; };
+		4D62FFC11E295C6500E8C793 /* libgcc_s.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libgcc_s.1.tbd; path = usr/lib/libgcc_s.1.tbd; sourceTree = SDKROOT; };
+		4D62FFC21E295C6500E8C793 /* libgermantok.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libgermantok.tbd; path = usr/lib/libgermantok.tbd; sourceTree = SDKROOT; };
+		4D62FFC31E295C6500E8C793 /* libH5Dynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libH5Dynamic.tbd; path = usr/lib/libH5Dynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFC41E295C6500E8C793 /* libHDLCDynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libHDLCDynamic.tbd; path = usr/lib/libHDLCDynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFC51E295C6500E8C793 /* libheimdal-asn1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libheimdal-asn1.tbd"; path = "usr/lib/libheimdal-asn1.tbd"; sourceTree = SDKROOT; };
+		4D62FFC61E295C6500E8C793 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		4D62FFC71E295C6500E8C793 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		4D62FFC81E295C6500E8C793 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		4D62FFC91E295C6500E8C793 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		4D62FFCA1E295C6500E8C793 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		4D62FFCB1E295C6500E8C793 /* libInFieldCollection.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libInFieldCollection.tbd; path = usr/lib/libInFieldCollection.tbd; sourceTree = SDKROOT; };
+		4D62FFCC1E295C6500E8C793 /* libinfo.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libinfo.tbd; path = usr/lib/libinfo.tbd; sourceTree = SDKROOT; };
+		4D62FFCD1E295C6500E8C793 /* libIOAccessoryManager.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libIOAccessoryManager.tbd; path = usr/lib/libIOAccessoryManager.tbd; sourceTree = SDKROOT; };
+		4D62FFCE1E295C6500E8C793 /* libipconfig.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libipconfig.tbd; path = usr/lib/libipconfig.tbd; sourceTree = SDKROOT; };
+		4D62FFCF1E295C6500E8C793 /* libipsec.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libipsec.A.tbd; path = usr/lib/libipsec.A.tbd; sourceTree = SDKROOT; };
+		4D62FFD01E295C6500E8C793 /* libipsec.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libipsec.tbd; path = usr/lib/libipsec.tbd; sourceTree = SDKROOT; };
+		4D62FFD11E295C6500E8C793 /* libktrace.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libktrace.tbd; path = usr/lib/libktrace.tbd; sourceTree = SDKROOT; };
+		4D62FFD21E295C6500E8C793 /* liblangid.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblangid.tbd; path = usr/lib/liblangid.tbd; sourceTree = SDKROOT; };
+		4D62FFD31E295C6500E8C793 /* libLLVM-C.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libLLVM-C.tbd"; path = "usr/lib/libLLVM-C.tbd"; sourceTree = SDKROOT; };
+		4D62FFD41E295C6500E8C793 /* libLLVM.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libLLVM.tbd; path = usr/lib/libLLVM.tbd; sourceTree = SDKROOT; };
+		4D62FFD51E295C6500E8C793 /* liblockdown.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblockdown.tbd; path = usr/lib/liblockdown.tbd; sourceTree = SDKROOT; };
+		4D62FFD61E295C6500E8C793 /* liblzma.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.5.tbd; path = usr/lib/liblzma.5.tbd; sourceTree = SDKROOT; };
+		4D62FFD71E295C6500E8C793 /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
+		4D62FFD81E295C6500E8C793 /* libm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libm.tbd; path = usr/lib/libm.tbd; sourceTree = SDKROOT; };
+		4D62FFD91E295C6500E8C793 /* libmarisa.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmarisa.tbd; path = usr/lib/libmarisa.tbd; sourceTree = SDKROOT; };
+		4D62FFDA1E295C6500E8C793 /* libMatch.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMatch.1.tbd; path = usr/lib/libMatch.1.tbd; sourceTree = SDKROOT; };
+		4D62FFDB1E295C6500E8C793 /* libMatch.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMatch.tbd; path = usr/lib/libMatch.tbd; sourceTree = SDKROOT; };
+		4D62FFDC1E295C6500E8C793 /* libmav_ipc_router_dynamic.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmav_ipc_router_dynamic.tbd; path = usr/lib/libmav_ipc_router_dynamic.tbd; sourceTree = SDKROOT; };
+		4D62FFDD1E295C6500E8C793 /* libmecab_em.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmecab_em.tbd; path = usr/lib/libmecab_em.tbd; sourceTree = SDKROOT; };
+		4D62FFDE1E295C6500E8C793 /* libmecabra.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmecabra.tbd; path = usr/lib/libmecabra.tbd; sourceTree = SDKROOT; };
+		4D62FFDF1E295C6500E8C793 /* libmis.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmis.tbd; path = usr/lib/libmis.tbd; sourceTree = SDKROOT; };
+		4D62FFE01E295C6500E8C793 /* libMobileCheckpoint.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileCheckpoint.tbd; path = usr/lib/libMobileCheckpoint.tbd; sourceTree = SDKROOT; };
+		4D62FFE11E295C6500E8C793 /* libMobileGestalt.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileGestalt.tbd; path = usr/lib/libMobileGestalt.tbd; sourceTree = SDKROOT; };
+		4D62FFE21E295C6500E8C793 /* libMobileGestaltExtensions.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libMobileGestaltExtensions.tbd; path = usr/lib/libMobileGestaltExtensions.tbd; sourceTree = SDKROOT; };
+		4D62FFE31E295C6500E8C793 /* libncurses.5.4.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.5.4.tbd; path = usr/lib/libncurses.5.4.tbd; sourceTree = SDKROOT; };
+		4D62FFE41E295C6500E8C793 /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
+		4D62FFE51E295C6500E8C793 /* libnetwork.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libnetwork.tbd; path = usr/lib/libnetwork.tbd; sourceTree = SDKROOT; };
+		4D62FFE61E295C6500E8C793 /* libnfshared.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libnfshared.tbd; path = usr/lib/libnfshared.tbd; sourceTree = SDKROOT; };
+		4D62FFE71E295C6500E8C793 /* libobjc.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.A.tbd; path = usr/lib/libobjc.A.tbd; sourceTree = SDKROOT; };
+		4D62FFE81E295C6500E8C793 /* libobjc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = usr/lib/libobjc.tbd; sourceTree = SDKROOT; };
+		4D62FFE91E295C6500E8C793 /* libomadm.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libomadm.tbd; path = usr/lib/libomadm.tbd; sourceTree = SDKROOT; };
+		4D62FFEA1E295C6500E8C793 /* libPCITransport.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libPCITransport.tbd; path = usr/lib/libPCITransport.tbd; sourceTree = SDKROOT; };
+		4D62FFEB1E295C6500E8C793 /* libpoll.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpoll.tbd; path = usr/lib/libpoll.tbd; sourceTree = SDKROOT; };
+		4D62FFEC1E295C6500E8C793 /* libPPM.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libPPM.tbd; path = usr/lib/libPPM.tbd; sourceTree = SDKROOT; };
+		4D62FFED1E295C6500E8C793 /* libprequelite.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprequelite.tbd; path = usr/lib/libprequelite.tbd; sourceTree = SDKROOT; };
+		4D62FFEE1E295C6500E8C793 /* libproc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libproc.tbd; path = usr/lib/libproc.tbd; sourceTree = SDKROOT; };
+		4D62FFEF1E295C6500E8C793 /* libprotobuf.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprotobuf.tbd; path = usr/lib/libprotobuf.tbd; sourceTree = SDKROOT; };
+		4D62FFF01E295C6500E8C793 /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
+		4D62FFF11E295C6500E8C793 /* libQLCharts.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libQLCharts.tbd; path = usr/lib/libQLCharts.tbd; sourceTree = SDKROOT; };
+		4D62FFF21E295C6500E8C793 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		4D62FFF31E295C6500E8C793 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		4D62FFF41E295C6500E8C793 /* librpcsvc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = librpcsvc.tbd; path = usr/lib/librpcsvc.tbd; sourceTree = SDKROOT; };
+		4D62FFF51E295C6500E8C793 /* libsandbox.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsandbox.1.tbd; path = usr/lib/libsandbox.1.tbd; sourceTree = SDKROOT; };
+		4D62FFF61E295C6500E8C793 /* libsandbox.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsandbox.tbd; path = usr/lib/libsandbox.tbd; sourceTree = SDKROOT; };
+		4D62FFF71E295C6500E8C793 /* libsp.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsp.tbd; path = usr/lib/libsp.tbd; sourceTree = SDKROOT; };
+		4D62FFF81E295C6500E8C793 /* libspindump.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libspindump.tbd; path = usr/lib/libspindump.tbd; sourceTree = SDKROOT; };
+		4D62FFF91E295C6500E8C793 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4D62FFFA1E295C6500E8C793 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		4D62FFFB1E295C6500E8C793 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		4D62FFFC1E295C6500E8C793 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		4D62FFFD1E295C6500E8C793 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		4D62FFFE1E295C6500E8C793 /* libsysdiagnose.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsysdiagnose.tbd; path = usr/lib/libsysdiagnose.tbd; sourceTree = SDKROOT; };
+		4D62FFFF1E295C6500E8C793 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
 		D2352E051E27EC9C00303424 /* fit-checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E081E27EC9C00303424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2352E0A1E27EC9C00303424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,10 +332,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D62FF2D1E2955B100E8C793 /* Frameworks */ = {
+		4D6201431E295CE700E8C793 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6201441E295D0E00E8C793 /* Alamofire.framework in Frameworks */,
+				4D6201451E295D0E00E8C793 /* Kanna.framework in Frameworks */,
+				4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */,
+				4D6201471E295D0E00E8C793 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +507,258 @@
 		D2352E371E27F37100303424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D62FF4B1E295C6500E8C793 /* Accelerate.framework */,
+				4D62FF4C1E295C6500E8C793 /* Accounts.framework */,
+				4D62FF4D1E295C6500E8C793 /* AddressBook.framework */,
+				4D62FF4E1E295C6500E8C793 /* AddressBookUI.framework */,
+				4D62FF4F1E295C6500E8C793 /* AdSupport.framework */,
+				4D62FF501E295C6500E8C793 /* AssetsLibrary.framework */,
+				4D62FF511E295C6500E8C793 /* AudioToolbox.framework */,
+				4D62FF521E295C6500E8C793 /* AudioUnit.framework */,
+				4D62FF531E295C6500E8C793 /* AVFoundation.framework */,
+				4D62FF541E295C6500E8C793 /* AVKit.framework */,
+				4D62FF551E295C6500E8C793 /* CallKit.framework */,
+				4D62FF561E295C6500E8C793 /* CarrierBundleUtilities.tbd */,
+				4D62FF571E295C6500E8C793 /* CFNetwork.framework */,
+				4D62FF581E295C6500E8C793 /* CloudKit.framework */,
+				4D62FF591E295C6500E8C793 /* Contacts.framework */,
+				4D62FF5A1E295C6500E8C793 /* ContactsUI.framework */,
+				4D62FF5B1E295C6500E8C793 /* CoreAudio.framework */,
+				4D62FF5C1E295C6500E8C793 /* CoreAudioKit.framework */,
+				4D62FF5D1E295C6500E8C793 /* CoreBluetooth.framework */,
+				4D62FF5E1E295C6500E8C793 /* CoreData.framework */,
+				4D62FF5F1E295C6500E8C793 /* CoreFoundation.framework */,
+				4D62FF601E295C6500E8C793 /* CoreGraphics.framework */,
+				4D62FF611E295C6500E8C793 /* CoreImage.framework */,
+				4D62FF621E295C6500E8C793 /* CoreLocation.framework */,
+				4D62FF631E295C6500E8C793 /* CoreMedia.framework */,
+				4D62FF641E295C6500E8C793 /* CoreMIDI.framework */,
+				4D62FF651E295C6500E8C793 /* CoreMotion.framework */,
+				4D62FF661E295C6500E8C793 /* CoreSpotlight.framework */,
+				4D62FF671E295C6500E8C793 /* CoreTelephony.framework */,
+				4D62FF681E295C6500E8C793 /* CoreText.framework */,
+				4D62FF691E295C6500E8C793 /* CoreVideo.framework */,
+				4D62FF6A1E295C6500E8C793 /* EventKit.framework */,
+				4D62FF6B1E295C6500E8C793 /* EventKitUI.framework */,
+				4D62FF6C1E295C6500E8C793 /* ExternalAccessory.framework */,
+				4D62FF6D1E295C6500E8C793 /* Foundation.framework */,
+				4D62FF6E1E295C6500E8C793 /* GameController.framework */,
+				4D62FF6F1E295C6500E8C793 /* GameKit.framework */,
+				4D62FF701E295C6500E8C793 /* GameplayKit.framework */,
+				4D62FF711E295C6500E8C793 /* GLKit.framework */,
+				4D62FF721E295C6500E8C793 /* GSS.framework */,
+				4D62FF731E295C6500E8C793 /* HealthKit.framework */,
+				4D62FF741E295C6500E8C793 /* HealthKitUI.framework */,
+				4D62FF751E295C6500E8C793 /* HomeKit.framework */,
+				4D62FF761E295C6500E8C793 /* iAd.framework */,
+				4D62FF771E295C6500E8C793 /* ImageIO.framework */,
+				4D62FF781E295C6500E8C793 /* Intents.framework */,
+				4D62FF791E295C6500E8C793 /* IntentsUI.framework */,
+				4D62FF7A1E295C6500E8C793 /* IOABPLib.tbd */,
+				4D62FF7B1E295C6500E8C793 /* JavaScriptCore.framework */,
+				4D62FF7C1E295C6500E8C793 /* libAccessibility.tbd */,
+				4D62FF7D1E295C6500E8C793 /* libacmobileshim.tbd */,
+				4D62FF7E1E295C6500E8C793 /* libafc.tbd */,
+				4D62FF7F1E295C6500E8C793 /* libamsupport.tbd */,
+				4D62FF801E295C6500E8C793 /* libAppPatch.tbd */,
+				4D62FF811E295C6500E8C793 /* libarchive.2.tbd */,
+				4D62FF821E295C6500E8C793 /* libarchive.tbd */,
+				4D62FF831E295C6500E8C793 /* libARI.tbd */,
+				4D62FF841E295C6500E8C793 /* libARIServer.tbd */,
+				4D62FF851E295C6500E8C793 /* libassertion_launchd.tbd */,
+				4D62FF861E295C6500E8C793 /* libate.tbd */,
+				4D62FF871E295C6500E8C793 /* libauthinstall.tbd */,
+				4D62FF881E295C6500E8C793 /* libAWDProtobufBluetooth.tbd */,
+				4D62FF891E295C6500E8C793 /* libAWDProtobufFacetime.tbd */,
+				4D62FF8A1E295C6500E8C793 /* libAWDProtobufFacetimeiMessage.tbd */,
+				4D62FF8B1E295C6500E8C793 /* libAWDProtobufGCK.tbd */,
+				4D62FF8C1E295C6500E8C793 /* libAWDProtobufLocation.tbd */,
+				4D62FF8D1E295C6500E8C793 /* libAWDSupport.tbd */,
+				4D62FF8E1E295C6500E8C793 /* libAWDSupportFramework.tbd */,
+				4D62FF8F1E295C6500E8C793 /* libAXSafeCategoryBundle.tbd */,
+				4D62FF901E295C6500E8C793 /* libAXSpeechManager.tbd */,
+				4D62FF911E295C6500E8C793 /* libBasebandManager.tbd */,
+				4D62FF921E295C6500E8C793 /* libBasebandUSB.tbd */,
+				4D62FF931E295C6500E8C793 /* libbsm.0.tbd */,
+				4D62FF941E295C6500E8C793 /* libbsm.tbd */,
+				4D62FF951E295C6500E8C793 /* libbz2.1.0.tbd */,
+				4D62FF961E295C6500E8C793 /* libbz2.tbd */,
+				4D62FF971E295C6500E8C793 /* libc++.1.tbd */,
+				4D62FF981E295C6500E8C793 /* libc++.tbd */,
+				4D62FF991E295C6500E8C793 /* libc++abi.tbd */,
+				4D62FF9A1E295C6500E8C793 /* libc.tbd */,
+				4D62FF9B1E295C6500E8C793 /* libcharset.1.0.0.tbd */,
+				4D62FF9C1E295C6500E8C793 /* libcharset.1.tbd */,
+				4D62FF9D1E295C6500E8C793 /* libcharset.tbd */,
+				4D62FF9E1E295C6500E8C793 /* libChineseTokenizer.tbd */,
+				4D62FF9F1E295C6500E8C793 /* libcmph.tbd */,
+				4D62FFA01E295C6500E8C793 /* libcompression.tbd */,
+				4D62FFA11E295C6500E8C793 /* libcoretls.tbd */,
+				4D62FFA21E295C6500E8C793 /* libcoretls_cfhelpers.tbd */,
+				4D62FFA31E295C6500E8C793 /* libCRFSuite.tbd */,
+				4D62FFA41E295C6500E8C793 /* libCRFSuite0.12.tbd */,
+				4D62FFA51E295C6500E8C793 /* libCTLogHelper.tbd */,
+				4D62FFA61E295C6500E8C793 /* libcupolicy.tbd */,
+				4D62FFA71E295C6500E8C793 /* libcurses.tbd */,
+				4D62FFA81E295C6500E8C793 /* libdbm.tbd */,
+				4D62FFA91E295C6500E8C793 /* libDHCPServer.A.tbd */,
+				4D62FFAA1E295C6500E8C793 /* libDHCPServer.tbd */,
+				4D62FFAB1E295C6500E8C793 /* libdl.tbd */,
+				4D62FFAC1E295C6500E8C793 /* libdns_services.tbd */,
+				4D62FFAD1E295C6500E8C793 /* libdscsym.tbd */,
+				4D62FFAE1E295C6500E8C793 /* libedit.2.tbd */,
+				4D62FFAF1E295C6500E8C793 /* libedit.3.0.tbd */,
+				4D62FFB01E295C6500E8C793 /* libedit.3.tbd */,
+				4D62FFB11E295C6500E8C793 /* libedit.tbd */,
+				4D62FFB21E295C6500E8C793 /* libenergytrace.tbd */,
+				4D62FFB31E295C6500E8C793 /* libETLDIAGLoggingDynamic.tbd */,
+				4D62FFB41E295C6500E8C793 /* libETLDLFDynamic.tbd */,
+				4D62FFB51E295C6500E8C793 /* libETLDLOADCoreDumpDynamic.tbd */,
+				4D62FFB61E295C6500E8C793 /* libETLDLOADDynamic.tbd */,
+				4D62FFB71E295C6500E8C793 /* libETLDMCDynamic.tbd */,
+				4D62FFB81E295C6500E8C793 /* libETLDynamic.tbd */,
+				4D62FFB91E295C6500E8C793 /* libETLEFSDumpDynamic.tbd */,
+				4D62FFBA1E295C6500E8C793 /* libETLSAHDynamic.tbd */,
+				4D62FFBB1E295C6500E8C793 /* libETLTransportDynamic.tbd */,
+				4D62FFBC1E295C6500E8C793 /* libexslt.0.tbd */,
+				4D62FFBD1E295C6500E8C793 /* libexslt.tbd */,
+				4D62FFBE1E295C6500E8C793 /* libextension.tbd */,
+				4D62FFBF1E295C6500E8C793 /* libform.5.4.tbd */,
+				4D62FFC01E295C6500E8C793 /* libform.tbd */,
+				4D62FFC11E295C6500E8C793 /* libgcc_s.1.tbd */,
+				4D62FFC21E295C6500E8C793 /* libgermantok.tbd */,
+				4D62FFC31E295C6500E8C793 /* libH5Dynamic.tbd */,
+				4D62FFC41E295C6500E8C793 /* libHDLCDynamic.tbd */,
+				4D62FFC51E295C6500E8C793 /* libheimdal-asn1.tbd */,
+				4D62FFC61E295C6500E8C793 /* libiconv.2.4.0.tbd */,
+				4D62FFC71E295C6500E8C793 /* libiconv.2.tbd */,
+				4D62FFC81E295C6500E8C793 /* libiconv.tbd */,
+				4D62FFC91E295C6500E8C793 /* libicucore.A.tbd */,
+				4D62FFCA1E295C6500E8C793 /* libicucore.tbd */,
+				4D62FFCB1E295C6500E8C793 /* libInFieldCollection.tbd */,
+				4D62FFCC1E295C6500E8C793 /* libinfo.tbd */,
+				4D62FFCD1E295C6500E8C793 /* libIOAccessoryManager.tbd */,
+				4D62FFCE1E295C6500E8C793 /* libipconfig.tbd */,
+				4D62FFCF1E295C6500E8C793 /* libipsec.A.tbd */,
+				4D62FFD01E295C6500E8C793 /* libipsec.tbd */,
+				4D62FFD11E295C6500E8C793 /* libktrace.tbd */,
+				4D62FFD21E295C6500E8C793 /* liblangid.tbd */,
+				4D62FFD31E295C6500E8C793 /* libLLVM-C.tbd */,
+				4D62FFD41E295C6500E8C793 /* libLLVM.tbd */,
+				4D62FFD51E295C6500E8C793 /* liblockdown.tbd */,
+				4D62FFD61E295C6500E8C793 /* liblzma.5.tbd */,
+				4D62FFD71E295C6500E8C793 /* liblzma.tbd */,
+				4D62FFD81E295C6500E8C793 /* libm.tbd */,
+				4D62FFD91E295C6500E8C793 /* libmarisa.tbd */,
+				4D62FFDA1E295C6500E8C793 /* libMatch.1.tbd */,
+				4D62FFDB1E295C6500E8C793 /* libMatch.tbd */,
+				4D62FFDC1E295C6500E8C793 /* libmav_ipc_router_dynamic.tbd */,
+				4D62FFDD1E295C6500E8C793 /* libmecab_em.tbd */,
+				4D62FFDE1E295C6500E8C793 /* libmecabra.tbd */,
+				4D62FFDF1E295C6500E8C793 /* libmis.tbd */,
+				4D62FFE01E295C6500E8C793 /* libMobileCheckpoint.tbd */,
+				4D62FFE11E295C6500E8C793 /* libMobileGestalt.tbd */,
+				4D62FFE21E295C6500E8C793 /* libMobileGestaltExtensions.tbd */,
+				4D62FFE31E295C6500E8C793 /* libncurses.5.4.tbd */,
+				4D62FFE41E295C6500E8C793 /* libncurses.tbd */,
+				4D62FFE51E295C6500E8C793 /* libnetwork.tbd */,
+				4D62FFE61E295C6500E8C793 /* libnfshared.tbd */,
+				4D62FFE71E295C6500E8C793 /* libobjc.A.tbd */,
+				4D62FFE81E295C6500E8C793 /* libobjc.tbd */,
+				4D62FFE91E295C6500E8C793 /* libomadm.tbd */,
+				4D62FFEA1E295C6500E8C793 /* libPCITransport.tbd */,
+				4D62FFEB1E295C6500E8C793 /* libpoll.tbd */,
+				4D62FFEC1E295C6500E8C793 /* libPPM.tbd */,
+				4D62FFED1E295C6500E8C793 /* libprequelite.tbd */,
+				4D62FFEE1E295C6500E8C793 /* libproc.tbd */,
+				4D62FFEF1E295C6500E8C793 /* libprotobuf.tbd */,
+				4D62FFF01E295C6500E8C793 /* libpthread.tbd */,
+				4D62FFF11E295C6500E8C793 /* libQLCharts.tbd */,
+				4D62FFF21E295C6500E8C793 /* libresolv.9.tbd */,
+				4D62FFF31E295C6500E8C793 /* libresolv.tbd */,
+				4D62FFF41E295C6500E8C793 /* librpcsvc.tbd */,
+				4D62FFF51E295C6500E8C793 /* libsandbox.1.tbd */,
+				4D62FFF61E295C6500E8C793 /* libsandbox.tbd */,
+				4D62FFF71E295C6500E8C793 /* libsp.tbd */,
+				4D62FFF81E295C6500E8C793 /* libspindump.tbd */,
+				4D62FFF91E295C6500E8C793 /* libsqlite3.0.tbd */,
+				4D62FFFA1E295C6500E8C793 /* libsqlite3.tbd */,
+				4D62FFFB1E295C6500E8C793 /* libstdc++.6.0.9.tbd */,
+				4D62FFFC1E295C6500E8C793 /* libstdc++.6.tbd */,
+				4D62FFFD1E295C6500E8C793 /* libstdc++.tbd */,
+				4D62FFFE1E295C6500E8C793 /* libsysdiagnose.tbd */,
+				4D62FFFF1E295C6500E8C793 /* libSystem.B.tbd */,
+				4D6200001E295C6500E8C793 /* libSystem.tbd */,
+				4D6200011E295C6500E8C793 /* libsystemstats.tbd */,
+				4D6200021E295C6500E8C793 /* libtailspin.tbd */,
+				4D6200031E295C6500E8C793 /* libTelephonyBasebandBulkUSBDynamic.tbd */,
+				4D6200041E295C6500E8C793 /* libTelephonyBasebandDynamic.tbd */,
+				4D6200051E295C6500E8C793 /* libTelephonyDebugDynamic.tbd */,
+				4D6200061E295C6500E8C793 /* libTelephonyIOKitDynamic.tbd */,
+				4D6200071E295C6500E8C793 /* libTelephonyUSBDynamic.tbd */,
+				4D6200081E295C6500E8C793 /* libTelephonyUtilDynamic.tbd */,
+				4D6200091E295C6500E8C793 /* libThaiTokenizer.tbd */,
+				4D62000A1E295C6500E8C793 /* libtidy.A.tbd */,
+				4D62000B1E295C6500E8C793 /* libtidy.tbd */,
+				4D62000C1E295C6600E8C793 /* libtzupdate.tbd */,
+				4D62000D1E295C6600E8C793 /* libutil.tbd */,
+				4D62000E1E295C6600E8C793 /* libutil1.0.tbd */,
+				4D62000F1E295C6600E8C793 /* libWAPI.tbd */,
+				4D6200101E295C6600E8C793 /* libxml2.2.tbd */,
+				4D6200111E295C6600E8C793 /* libxml2.tbd */,
+				4D6200121E295C6600E8C793 /* libxslt.1.tbd */,
+				4D6200131E295C6600E8C793 /* libxslt.tbd */,
+				4D6200141E295C6600E8C793 /* libz.1.1.3.tbd */,
+				4D6200151E295C6600E8C793 /* libz.1.2.5.tbd */,
+				4D6200161E295C6600E8C793 /* libz.1.2.8.tbd */,
+				4D6200171E295C6600E8C793 /* libz.1.tbd */,
+				4D6200181E295C6600E8C793 /* libz.tbd */,
+				4D6200191E295C6600E8C793 /* LocalAuthentication.framework */,
+				4D62001A1E295C6600E8C793 /* MapKit.framework */,
+				4D62001B1E295C6600E8C793 /* MediaAccessibility.framework */,
+				4D62001C1E295C6600E8C793 /* MediaPlayer.framework */,
+				4D62001D1E295C6600E8C793 /* MediaToolbox.framework */,
+				4D62001E1E295C6600E8C793 /* Messages.framework */,
+				4D62001F1E295C6600E8C793 /* MessageUI.framework */,
+				4D6200201E295C6600E8C793 /* Metal.framework */,
+				4D6200211E295C6600E8C793 /* MetalKit.framework */,
+				4D6200221E295C6600E8C793 /* MetalPerformanceShaders.framework */,
+				4D6200231E295C6600E8C793 /* MobileCoreServices.framework */,
+				4D6200241E295C6600E8C793 /* ModelIO.framework */,
+				4D6200251E295C6600E8C793 /* MultipeerConnectivity.framework */,
+				4D6200261E295C6600E8C793 /* NetworkExtension.framework */,
+				4D6200271E295C6600E8C793 /* NewsstandKit.framework */,
+				4D6200281E295C6600E8C793 /* NotificationCenter.framework */,
+				4D6200291E295C6600E8C793 /* OpenAL.framework */,
+				4D62002A1E295C6600E8C793 /* OpenGLES.framework */,
+				4D62002B1E295C6600E8C793 /* PassKit.framework */,
+				4D62002C1E295C6600E8C793 /* Photos.framework */,
+				4D62002D1E295C6600E8C793 /* PhotosUI.framework */,
+				4D62002E1E295C6600E8C793 /* PushKit.framework */,
+				4D62002F1E295C6600E8C793 /* QuartzCore.framework */,
+				4D6200301E295C6600E8C793 /* QuickLook.framework */,
+				4D6200311E295C6600E8C793 /* ReplayKit.framework */,
+				4D6200321E295C6600E8C793 /* SafariServices.framework */,
+				4D6200331E295C6600E8C793 /* SceneKit.framework */,
+				4D6200341E295C6600E8C793 /* Security.framework */,
+				4D6200351E295C6600E8C793 /* Social.framework */,
+				4D6200361E295C6600E8C793 /* Speech.framework */,
+				4D6200371E295C6600E8C793 /* SpriteKit.framework */,
+				4D6200381E295C6600E8C793 /* StoreKit.framework */,
+				4D6200391E295C6600E8C793 /* SystemConfiguration.framework */,
+				4D62003A1E295C6600E8C793 /* Twitter.framework */,
+				4D62003B1E295C6600E8C793 /* UIKit.framework */,
+				4D62003C1E295C6600E8C793 /* UserNotifications.framework */,
+				4D62003D1E295C6600E8C793 /* UserNotificationsUI.framework */,
+				4D62003E1E295C6600E8C793 /* VideoSubscriberAccount.framework */,
+				4D62003F1E295C6600E8C793 /* VideoToolbox.framework */,
+				4D6200401E295C6600E8C793 /* WatchConnectivity.framework */,
+				4D6200411E295C6600E8C793 /* WatchKit.framework */,
+				4D6200421E295C6600E8C793 /* WebKit.framework */,
+				4D6200431E295C6600E8C793 /* DTPerformanceSession.framework */,
+				4D6200441E295C6600E8C793 /* InterfaceBuilderKit.framework */,
+				4D6200451E295C6600E8C793 /* XcodeKit.framework */,
+				4D6200461E295C6600E8C793 /* XCTest.framework */,
 				D2352E381E27F37100303424 /* Alamofire.framework */,
 				D2352E391E27F37100303424 /* Kanna.framework */,
 				D2352E3A1E27F37100303424 /* Realm.framework */,
@@ -259,8 +775,8 @@
 			buildConfigurationList = 4D62FF371E2955B100E8C793 /* Build configuration list for PBXNativeTarget "fit-checkerTests" */;
 			buildPhases = (
 				4D62FF2C1E2955B100E8C793 /* Sources */,
-				4D62FF2D1E2955B100E8C793 /* Frameworks */,
 				4D62FF2E1E2955B100E8C793 /* Resources */,
+				4D6201431E295CE700E8C793 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,7 +923,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D62FF3F1E29561500E8C793 /* ClassificationParserTest.swift in Sources */,
+				4D62014F1E295DD600E8C793 /* ClasificationParsing.swift in Sources */,
+				4D6201501E295DD600E8C793 /* ClassificationParser.swift in Sources */,
+				4D62014C1E295DD600E8C793 /* ClassificationResult.swift in Sources */,
+				4D62FF451E295A5600E8C793 /* ClassificationParserTest.swift in Sources */,
+				4D62014D1E295DD600E8C793 /* ClassificationRow.swift in Sources */,
+				4D62014E1E295DD600E8C793 /* ClassificationTable.swift in Sources */,
 				4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +939,6 @@
 			files = (
 				D2352E351E27EFDF00303424 /* ClasificationParsing.swift in Sources */,
 				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
-				4D62FF441E29587300E8C793 /* ClassificationParserTest.swift in Sources */,
 				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
@@ -466,6 +986,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "fit-checkerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cvut.fit.fit-checkerTests";
@@ -479,6 +1003,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "fit-checkerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cvut.fit.fit-checkerTests";
