@@ -13,6 +13,10 @@ import Foundation
 /// Lecture is simple object keeping information about parsed lecture.
 class Lecture {
 
-    let name : String = ""
+    let name : String
+
+    init(name : String) {
+        self.name = name
+    }
 
 }
