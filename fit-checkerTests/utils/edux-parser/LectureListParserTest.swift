@@ -10,7 +10,7 @@ import XCTest
 
 class LectureListParserTest: XCTestCase {
 
-    let parser = ClassificationParser()
+    let parser = LectureListParser()
 
     func testExample() {
         // This is an example of a functional test case.
@@ -26,7 +26,13 @@ class LectureListParserTest: XCTestCase {
 
 
     func testHomepage() {
-        
+        let content = FileLoader.readFile(name: "homepage", selfClass: self)!
+
+        let result = parser.parseClassification(html: content)
+
+        XCTAssertEqual("Semestr: Zimní 2016/2017", result.semesterInfo)
+        XCTAssertEqual(6, result.lectures.count)
+
     }
-    
+
 }

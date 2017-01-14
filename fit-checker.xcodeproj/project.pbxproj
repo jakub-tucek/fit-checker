@@ -27,6 +27,8 @@
 		4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */; };
 		4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968E1E2A4C28007677BA /* FileLoader.swift */; };
 		4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968E1E2A4C28007677BA /* FileLoader.swift */; };
+		4D5296921E2A53AA007677BA /* homepage.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D5296911E2A53AA007677BA /* homepage.html */; };
+		4D5296931E2A53AA007677BA /* homepage.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D5296911E2A53AA007677BA /* homepage.html */; };
 		4D6201441E295D0E00E8C793 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E381E27F37100303424 /* Alamofire.framework */; };
 		4D6201451E295D0E00E8C793 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E391E27F37100303424 /* Kanna.framework */; };
 		4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
@@ -73,6 +75,7 @@
 		4D5296891E2A2AFF007677BA /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = entity/Lecture.swift; sourceTree = "<group>"; };
 		4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListParserTest.swift; path = "utils/edux-parser/LectureListParserTest.swift"; sourceTree = "<group>"; };
 		4D52968E1E2A4C28007677BA /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileLoader.swift; path = "utils/edux-parser/FileLoader.swift"; sourceTree = "<group>"; };
+		4D5296911E2A53AA007677BA /* homepage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = homepage.html; path = resources/homepage.html; sourceTree = "<group>"; };
 		4D6200001E295C6500E8C793 /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
 		4D6200011E295C6500E8C793 /* libsystemstats.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsystemstats.tbd; path = usr/lib/libsystemstats.tbd; sourceTree = SDKROOT; };
 		4D6200021E295C6500E8C793 /* libtailspin.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtailspin.tbd; path = usr/lib/libtailspin.tbd; sourceTree = SDKROOT; };
@@ -431,6 +434,7 @@
 				4D62FF401E29562400E8C793 /* biomo.html */,
 				4D279A681E2A199000542E0B /* bipst.html */,
 				4D279A6A1E2A1B3700542E0B /* bisp2.html */,
+				4D5296911E2A53AA007677BA /* homepage.html */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -904,6 +908,7 @@
 			files = (
 				4D5296791E2A274A007677BA /* biomo.html in Resources */,
 				4D52967A1E2A274A007677BA /* bipst.html in Resources */,
+				4D5296931E2A53AA007677BA /* homepage.html in Resources */,
 				4D52967B1E2A274A007677BA /* bisp2.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -914,6 +919,7 @@
 			files = (
 				D2352E131E27EC9C00303424 /* LaunchScreen.storyboard in Resources */,
 				D2352E101E27EC9C00303424 /* Assets.xcassets in Resources */,
+				4D5296921E2A53AA007677BA /* homepage.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

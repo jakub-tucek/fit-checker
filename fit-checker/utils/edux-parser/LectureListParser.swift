@@ -20,15 +20,15 @@ class LectureListParser : LectureListParsing {
 
         /// Select widget's div from page
         static let lecturesWidgetSelector
-            = "//div[contains(@class, 'w_actual_courses_fit')]"
+            = "//div[contains(@id, 'w_actual_courses_fit')]/div[contains(@class, 'content')]"
 
         /// Select info about semester
         static let semesterInfoSelector
-            = "div/p[contains(@class, 'semester-info')]"
+            = "p[contains(@class, 'semester-info')]"
 
         /// Select lecture in list containing
         static let lectureSelector
-            = "div[constains(@class, 'content')]/div/ul/li"
+            = "div/ul/li"
     }
     
 
