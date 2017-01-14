@@ -15,15 +15,25 @@ import Alamofire
 /// recycle (inject) instance to keep request authorized after login.
 class NetworkController {
 
+    /// Network session manager, keeps cookies and shit
     private let sessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
 
         return SessionManager(configuration: configuration)
     }()
 
+    /// Network requests queue
     private let queue = OperationQueue()
 
+    /// Allows to authorize user to Edux with username and password.
+    ///
+    /// - Parameters:
+    ///   - username: User's faculty username
+    ///   - password: Password
     func authorizeUser(with username: String, password: String) {
-        
+        let loginOperation = EduxLoginOperation(username: username, password:
+            password, sessionManager: sessionManager)
+
+        queue.addOperation(loginOperation)
     }
 }

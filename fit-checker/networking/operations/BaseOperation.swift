@@ -11,7 +11,14 @@ import Alamofire
 
 class BaseOperation: Operation {
     /// Holds error when occured, nil otherwise
-    var error: Error?
+    var error: Error? {
+        didSet {
+            // Print the error if occures
+            if let error = error {
+                print("\(classForCoder): \(error)")
+            }
+        }
+    }
 
     /// Injected request manager
     var sessionManager: SessionManager
