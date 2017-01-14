@@ -51,9 +51,28 @@ class ClassificationParserTest: XCTestCase {
         print(result)
 
 
-        XCTAssertEqual(result.tables.count, 1)
-        XCTAssertEqual(result.tables[0].rows.count, 6)
+        XCTAssertEqual(1, result.tables.count)
 
+        XCTAssertEqual(6, result.tables[0].rows.count)
+        XCTAssertEqual("tutorial", result.tables[0].name!)
+
+        XCTAssertEqual("test", result.tables[0].rows[0].name)
+        XCTAssertEqual("-", result.tables[0].rows[0].value)
+
+        XCTAssertEqual("1kon", result.tables[0].rows[1].name)
+        XCTAssertEqual("-", result.tables[0].rows[1].value)
+
+        XCTAssertEqual("2kon", result.tables[0].rows[2].name)
+        XCTAssertEqual("-", result.tables[0].rows[2].value)
+
+        XCTAssertEqual("odevzdano", result.tables[0].rows[3].name)
+        XCTAssertEqual("-", result.tables[0].rows[3].value)
+
+        XCTAssertEqual("hodnoceni", result.tables[0].rows[4].name)
+        XCTAssertEqual("-", result.tables[0].rows[4].value)
+
+        XCTAssertEqual("zapocet", result.tables[0].rows[5].name)
+        XCTAssertEqual("-", result.tables[0].rows[5].value)
 
     }
 
