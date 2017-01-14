@@ -42,14 +42,11 @@ class ClassificationParserTest: XCTestCase {
     }
 
 
+    //one table
     func testOMO() {
         let omoPage = readFile(name: "biomo")
 
         let result = parser.parseEdux(html: omoPage)
-
-
-        print(result)
-
 
         XCTAssertEqual(1, result.tables.count)
 
@@ -76,16 +73,37 @@ class ClassificationParserTest: XCTestCase {
 
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //two tables
+    func testPST() {
+        let pstPage = readFile(name: "bipst")
+
+        let result = parser.parseEdux(html: pstPage)
+
+        XCTAssertEqual(2, result.tables.count)
+
+        XCTAssertEqual(17, result.tables[0].rows.count)
+        XCTAssertEqual(12, result.tables[1].rows.count)
+
+        XCTAssertEqual("Cvičení", result.tables[0].name!)
+        XCTAssertEqual("Přednáška", result.tables[1].name!)
+
+
+        XCTAssertEqual("Test 1", result.tables[0].rows[0].name)
+        XCTAssertEqual("6", result.tables[0].rows[0].value)
+
+
+
+        XCTAssertEqual("Cvičení", result.tables[1].rows[0].name)
+        XCTAssertEqual("30", result.tables[1].rows[0].value)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    //empty page
+    func testSPTwo() {
+        let pstPage = readFile(name: "bisp2")
+
+        let result = parser.parseEdux(html: pstPage)
+
+        XCTAssertEqual(0, result.tables.count)
     }
-    
+
 }

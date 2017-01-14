@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D279A691E2A199000542E0B /* bipst.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A681E2A199000542E0B /* bipst.html */; };
+		4D279A6B1E2A1B3700542E0B /* bisp2.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A6A1E2A1B3700542E0B /* bisp2.html */; };
 		4D6201441E295D0E00E8C793 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E381E27F37100303424 /* Alamofire.framework */; };
 		4D6201451E295D0E00E8C793 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E391E27F37100303424 /* Kanna.framework */; };
 		4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D279A681E2A199000542E0B /* bipst.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = bipst.html; sourceTree = "<group>"; };
+		4D279A6A1E2A1B3700542E0B /* bisp2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = bisp2.html; sourceTree = "<group>"; };
 		4D6200001E295C6500E8C793 /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
 		4D6200011E295C6500E8C793 /* libsystemstats.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsystemstats.tbd; path = usr/lib/libsystemstats.tbd; sourceTree = SDKROOT; };
 		4D6200021E295C6500E8C793 /* libtailspin.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libtailspin.tbd; path = usr/lib/libtailspin.tbd; sourceTree = SDKROOT; };
@@ -405,6 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				4D62FF401E29562400E8C793 /* biomo.html */,
+				4D279A681E2A199000542E0B /* bipst.html */,
+				4D279A6A1E2A1B3700542E0B /* bisp2.html */,
 			);
 			name = resources;
 			sourceTree = "<group>";
@@ -875,7 +881,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D279A6B1E2A1B3700542E0B /* bisp2.html in Resources */,
 				4D62FF411E29562400E8C793 /* biomo.html in Resources */,
+				4D279A691E2A199000542E0B /* bipst.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,6 +1189,7 @@
 				4D62FF391E2955B100E8C793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2352E001E27EC9C00303424 /* Build configuration list for PBXProject "fit-checker" */ = {
 			isa = XCConfigurationList;
