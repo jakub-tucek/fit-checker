@@ -12,39 +12,9 @@ class ClassificationParserTest: XCTestCase {
 
     let parser = ClassificationParser()
 
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
-
-    private func readFile(name: String) -> String {
-        let testBundle = Bundle(for: type(of: self))
-        guard let ressourceURL = testBundle.url(forResource: name, withExtension: "html") else {
-            // file does not exist
-            return ""
-        }
-        do {
-            let resourceData = try Data(contentsOf: ressourceURL)
-            let datastring = String(data: resourceData, encoding: .utf8)
-
-            return datastring!
-        } catch _ {
-            // some error occurred when reading the file
-        }
-
-        return ""
-    }
-
-
     //one table
     func testOMO() {
-        let omoPage = readFile(name: "biomo")
+        let omoPage = FileLoader.readFile(name: "biomo", selfClass: self)!
 
         let result = parser.parseEdux(html: omoPage)
 
@@ -75,7 +45,7 @@ class ClassificationParserTest: XCTestCase {
 
     //two tables
     func testPST() {
-        let pstPage = readFile(name: "bipst")
+        let pstPage = FileLoader.readFile(name: "bipst", selfClass: self)!
 
         let result = parser.parseEdux(html: pstPage)
 
@@ -99,7 +69,7 @@ class ClassificationParserTest: XCTestCase {
 
     //empty page
     func testSPTwo() {
-        let pstPage = readFile(name: "bisp2")
+        let pstPage = FileLoader.readFile(name: "bisp2", selfClass: self)!
 
         let result = parser.parseEdux(html: pstPage)
 

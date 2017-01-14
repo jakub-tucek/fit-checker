@@ -9,7 +9,7 @@
 import Foundation
 
 
-/// EduxParsing is protocol for parsing edux.
+/// ClassificationParsing is protocol for parsing edux.
 protocol ClasificationParsing {
 
 
