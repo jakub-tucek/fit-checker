@@ -20,7 +20,7 @@ enum EduxRouter {
     }
 
     case login(query: Parameters, body: Parameters)
-    case courseClassification(subjectCode: String, student: String)
+    case courseClassification(courseId: String, student: String)
     case courseList(parameters: Parameters)
 
     /// Edux site base URL
@@ -29,11 +29,11 @@ enum EduxRouter {
     /// Returns route associated values as request configuration
     var requestData: RequestData {
         switch self {
-        case .login(let query, let body):
+        case let .login(query, body):
             return .multiEncoded(method: .post, path: "start", query: query, body: body)
-        case .courseClassification(let subjectCode, let student):
-            return .singleEncoded(method: .get, path: "courses/\(subjectCode)/classification/student/\(student)/start", parameters: nil)
-        case .courseList(let parameters):
+        case let .courseClassification(courseId, student):
+            return .singleEncoded(method: .get, path: "courses/\(courseId)/classification/student/\(student)/start", parameters: nil)
+        case let .courseList(parameters):
             return .singleEncoded(method: .post, path: "lib/exe/ajax.php", parameters: parameters)
         }
     }

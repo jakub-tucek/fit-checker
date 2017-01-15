@@ -36,4 +36,16 @@ class NetworkController {
 
         queue.addOperation(loginOperation)
     }
+
+    /// Loads latest classification results for given subject
+    ///
+    /// - Parameters:
+    ///   - courseId: ID (name) of the course
+    ///   - student: Student username
+    func loadCourseClassification(courseId: String, student: String) {
+        let courseOperation = ReadCourseClassificationOperation(courseId:
+            courseId, student: student, sessionManager: sessionManager)
+
+        queue.addOperation(courseOperation)
+    }
 }
