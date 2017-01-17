@@ -33,6 +33,7 @@
 		D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B30A1E2D40B90074CB5B /* ContextManager.swift */; };
 		D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245B3111E2E43890074CB5B /* KeychainAccess.framework */; };
 		D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3171E2E7D620074CB5B /* Keechain.swift */; };
+		D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		D245B30A1E2D40B90074CB5B /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
 		D245B3111E2E43890074CB5B /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		D245B3171E2E7D620074CB5B /* Keechain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keechain.swift; sourceTree = "<group>"; };
+		D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notifications+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				D2352E281E27ECBF00303424 /* model */,
 				D2352E291E27ECC400303424 /* view */,
 				D2352E2A1E27ECCA00303424 /* controller */,
+				D245B3191E2E93500074CB5B /* constants */,
 			);
 			path = "fit-checker";
 			sourceTree = "<group>";
@@ -312,6 +315,14 @@
 				D245B3171E2E7D620074CB5B /* Keechain.swift */,
 			);
 			path = keechain;
+			sourceTree = "<group>";
+		};
+		D245B3191E2E93500074CB5B /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */,
+			);
+			path = constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +493,7 @@
 				D2352E501E29820900303424 /* LoginViewController.swift in Sources */,
 				D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */,
 				D2352E351E27EFDF00303424 /* ClasificationParsing.swift in Sources */,
+				D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */,
 				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
