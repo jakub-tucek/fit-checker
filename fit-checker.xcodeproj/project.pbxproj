@@ -31,6 +31,7 @@
 		D2352E501E29820900303424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E4F1E29820900303424 /* LoginViewController.swift */; };
 		D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E521E2A0CDF00303424 /* BaseOperation.swift */; };
 		D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B30A1E2D40B90074CB5B /* ContextManager.swift */; };
+		D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245B3111E2E43890074CB5B /* KeychainAccess.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		D2352E511E298D7200303424 /* ViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ViewPlayground.playground; sourceTree = "<group>"; };
 		D2352E521E2A0CDF00303424 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		D245B30A1E2D40B90074CB5B /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
+		D245B3111E2E43890074CB5B /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				D2352E3D1E27F37100303424 /* Kanna.framework in Frameworks */,
 				D2352E3E1E27F37100303424 /* Realm.framework in Frameworks */,
 				D2352E3F1E27F37100303424 /* RealmSwift.framework in Frameworks */,
+				D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +265,7 @@
 		D2352E371E27F37100303424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D245B3111E2E43890074CB5B /* KeychainAccess.framework */,
 				D2352E381E27F37100303424 /* Alamofire.framework */,
 				D2352E391E27F37100303424 /* Kanna.framework */,
 				D2352E3A1E27F37100303424 /* Realm.framework */,
@@ -440,6 +444,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			name = Carthage;
 			outputPaths = (
