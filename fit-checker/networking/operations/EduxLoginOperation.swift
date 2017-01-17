@@ -12,6 +12,9 @@ import Alamofire
 /// Handles user login to Edux.
 class EduxLoginOperation: BaseOperation {
 
+    /// Completion promise
+    var promise: OperationPromise<Void>?
+
     /// Parameters which will be presented in URL query string
     private let queryParameters: Parameters
 
@@ -89,9 +92,13 @@ class EduxLoginOperation: BaseOperation {
 
         switch response.error == nil {
         case true:
-            print("User is logged in")
+            let keychain = Keechain(service: .edux)
+
+            keychain.saveAccount(username: username, password: password)
+            promise?.success()
         case false:
             self.error = response.error
+            promise?.failure()
         }
     }
 }

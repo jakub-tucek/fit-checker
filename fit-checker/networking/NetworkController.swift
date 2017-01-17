@@ -25,16 +25,22 @@ class NetworkController {
     /// Network requests queue
     private let queue = OperationQueue()
 
-    /// Allows to authorize user to Edux with username and password.
+    /// Allows to authorize user to Edux with username and password
     ///
     /// - Parameters:
     ///   - username: User's faculty username
     ///   - password: Password
-    func authorizeUser(with username: String, password: String) {
+    func authorizeUser(with username: String,
+                       password: String) -> OperationPromise<Void> {
+
+        let promise = OperationPromise<Void>()
         let loginOperation = EduxLoginOperation(username: username, password:
             password, sessionManager: sessionManager)
 
+        loginOperation.promise = promise
         queue.addOperation(loginOperation)
+
+        return promise
     }
 
     /// Loads latest classification results for given subject

@@ -80,7 +80,15 @@ class LoginViewController: UIViewController {
             username.characters.count > 0,
             password.characters.count > 0 else { return }
 
-        networkController.authorizeUser(with: username, password: password)
+        let promise = networkController.authorizeUser(with: username,
+                                                      password: password)
+
+        promise.success = {
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .FCLoginStateChanged,
+                                                object: nil)
+            }
+        }
     }
 
     /// Configures all subviews layouts
