@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+
+/// Base class for network operations.
 class BaseOperation: Operation {
     /// Holds error when occured, nil otherwise
     var error: Error? {
@@ -41,4 +43,14 @@ class BaseOperation: Operation {
             didChangeValue(forKey: "isFinished")
         }
     }
+}
+
+/// Network operation promise, allows Operatation creator
+/// to set custom callbacks.
+class OperationPromise<T> {
+    /// Success callback
+    var success: (T) -> Void = { _ in }
+
+    /// Failure callback
+    var failure: () -> Void = {}
 }
