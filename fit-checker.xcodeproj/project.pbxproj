@@ -32,6 +32,7 @@
 		D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E521E2A0CDF00303424 /* BaseOperation.swift */; };
 		D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B30A1E2D40B90074CB5B /* ContextManager.swift */; };
 		D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245B3111E2E43890074CB5B /* KeychainAccess.framework */; };
+		D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3171E2E7D620074CB5B /* Keechain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		D2352E521E2A0CDF00303424 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		D245B30A1E2D40B90074CB5B /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
 		D245B3111E2E43890074CB5B /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		D245B3171E2E7D620074CB5B /* Keechain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keechain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 		D2352E2C1E27EF8800303424 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				D245B3161E2E7D4B0074CB5B /* keechain */,
 				D2352E2D1E27EFA700303424 /* edux-parser */,
 			);
 			path = utils;
@@ -301,6 +304,14 @@
 				D245B30A1E2D40B90074CB5B /* ContextManager.swift */,
 			);
 			path = context;
+			sourceTree = "<group>";
+		};
+		D245B3161E2E7D4B0074CB5B /* keechain */ = {
+			isa = PBXGroup;
+			children = (
+				D245B3171E2E7D620074CB5B /* Keechain.swift */,
+			);
+			path = keechain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2352E501E29820900303424 /* LoginViewController.swift in Sources */,
+				D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */,
 				D2352E351E27EFDF00303424 /* ClasificationParsing.swift in Sources */,
 				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
