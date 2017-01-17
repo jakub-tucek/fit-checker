@@ -30,6 +30,7 @@
 		D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E4A1E284EBC00303424 /* ReadCourseListOperation.swift */; };
 		D2352E501E29820900303424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E4F1E29820900303424 /* LoginViewController.swift */; };
 		D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E521E2A0CDF00303424 /* BaseOperation.swift */; };
+		D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B30A1E2D40B90074CB5B /* ContextManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		D2352E4F1E29820900303424 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D2352E511E298D7200303424 /* ViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ViewPlayground.playground; sourceTree = "<group>"; };
 		D2352E521E2A0CDF00303424 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		D245B30A1E2D40B90074CB5B /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		D2352E281E27ECBF00303424 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D245B3091E2D404A0074CB5B /* context */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -286,6 +289,14 @@
 				D2352E521E2A0CDF00303424 /* BaseOperation.swift */,
 			);
 			path = operations;
+			sourceTree = "<group>";
+		};
+		D245B3091E2D404A0074CB5B /* context */ = {
+			isa = PBXGroup;
+			children = (
+				D245B30A1E2D40B90074CB5B /* ContextManager.swift */,
+			);
+			path = context;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +469,7 @@
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
+				D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */,
 				4D62FF161E2942BA00E8C793 /* ClassificationParser.swift in Sources */,
 				D2352E491E284EA300303424 /* ReadCourseClassificationOperation.swift in Sources */,
 				D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */,
