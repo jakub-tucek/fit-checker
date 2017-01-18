@@ -16,21 +16,17 @@ class LectureListParser : LectureListParsing {
 
 
     /// Struct containg selector constants
-    struct xpath {
+    struct constants {
         /// static let
         static let jsonContentKey = "widget_content"
 
-        /// Select widget's div from page
-        static let lecturesWidgetSelector
-            = "//div[contains(@id, 'w_actual_courses_fit')]/div[contains(@class, 'content')]"
-
         /// Select info about semester
         static let semesterInfoSelector
-            = "p[contains(@class, 'semester-info')]"
+        = "//p[contains(@class, 'semester-info')]"
 
         /// Select lecture in list containing
         static let lectureSelector
-            = "div/ul/li"
+            = "//ul/li"
     }
     
 
@@ -44,15 +40,13 @@ class LectureListParser : LectureListParsing {
         let html = getWidgetContent(json: json)
 
         if let node = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
-            for widgetNode in node.xpath(xpath.lecturesWidgetSelector) {
-                let semesterInfo = parseSemesterInfo(widgetNode: widgetNode)
+                let semesterInfo = parseSemesterInfo(widgetDocument: node)
                 if let infoUnwrap = semesterInfo {
                     result.semesterInfo = infoUnwrap
 
                 }
 
-                result.lectures = parseLectures(widgetNode: widgetNode)
-            }
+                result.lectures = parseLectures(widgetDocument: node)
 
         }
         return result
@@ -64,7 +58,7 @@ class LectureListParser : LectureListParsing {
     /// - Parameter json: response JSON of widget
     /// - Returns: html or empty string if JSON is not valid
     private func getWidgetContent(json: [String: Any?]) -> String{
-        if let str = json[xpath.jsonContentKey] as? String {
+        if let str = json[constants.jsonContentKey] as? String {
             return str
         } else {
             return ""
@@ -77,8 +71,8 @@ class LectureListParser : LectureListParsing {
     ///
     /// - Parameter widgetNode: widget node
     /// - Returns: parsed semester info
-    private func parseSemesterInfo(widgetNode: XMLElement) -> String? {
-        for infoNode in widgetNode.xpath(xpath.semesterInfoSelector) {
+    private func parseSemesterInfo(widgetDocument: HTMLDocument) -> String? {
+        for infoNode in widgetDocument.xpath(constants.semesterInfoSelector) {
             return infoNode.text
         }
         return nil
@@ -89,9 +83,9 @@ class LectureListParser : LectureListParsing {
     ///
     /// - Parameter widgetNode: widget node
     /// - Returns: parsed lectures
-    private func parseLectures(widgetNode: XMLElement) -> [Lecture] {
+    private func parseLectures(widgetDocument: HTMLDocument) -> [Lecture] {
         var lectures = [Lecture]()
-        for lectureNode in widgetNode.xpath(xpath.lectureSelector) {
+        for lectureNode in widgetDocument.xpath(constants.lectureSelector) {
             if let name = lectureNode.text {
                 lectures.append(Lecture(name: name))
             }

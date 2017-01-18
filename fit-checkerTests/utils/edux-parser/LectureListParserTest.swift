@@ -41,7 +41,7 @@ class LectureListParserTest: XCTestCase {
         let result = parser.parseClassification(json: convertToDictionary(text: content)!)
         
         XCTAssertEqual("Semestr: Zimní 2016/2017", result.semesterInfo)
-        XCTAssertEqual(6, result.lectures.count)
+        XCTAssertEqual(8, result.lectures.count)
 
     }
 
