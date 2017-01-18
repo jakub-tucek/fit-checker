@@ -25,11 +25,7 @@ class ContextManager {
     /// Create new database connection (must be created on each thread)
     ///
     /// - Returns: New realm instance
-    func createContext() -> Realm {
-        guard let realm = try? Realm(configuration: configuration) else {
-            fatalError("Could not load realm")
-        }
-
-        return realm
+    func createContext() throws -> Realm {
+        return try Realm(configuration: configuration)
     }
 }
