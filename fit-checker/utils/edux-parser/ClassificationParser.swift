@@ -17,7 +17,7 @@ import Kanna
 class ClassificationParser: ClasificationParsing {
 
 
-    struct xpath {
+    struct Consts {
         /// Selectors main div containing all data
         static let mainDivSelector = "//div[contains(@class, 'page_with_sidebar')]" +
         "/div[contains(@class, 'level1')]"
@@ -45,7 +45,7 @@ class ClassificationParser: ClasificationParsing {
         let result = ClassificationResult()
 
         if let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
-            for node in doc.xpath(xpath.mainDivSelector) {
+            for node in doc.xpath(Consts.mainDivSelector) {
 
                 let tables = parseTables(node: node)
 
@@ -65,7 +65,7 @@ class ClassificationParser: ClasificationParsing {
     private func parseTableNames(node: XMLElement) -> [String] {
         var names = [String]()
 
-        for titleNode in node.xpath(xpath.tableNameSelector) {
+        for titleNode in node.xpath(Consts.tableNameSelector) {
             if let title = titleNode.text {
                 names.append(title)
             } else {
@@ -86,7 +86,7 @@ class ClassificationParser: ClasificationParsing {
     /// - Returns: parsed table
     private func parseTable(tableNode: XMLElement, name: String) -> ClassificationTable {
         var rows = [ClassificationRow]()
-        for rowNode in tableNode.xpath(xpath.rowSelector) {
+        for rowNode in tableNode.xpath(Consts.rowSelector) {
             if let row = parseRow(rowNode: rowNode) {
                 rows.append(row)
             }
@@ -107,7 +107,7 @@ class ClassificationParser: ClasificationParsing {
         var tables = [ClassificationTable]()
         let names = parseTableNames(node: node)
 
-        for tableNode in node.xpath(xpath.tableSelector) {
+        for tableNode in node.xpath(Consts.tableSelector) {
 
             tables.append(
                 self.parseTable(
@@ -132,7 +132,7 @@ class ClassificationParser: ClasificationParsing {
         var orderedCol = [String]()
         var limit = 0
 
-        for colNode in rowNode.xpath(xpath.colSelector) {
+        for colNode in rowNode.xpath(Consts.colSelector) {
 
             if (limit >= 2) {
                 break

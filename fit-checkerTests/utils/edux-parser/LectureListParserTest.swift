@@ -24,14 +24,24 @@ class LectureListParserTest: XCTestCase {
         }
     }
 
+    func convertToDictionary(text: String) -> [String: Any?]? {
+        if let data = text.data(using: .utf8) {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any?]
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        return nil
+    }
 
     func testHomepage() {
-        let content = FileLoader.readFile(name: "homepage", selfClass: self)!
+        let content = FileLoader.readFile(name: "lecture-list", ext: "json")!
 
-        let result = parser.parseClassification(html: content)
-
+        let result = parser.parseClassification(json: convertToDictionary(text: content)!)
+        
         XCTAssertEqual("Semestr: Zimní 2016/2017", result.semesterInfo)
-        XCTAssertEqual(6, result.lectures.count)
+        XCTAssertEqual(8, result.lectures.count)
 
     }
 
