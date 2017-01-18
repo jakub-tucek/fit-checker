@@ -14,7 +14,7 @@ class ClassificationParserTest: XCTestCase {
 
     //one table
     func testOMO() {
-        let omoPage = FileLoader.readFile(name: "biomo", selfClass: self)!
+        let omoPage = FileLoader.readFile(name: "biomo")!
 
         let result = parser.parseEdux(html: omoPage)
 
@@ -45,7 +45,7 @@ class ClassificationParserTest: XCTestCase {
 
     //two tables
     func testPST() {
-        let pstPage = FileLoader.readFile(name: "bipst", selfClass: self)!
+        let pstPage = FileLoader.readFile(name: "bipst")!
 
         let result = parser.parseEdux(html: pstPage)
 
@@ -69,7 +69,7 @@ class ClassificationParserTest: XCTestCase {
 
     //empty page
     func testSPTwo() {
-        let pstPage = FileLoader.readFile(name: "bisp2", selfClass: self)!
+        let pstPage = FileLoader.readFile(name: "bisp2")!
 
         let result = parser.parseEdux(html: pstPage)
 

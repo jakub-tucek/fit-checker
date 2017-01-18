@@ -29,7 +29,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-
+.idea/*
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
