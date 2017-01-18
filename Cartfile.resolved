@@ -1,4 +1,8 @@
 github "Alamofire/Alamofire" "4.2.0"
 github "tid-kijyun/Kanna" "2.1.1"
+<<<<<<< HEAD
+github "kishikawakatsumi/KeychainAccess" "v3.0.1"
+=======
 github "nourahassan/SwiftHamcrest" "0.2"
+>>>>>>> origin/dev
 github "realm/realm-cocoa" "v2.2.0"

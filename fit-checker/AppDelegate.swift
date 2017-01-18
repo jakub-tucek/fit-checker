@@ -13,16 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private let networkController = NetworkController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         let window = UIWindow(frame: UIScreen.main.bounds)
 
-        window.rootViewController = ViewController()
         window.makeKeyAndVisible()
-
         self.window = window
+
+        NotificationCenter.default.addObserver(self, selector:
+            #selector(changeRootController), name:
+            .FCLoginStateChanged, object: nil)
+
+        changeRootController()
 
         return true
     }
@@ -49,6 +54,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    /// Switchs root cotnroller based on user login status
+    func changeRootController() {
+        guard
+            let (_, _) = Keechain(service: .edux).getAccount() else
+        {
+            window?.rootViewController = LoginViewController(
+                networkController: networkController)
+
+            return
+        }
+
+        window?.rootViewController = ViewController()
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
 }
 

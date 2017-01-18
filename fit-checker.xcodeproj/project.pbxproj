@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D62FF161E2942BA00E8C793 /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* ClassificationParser.swift */; };
+		4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */; };
+		4D62FF411E29562400E8C793 /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
 		4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */; };
 		4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */; };
 		4D5296791E2A274A007677BA /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
@@ -20,9 +23,7 @@
 		4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */; };
 		4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */; };
 		4D5296851E2A27F4007677BA /* ClassificationParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */; };
-		4D5296871E2A2AF2007677BA /* LectureListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* LectureListResult.swift */; };
 		4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* LectureListResult.swift */; };
-		4D52968A1E2A2AFF007677BA /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* Lecture.swift */; };
 		4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* Lecture.swift */; };
 		4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */; };
 		4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968E1E2A4C28007677BA /* FileLoader.swift */; };
@@ -47,6 +48,17 @@
 		D2352E3D1E27F37100303424 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E391E27F37100303424 /* Kanna.framework */; };
 		D2352E3E1E27F37100303424 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
 		D2352E3F1E27F37100303424 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3B1E27F37100303424 /* RealmSwift.framework */; };
+		D2352E421E28481200303424 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E411E28481200303424 /* NetworkController.swift */; };
+		D2352E441E28487700303424 /* EduxRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E431E28487700303424 /* EduxRouter.swift */; };
+		D2352E471E284E5A00303424 /* EduxLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E461E284E5A00303424 /* EduxLoginOperation.swift */; };
+		D2352E491E284EA300303424 /* ReadCourseClassificationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E481E284EA300303424 /* ReadCourseClassificationOperation.swift */; };
+		D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E4A1E284EBC00303424 /* ReadCourseListOperation.swift */; };
+		D2352E501E29820900303424 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E4F1E29820900303424 /* LoginViewController.swift */; };
+		D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E521E2A0CDF00303424 /* BaseOperation.swift */; };
+		D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B30A1E2D40B90074CB5B /* ContextManager.swift */; };
+		D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245B3111E2E43890074CB5B /* KeychainAccess.framework */; };
+		D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3171E2E7D620074CB5B /* Keechain.swift */; };
+		D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -352,6 +364,18 @@
 		D2352E391E27F37100303424 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		D2352E3A1E27F37100303424 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		D2352E3B1E27F37100303424 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		D2352E411E28481200303424 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		D2352E431E28487700303424 /* EduxRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxRouter.swift; sourceTree = "<group>"; };
+		D2352E461E284E5A00303424 /* EduxLoginOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxLoginOperation.swift; sourceTree = "<group>"; };
+		D2352E481E284EA300303424 /* ReadCourseClassificationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadCourseClassificationOperation.swift; sourceTree = "<group>"; };
+		D2352E4A1E284EBC00303424 /* ReadCourseListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadCourseListOperation.swift; sourceTree = "<group>"; };
+		D2352E4F1E29820900303424 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2352E511E298D7200303424 /* ViewPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ViewPlayground.playground; sourceTree = "<group>"; };
+		D2352E521E2A0CDF00303424 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		D245B30A1E2D40B90074CB5B /* ContextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
+		D245B3111E2E43890074CB5B /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		D245B3171E2E7D620074CB5B /* Keechain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keechain.swift; sourceTree = "<group>"; };
+		D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notifications+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +398,7 @@
 				D2352E3D1E27F37100303424 /* Kanna.framework in Frameworks */,
 				D2352E3E1E27F37100303424 /* Realm.framework in Frameworks */,
 				D2352E3F1E27F37100303424 /* RealmSwift.framework in Frameworks */,
+				D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,10 +490,12 @@
 			isa = PBXGroup;
 			children = (
 				D2352E2B1E27EE7A00303424 /* supporting-files */,
+				D2352E401E2847E500303424 /* networking */,
 				D2352E2C1E27EF8800303424 /* utils */,
 				D2352E281E27ECBF00303424 /* model */,
 				D2352E291E27ECC400303424 /* view */,
 				D2352E2A1E27ECCA00303424 /* controller */,
+				D245B3191E2E93500074CB5B /* constants */,
 			);
 			path = "fit-checker";
 			sourceTree = "<group>";
@@ -485,6 +512,7 @@
 		D2352E281E27ECBF00303424 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D245B3091E2D404A0074CB5B /* context */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -500,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				D2352E0A1E27EC9C00303424 /* ViewController.swift */,
+				D2352E4F1E29820900303424 /* LoginViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -511,6 +540,7 @@
 				D2352E0F1E27EC9C00303424 /* Assets.xcassets */,
 				D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */,
 				D2352E141E27EC9C00303424 /* Info.plist */,
+				D2352E511E298D7200303424 /* ViewPlayground.playground */,
 			);
 			name = "supporting-files";
 			sourceTree = "<group>";
@@ -518,6 +548,7 @@
 		D2352E2C1E27EF8800303424 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				D245B3161E2E7D4B0074CB5B /* keechain */,
 				D2352E2D1E27EFA700303424 /* edux-parser */,
 			);
 			path = utils;
@@ -538,6 +569,7 @@
 		D2352E371E27F37100303424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D245B3111E2E43890074CB5B /* KeychainAccess.framework */,
 				4D62FF4B1E295C6500E8C793 /* Accelerate.framework */,
 				4D62FF4C1E295C6500E8C793 /* Accounts.framework */,
 				4D62FF4D1E295C6500E8C793 /* AddressBook.framework */,
@@ -798,6 +830,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D2352E401E2847E500303424 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				D2352E451E284E3500303424 /* operations */,
+				D2352E411E28481200303424 /* NetworkController.swift */,
+				D2352E431E28487700303424 /* EduxRouter.swift */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		D2352E451E284E3500303424 /* operations */ = {
+			isa = PBXGroup;
+			children = (
+				D2352E461E284E5A00303424 /* EduxLoginOperation.swift */,
+				D2352E481E284EA300303424 /* ReadCourseClassificationOperation.swift */,
+				D2352E4A1E284EBC00303424 /* ReadCourseListOperation.swift */,
+				D2352E521E2A0CDF00303424 /* BaseOperation.swift */,
+			);
+			path = operations;
+			sourceTree = "<group>";
+		};
+		D245B3091E2D404A0074CB5B /* context */ = {
+			isa = PBXGroup;
+			children = (
+				D245B30A1E2D40B90074CB5B /* ContextManager.swift */,
+			);
+			path = context;
+			sourceTree = "<group>";
+		};
+		D245B3161E2E7D4B0074CB5B /* keechain */ = {
+			isa = PBXGroup;
+			children = (
+				D245B3171E2E7D620074CB5B /* Keechain.swift */,
+			);
+			path = keechain;
+			sourceTree = "<group>";
+		};
+		D245B3191E2E93500074CB5B /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -943,6 +1020,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -958,6 +1036,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */,
 				4D52967E1E2A27F4007677BA /* ClassificationResult.swift in Sources */,
 				4D52967F1E2A27F4007677BA /* ClassificationRow.swift in Sources */,
 				4D5296801E2A27F4007677BA /* ClassificationTable.swift in Sources */,
@@ -977,6 +1056,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2352E501E29820900303424 /* LoginViewController.swift in Sources */,
+				D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */,
+				D2352E351E27EFDF00303424 /* ClasificationParsing.swift in Sources */,
+				D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */,
+				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
 				D2352E351E27EFDF00303424 /* LectureListParsing.swift in Sources */,
 				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
@@ -985,6 +1069,15 @@
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
 				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
+				D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */,
+				4D62FF161E2942BA00E8C793 /* ClassificationParser.swift in Sources */,
+				D2352E491E284EA300303424 /* ReadCourseClassificationOperation.swift in Sources */,
+				D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */,
+				D2352E441E28487700303424 /* EduxRouter.swift in Sources */,
+				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
+				D2352E471E284E5A00303424 /* EduxLoginOperation.swift in Sources */,
+				D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */,
+				D2352E421E28481200303424 /* NetworkController.swift in Sources */,
 				4D62FF161E2942BA00E8C793 /* LectureListParser.swift in Sources */,
 				4D52968A1E2A2AFF007677BA /* Lecture.swift in Sources */,
 				4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */,
