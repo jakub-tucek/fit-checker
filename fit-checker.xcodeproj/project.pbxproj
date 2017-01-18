@@ -59,6 +59,7 @@
 		D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245B3111E2E43890074CB5B /* KeychainAccess.framework */; };
 		D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3171E2E7D620074CB5B /* Keechain.swift */; };
 		D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */; };
+		D245B3211E3021F20074CB5B /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3201E3021F20074CB5B /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,6 +377,7 @@
 		D245B3111E2E43890074CB5B /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		D245B3171E2E7D620074CB5B /* Keechain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keechain.swift; sourceTree = "<group>"; };
 		D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notifications+Extension.swift"; sourceTree = "<group>"; };
+		D245B3201E3021F20074CB5B /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -513,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				D245B3091E2D404A0074CB5B /* context */,
+				D245B3201E3021F20074CB5B /* Course.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1066,6 +1069,7 @@
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
+				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
 				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
@@ -1079,7 +1083,6 @@
 				D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */,
 				D2352E421E28481200303424 /* NetworkController.swift in Sources */,
 				4D62FF161E2942BA00E8C793 /* LectureListParser.swift in Sources */,
-				4D52968A1E2A2AFF007677BA /* Lecture.swift in Sources */,
 				4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */,
 				4D5296871E2A2AF2007677BA /* LectureListResult.swift in Sources */,
 			);
