@@ -17,6 +17,8 @@ class LectureListParser : LectureListParsing {
 
     /// Struct containg selector constants
     struct xpath {
+        /// static let
+        static let jsonContentKey = "widget_content"
 
         /// Select widget's div from page
         static let lecturesWidgetSelector
@@ -32,13 +34,14 @@ class LectureListParser : LectureListParsing {
     }
     
 
-
     /// Parses classification from edux homepage.
     ///
-    /// - Parameter html: html to parse
+    /// - Parameter json: ajax response containg widget content in json format
     /// - Returns: parsed result
-    func parseClassification(html: String) -> LectureListResult {
+    func parseClassification(json: [String: Any?]) -> LectureListResult {
         let result = LectureListResult()
+
+        let html = getWidgetContent(json: json)
 
         if let node = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
             for widgetNode in node.xpath(xpath.lecturesWidgetSelector) {
@@ -53,6 +56,19 @@ class LectureListParser : LectureListParsing {
 
         }
         return result
+    }
+
+
+    /// Gets html content from JSON.
+    ///
+    /// - Parameter json: response JSON of widget
+    /// - Returns: html or empty string if JSON is not valid
+    private func getWidgetContent(json: [String: Any?]) -> String{
+        if let str = json[xpath.jsonContentKey] as? String {
+            return str
+        } else {
+            return ""
+        }
     }
 
 

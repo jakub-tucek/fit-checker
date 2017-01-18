@@ -10,9 +10,9 @@ import Foundation
 
 class FileLoader {
 
-    static func readFile(name: String, selfClass: AnyObject ) -> String? {
+    static func readFile(name: String, selfClass: AnyObject, ext: String = "html") -> String? {
         let testBundle = Bundle(for: type(of :selfClass))
-        guard let ressourceURL = testBundle.url(forResource: name, withExtension: "html") else {
+        guard let ressourceURL = testBundle.url(forResource: name, withExtension: ext) else {
             // file does not exist
             return nil
         }
