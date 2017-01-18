@@ -36,7 +36,7 @@ class LectureListParserTest: XCTestCase {
     }
 
     func testHomepage() {
-        let content = FileLoader.readFile(name: "lecture-list", selfClass: self, ext: "json")!
+        let content = FileLoader.readFile(name: "lecture-list", ext: "json")!
 
         let result = parser.parseClassification(json: convertToDictionary(text: content)!)
         
