@@ -16,7 +16,7 @@ class LectureListParser : LectureListParsing {
 
 
     /// Struct containg selector constants
-    struct constants {
+    struct Consts {
         /// static let
         static let jsonContentKey = "widget_content"
 
@@ -58,7 +58,7 @@ class LectureListParser : LectureListParsing {
     /// - Parameter json: response JSON of widget
     /// - Returns: html or empty string if JSON is not valid
     private func getWidgetContent(json: [String: Any?]) -> String{
-        if let str = json[constants.jsonContentKey] as? String {
+        if let str = json[Consts.jsonContentKey] as? String {
             return str
         } else {
             return ""
@@ -72,7 +72,7 @@ class LectureListParser : LectureListParsing {
     /// - Parameter widgetNode: widget node
     /// - Returns: parsed semester info
     private func parseSemesterInfo(widgetDocument: HTMLDocument) -> String? {
-        for infoNode in widgetDocument.xpath(constants.semesterInfoSelector) {
+        for infoNode in widgetDocument.xpath(Consts.semesterInfoSelector) {
             return infoNode.text
         }
         return nil
@@ -85,7 +85,7 @@ class LectureListParser : LectureListParsing {
     /// - Returns: parsed lectures
     private func parseLectures(widgetDocument: HTMLDocument) -> [Lecture] {
         var lectures = [Lecture]()
-        for lectureNode in widgetDocument.xpath(constants.lectureSelector) {
+        for lectureNode in widgetDocument.xpath(Consts.lectureSelector) {
             if let name = lectureNode.text {
                 lectures.append(Lecture(name: name))
             }
