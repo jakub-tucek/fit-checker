@@ -13,7 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private let networkController = NetworkController()
+    private let contextManager = ContextManager()
+
+    private let networkController: NetworkController = {
+        let contextManager = ContextManager()
+
+        return NetworkController(contextManager: contextManager)
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -65,7 +71,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
 
-        window?.rootViewController = ViewController()
+        window?.rootViewController = CoursesTableViewController(
+            contextManager: contextManager,
+            networkController: networkController
+        )
     }
 
     deinit {

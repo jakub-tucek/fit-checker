@@ -36,23 +36,43 @@ class CoursesTableViewController: UITableViewController {
         super.viewDidLoad()
 
         configureView()
-        fetchData()
+        loadData()
+        refreshData()
     }
 
     /// Configure view related stuff
     private func configureView() {
+        let refreshControl = UIRefreshControl()
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier:
             UITableViewCell.identifier)
+        tableView.addSubview(refreshControl)
+
+        self.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshData),
+                                 for: .valueChanged)
     }
 
-    /// Load stored data and load new
-    private func fetchData() {
+    /// Load stored data into view
+    private func loadData() {
         do {
             let realm = try contextManager.createContext()
 
             courses = realm.objects(Course.self)
         } catch {
             print("\(error)")
+        }
+    }
+
+    /// Download new data
+    func refreshData() {
+        refreshControl?.beginRefreshing()
+
+        networkController.loadCourseList {
+            // Stop refresh control when download is comleted
+            DispatchQueue.main.async { [weak self] in
+                self?.refreshControl?.endRefreshing()
+            }
         }
     }
 }

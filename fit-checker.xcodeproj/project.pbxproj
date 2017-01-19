@@ -31,17 +31,14 @@
 		4D6201451E295D0E00E8C793 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E391E27F37100303424 /* Kanna.framework */; };
 		4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
 		4D6201471E295D0E00E8C793 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3B1E27F37100303424 /* RealmSwift.framework */; };
-		4D62FF161E2942BA00E8C793 /* LectureListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* LectureListParser.swift */; };
 		4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */; };
 		D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E081E27EC9C00303424 /* AppDelegate.swift */; };
 		D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E0A1E27EC9C00303424 /* ViewController.swift */; };
 		D2352E101E27EC9C00303424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2352E0F1E27EC9C00303424 /* Assets.xcassets */; };
 		D2352E131E27EC9C00303424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */; };
 		D2352E1E1E27EC9D00303424 /* fit_checkerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E1D1E27EC9D00303424 /* fit_checkerUITests.swift */; };
-		D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2E1E27EFDF00303424 /* ClassificationResult.swift */; };
 		D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2F1E27EFDF00303424 /* ClassificationRow.swift */; };
 		D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E301E27EFDF00303424 /* ClassificationTable.swift */; };
-		D2352E351E27EFDF00303424 /* LectureListParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* LectureListParsing.swift */; };
 		D2352E3C1E27F37100303424 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E381E27F37100303424 /* Alamofire.framework */; };
 		D2352E3D1E27F37100303424 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E391E27F37100303424 /* Kanna.framework */; };
 		D2352E3E1E27F37100303424 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
@@ -60,6 +57,11 @@
 		D245B31F1E3021BE0074CB5B /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B31E1E3021BE0074CB5B /* CoursesTableViewController.swift */; };
 		D245B3211E3021F20074CB5B /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3201E3021F20074CB5B /* Course.swift */; };
 		D245B3241E3025040074CB5B /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3231E3025040074CB5B /* UITableViewCell+Reusable.swift */; };
+		D245B3251E3030920074CB5B /* ClassificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2E1E27EFDF00303424 /* ClassificationResult.swift */; };
+		D245B3261E3030980074CB5B /* LectureListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* LectureListResult.swift */; };
+		D245B3271E30309B0074CB5B /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* Lecture.swift */; };
+		D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* LectureListParsing.swift */; };
+		D245B3291E3030A50074CB5B /* LectureListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* LectureListParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1073,30 +1075,28 @@
 			files = (
 				D2352E501E29820900303424 /* LoginViewController.swift in Sources */,
 				D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */,
-				D2352E351E27EFDF00303424 /* LectureListParsing.swift in Sources */,
 				D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */,
-				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
-				D2352E351E27EFDF00303424 /* LectureListParsing.swift in Sources */,
-				D2352E321E27EFDF00303424 /* ClassificationResult.swift in Sources */,
+				D245B3271E30309B0074CB5B /* Lecture.swift in Sources */,
+				D245B3291E3030A50074CB5B /* LectureListParser.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
+				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
 				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
+				D245B3261E3030980074CB5B /* LectureListResult.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
 				D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */,
-				4D62FF161E2942BA00E8C793 /* LectureListParser.swift in Sources */,
 				D2352E491E284EA300303424 /* ReadCourseClassificationOperation.swift in Sources */,
 				D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */,
 				D245B31F1E3021BE0074CB5B /* CoursesTableViewController.swift in Sources */,
 				D2352E441E28487700303424 /* EduxRouter.swift in Sources */,
-				D2352E0B1E27EC9C00303424 /* ViewController.swift in Sources */,
+				D245B3251E3030920074CB5B /* ClassificationResult.swift in Sources */,
 				D2352E471E284E5A00303424 /* EduxLoginOperation.swift in Sources */,
 				D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */,
 				D245B3241E3025040074CB5B /* UITableViewCell+Reusable.swift in Sources */,
 				D2352E421E28481200303424 /* NetworkController.swift in Sources */,
-				4D62FF161E2942BA00E8C793 /* LectureListParser.swift in Sources */,
 				4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
