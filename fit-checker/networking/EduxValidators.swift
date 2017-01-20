@@ -24,20 +24,47 @@ struct EduxValidators {
     /// Possible edux validation errors
     ///
     /// - generalError: Unrecognized error during request processing
-    /// - badCredentials: User is not logged in
+    /// - badCredentials: Given user credentials are not valid (thrown at login)
+    /// - unauthorized: User is not logged in
     enum ValidationError: Error {
         case generalError
         case badCredentials
+        case unauthorized
     }
 
-    /// Checks whether user is logged in (for HTML requests only)
+    /// Validates if login request was successfull. It uses authorizedHTML
+    /// validator under the hood but returns different error.
+    /// Usualy used only to check if cookies was obtained successfully.
+    ///
+    /// - Parameters:
+    ///   - request: Original request
+    ///   - response: Server response
+    ///   - data: Response body
+    /// - Returns: Failure if request did not contained valid credentials
+    static func validCredentials(request: URLRequest?, response:
+        HTTPURLResponse, data: Data?) -> Request.ValidationResult {
+
+        let result = authorizedHTML(request: request,
+                                    response: response, data: data)
+
+        switch result {
+        case .success: return result
+        case .failure: return .failure(ValidationError.badCredentials)
+        }
+    }
+
+    /// Checks whether user is logged in (for HTML requests only).
+    /// Used for common HTML requests, not user authorization.
+    /// If you use it during authorization, you could make
+    /// infinite requests calling. Use this validator if you want
+    /// your request to be retriable.
     ///
     /// - Parameters:
     ///   - request: Original URL request
     ///   - response: Server response
     ///   - data: Response data
     /// - Returns: Failure if login was not successfull, success otherwise
-    static func validateLoginHTML(request: URLRequest?, response:
+    static func authorizedHTML(request: URLRequest?, response:
         HTTPURLResponse, data: Data?) -> Request.ValidationResult {
 
         return dataContainsVerifier(data: data, verifier:
@@ -51,7 +78,7 @@ struct EduxValidators {
     ///   - response: Server response
     ///   - data: Response data
     /// - Returns: Failure if login was not successfull, success otherwise
-    static func validateLoginJSON(request: URLRequest?, response:
+    static func authorizedJSON(request: URLRequest?, response:
         HTTPURLResponse, data: Data?) -> Request.ValidationResult {
 
         return dataContainsVerifier(data: data, verifier:

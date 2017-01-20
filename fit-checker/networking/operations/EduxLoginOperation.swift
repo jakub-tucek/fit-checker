@@ -51,7 +51,7 @@ class EduxLoginOperation: BaseOperation {
     override func start() {
         _ = sessionManager.request(EduxRouter.login(query: queryParameters,
                                                     body: bodyParameters))
-            .validate().validate(EduxValidators.validateLoginHTML)
+            .validate().validate(EduxValidators.validCredentials)
             .response(completionHandler: handle)
     }
 

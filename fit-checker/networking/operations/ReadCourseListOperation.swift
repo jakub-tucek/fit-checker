@@ -38,7 +38,7 @@ class ReadCourseListOperation: BaseOperation {
             body: ReadCourseListOperation.body)
             )
             .validate()
-            .validate(EduxValidators.validateLoginJSON)
+            .validate(EduxValidators.authorizedJSON)
             .responseJSON(completionHandler: handle)
     }
 

@@ -30,7 +30,7 @@ class ReadCourseClassificationOperation: BaseOperation {
         _ = sessionManager.request(EduxRouter.courseClassification(
             courseId: courseId, student: student))
             .validate()
-            .validate(EduxValidators.validateLoginHTML)
+            .validate(EduxValidators.authorizedHTML)
             .responseString(completionHandler: handle)
     }
 
