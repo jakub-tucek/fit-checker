@@ -21,6 +21,8 @@ class CoursesTableViewController: UITableViewController {
     /// List of stored courses
     fileprivate var courses: Results<Course>?
 
+    private var token: NotificationToken?
+
     init(contextManager: ContextManager, networkController: NetworkController) {
         self.contextManager = contextManager
         self.networkController = networkController
@@ -38,6 +40,18 @@ class CoursesTableViewController: UITableViewController {
         configureView()
         loadData()
         refreshData()
+    }
+
+    /// Download new data
+    func refreshData() {
+        refreshControl?.beginRefreshing()
+
+        networkController.loadCourseList {
+            // Stop refresh control when download is comleted
+            DispatchQueue.main.async { [weak self] in
+                self?.refreshControl?.endRefreshing()
+            }
+        }
     }
 
     /// Configure view related stuff
@@ -59,21 +73,16 @@ class CoursesTableViewController: UITableViewController {
             let realm = try contextManager.createContext()
 
             courses = realm.objects(Course.self)
+            token = courses?.addNotificationBlock { [weak self] _ in
+                self?.tableView.reloadData()
+            }
         } catch {
             print("\(error)")
         }
     }
 
-    /// Download new data
-    func refreshData() {
-        refreshControl?.beginRefreshing()
-
-        networkController.loadCourseList {
-            // Stop refresh control when download is comleted
-            DispatchQueue.main.async { [weak self] in
-                self?.refreshControl?.endRefreshing()
-            }
-        }
+    deinit {
+        token?.stop()
     }
 }
 

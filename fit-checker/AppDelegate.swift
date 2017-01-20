@@ -13,8 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    /// Shared database context manager
     private let contextManager = ContextManager()
 
+    /// Shared network request controller
     private let networkController: NetworkController = {
         let contextManager = ContextManager()
 
@@ -71,10 +73,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
 
-        window?.rootViewController = CoursesTableViewController(
-            contextManager: contextManager,
-            networkController: networkController
-        )
+        let tabBarController = UITabBarController()
+        let coursesController = CoursesTableViewController(contextManager:
+            contextManager, networkController: networkController)
+        let settingsController = SettingsViewController(
+            contextManager: contextManager)
+
+        coursesController.tabBarItem = UITabBarItem(title: "Courses", image:
+            nil, selectedImage: nil)
+        settingsController.tabBarItem = UITabBarItem(title: "Courses", image:
+            nil, selectedImage: nil)
+
+        let controllers = [
+            coursesController,
+            settingsController
+        ]
+
+        tabBarController.viewControllers = controllers
+
+        window?.rootViewController = UINavigationController(rootViewController:
+            tabBarController)
     }
 
     deinit {
