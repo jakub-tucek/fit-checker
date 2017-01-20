@@ -64,6 +64,8 @@
 		D245B32B1E317D410074CB5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32A1E317D410074CB5B /* SettingsViewController.swift */; };
 		D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32C1E3181530074CB5B /* KeychainAccess+Keechain.swift */; };
 		D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */; };
+		D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */; };
+		D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56711E32C0F700EC9C40 /* EduxValidators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,6 +388,8 @@
 		D245B32A1E317D410074CB5B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D245B32C1E3181530074CB5B /* KeychainAccess+Keechain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Keechain.swift"; sourceTree = "<group>"; };
 		D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutOperation.swift; sourceTree = "<group>"; };
+		D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxRetrier.swift; sourceTree = "<group>"; };
+		D27C56711E32C0F700EC9C40 /* EduxValidators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxValidators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -850,6 +854,8 @@
 				D2352E451E284E3500303424 /* operations */,
 				D2352E411E28481200303424 /* NetworkController.swift */,
 				D2352E431E28487700303424 /* EduxRouter.swift */,
+				D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */,
+				D27C56711E32C0F700EC9C40 /* EduxValidators.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -1094,6 +1100,7 @@
 				D245B3271E30309B0074CB5B /* Lecture.swift in Sources */,
 				D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */,
 				D245B3291E3030A50074CB5B /* LectureListParser.swift in Sources */,
+				D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
@@ -1102,6 +1109,7 @@
 				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
 				D245B3261E3030980074CB5B /* LectureListResult.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
+				D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */,
 				D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */,
 				D2352E491E284EA300303424 /* ReadCourseClassificationOperation.swift in Sources */,
 				D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */,

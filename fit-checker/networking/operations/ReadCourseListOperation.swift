@@ -38,6 +38,7 @@ class ReadCourseListOperation: BaseOperation {
             body: ReadCourseListOperation.body)
             )
             .validate()
+            .validate(EduxValidators.validateLoginJSON)
             .responseJSON(completionHandler: handle)
     }
 
@@ -55,7 +56,6 @@ class ReadCourseListOperation: BaseOperation {
 
         switch response.result {
         case let .success(json):
-            try! print(String(data: JSONSerialization.data(withJSONObject: json, options: []), encoding: .utf8))
             guard let json = json as? [String: Any?] else { return }
 
             let parser = LectureListParser()

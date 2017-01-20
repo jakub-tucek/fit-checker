@@ -32,6 +32,12 @@ class NetworkController {
 
     init(contextManager: ContextManager) {
         self.contextManager = contextManager
+
+        // This is safe because network controller is
+        // weak property, so no reference cycle should occure
+        let retrier = EduxRetrier(networkController: self)
+
+        sessionManager.retrier = retrier
     }
 
     /// Allows to authorize user to Edux with username and password
