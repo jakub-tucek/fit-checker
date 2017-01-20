@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         coursesController.tabBarItem = UITabBarItem(title: "Courses", image:
             nil, selectedImage: nil)
-        settingsController.tabBarItem = UITabBarItem(title: "Courses", image:
+        settingsController.tabBarItem = UITabBarItem(title: "Settings", image:
             nil, selectedImage: nil)
 
         let controllers = [
