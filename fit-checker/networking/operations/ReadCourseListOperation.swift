@@ -7,3 +7,76 @@
 //
 
 import Foundation
+import Alamofire
+
+/// Read user course list request operation.
+class ReadCourseListOperation: BaseOperation {
+
+    /// Parameters presented in request query string
+    private static let query: Parameters = ["dashboard_current_lang": "cs"]
+
+    /// Parameters presented in request body
+    private static let body: Parameters = [
+        "call": "dashboard_widget_update",
+        "widget_real_id": "w_actual_courses_fit",
+        "widget_max": 0,
+        "lazy": 1
+    ]
+
+    /// Database context manager
+    private let contextManager: ContextManager
+
+    init(sessionManager: SessionManager, contextManager: ContextManager) {
+        self.contextManager = contextManager
+
+        super.init(sessionManager: sessionManager)
+    }
+
+    override func start() {
+        _ = sessionManager.request(EduxRouter.courseList(
+            query: ReadCourseListOperation.query,
+            body: ReadCourseListOperation.body)
+            )
+            .validate()
+            .responseJSON(completionHandler: handle)
+    }
+
+    /// Handle server response data and parse course list
+    ///
+    /// - Parameter response: Remote server response
+    func handle(response: DataResponse<Any>) {
+        defer {
+            isFinished = true
+        }
+
+        if isCancelled {
+            return
+        }
+
+        switch response.result {
+        case let .success(json):
+            try! print(String(data: JSONSerialization.data(withJSONObject: json, options: []), encoding: .utf8))
+            guard let json = json as? [String: Any?] else { return }
+
+            let parser = LectureListParser()
+            let parsedCourses = parser.parseClassification(json: json)
+            let courses = parsedCourses.lectures.map({ lecture -> Course in
+                return Course(id: lecture.name, name: lecture.name)
+            })
+
+            do {
+                let realm = try contextManager.createContext()
+
+                try realm.write() {
+                    realm.add(courses, update: true)
+                }
+            } catch {
+                self.error = error
+            }
+
+        case .failure:
+            self.error = error
+        }
+    }
+
+}

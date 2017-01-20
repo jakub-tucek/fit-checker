@@ -13,7 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private let networkController = NetworkController()
+    /// Shared database context manager
+    private let contextManager = ContextManager()
+
+    /// Shared network request controller
+    private let networkController: NetworkController = {
+        let contextManager = ContextManager()
+
+        return NetworkController(contextManager: contextManager)
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -65,7 +73,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
 
-        window?.rootViewController = ViewController()
+        let tabBarController = UITabBarController()
+        let coursesController = CoursesTableViewController(contextManager:
+            contextManager, networkController: networkController)
+        let settingsController = SettingsViewController(
+            contextManager: contextManager)
+
+        coursesController.tabBarItem = UITabBarItem(title: "Courses", image:
+            nil, selectedImage: nil)
+        settingsController.tabBarItem = UITabBarItem(title: "Courses", image:
+            nil, selectedImage: nil)
+
+        let controllers = [
+            coursesController,
+            settingsController
+        ]
+
+        tabBarController.viewControllers = controllers
+
+        window?.rootViewController = UINavigationController(rootViewController:
+            tabBarController)
     }
 
     deinit {

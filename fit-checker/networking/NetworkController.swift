@@ -15,6 +15,8 @@ import Alamofire
 /// recycle (inject) instance to keep request authorized after login.
 class NetworkController {
 
+    typealias Completion = (Void) -> ()
+
     /// Network session manager, keeps cookies and shit
     private let sessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
@@ -25,11 +27,19 @@ class NetworkController {
     /// Network requests queue
     private let queue = OperationQueue()
 
+    /// Database context manager
+    private let contextManager: ContextManager
+
+    init(contextManager: ContextManager) {
+        self.contextManager = contextManager
+    }
+
     /// Allows to authorize user to Edux with username and password
     ///
     /// - Parameters:
     ///   - username: User's faculty username
     ///   - password: Password
+    @discardableResult
     func authorizeUser(with username: String,
                        password: String) -> OperationPromise<Void> {
 
@@ -53,5 +63,21 @@ class NetworkController {
             courseId, student: student, sessionManager: sessionManager)
 
         queue.addOperation(courseOperation)
+    }
+
+    /// Load current course list
+    ///
+    /// - Parameter completion: Completion callback
+    func loadCourseList(completion: Completion? = nil) {
+        let coursesList = ReadCourseListOperation(
+            sessionManager: sessionManager,
+            contextManager: contextManager)
+        let completionOperation = BlockOperation() {
+            completion?()
+        }
+
+        completionOperation.addDependency(coursesList)
+        queue.addOperations([coursesList, completionOperation],
+                            waitUntilFinished: false)
     }
 }

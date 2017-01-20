@@ -68,16 +68,29 @@ class Keechain {
         set(value: password, for: Keys.password)
     }
 
+    func deleteAccount() {
+        delete(key: Keys.username)
+        delete(key: Keys.password)
+    }
+
     /// Saves value for given key in current service
     ///
     /// - Parameters:
     ///   - value: Value to be stored
     ///   - key: Key for stored value
     private func set(value: String, for key: String) {
-        let keychain = Keychain(server: service.identifier,
-                                protocolType: service.protocolType)
+        let keychain = Keychain(service: service)
 
         try? keychain.set(value, key: key)
+    }
+
+    /// Deletes encrypted value for given key
+    ///
+    /// - Parameter key: Key of value which will be removed
+    private func delete(key: String) {
+        let keychain = Keychain(service: service)
+
+        try? keychain.remove(key)
     }
 
     /// Reads encrypted user data from keychain
@@ -86,8 +99,7 @@ class Keechain {
     /// - Returns: Decrypted data for given key | nil if not presented or value
     ///            is corrupted
     private func getValue(for key: String) -> String? {
-        let keychain = Keychain(server: service.identifier,
-                                protocolType: service.protocolType)
+        let keychain = Keychain(service: service)
 
         do {
             return try keychain.getString(key)
