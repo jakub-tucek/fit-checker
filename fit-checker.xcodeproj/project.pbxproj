@@ -66,6 +66,9 @@
 		D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */; };
 		D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */; };
 		D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56711E32C0F700EC9C40 /* EduxValidators.swift */; };
+		D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */; };
+		D28F220B1E3389C200D5ADF5 /* CourseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220A1E3389C200D5ADF5 /* CourseTable.swift */; };
+		D28F220D1E3389D200D5ADF5 /* ClassificationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +393,9 @@
 		D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutOperation.swift; sourceTree = "<group>"; };
 		D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxRetrier.swift; sourceTree = "<group>"; };
 		D27C56711E32C0F700EC9C40 /* EduxValidators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxValidators.swift; sourceTree = "<group>"; };
+		D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseClassificationTableViewController.swift; sourceTree = "<group>"; };
+		D28F220A1E3389C200D5ADF5 /* CourseTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTable.swift; sourceTree = "<group>"; };
+		D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,6 +534,8 @@
 			children = (
 				D245B3091E2D404A0074CB5B /* context */,
 				D245B3201E3021F20074CB5B /* Course.swift */,
+				D28F220A1E3389C200D5ADF5 /* CourseTable.swift */,
+				D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -547,6 +555,7 @@
 				D2352E4F1E29820900303424 /* LoginViewController.swift */,
 				D245B31E1E3021BE0074CB5B /* CoursesTableViewController.swift */,
 				D245B32A1E317D410074CB5B /* SettingsViewController.swift */,
+				D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1103,6 +1112,7 @@
 				D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
+				D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */,
 				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
@@ -1110,9 +1120,11 @@
 				D245B3261E3030980074CB5B /* LectureListResult.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
 				D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */,
+				D28F220D1E3389D200D5ADF5 /* ClassificationRecord.swift in Sources */,
 				D245B30B1E2D40B90074CB5B /* ContextManager.swift in Sources */,
 				D2352E491E284EA300303424 /* ReadCourseClassificationOperation.swift in Sources */,
 				D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */,
+				D28F220B1E3389C200D5ADF5 /* CourseTable.swift in Sources */,
 				D245B31F1E3021BE0074CB5B /* CoursesTableViewController.swift in Sources */,
 				D2352E441E28487700303424 /* EduxRouter.swift in Sources */,
 				D245B3251E3030920074CB5B /* ClassificationResult.swift in Sources */,

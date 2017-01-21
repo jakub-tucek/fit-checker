@@ -66,7 +66,8 @@ class NetworkController {
     ///   - student: Student username
     func loadCourseClassification(courseId: String, student: String) {
         let courseOperation = ReadCourseClassificationOperation(courseId:
-            courseId, student: student, sessionManager: sessionManager)
+            courseId, student: student, sessionManager:
+            sessionManager, contextManager: contextManager)
 
         queue.addOperation(courseOperation)
     }
