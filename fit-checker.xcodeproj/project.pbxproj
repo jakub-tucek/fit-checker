@@ -69,6 +69,7 @@
 		D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */; };
 		D28F220B1E3389C200D5ADF5 /* CourseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220A1E3389C200D5ADF5 /* CourseTable.swift */; };
 		D28F220D1E3389D200D5ADF5 /* ClassificationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */; };
+		D28F220F1E34096000D5ADF5 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -396,6 +397,7 @@
 		D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseClassificationTableViewController.swift; sourceTree = "<group>"; };
 		D28F220A1E3389C200D5ADF5 /* CourseTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTable.swift; sourceTree = "<group>"; };
 		D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationRecord.swift; sourceTree = "<group>"; };
+		D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +421,7 @@
 				D2352E3E1E27F37100303424 /* Realm.framework in Frameworks */,
 				D2352E3F1E27F37100303424 /* RealmSwift.framework in Frameworks */,
 				D245B3121E2E43890074CB5B /* KeychainAccess.framework in Frameworks */,
+				D28F220F1E34096000D5ADF5 /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +599,7 @@
 		D2352E371E27F37100303424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */,
 				D245B3111E2E43890074CB5B /* KeychainAccess.framework */,
 				4D62FF4B1E295C6500E8C793 /* Accelerate.framework */,
 				4D62FF4C1E295C6500E8C793 /* Accounts.framework */,
