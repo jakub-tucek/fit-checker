@@ -70,6 +70,13 @@ class LectureListDetect {
             return nil
     }
 
+
+    /// Iterates over all values and returns changes for each index.
+    ///
+    /// - Parameters:
+    ///   - oldValue: old value of LectureListResult
+    ///   - newValue: new value of LectureListResult
+    /// - Returns: Change entity array or empty array if no change detected
     func detectValuesChange(oldValue: LectureListResult, newValue: LectureListResult)
         -> [Change<Lecture>] {
             var changes = [Change<Lecture>]()
@@ -96,10 +103,34 @@ class LectureListDetect {
     }
 
 
-    func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> Change<Lecture>? {
 
+    /// Detects if change occured. By checking if one of items is not 
+    /// missing. If both are equal, then their name is checked.
+    ///
+    /// - Parameters:
+    ///   - oldValue: old value of Lecture
+    ///   - newValue: new value of Lecture
+    /// - Returns: Change entity or empty if no change detected
+    func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> Change<Lecture>? {
+        var type: ChangeType?
+
+        type = (oldItem == nil ? ChangeType.added : nil)
+
+        type = (newItem == nil ? ChangeType.removed : nil)
+
+        if let old = oldItem, let new = newItem {
+            type = (old.name != new.name ? ChangeType.modified : nil)
+        }
+
+        if let type = type {
+            return Change<Lecture>(
+                type: type,
+                oldValue: oldItem,
+                newValue: newItem
+            )
+        }
         return nil
     }
-
-
+    
+    
 }

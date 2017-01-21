@@ -12,6 +12,6 @@ import Foundation
 /// Generic change struct.
 struct Change<T> {
     let type: ChangeType
-    let oldValue: T
-    let newValue: T
+    let oldValue: T?
+    let newValue: T?
 }
