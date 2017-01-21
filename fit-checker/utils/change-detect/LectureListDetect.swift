@@ -39,7 +39,7 @@ class LectureListDetect {
     ///   - oldValue: old value of LectureListResult
     ///   - newValue: new value of LectureListResult
     /// - Returns: size difference
-    func detectSizeDiff(oldValue: LectureListResult, newValue: LectureListResult) -> Int {
+    private func detectSizeDiff(oldValue: LectureListResult, newValue: LectureListResult) -> Int {
         return newValue.lectures.count - oldValue.lectures.count
     }
 
@@ -51,7 +51,7 @@ class LectureListDetect {
     ///   - oldValue: old value of LectureListResult
     ///   - newValue: new value of LectureListResult
     /// - Returns: Change entity or empty if no change detected
-    func detectSemesterChange(oldValue: LectureListResult, newValue: LectureListResult)
+    private func detectSemesterChange(oldValue: LectureListResult, newValue: LectureListResult)
                     -> Change<String>? {
         if oldValue.semesterInfo != newValue.semesterInfo {
             var type: ChangeType
@@ -80,7 +80,7 @@ class LectureListDetect {
     ///   - oldValue: old value of LectureListResult
     ///   - newValue: new value of LectureListResult
     /// - Returns: Change entity array or empty array if no change detected
-    func detectValuesChange(oldValue: LectureListResult, newValue: LectureListResult)
+    private func detectValuesChange(oldValue: LectureListResult, newValue: LectureListResult)
                     -> [Change<Lecture>] {
         var changes = [Change<Lecture>]()
         let oldLectures = oldValue.lectures
@@ -114,7 +114,7 @@ class LectureListDetect {
     ///   - oldValue: old value of Lecture
     ///   - newValue: new value of Lecture
     /// - Returns: Change entity or empty if no change detected
-    func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> Change<Lecture>? {
+    private func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> Change<Lecture>? {
         var type: ChangeType?
 
         type = (oldItem == nil ? ChangeType.added : nil)
