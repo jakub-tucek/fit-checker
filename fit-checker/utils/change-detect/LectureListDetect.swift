@@ -9,11 +9,10 @@
 import Foundation
 
 
-/// Detects changes in lecture list and returns them in LectureListResultChange
-/// that contains information about changes.
+/// Detects changes in lecture list
 class LectureListDetect {
 
-    /// Compares two inputs and returned result of type U that
+    /// Compares two inputs and returns LectureListResultChange that
     /// contains detected changes.
     ///
     /// - Parameters:
