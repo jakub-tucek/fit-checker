@@ -981,6 +981,7 @@
 				D2352E021E27EC9C00303424 /* Frameworks */,
 				D2352E031E27EC9C00303424 /* Resources */,
 				D2352E361E27F1A400303424 /* Carthage */,
+				D28F22211E34209300D5ADF5 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -1108,6 +1109,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		D28F22211E34209300D5ADF5 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\n    swiftgen strings -t swift3 \"$PROJECT_DIR/fit-checker/localization/en.lproj/Localizable.strings\" -o \"$PROJECT_DIR/fit-checker/localization/Localization.Generated.swift\"\nelse\n    echo \"warning: SwiftGen not installed, download it from https://github.com/AliSoftware/SwiftGen\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
