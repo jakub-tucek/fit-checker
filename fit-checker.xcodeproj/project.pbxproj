@@ -71,6 +71,8 @@
 		D28F220D1E3389D200D5ADF5 /* ClassificationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */; };
 		D28F220F1E34096000D5ADF5 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */; };
 		D28F22121E3409C700D5ADF5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F22111E3409C700D5ADF5 /* Logger.swift */; };
+		D28F22191E34187600D5ADF5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D28F221B1E34187600D5ADF5 /* Localizable.strings */; };
+		D28F221E1E341AEC00D5ADF5 /* Localization.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,7 +364,6 @@
 		D2352E051E27EC9C00303424 /* fit-checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E081E27EC9C00303424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2352E0F1E27EC9C00303424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D2352E121E27EC9C00303424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2352E141E27EC9C00303424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2352E191E27EC9D00303424 /* fit-checkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E1D1E27EC9D00303424 /* fit_checkerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fit_checkerUITests.swift; sourceTree = "<group>"; };
@@ -400,6 +401,11 @@
 		D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationRecord.swift; sourceTree = "<group>"; };
 		D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		D28F22111E3409C700D5ADF5 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D28F221A1E34187600D5ADF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D28F221C1E34187A00D5ADF5 /* cs-CZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "cs-CZ"; path = "cs-CZ.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.Generated.swift; sourceTree = "<group>"; };
+		D28F221F1E341B6F00D5ADF5 /* cs-CZ */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "cs-CZ"; path = "cs-CZ.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		D28F22201E341B6F00D5ADF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -568,6 +574,7 @@
 		D2352E2B1E27EE7A00303424 /* supporting-files */ = {
 			isa = PBXGroup;
 			children = (
+				D28F22161E34181400D5ADF5 /* localization */,
 				D2352E081E27EC9C00303424 /* AppDelegate.swift */,
 				D2352E0F1E27EC9C00303424 /* Assets.xcassets */,
 				D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */,
@@ -936,6 +943,15 @@
 			path = logs;
 			sourceTree = "<group>";
 		};
+		D28F22161E34181400D5ADF5 /* localization */ = {
+			isa = PBXGroup;
+			children = (
+				D28F221B1E34187600D5ADF5 /* Localizable.strings */,
+				D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */,
+			);
+			path = localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1026,6 +1042,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"cs-CZ",
 			);
 			mainGroup = D2352DFC1E27EC9C00303424;
 			productRefGroup = D2352E061E27EC9C00303424 /* Products */;
@@ -1056,6 +1073,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2352E131E27EC9C00303424 /* LaunchScreen.storyboard in Resources */,
+				D28F22191E34187600D5ADF5 /* Localizable.strings in Resources */,
 				D2352E101E27EC9C00303424 /* Assets.xcassets in Resources */,
 				4D5296921E2A53AA007677BA /* lecture-list.json in Resources */,
 			);
@@ -1151,6 +1169,7 @@
 				D245B32B1E317D410074CB5B /* SettingsViewController.swift in Sources */,
 				D2352E421E28481200303424 /* NetworkController.swift in Sources */,
 				4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */,
+				D28F221E1E341AEC00D5ADF5 /* Localization.Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,9 +1200,19 @@
 		D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D2352E121E27EC9C00303424 /* Base */,
+				D28F221F1E341B6F00D5ADF5 /* cs-CZ */,
+				D28F22201E341B6F00D5ADF5 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D28F221B1E34187600D5ADF5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D28F221A1E34187600D5ADF5 /* en */,
+				D28F221C1E34187A00D5ADF5 /* cs-CZ */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1227,6 +1256,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1263,7 +1293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1277,6 +1307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1307,7 +1338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

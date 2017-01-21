@@ -34,7 +34,7 @@ class SettingsViewController: UIViewController {
     /// Logout button
     private let logoutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Logout", for: .normal)
+        button.setTitle(tr(.logout), for: .normal)
 
         return button
     }()

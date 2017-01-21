@@ -27,9 +27,6 @@ class EduxLoginOperation: BaseOperation {
     /// Current user password
     private let password: String
 
-    /// Element which determines whether the user is logged in or not
-    private static let loginIdentifier = "Odhlásit se."
-
     init(username: String, password: String, sessionManager: SessionManager) {
 
         queryParameters = ["do": "login"]

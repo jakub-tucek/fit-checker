@@ -80,9 +80,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settingsController = SettingsViewController(
             contextManager: contextManager)
 
-        coursesController.tabBarItem = UITabBarItem(title: "Courses", image:
+        coursesController.tabBarItem = UITabBarItem(title: tr(.courses), image:
             nil, selectedImage: nil)
-        settingsController.tabBarItem = UITabBarItem(title: "Settings", image:
+        settingsController.tabBarItem = UITabBarItem(title: tr(.settings), image:
             nil, selectedImage: nil)
 
         let controllers = [

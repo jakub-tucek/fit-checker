@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     /// Username input field
     private let usernameField: UITextField = {
         let field = UITextField()
-        field.placeholder = "Username"
+        field.placeholder = tr(.username)
 
         return field
     }()
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     /// Password input field
     private let passwordField: UITextField = {
         let field = UITextField()
-        field.placeholder = "Password"
+        field.placeholder = tr(.password)
 
         return field
     }()
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     /// Login action button
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Login", for: .normal)
+        button.setTitle(tr(.login), for: .normal)
 
         return button
     }()
