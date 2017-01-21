@@ -17,6 +17,7 @@
 		4D4DB8FB1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */; };
 		4D4DB8FD1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */; };
 		4D4DB8FE1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */; };
+		4D4DB9021E33DEC400A8CCB3 /* LectureListDetectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */; };
 		4D5296791E2A274A007677BA /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
 		4D52967A1E2A274A007677BA /* bipst.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A681E2A199000542E0B /* bipst.html */; };
 		4D52967B1E2A274A007677BA /* bisp2.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A6A1E2A1B3700542E0B /* bisp2.html */; };
@@ -106,6 +107,7 @@
 		4D4DB8F61E33B03700A8CCB3 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListResultChange.swift; sourceTree = "<group>"; };
 		4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtils.swift; sourceTree = "<group>"; };
+		4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListDetectTest.swift; sourceTree = "<group>"; };
 		4D5296861E2A2AF2007677BA /* LectureListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListResult.swift; path = entity/LectureListResult.swift; sourceTree = "<group>"; };
 		4D5296891E2A2AFF007677BA /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = entity/Lecture.swift; sourceTree = "<group>"; };
 		4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListParserTest.swift; path = "utils/edux-parser/LectureListParserTest.swift"; sourceTree = "<group>"; };
@@ -444,6 +446,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D4DB8FF1E33DE7500A8CCB3 /* change-detect */ = {
+			isa = PBXGroup;
+			children = (
+				4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */,
+			);
+			path = "change-detect";
+			sourceTree = "<group>";
+		};
 		4D62FF171E2943DD00E8C793 /* entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +480,7 @@
 		4D62FF3B1E2955EF00E8C793 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				4D4DB8FF1E33DE7500A8CCB3 /* change-detect */,
 				4D62FF3C1E2955F800E8C793 /* edux-parser */,
 			);
 			name = utils;
@@ -1120,6 +1131,7 @@
 				4D5296811E2A27F4007677BA /* LectureListParsing.swift in Sources */,
 				4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */,
 				4D5296821E2A27F4007677BA /* LectureListParser.swift in Sources */,
+				4D4DB9021E33DEC400A8CCB3 /* LectureListDetectTest.swift in Sources */,
 				4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
 				4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */,
 				4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
