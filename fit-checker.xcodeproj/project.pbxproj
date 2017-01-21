@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */; };
 		4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */; };
+		4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */; };
+		4D490EE51E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */; };
+		4D490EE71E34135700BE6EE8 /* ClassificationDetectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */; };
 		4D4DB8F41E33AE5100A8CCB3 /* ChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */; };
 		4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */; };
 		4D4DB8F71E33B03700A8CCB3 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* Change.swift */; };
@@ -103,6 +106,8 @@
 		4D279A6A1E2A1B3700542E0B /* bisp2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = bisp2.html; path = resources/bisp2.html; sourceTree = "<group>"; };
 		4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationParser.swift; sourceTree = "<group>"; };
 		4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClasificationParsing.swift; sourceTree = "<group>"; };
+		4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationDetect.swift; sourceTree = "<group>"; };
+		4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationDetectTest.swift; sourceTree = "<group>"; };
 		4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeType.swift; sourceTree = "<group>"; };
 		4D4DB8F61E33B03700A8CCB3 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListResultChange.swift; sourceTree = "<group>"; };
@@ -450,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */,
+				4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */,
 			);
 			path = "change-detect";
 			sourceTree = "<group>";
@@ -512,6 +518,7 @@
 			children = (
 				4DFAB2F41E33A95400CBD3D2 /* entity */,
 				4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */,
+				4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */,
 			);
 			path = "change-detect";
 			sourceTree = "<group>";
@@ -1135,8 +1142,10 @@
 				4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
 				4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */,
 				4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
+				4D490EE51E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
 				4D4DB8FB1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */,
 				4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */,
+				4D490EE71E34135700BE6EE8 /* ClassificationDetectTest.swift in Sources */,
 				4DFAB2F01E33847100CBD3D2 /* LectureListDetect.swift in Sources */,
 				4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */,
 				4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */,
@@ -1165,6 +1174,7 @@
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				4D4DB8F41E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
 				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
+				4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
 				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
