@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
 
         window.makeKeyAndVisible()
+        window.backgroundColor = .white
         self.window = window
 
         NotificationCenter.default.addObserver(self, selector:
