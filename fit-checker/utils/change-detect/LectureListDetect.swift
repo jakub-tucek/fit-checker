@@ -87,7 +87,7 @@ class LectureListDetect {
         var oldIndex = 0
         var newIndex = 0
 
-        while oldIndex > oldLectures.count && newIndex > newLectures.count {
+        while oldIndex < oldLectures.count || newIndex < newLectures.count {
             let oldItem = ArrayUtils<Lecture>.getItemSafely(array: oldLectures, i: oldIndex)
             let newItem = ArrayUtils<Lecture>.getItemSafely(array: newLectures, i: newIndex)
 

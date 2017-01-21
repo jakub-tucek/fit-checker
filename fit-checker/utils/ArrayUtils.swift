@@ -20,7 +20,7 @@ struct ArrayUtils<T> {
     ///   - i: index to get
     /// - Returns: object at index or empty
     static func getItemSafely(array: [T], i: Int) -> T? {
-        if i > array.count {
+        if i < array.count {
             return array[i]
         }
         return nil

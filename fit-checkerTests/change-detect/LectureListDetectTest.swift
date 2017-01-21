@@ -87,4 +87,38 @@ class LectureListDetectTest: XCTestCase {
         XCTAssertEqual(0, res.changes.count)
     }
 
+
+    func testDifferentName() {
+        newRes.lectures[0] = Lecture(name: "Diff name")
+
+        let detectResult = detect.detect(oldValue: oldRes, newValue: newRes)
+
+
+        XCTAssertEqual(0, detectResult.sizeDifference)
+        XCTAssertEqual(1, detectResult.changes.count)
+
+        XCTAssertEqual("Diff name", detectResult.changes[0].newValue!.name)
+        XCTAssertEqual("SP2", detectResult.changes[0].oldValue!.name)
+        XCTAssertEqual(ChangeType.modified, detectResult.changes[0].type)
+
+        XCTAssertTrue(detectResult.changeDetected())
+    }
+
+
+    func testMissingNewName() {
+        newRes.lectures.remove(at: 2)
+
+        let detectResult = detect.detect(oldValue: oldRes, newValue: newRes)
+
+
+        XCTAssertEqual(-1, detectResult.sizeDifference)
+        XCTAssertEqual(1, detectResult.changes.count)
+
+        XCTAssertNil(detectResult.changes[0].newValue)
+        XCTAssertEqual("SI3.0", detectResult.changes[0].oldValue!.name)
+        XCTAssertEqual(ChangeType.removed, detectResult.changes[0].type)
+
+        XCTAssertTrue(detectResult.changeDetected())
+    }
+
 }
