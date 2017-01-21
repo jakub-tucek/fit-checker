@@ -70,6 +70,7 @@
 		D28F220B1E3389C200D5ADF5 /* CourseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220A1E3389C200D5ADF5 /* CourseTable.swift */; };
 		D28F220D1E3389D200D5ADF5 /* ClassificationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */; };
 		D28F220F1E34096000D5ADF5 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */; };
+		D28F22121E3409C700D5ADF5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F22111E3409C700D5ADF5 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -398,6 +399,7 @@
 		D28F220A1E3389C200D5ADF5 /* CourseTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTable.swift; sourceTree = "<group>"; };
 		D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationRecord.swift; sourceTree = "<group>"; };
 		D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		D28F22111E3409C700D5ADF5 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +580,7 @@
 		D2352E2C1E27EF8800303424 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				D28F22101E3409A900D5ADF5 /* logs */,
 				D245B3161E2E7D4B0074CB5B /* keechain */,
 				D2352E2D1E27EFA700303424 /* edux-parser */,
 			);
@@ -925,6 +928,14 @@
 			path = tasks;
 			sourceTree = "<group>";
 		};
+		D28F22101E3409A900D5ADF5 /* logs */ = {
+			isa = PBXGroup;
+			children = (
+				D28F22111E3409C700D5ADF5 /* Logger.swift */,
+			);
+			path = logs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1071,6 +1082,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -1107,6 +1119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2352E501E29820900303424 /* LoginViewController.swift in Sources */,
+				D28F22121E3409C700D5ADF5 /* Logger.swift in Sources */,
 				D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */,
 				D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */,
 				D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */,

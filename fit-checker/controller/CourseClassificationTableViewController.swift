@@ -75,7 +75,7 @@ class CourseClassificationTableViewController: UITableViewController {
                 }
             })
         } catch {
-            print("Could not create realm instance: \(error)")
+            Logger.shared.error("Could not create realm instance: \(error)")
         }
     }
 
