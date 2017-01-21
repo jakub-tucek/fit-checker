@@ -15,13 +15,17 @@ class LectureListResultChange: ResultChange<Lecture> {
 
     var semesterChange: Change<String>?
 
-    override init() {
-        super.init()
-    }
-
-    init(changes: [Change<Lecture>], sizeDifference: Int, semesterChange: Change<String>) {
+    init(changes: [Change<Lecture>], sizeDifference: Int, semesterChange: Change<String>?) {
         super.init(changes: changes, sizeDifference: sizeDifference)
         self.semesterChange = semesterChange
+    }
 
+
+    /// Detects change by calling super method and checking semesterChange
+    /// property.
+    ///
+    /// - Returns: true if change detected
+    override func changeDetected() -> Bool {
+        return super.changeDetected() || (semesterChange != nil)
     }
 }

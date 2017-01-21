@@ -14,16 +14,22 @@ import Foundation
 /// was detected.
 class ResultChange<T: Any> {
 
-    var changes: [Change<T>]?
+    var changes: [Change<T>]
 
     var sizeDifference: Int?
-
-    init() {
-    }
 
     init (changes:[Change<T>], sizeDifference: Int) {
         self.changes = changes
         self.sizeDifference = sizeDifference
+    }
+
+
+
+    /// Returns if change was detected by checking size of changes array.
+    ///
+    /// - Returns: true if change was detected
+    func changeDetected() -> Bool {
+        return changes.count != 0
     }
 
     

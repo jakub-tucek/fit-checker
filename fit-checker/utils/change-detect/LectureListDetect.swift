@@ -24,10 +24,11 @@ class LectureListDetect {
             let semesterChange = detectSemesterChange(oldValue: oldValue, newValue: newValue)
             let valuesChange = detectValuesChange(oldValue: oldValue, newValue: newValue)
 
-
-
-
-            return LectureListResultChange()
+            return LectureListResultChange(
+                changes: valuesChange,
+                sizeDifference: sizeDiff,
+                semesterChange: semesterChange
+            )
     }
 
     /// Returns size difference in parsed lectures
