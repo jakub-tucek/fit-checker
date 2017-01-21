@@ -34,6 +34,7 @@ class CourseTable: Object {
         self.init()
 
         self.name = name
+        self.courseId = courseId
         self.classification.append(objectsIn: classification)
     }
 }
