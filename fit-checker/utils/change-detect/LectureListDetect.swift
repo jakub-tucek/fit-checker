@@ -16,7 +16,7 @@ class LectureListDetect {
     /// contains detected changes.
     ///
     /// - Parameters:
-    ///   - oldvalue: old value of type LectureListResult
+    ///   - oldValue: old value of type LectureListResult
     ///   - newValue: new value of type LectureListResult
     /// - Returns: detected change
     func detect(oldValue: LectureListResult, newValue: LectureListResult)
