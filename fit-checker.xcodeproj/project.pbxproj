@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */; };
 		4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */; };
+		4D4DB8F41E33AE5100A8CCB3 /* ChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */; };
+		4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */; };
+		4D4DB8F71E33B03700A8CCB3 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* Change.swift */; };
+		4D4DB8F81E33B03700A8CCB3 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* Change.swift */; };
 		4D5296791E2A274A007677BA /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
 		4D52967A1E2A274A007677BA /* bipst.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A681E2A199000542E0B /* bipst.html */; };
 		4D52967B1E2A274A007677BA /* bisp2.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A6A1E2A1B3700542E0B /* bisp2.html */; };
@@ -36,6 +40,8 @@
 		4DFAB2F01E33847100CBD3D2 /* LectureListDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */; };
 		4DFAB2F21E33867200CBD3D2 /* ChangeDetecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */; };
 		4DFAB2F31E33867200CBD3D2 /* ChangeDetecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */; };
+		4DFAB2F61E33A99E00CBD3D2 /* ResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */; };
+		4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */; };
 		D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E081E27EC9C00303424 /* AppDelegate.swift */; };
 		D2352E101E27EC9C00303424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2352E0F1E27EC9C00303424 /* Assets.xcassets */; };
 		D2352E131E27EC9C00303424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2352E111E27EC9C00303424 /* LaunchScreen.storyboard */; };
@@ -94,6 +100,8 @@
 		4D279A6A1E2A1B3700542E0B /* bisp2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = bisp2.html; path = resources/bisp2.html; sourceTree = "<group>"; };
 		4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationParser.swift; sourceTree = "<group>"; };
 		4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClasificationParsing.swift; sourceTree = "<group>"; };
+		4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeType.swift; sourceTree = "<group>"; };
+		4D4DB8F61E33B03700A8CCB3 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		4D5296861E2A2AF2007677BA /* LectureListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListResult.swift; path = entity/LectureListResult.swift; sourceTree = "<group>"; };
 		4D5296891E2A2AFF007677BA /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = entity/Lecture.swift; sourceTree = "<group>"; };
 		4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListParserTest.swift; path = "utils/edux-parser/LectureListParserTest.swift"; sourceTree = "<group>"; };
@@ -360,6 +368,7 @@
 		4D62FFFF1E295C6500E8C793 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
 		4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListDetect.swift; sourceTree = "<group>"; };
 		4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeDetecting.swift; sourceTree = "<group>"; };
+		4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultChange.swift; sourceTree = "<group>"; };
 		D2352E051E27EC9C00303424 /* fit-checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E081E27EC9C00303424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2352E0F1E27EC9C00303424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -487,10 +496,21 @@
 		4DFAB2ED1E3383BE00CBD3D2 /* change-detect */ = {
 			isa = PBXGroup;
 			children = (
+				4DFAB2F41E33A95400CBD3D2 /* entity */,
 				4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */,
 				4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */,
 			);
 			path = "change-detect";
+			sourceTree = "<group>";
+		};
+		4DFAB2F41E33A95400CBD3D2 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */,
+				4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */,
+				4D4DB8F61E33B03700A8CCB3 /* Change.swift */,
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 		D2352DFC1E27EC9C00303424 = {
@@ -1096,13 +1116,16 @@
 				4D5296811E2A27F4007677BA /* LectureListParsing.swift in Sources */,
 				4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */,
 				4D5296821E2A27F4007677BA /* LectureListParser.swift in Sources */,
+				4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
 				4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */,
+				4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
 				4DFAB2F31E33867200CBD3D2 /* ChangeDetecting.swift in Sources */,
 				4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */,
 				4DFAB2F01E33847100CBD3D2 /* LectureListDetect.swift in Sources */,
 				4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */,
 				4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */,
 				4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */,
+				4D4DB8F81E33B03700A8CCB3 /* Change.swift in Sources */,
 				4D5296851E2A27F4007677BA /* ClassificationParserTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1117,10 +1140,13 @@
 				D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */,
 				D245B3271E30309B0074CB5B /* Lecture.swift in Sources */,
 				D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */,
+				4D4DB8F71E33B03700A8CCB3 /* Change.swift in Sources */,
 				D245B3291E3030A50074CB5B /* LectureListParser.swift in Sources */,
 				D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */,
+				4DFAB2F61E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
+				4D4DB8F41E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
 				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,

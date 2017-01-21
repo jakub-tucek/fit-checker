@@ -13,8 +13,6 @@ import Foundation
 protocol ChangeDetecting {
 
     associatedtype T
-    associatedtype U
-
 
     /// Compares two inputs and returned result of type U that
     /// contains detected changes.
@@ -23,7 +21,7 @@ protocol ChangeDetecting {
     ///   - oldvalue: old value of type T
     ///   - newValue: new value of type T
     /// - Returns: detected change
-    func detect(oldvalue: T, newValue: T) -> U
+    func detect(oldvalue: T, newValue: T) -> ResultChange
 
 }
 

@@ -8,10 +8,19 @@
 
 import Foundation
 
-class LectureListDetect {
+class LectureListDetect: ChangeDetecting {
+    typealias T = LectureListResult
 
 
-    func detectLectureListChange(result : LectureListResult) -> Bool {
-        
+    /// Compares two inputs and returned result of type U that
+    /// contains detected changes.
+    ///
+    /// - Parameters:
+    ///   - oldvalue: old value of type T
+    ///   - newValue: new value of type T
+    /// - Returns: detected change
+    func detect(oldvalue: T, newValue: T) -> ResultChange {
+
+        return ResultChange()
     }
 }
