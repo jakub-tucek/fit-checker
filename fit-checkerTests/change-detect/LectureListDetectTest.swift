@@ -121,4 +121,20 @@ class LectureListDetectTest: XCTestCase {
         XCTAssertTrue(detectResult.changeDetected())
     }
 
+    func testAddedNewName() {
+        oldRes.lectures.remove(at: 2)
+
+        let detectResult = detect.detect(oldValue: oldRes, newValue: newRes)
+
+
+        XCTAssertEqual(1, detectResult.sizeDifference)
+        XCTAssertEqual(1, detectResult.changes.count)
+
+        XCTAssertNil(detectResult.changes[0].oldValue)
+        XCTAssertEqual("SI3.0", detectResult.changes[0].newValue!.name)
+        XCTAssertEqual(ChangeType.added, detectResult.changes[0].type)
+
+        XCTAssertTrue(detectResult.changeDetected())
+    }
+
 }
