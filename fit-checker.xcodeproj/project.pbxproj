@@ -66,6 +66,7 @@
 		D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */; };
 		D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */; };
 		D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56711E32C0F700EC9C40 /* EduxValidators.swift */; };
+		D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +391,7 @@
 		D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutOperation.swift; sourceTree = "<group>"; };
 		D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxRetrier.swift; sourceTree = "<group>"; };
 		D27C56711E32C0F700EC9C40 /* EduxValidators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxValidators.swift; sourceTree = "<group>"; };
+		D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseClassificationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -547,6 +549,7 @@
 				D2352E4F1E29820900303424 /* LoginViewController.swift */,
 				D245B31E1E3021BE0074CB5B /* CoursesTableViewController.swift */,
 				D245B32A1E317D410074CB5B /* SettingsViewController.swift */,
+				D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
+				D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */,
 				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
