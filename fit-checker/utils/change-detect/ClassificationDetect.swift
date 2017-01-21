@@ -41,45 +41,90 @@ class ClassificationDetect {
         return countTotalRows(value: newValue) - countTotalRows(value: oldValue)
     }
 
+
+    /// Iterates over each table and checks differences. That makes each table
+    /// check independent.
+    ///
+    /// - Parameters:
+    ///   - oldValue: ClassificationResult
+    ///   - newValue: ClassificationResult
+    /// - Returns: changes
     private func detectValuesChange(oldValue: ClassificationResult, newValue: ClassificationResult)
                     -> [Change<ClassificationRow>] {
-        let oldRows = getAllRows(value: oldValue)
-        let newRows = getAllRows(value: newValue)
+        let oldTables = oldValue.tables
+        let newTables = newValue.tables
         var changes = [Change<ClassificationRow>]()
 
         var oldIndex = 0
         var newIndex = 0
 
-        while oldIndex < oldRows.count || newIndex < newRows.count {
-            let oldItem = ArrayUtils<ClassificationRow>.getItemSafely(array: oldRows, i: oldIndex)
-            let newItem = ArrayUtils<ClassificationRow>.getItemSafely(array: newRows, i: newIndex)
+        while oldIndex < oldTables.count || newIndex < newTables.count {
+            let oldTable = ArrayUtils<ClassificationTable>.getItemSafely(array: oldTables, i: oldIndex)
+            let newTable = ArrayUtils<ClassificationTable>.getItemSafely(array: newTables, i: newIndex)
 
-            let change = detectValueChange(oldItem: oldItem, newItem: newItem)
-            if let change = change {
-                changes.append(change)
-            }
+            let tableChanges = detectChangeForTable(oldTable: oldTable, newTable: newTable)
+
+            changes.append(contentsOf: tableChanges)
 
             oldIndex += 1
             newIndex += 1
         }
 
         return changes
-
     }
 
 
-
-    /// Finds all row in all tables
+    /// Iterates over rows in tables and detect changes there.
     ///
-    /// - Parameter value: ClassificaitonResult containg array on tables
-    /// - Returns: array of all rows
-    private func getAllRows(value: ClassificationResult) -> [ClassificationRow] {
-        return value.tables
-                .flatMap {
-                    $0.rows
-                }
+    /// - Parameters:
+    ///   - oldTable: ClassificationTable?
+    ///   - newTable: ClassificationTable?
+    /// - Returns: changes
+    private func detectChangeForTable(oldTable: ClassificationTable?, newTable: ClassificationTable?)
+                    -> [Change<ClassificationRow>] {
+        let oldRows = getRowsSafely(table: oldTable)
+        let newRows = getRowsSafely(table: newTable)
+        var tableChanges = [Change<ClassificationRow>]()
+
+        var oldRowIndex = 0
+        var newRowIndex = 0
+
+        while oldRowIndex < oldRows.count || newRowIndex < newRows.count {
+            let oldRow = ArrayUtils<ClassificationRow>.getItemSafely(array: oldRows, i: oldRowIndex)
+            let newRow = ArrayUtils<ClassificationRow>.getItemSafely(array: newRows, i: newRowIndex)
+
+            let change = detectValueChange(oldItem: oldRow, newItem: newRow)
+            if let change = change {
+                tableChanges.append(change)
+            }
+
+            oldRowIndex += 1
+            newRowIndex += 1
+        }
+
+        return tableChanges
     }
 
+
+    /// Gets rows from table safely.
+    ///
+    /// - Parameter table: table with rows
+    /// - Returns: rows or empty array
+    private func getRowsSafely(table: ClassificationTable?) -> [ClassificationRow] {
+        if let table = table {
+            return table.rows
+        } else {
+            return [ClassificationRow]()
+        }
+    }
+
+
+    /// Detects change in row.
+    ///
+    /// - Parameters:
+    ///   - oldItem: ClassificationRow
+    ///   - newItem: ClassificationRow
+    /// - Returns: found change or empty
     private func detectValueChange(oldItem: ClassificationRow?, newItem: ClassificationRow?)
                     -> Change<ClassificationRow>? {
         var type: ChangeType?
@@ -105,7 +150,7 @@ class ClassificationDetect {
     }
 
 
-    /// Counts total rows with reduce
+    /// Counts total rows
     ///
     /// - Parameter value: ClassificationResult object
     /// - Returns: total row count
