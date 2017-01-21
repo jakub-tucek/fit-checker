@@ -478,6 +478,13 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
+		4DFAB2ED1E3383BE00CBD3D2 /* change-detect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "change-detect";
+			sourceTree = "<group>";
+		};
 		D2352DFC1E27EC9C00303424 = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +573,7 @@
 		D2352E2C1E27EF8800303424 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				4DFAB2ED1E3383BE00CBD3D2 /* change-detect */,
 				D245B3161E2E7D4B0074CB5B /* keechain */,
 				D2352E2D1E27EFA700303424 /* edux-parser */,
 			);
