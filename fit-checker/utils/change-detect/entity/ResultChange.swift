@@ -16,7 +16,7 @@ class ResultChange<T: AnyObject> {
 
     var changes: [Change<T>]
 
-    var sizeDifference: Int?
+    var sizeDifference: Int
 
     init(changes: [Change<T>], sizeDifference: Int) {
         self.changes = changes
