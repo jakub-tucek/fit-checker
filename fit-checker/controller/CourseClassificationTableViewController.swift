@@ -21,12 +21,16 @@ class CourseClassificationTableViewController: UITableViewController {
     /// Selected course identifier
     private let courseId: String
 
-    init(networkController: NetworkController, contextManager: ContextManager,
-         courseId: String) {
+    /// Current student username
+    private let student: String
 
+    init(student: String, courseId: String,
+         networkController: NetworkController, contextManager: ContextManager) {
+
+        self.courseId = courseId
+        self.student = student
         self.networkController = networkController
         self.contextManager = contextManager
-        self.courseId = courseId
 
         super.init(style: .grouped)
     }
@@ -50,7 +54,8 @@ class CourseClassificationTableViewController: UITableViewController {
 
     /// Load stored data
     private func loadData() {
-
+        networkController.loadCourseClassification(courseId: courseId,
+                                                   student: student)
     }
 
     /// Download new data

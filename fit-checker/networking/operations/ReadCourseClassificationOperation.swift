@@ -19,9 +19,15 @@ class ReadCourseClassificationOperation: BaseOperation {
     /// Student username
     private let student: String
 
-    init(courseId: String, student: String, sessionManager: SessionManager) {
+    /// Database context manager
+    private let contextManager: ContextManager
+
+    init(courseId: String, student: String, sessionManager: SessionManager,
+         contextManager: ContextManager) {
+
         self.courseId = courseId
         self.student = student
+        self.contextManager = contextManager
 
         super.init(sessionManager: sessionManager)
     }
@@ -48,7 +54,28 @@ class ReadCourseClassificationOperation: BaseOperation {
 
         switch response.result {
         case let .success(html):
-            print(html)
+            let parser = ClassificationParser()
+            let tables = parser.parseEdux(html: html).tables.map { table -> CourseTable in
+                let classification = table.rows.map({ row in
+                    return ClassificationRecord(name: row.name, score: row.value)
+                })
+
+                return CourseTable(name: table.name, courseId: courseId,
+                                   classification: classification)
+            }
+
+            do {
+                let realm = try contextManager.createContext()
+                let oldTables = realm.objects(CourseTable.self)
+                    .filter("courseId = %@", courseId)
+
+                try realm.write {
+                    realm.delete(oldTables)
+                    realm.add(tables)
+                }
+            } catch {
+                self.error = error
+            }
         case .failure: self.error = error
         }
     }

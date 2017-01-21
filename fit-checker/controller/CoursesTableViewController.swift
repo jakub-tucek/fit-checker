@@ -108,15 +108,21 @@ extension CoursesTableViewController {
 // MARK: - UITableViewDelegate
 extension CoursesTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let course = courses?[indexPath.row] else {
-            print("Daaamn man, user selected unselectable row!")
+        let keychain = Keechain(service: .edux)
+
+        guard
+            let course = courses?[indexPath.row],
+            let (student, _) = keychain.getAccount() else {
+
+                print("Daaamn man, user selected unselectable row!")
             return
         }
 
         let controller = CourseClassificationTableViewController(
+            student: student,
+            courseId: course.id,
             networkController: networkController,
-            contextManager: contextManager,
-            courseId: course.id
+            contextManager: contextManager
         )
 
         navigationController?.pushViewController(controller, animated: true)

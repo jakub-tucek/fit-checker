@@ -29,6 +29,7 @@ class CourseTable: Object {
     //MARK: - Initializers
 
     convenience init(name: String? = nil,
+                     courseId: String,
                      classification: [ClassificationRecord]) {
         self.init()
 
