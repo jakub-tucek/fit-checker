@@ -24,6 +24,12 @@ class CourseClassificationTableViewController: UITableViewController {
     /// Current student username
     private let student: String
 
+    /// Classification tables
+    fileprivate var tables: Results<CourseTable>?
+
+    /// Realm changes notification token
+    private var token: NotificationToken?
+
     init(student: String, courseId: String,
          networkController: NetworkController, contextManager: ContextManager) {
 
@@ -50,16 +56,65 @@ class CourseClassificationTableViewController: UITableViewController {
     /// Configure view and setup subviews
     private func configureView() {
         title = courseId
+
+        tableView.allowsSelection = false
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier:
+            UITableViewCell.identifier)
     }
 
     /// Load stored data
     private func loadData() {
-        networkController.loadCourseClassification(courseId: courseId,
-                                                   student: student)
+        do {
+            let realm = try contextManager.createContext()
+
+            tables = realm.objects(CourseTable.self)
+                .filter("courseId = %@", courseId)
+            token = tables?.addNotificationBlock({ _ in
+                DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+                }
+            })
+        } catch {
+            print("Could not create realm instance: \(error)")
+        }
     }
 
     /// Download new data
     private func refreshData() {
+        networkController.loadCourseClassification(courseId: courseId,
+                                                   student: student)
+    }
 
+    deinit {
+        token?.stop()
+    }
+}
+
+
+// MARK: - UITableViewDataSource
+extension CourseClassificationTableViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return tables?.count ?? 0
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tables?[section].classification.count ?? 0
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:
+            UITableViewCell.identifier, for: indexPath)
+
+        if let classification = tables?[indexPath.section]
+            .classification[indexPath.row] {
+
+            cell.textLabel?.text = "\(classification.name) - \(classification.score)"
+        }
+
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return tables?[section].name
     }
 }
