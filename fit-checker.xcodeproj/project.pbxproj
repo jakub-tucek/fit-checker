@@ -73,6 +73,8 @@
 		D28F22121E3409C700D5ADF5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F22111E3409C700D5ADF5 /* Logger.swift */; };
 		D28F22191E34187600D5ADF5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D28F221B1E34187600D5ADF5 /* Localizable.strings */; };
 		D28F221E1E341AEC00D5ADF5 /* Localization.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */; };
+		D28F22131E34139500D5ADF5 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */; };
+		D28F22141E3413A000D5ADF5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F22111E3409C700D5ADF5 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -417,6 +419,7 @@
 				4D6201451E295D0E00E8C793 /* Kanna.framework in Frameworks */,
 				4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */,
 				4D6201471E295D0E00E8C793 /* RealmSwift.framework in Frameworks */,
+				D28F22131E34139500D5ADF5 /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1142,6 +1145,7 @@
 				4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */,
 				4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */,
 				4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */,
+				D28F22141E3413A000D5ADF5 /* Logger.swift in Sources */,
 				4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */,
 				4D5296851E2A27F4007677BA /* ClassificationParserTest.swift in Sources */,
 			);
