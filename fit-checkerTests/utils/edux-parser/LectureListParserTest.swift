@@ -29,7 +29,7 @@ class LectureListParserTest: XCTestCase {
             do {
                 return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any?]
             } catch {
-                Logger.share.error(error.localizedDescription)
+                Logger.shared.error(error.localizedDescription)
             }
         }
         return nil
