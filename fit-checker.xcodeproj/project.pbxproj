@@ -13,6 +13,10 @@
 		4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */; };
 		4D4DB8F71E33B03700A8CCB3 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* Change.swift */; };
 		4D4DB8F81E33B03700A8CCB3 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* Change.swift */; };
+		4D4DB8FA1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */; };
+		4D4DB8FB1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */; };
+		4D4DB8FD1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */; };
+		4D4DB8FE1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */; };
 		4D5296791E2A274A007677BA /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
 		4D52967A1E2A274A007677BA /* bipst.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A681E2A199000542E0B /* bipst.html */; };
 		4D52967B1E2A274A007677BA /* bisp2.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A6A1E2A1B3700542E0B /* bisp2.html */; };
@@ -38,8 +42,6 @@
 		4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */; };
 		4DFAB2EF1E33847100CBD3D2 /* LectureListDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */; };
 		4DFAB2F01E33847100CBD3D2 /* LectureListDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */; };
-		4DFAB2F21E33867200CBD3D2 /* ChangeDetecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */; };
-		4DFAB2F31E33867200CBD3D2 /* ChangeDetecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */; };
 		4DFAB2F61E33A99E00CBD3D2 /* ResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */; };
 		4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */; };
 		D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E081E27EC9C00303424 /* AppDelegate.swift */; };
@@ -102,6 +104,8 @@
 		4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClasificationParsing.swift; sourceTree = "<group>"; };
 		4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeType.swift; sourceTree = "<group>"; };
 		4D4DB8F61E33B03700A8CCB3 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
+		4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListResultChange.swift; sourceTree = "<group>"; };
+		4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtils.swift; sourceTree = "<group>"; };
 		4D5296861E2A2AF2007677BA /* LectureListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListResult.swift; path = entity/LectureListResult.swift; sourceTree = "<group>"; };
 		4D5296891E2A2AFF007677BA /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = entity/Lecture.swift; sourceTree = "<group>"; };
 		4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListParserTest.swift; path = "utils/edux-parser/LectureListParserTest.swift"; sourceTree = "<group>"; };
@@ -367,7 +371,6 @@
 		4D62FFFE1E295C6500E8C793 /* libsysdiagnose.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsysdiagnose.tbd; path = usr/lib/libsysdiagnose.tbd; sourceTree = SDKROOT; };
 		4D62FFFF1E295C6500E8C793 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
 		4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListDetect.swift; sourceTree = "<group>"; };
-		4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeDetecting.swift; sourceTree = "<group>"; };
 		4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultChange.swift; sourceTree = "<group>"; };
 		D2352E051E27EC9C00303424 /* fit-checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E081E27EC9C00303424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -498,7 +501,6 @@
 			children = (
 				4DFAB2F41E33A95400CBD3D2 /* entity */,
 				4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */,
-				4DFAB2F11E33867200CBD3D2 /* ChangeDetecting.swift */,
 			);
 			path = "change-detect";
 			sourceTree = "<group>";
@@ -509,6 +511,7 @@
 				4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */,
 				4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */,
 				4D4DB8F61E33B03700A8CCB3 /* Change.swift */,
+				4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				4DFAB2ED1E3383BE00CBD3D2 /* change-detect */,
 				D245B3161E2E7D4B0074CB5B /* keechain */,
 				D2352E2D1E27EFA700303424 /* edux-parser */,
+				4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -1119,13 +1123,14 @@
 				4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
 				4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */,
 				4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
-				4DFAB2F31E33867200CBD3D2 /* ChangeDetecting.swift in Sources */,
+				4D4DB8FB1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */,
 				4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */,
 				4DFAB2F01E33847100CBD3D2 /* LectureListDetect.swift in Sources */,
 				4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */,
 				4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */,
 				4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */,
 				4D4DB8F81E33B03700A8CCB3 /* Change.swift in Sources */,
+				4D4DB8FE1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */,
 				4D5296851E2A27F4007677BA /* ClassificationParserTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1158,14 +1163,15 @@
 				D2352E491E284EA300303424 /* ReadCourseClassificationOperation.swift in Sources */,
 				D2352E531E2A0CDF00303424 /* BaseOperation.swift in Sources */,
 				D245B31F1E3021BE0074CB5B /* CoursesTableViewController.swift in Sources */,
-				4DFAB2F21E33867200CBD3D2 /* ChangeDetecting.swift in Sources */,
 				D2352E441E28487700303424 /* EduxRouter.swift in Sources */,
 				D245B3251E3030920074CB5B /* ClassificationResult.swift in Sources */,
+				4D4DB8FD1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */,
 				D2352E471E284E5A00303424 /* EduxLoginOperation.swift in Sources */,
 				D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */,
 				4DFAB2EF1E33847100CBD3D2 /* LectureListDetect.swift in Sources */,
 				D245B3241E3025040074CB5B /* UITableViewCell+Reusable.swift in Sources */,
 				D245B32B1E317D410074CB5B /* SettingsViewController.swift in Sources */,
+				4D4DB8FA1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */,
 				D2352E421E28481200303424 /* NetworkController.swift in Sources */,
 				4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */,
 			);
