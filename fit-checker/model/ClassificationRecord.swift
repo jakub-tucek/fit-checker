@@ -17,10 +17,10 @@ class ClassificationRecord: Object {
     //MARK: - Stored properties
 
     /// Classification record label/description
-    var name: String = ""
+    dynamic var name: String = ""
 
     /// Earned score for exercise (test, assignment, ...)
-    var score: String = ""
+    dynamic var score: String = ""
 
     //MARK: - Initializers
 

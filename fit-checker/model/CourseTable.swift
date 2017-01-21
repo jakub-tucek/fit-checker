@@ -18,10 +18,10 @@ class CourseTable: Object {
     //MARK: - Stored properties
 
     /// Name of table
-    var name: String?
+    dynamic var name: String?
 
     /// Associated course identifier
-    var courseId: String = ""
+    dynamic var courseId: String = ""
 
     // All rows in table
     let classification = List<ClassificationRecord>()
