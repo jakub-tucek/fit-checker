@@ -78,7 +78,7 @@ class CoursesTableViewController: UITableViewController {
                 self?.tableView.reloadData()
             }
         } catch {
-            print("\(error)")
+            Logger.shared.error("\(error)")
         }
     }
 
@@ -114,7 +114,7 @@ extension CoursesTableViewController {
             let course = courses?[indexPath.row],
             let (student, _) = keychain.getAccount() else {
 
-                print("Daaamn man, user selected unselectable row!")
+                Logger.shared.error("Daaamn man, user selected unselectable row!")
             return
         }
 
