@@ -94,8 +94,8 @@ class LectureListDetect {
             let newItem = ArrayUtils<Lecture>.getItemSafely(array: newLectures, i: newIndex)
 
             let change = detectValueChange(oldItem: oldItem, newItem: newItem)
-            if let changeUnwrapped = change {
-                changes.append(changeUnwrapped)
+            if let change = change {
+                changes.append(change)
             }
 
             oldIndex += 1
