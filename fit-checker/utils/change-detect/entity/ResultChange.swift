@@ -12,7 +12,7 @@ import Foundation
 /// Simple entity for keeping changes.
 /// Default constructor creates default state. Default state is that no change
 /// was detected.
-class ResultChange<T: Any> {
+class ResultChange<T: AnyObject> {
 
     var changes: [Change<T>]
 
