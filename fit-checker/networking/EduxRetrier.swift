@@ -11,7 +11,7 @@ import Alamofire
 
 
 /// Allows to retry failed operations. If operation failed because of
-/// missing cookies (uh, authorization) retrier tryes to login
+/// missing cookies (uh, authorization) retrier tries to login
 /// user with stored credential and if it's successfull, calls original
 /// request again.
 class EduxRetrier: RequestRetrier {
