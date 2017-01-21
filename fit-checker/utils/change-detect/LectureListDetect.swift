@@ -18,17 +18,17 @@ class LectureListDetect {
     ///   - newValue: new value of type LectureListResult
     /// - Returns: detected change
     func detect(oldValue: LectureListResult, newValue: LectureListResult)
-        -> LectureListResultChange {
+                    -> LectureListResultChange {
 
-            let sizeDiff = detectSizeDiff(oldValue: oldValue, newValue: newValue)
-            let semesterChange = detectSemesterChange(oldValue: oldValue, newValue: newValue)
-            let valuesChange = detectValuesChange(oldValue: oldValue, newValue: newValue)
+        let sizeDiff = detectSizeDiff(oldValue: oldValue, newValue: newValue)
+        let semesterChange = detectSemesterChange(oldValue: oldValue, newValue: newValue)
+        let valuesChange = detectValuesChange(oldValue: oldValue, newValue: newValue)
 
-            return LectureListResultChange(
+        return LectureListResultChange(
                 changes: valuesChange,
                 sizeDifference: sizeDiff,
                 semesterChange: semesterChange
-            )
+        )
     }
 
     /// Returns size difference in parsed lectures
@@ -50,25 +50,25 @@ class LectureListDetect {
     ///   - newValue: new value of LectureListResult
     /// - Returns: Change entity or empty if no change detected
     func detectSemesterChange(oldValue: LectureListResult, newValue: LectureListResult)
-        -> Change<String>? {
-            if oldValue.semesterInfo != newValue.semesterInfo {
-                var type: ChangeType
+                    -> Change<String>? {
+        if oldValue.semesterInfo != newValue.semesterInfo {
+            var type: ChangeType
 
-                if oldValue.semesterInfo.isEmpty {
-                    type = ChangeType.added
-                } else if newValue.semesterInfo.isEmpty {
-                    type = ChangeType.removed
-                } else {
-                    type = ChangeType.modified
-                }
+            if oldValue.semesterInfo.isEmpty {
+                type = ChangeType.added
+            } else if newValue.semesterInfo.isEmpty {
+                type = ChangeType.removed
+            } else {
+                type = ChangeType.modified
+            }
 
-                return Change(
+            return Change(
                     type: type,
                     oldValue: oldValue.semesterInfo,
                     newValue: newValue.semesterInfo
-                )
-            }
-            return nil
+            )
+        }
+        return nil
     }
 
 
@@ -79,28 +79,28 @@ class LectureListDetect {
     ///   - newValue: new value of LectureListResult
     /// - Returns: Change entity array or empty array if no change detected
     func detectValuesChange(oldValue: LectureListResult, newValue: LectureListResult)
-        -> [Change<Lecture>] {
-            var changes = [Change<Lecture>]()
-            let oldLectures = oldValue.lectures
-            let newLectures = newValue.lectures
+                    -> [Change<Lecture>] {
+        var changes = [Change<Lecture>]()
+        let oldLectures = oldValue.lectures
+        let newLectures = newValue.lectures
 
-            var oldIndex = 0
-            var newIndex = 0
+        var oldIndex = 0
+        var newIndex = 0
 
-            while oldIndex > oldLectures.count && newIndex > newLectures.count {
-                let oldItem = ArrayUtils<Lecture>.getItemSafely(array: oldLectures, i: oldIndex)
-                let newItem = ArrayUtils<Lecture>.getItemSafely(array: newLectures, i: newIndex)
+        while oldIndex > oldLectures.count && newIndex > newLectures.count {
+            let oldItem = ArrayUtils<Lecture>.getItemSafely(array: oldLectures, i: oldIndex)
+            let newItem = ArrayUtils<Lecture>.getItemSafely(array: newLectures, i: newIndex)
 
-                let change = detectValueChange(oldItem: oldItem, newItem: newItem)
-                if let changeUnwrapped = change {
-                    changes.append(changeUnwrapped)
-                }
-
-                oldIndex += 1
-                newIndex += 1
+            let change = detectValueChange(oldItem: oldItem, newItem: newItem)
+            if let changeUnwrapped = change {
+                changes.append(changeUnwrapped)
             }
 
-            return changes
+            oldIndex += 1
+            newIndex += 1
+        }
+
+        return changes
     }
 
 
@@ -125,13 +125,13 @@ class LectureListDetect {
 
         if let type = type {
             return Change<Lecture>(
-                type: type,
-                oldValue: oldItem,
-                newValue: newItem
+                    type: type,
+                    oldValue: oldItem,
+                    newValue: newItem
             )
         }
         return nil
     }
-    
-    
+
+
 }

@@ -29,7 +29,7 @@ class Keechain {
         /// Protocol for internet service
         var protocolType: ProtocolType {
             switch self {
-                case .edux: return .https
+            case .edux: return .https
             }
         }
     }
@@ -52,8 +52,10 @@ class Keechain {
     /// - Returns: Stored account or nil if not presented
     func getAccount() -> Account? {
         guard
-            let username = getValue(for: Keys.username),
-            let password = getValue(for: Keys.password) else { return nil }
+                let username = getValue(for: Keys.username),
+                let password = getValue(for: Keys.password) else {
+            return nil
+        }
 
         return (username, password)
     }

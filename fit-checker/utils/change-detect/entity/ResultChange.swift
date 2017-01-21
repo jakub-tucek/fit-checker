@@ -18,7 +18,7 @@ class ResultChange<T: Any> {
 
     var sizeDifference: Int?
 
-    init (changes:[Change<T>], sizeDifference: Int) {
+    init(changes: [Change<T>], sizeDifference: Int) {
         self.changes = changes
         self.sizeDifference = sizeDifference
     }
@@ -32,5 +32,5 @@ class ResultChange<T: Any> {
         return changes.count != 0
     }
 
-    
+
 }

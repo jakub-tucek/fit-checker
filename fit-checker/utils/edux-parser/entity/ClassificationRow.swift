@@ -10,17 +10,17 @@ import Foundation
 
 /// EduxParserResultRow is class storing data of one row.
 class ClassificationRow {
-    
-    /// Represents first collumn in table
-    let name : String
-    
-    /// Represents second collumn in table - typically result of test, final grade
+
+    /// Represents first column in table
+    let name: String
+
+    /// Represents second column in table - typically result of test, final grade
     let value: String
-    
-    init(name : String, value : String) {
+
+    init(name: String, value: String) {
         self.name = name
         self.value = value
     }
-    
+
 
 }

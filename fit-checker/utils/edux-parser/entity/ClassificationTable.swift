@@ -14,14 +14,14 @@ class ClassificationTable {
 
 
     /// Name of table if present
-    var name : String?
+    var name: String?
 
     // All rows in table
-    var rows : [ClassificationRow]
+    var rows: [ClassificationRow]
 
-    init(name : String, rows : [ClassificationRow]) {
+    init(name: String, rows: [ClassificationRow]) {
         self.name = name
         self.rows = rows
     }
-    
+
 }

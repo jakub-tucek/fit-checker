@@ -16,7 +16,7 @@ protocol ClasificationParsing {
     /// Parses result from edux webpage.
     ///
     /// - Parameter html: downloaded html
-    /// - Returns: parsed resut
+    /// - Returns: parsed result
     func parseEdux(html: String) -> ClassificationResult
 
 }

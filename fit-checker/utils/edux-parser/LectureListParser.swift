@@ -12,27 +12,27 @@ import Kanna
 
 /// LectureListParser is impelemntation of LectureListParsing protocol.
 /// Parses semester information and current lectures (courses) from edux homepage.
-class LectureListParser : LectureListParsing {
+class LectureListParser: LectureListParsing {
 
 
-    /// Struct containg selector constants
+    /// Struct containing selector constants
     struct Consts {
         /// static let
         static let jsonContentKey = "widget_content"
 
         /// Select info about semester
         static let semesterInfoSelector
-        = "//p[contains(@class, 'semester-info')]"
+                = "//p[contains(@class, 'semester-info')]"
 
         /// Select lecture in list containing
         static let lectureSelector
-            = "//ul/li"
+                = "//ul/li"
     }
-    
+
 
     /// Parses classification from edux homepage.
     ///
-    /// - Parameter json: ajax response containg widget content in json format
+    /// - Parameter json: ajax response containing widget content in json format
     /// - Returns: parsed result
     func parseClassification(json: [String: Any?]) -> LectureListResult {
         let result = LectureListResult()
@@ -40,13 +40,13 @@ class LectureListParser : LectureListParsing {
         let html = getWidgetContent(json: json)
 
         if let node = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
-                let semesterInfo = parseSemesterInfo(widgetDocument: node)
-                if let infoUnwrap = semesterInfo {
-                    result.semesterInfo = infoUnwrap
+            let semesterInfo = parseSemesterInfo(widgetDocument: node)
+            if let infoUnwrap = semesterInfo {
+                result.semesterInfo = infoUnwrap
 
-                }
+            }
 
-                result.lectures = parseLectures(widgetDocument: node)
+            result.lectures = parseLectures(widgetDocument: node)
 
         }
         return result
@@ -57,7 +57,7 @@ class LectureListParser : LectureListParsing {
     ///
     /// - Parameter json: response JSON of widget
     /// - Returns: html or empty string if JSON is not valid
-    private func getWidgetContent(json: [String: Any?]) -> String{
+    private func getWidgetContent(json: [String: Any?]) -> String {
         if let str = json[Consts.jsonContentKey] as? String {
             return str
         } else {
@@ -67,7 +67,7 @@ class LectureListParser : LectureListParsing {
 
 
     /// Parses semester informations. Finds first node that matches
-    /// Semester infor selector and returns it's text.
+    /// Semester info selector and returns it's text.
     ///
     /// - Parameter widgetNode: widget node
     /// - Returns: parsed semester info
