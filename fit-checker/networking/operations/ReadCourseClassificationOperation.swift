@@ -29,8 +29,9 @@ class ReadCourseClassificationOperation: BaseOperation {
     override func start() {
         _ = sessionManager.request(EduxRouter.courseClassification(
             courseId: courseId, student: student))
-            .validate().responseString(
-                completionHandler: handle)
+            .validate()
+            .validate(EduxValidators.authorizedHTML)
+            .responseString(completionHandler: handle)
     }
 
     /// Handle HTML response

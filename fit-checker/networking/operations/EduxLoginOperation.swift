@@ -51,31 +51,8 @@ class EduxLoginOperation: BaseOperation {
     override func start() {
         _ = sessionManager.request(EduxRouter.login(query: queryParameters,
                                                     body: bodyParameters))
-            .validate().validate(EduxLoginOperation.validateLogin)
+            .validate().validate(EduxValidators.validCredentials)
             .response(completionHandler: handle)
-    }
-
-    /// Checks whether user login was successfull.
-    ///
-    /// - Parameters:
-    ///   - request: Original URL request
-    ///   - response: Server response
-    ///   - data: Response data
-    /// - Returns: Failure if login was not successfull, success otherwise
-    static func validateLogin(request: URLRequest?,
-                              response: HTTPURLResponse, data: Data?)
-        -> Request.ValidationResult {
-
-            guard
-                let data = data,
-                let html = String(data: data, encoding: .utf8) else {
-
-                return .failure(EduxLoginOperationError.generalError)
-            }
-
-            return html.contains(EduxLoginOperation.loginIdentifier)
-                ? .failure(EduxLoginOperationError.badCredentials)
-                : .success
     }
 
     /// Finishes operation based on validation results.
@@ -101,13 +78,4 @@ class EduxLoginOperation: BaseOperation {
             promise?.failure()
         }
     }
-}
-
-/// Possible Edux login error.
-///
-/// - generalError: Occures when server response is not valid html or has bad response code
-/// - badCredentials: Thrown when user credentials are not valid
-enum EduxLoginOperationError: Error {
-    case generalError
-    case badCredentials
 }
