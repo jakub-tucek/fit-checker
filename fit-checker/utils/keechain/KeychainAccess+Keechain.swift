@@ -16,6 +16,6 @@ extension Keychain {
     /// - Parameter service: Remote service
     convenience init(service: Keechain.Service) {
         self.init(server: service.identifier,
-                  protocolType: service.protocolType)
+                protocolType: service.protocolType)
     }
 }

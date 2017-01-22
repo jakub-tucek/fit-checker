@@ -10,7 +10,6 @@ import Foundation
 import Kanna
 
 
-
 /// ClassificationParser is implementation of ClassificaitonParsing protocol.
 /// With help of Kanna framework and simple xpath selectors parses classification
 /// page. Result is returned in ClassificationResult object.
@@ -20,7 +19,7 @@ class ClassificationParser: ClasificationParsing {
     struct Consts {
         /// Selectors main div containing all data
         static let mainDivSelector = "//div[contains(@class, 'page_with_sidebar')]" +
-        "/div[contains(@class, 'level1')]"
+                "/div[contains(@class, 'level1')]"
 
         /// Selects table names
         static let tableNameSelector = "h2"
@@ -34,7 +33,6 @@ class ClassificationParser: ClasificationParsing {
         /// One col in row
         static let colSelector = "td"
     }
-
 
 
     /// Parses classification page - all of tables and its names and returns it.
@@ -110,10 +108,10 @@ class ClassificationParser: ClasificationParsing {
         for tableNode in node.xpath(Consts.tableSelector) {
 
             tables.append(
-                self.parseTable(
-                    tableNode: tableNode,
-                    name: names[tableCounter]
-                )
+                    self.parseTable(
+                            tableNode: tableNode,
+                            name: names[tableCounter]
+                    )
             )
 
             tableCounter += 1

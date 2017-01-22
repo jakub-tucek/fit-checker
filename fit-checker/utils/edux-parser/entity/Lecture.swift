@@ -9,14 +9,18 @@
 import Foundation
 
 
-
 /// Lecture is simple object keeping information about parsed lecture.
 class Lecture {
 
-    let name : String
+    let name: String
 
-    init(name : String) {
+    init(name: String) {
         self.name = name
+    }
+
+
+    static func !=(left:Lecture, right: Lecture) -> Bool {
+        return !(left.name == right.name)
     }
 
 }

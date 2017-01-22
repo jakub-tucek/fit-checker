@@ -16,8 +16,8 @@ class LectureListResult {
     /// Timestamp when result was created
     let timestamp = Date()
 
-    var semesterInfo : String = ""
+    var semesterInfo: String = ""
 
     var lectures = [Lecture]()
-    
+
 }
