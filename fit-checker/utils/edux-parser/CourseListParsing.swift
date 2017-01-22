@@ -1,5 +1,5 @@
 //
-//  LectureListParsing.swift
+//  CourseListParsing.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 14/01/17.
@@ -9,16 +9,16 @@
 import Foundation
 
 
-/// LectureListParsing is protocal for parsing edux homepage that contains
+/// CourseParsedListParsing is protocol for parsing edux homepage that contains
 /// courses of current semester.
-protocol LectureListParsing {
+protocol CourseListParsing {
 
 
     /// Parses classification from edux homepage.
     ///
     /// - Parameter json: ajax response containg widget content in json format
     /// - Returns: parsed result
-    func parseClassification(json: [String: Any?]) -> LectureListResult
+    func parseClassification(json: [String: Any?]) -> CourseParsedListResult
 
 
 }

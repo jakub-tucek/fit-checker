@@ -1,5 +1,5 @@
 //
-//  LectureListDetectTest.swift
+//  CourseListDetectTest.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 21/01/17.
@@ -8,12 +8,12 @@
 
 import XCTest
 
-class LectureListDetectTest: XCTestCase {
+class CourseListDetectTest: XCTestCase {
 
-    let detect = LectureListDetect()
+    let detect = CourseListDetect()
 
-    var oldRes = LectureListResult()
-    var newRes = LectureListResult()
+    var oldRes = CourseParsedListResult()
+    var newRes = CourseParsedListResult()
 
     override func setUp() {
         super.setUp()
@@ -22,11 +22,11 @@ class LectureListDetectTest: XCTestCase {
         newRes = initResult()
     }
 
-    private func initResult() -> LectureListResult {
-        let res = LectureListResult()
+    private func initResult() -> CourseParsedListResult {
+        let res = CourseParsedListResult()
         res.semesterInfo = "semester info"
-        let lecture = [Lecture(name: "SP2"), Lecture(name: "SP3"), Lecture(name: "SI3.0")]
-        res.lectures = lecture
+        let course = [CourseParsed(name: "SP2"), CourseParsed(name: "SP3"), CourseParsed(name: "SI3.0")]
+        res.courses = course
 
         return res
     }
@@ -82,14 +82,14 @@ class LectureListDetectTest: XCTestCase {
         XCTAssertTrue(detectResult.changeDetected())
     }
 
-    private func noListChangeAsserts(res: LectureListResultChange) {
+    private func noListChangeAsserts(res: CourseListResultChange) {
         XCTAssertEqual(0, res.sizeDifference)
         XCTAssertEqual(0, res.changes.count)
     }
 
 
     func testDifferentName() {
-        newRes.lectures[0] = Lecture(name: "Diff name")
+        newRes.courses[0] = CourseParsed(name: "Diff name")
 
         let detectResult = detect.detect(oldValue: oldRes, newValue: newRes)
 
@@ -106,7 +106,7 @@ class LectureListDetectTest: XCTestCase {
 
 
     func testMissingNewName() {
-        newRes.lectures.remove(at: 2)
+        newRes.courses.remove(at: 2)
 
         let detectResult = detect.detect(oldValue: oldRes, newValue: newRes)
 
@@ -122,7 +122,7 @@ class LectureListDetectTest: XCTestCase {
     }
 
     func testAddedNewName() {
-        oldRes.lectures.remove(at: 2)
+        oldRes.courses.remove(at: 2)
 
         let detectResult = detect.detect(oldValue: oldRes, newValue: newRes)
 

@@ -58,10 +58,10 @@ class ReadCourseListOperation: BaseOperation {
         case let .success(json):
             guard let json = json as? [String: Any?] else { return }
 
-            let parser = LectureListParser()
+            let parser = CourseListParser()
             let parsedCourses = parser.parseClassification(json: json)
-            let courses = parsedCourses.lectures.map({ lecture -> Course in
-                return Course(id: lecture.name, name: lecture.name)
+            let courses = parsedCourses.courses.map({ course -> Course in
+                return Course(id: course.name, name: course.name)
             })
 
             do {

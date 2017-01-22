@@ -1,5 +1,5 @@
 //
-//  Lecture.swift
+//  CourseParsed.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 14/01/17.
@@ -9,12 +9,12 @@
 import Foundation
 
 
-/// Lecture is simple object keeping information about parsed lecture.
-class Lecture {
+/// CoursedParsed is simple object keeping information about parsed course.
+class CourseParsed {
 
     let name: String
 
-    /// True if lecture has classification page
+    /// True if course has classification page
     let classification: Bool
 
     init(name: String, classification: Bool = true) {
@@ -23,7 +23,7 @@ class Lecture {
     }
 
 
-    static func !=(left:Lecture, right: Lecture) -> Bool {
+    static func !=(left: CourseParsed, right: CourseParsed) -> Bool {
         return !((left.name == right.name) && (left.classification == right.classification))
     }
 

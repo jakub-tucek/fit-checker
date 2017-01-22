@@ -1,5 +1,5 @@
 //
-//  LectureListParser.swift
+//  CourseListParser.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 14/01/17.
@@ -10,9 +10,9 @@ import Foundation
 import Kanna
 
 
-/// LectureListParser is impelemntation of LectureListParsing protocol.
-/// Parses semester information and current lectures (courses) from edux homepage.
-class LectureListParser: LectureListParsing {
+/// CourseListParser is implementation of CourseListParsing protocol.
+/// Parses semester information and current courses (courses) from edux homepage.
+class CourseListParser: CourseListParsing {
 
 
     /// Struct containing selector constants
@@ -24,11 +24,11 @@ class LectureListParser: LectureListParsing {
         static let semesterInfoSelector
                 = "//p[contains(@class, 'semester-info')]"
 
-        /// Select lecture in list containing
-        static let lectureSelector
+        /// Select course in list containing
+        static let courseSelector
                 = "//ul/li"
 
-        static let lectureLinkSelector
+        static let courseLinkSelector
                 = "a"
     }
 
@@ -37,8 +37,8 @@ class LectureListParser: LectureListParsing {
     ///
     /// - Parameter json: ajax response containing widget content in json format
     /// - Returns: parsed result
-    func parseClassification(json: [String: Any?]) -> LectureListResult {
-        let result = LectureListResult()
+    func parseClassification(json: [String: Any?]) -> CourseParsedListResult {
+        let result = CourseParsedListResult()
 
         let html = getWidgetContent(json: json)
 
@@ -49,7 +49,7 @@ class LectureListParser: LectureListParsing {
 
             }
 
-            result.lectures = parseLectures(widgetDocument: node)
+            result.courses = parseLectures(widgetDocument: node)
 
         }
         return result
@@ -82,25 +82,25 @@ class LectureListParser: LectureListParsing {
     }
 
 
-    /// Parses lectures names by iterating over li elements in list.
+    /// Parses courses names by iterating over li elements in list.
     ///
     /// - Parameter widgetNode: widget node
-    /// - Returns: parsed lectures
-    private func parseLectures(widgetDocument: HTMLDocument) -> [Lecture] {
-        var lectures = [Lecture]()
-        for lectureNode in widgetDocument.xpath(Consts.lectureSelector) {
+    /// - Returns: parsed courses
+    private func parseLectures(widgetDocument: HTMLDocument) -> [CourseParsed] {
+        var courses = [CourseParsed]()
+        for courseNode in widgetDocument.xpath(Consts.courseSelector) {
             let linkNodeCount
-                    = lectureNode.xpath(Consts.lectureLinkSelector).count
+                    = courseNode.xpath(Consts.courseLinkSelector).count
 
             //no link found
             let classification = (linkNodeCount > 0)
 
-            if let name = lectureNode.text {
-                lectures.append(Lecture(name: name, classification: classification))
+            if let name = courseNode.text {
+                courses.append(CourseParsed(name: name, classification: classification))
             }
         }
 
-        return lectures
+        return courses
     }
 
 }
