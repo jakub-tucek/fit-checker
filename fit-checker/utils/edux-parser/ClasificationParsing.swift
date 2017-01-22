@@ -1,5 +1,5 @@
 //
-//  EduxParsing.swift
+//  ClassificationParsing.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 12/01/17.
@@ -10,13 +10,13 @@ import Foundation
 
 
 /// ClassificationParsing is protocol for parsing edux.
-protocol ClasificationParsing {
+protocol ClassificationParsing {
 
 
-    /// Parses result from edux webpage.
+    /// Parses classification results from edux webpage.
     ///
     /// - Parameter html: downloaded html
     /// - Returns: parsed result
-    func parseEdux(html: String) -> ClassificationResult
+    func parse(html: String) -> ClassificationResult
 
 }

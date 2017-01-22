@@ -1,5 +1,5 @@
 //
-//  LectureListResultChange.swift
+//  CourseListResultChange.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 21/01/17.
@@ -9,13 +9,13 @@
 import Foundation
 
 
-/// LectureListResultChange is child of ResultChange to keep track of possible
+/// CourseListResultChange is child of ResultChange to keep track of possible
 /// semester change.
-class LectureListResultChange: ResultChange<Lecture> {
+class CourseListResultChange: ResultChange<CourseParsed> {
 
     var semesterChange: DetectedChange<String>?
 
-    init(changes: [DetectedChange<Lecture>], sizeDifference: Int, semesterChange: DetectedChange<String>?) {
+    init(changes: [DetectedChange<CourseParsed>], sizeDifference: Int, semesterChange: DetectedChange<String>?) {
         super.init(changes: changes, sizeDifference: sizeDifference)
         self.semesterChange = semesterChange
     }

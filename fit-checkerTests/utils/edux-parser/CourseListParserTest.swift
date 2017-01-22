@@ -1,5 +1,5 @@
 //
-//  LectureListParserTest.swift
+//  CourseListParserTest.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 14/01/17.
@@ -8,9 +8,9 @@
 
 import XCTest
 
-class LectureListParserTest: XCTestCase {
+class CourseListParserTest: XCTestCase {
 
-    let parser = LectureListParser()
+    let parser = CourseListParser()
 
     func convertToDictionary(text: String) -> [String: Any?]? {
         if let data = text.data(using: .utf8) {
@@ -26,16 +26,16 @@ class LectureListParserTest: XCTestCase {
     func testHomepage() {
         let content = FileLoader.readFile(name: "lecture-list", ext: "json")!
 
-        let result = parser.parseClassification(json: convertToDictionary(text: content)!)
+        let result = parser.parse(json: convertToDictionary(text: content)!)
         
         XCTAssertEqual("Semestr: Zimní 2016/2017", result.semesterInfo)
-        XCTAssertEqual(8, result.lectures.count)
+        XCTAssertEqual(8, result.courses.count)
 
-        XCTAssertEqual("BI-SP2", result.lectures[6].name)
-        XCTAssertEqual(true, result.lectures[6].classification)
+        XCTAssertEqual("BI-SP2", result.courses[6].name)
+        XCTAssertEqual(true, result.courses[6].classification)
 
-        XCTAssertEqual("TVV0", result.lectures[7].name)
-        XCTAssertEqual(false, result.lectures[7].classification)
+        XCTAssertEqual("TVV0", result.courses[7].name)
+        XCTAssertEqual(false, result.courses[7].classification)
 
     }
 

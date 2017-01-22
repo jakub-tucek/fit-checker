@@ -19,12 +19,16 @@ class Course: Object {
     /// Course name
     dynamic var name = ""
 
+    /// Indicates wheter classification for this course is available
+    dynamic var classificationAvailable = false
+
     //MARK: - Initializers
-    convenience init(id: String, name: String) {
+    convenience init(id: String, name: String, classificationAvailable: Bool) {
         self.init()
 
         self.id = id
         self.name = name
+        self.classificationAvailable = classificationAvailable
     }
 
     //MARK: - Realm API

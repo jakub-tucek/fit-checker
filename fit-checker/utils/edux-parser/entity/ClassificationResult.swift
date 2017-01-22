@@ -1,5 +1,5 @@
 //
-//  EduxParserResult.swift
+//  ClassificationResult.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 12/01/17.

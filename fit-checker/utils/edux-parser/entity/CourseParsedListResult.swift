@@ -1,5 +1,5 @@
 //
-//  LectureListResult.swift
+//  CourseParsedListResult.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 14/01/17.
@@ -9,8 +9,8 @@
 import Foundation
 
 
-/// LectureListResult is object keeping info about parsing lectures.
-class LectureListResult {
+/// CourseParsedListResult is object keeping info about parsing courses.
+class CourseParsedListResult {
 
 
     /// Timestamp when result was created
@@ -18,6 +18,6 @@ class LectureListResult {
 
     var semesterInfo: String = ""
 
-    var lectures = [Lecture]()
+    var courses = [CourseParsed]()
 
 }
