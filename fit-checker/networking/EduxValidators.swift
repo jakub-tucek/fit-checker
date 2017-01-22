@@ -15,10 +15,10 @@ struct EduxValidators {
     /// Shared validator constants
     struct Constants {
         /// If verifier is contained in HTML response, user is logged in
-        static let loginHTMLVerifier = "Odhlásit se"
+        static let loginHTMLVerifier = tr(.htmlLogoutVerifier)
 
         /// If verifier is contained in JSON response, user is logged in
-        static let loginJSONVerifier = "Studuji:"
+        static let loginJSONVerifier = tr(.jsonLogoutVerifier)
     }
 
     /// Possible edux validation errors

@@ -58,7 +58,7 @@ class CoursesTableViewController: UITableViewController {
     private func configureView() {
         let refreshControl = UIRefreshControl()
 
-        title = "Courses"
+        title = tr(.courses)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier:
             UITableViewCell.identifier)
         tableView.addSubview(refreshControl)
