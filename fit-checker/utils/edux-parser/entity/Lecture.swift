@@ -18,4 +18,9 @@ class Lecture {
         self.name = name
     }
 
+
+    static func !=(left:Lecture, right: Lecture) -> Bool {
+        return !(left.name == right.name)
+    }
+
 }

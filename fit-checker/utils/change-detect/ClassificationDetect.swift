@@ -133,10 +133,8 @@ class ClassificationDetect {
 
         type = (newItem == nil ? DetectedChangeType.removed : type)
 
-        if let old = oldItem, let new = newItem {
-            if (old.name != new.name || old.value != new.value) {
-                type = DetectedChangeType.modified
-            }
+        if let old = oldItem, let new = newItem, old != new {
+            type = DetectedChangeType.modified
         }
 
         if let type = type {

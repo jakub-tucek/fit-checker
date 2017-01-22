@@ -123,7 +123,7 @@ class LectureListDetect {
         type = (newItem == nil ? DetectedChangeType.removed : type)
 
 
-        if let old = oldItem, let new = newItem, old.name != new.name {
+        if let old = oldItem, let new = newItem, old != new {
             type = DetectedChangeType.modified
         }
 

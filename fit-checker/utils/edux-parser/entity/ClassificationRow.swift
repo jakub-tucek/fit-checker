@@ -23,4 +23,9 @@ class ClassificationRow {
     }
 
 
+    static func !=(left: ClassificationRow, right: ClassificationRow) -> Bool {
+        return !((left.name == right.name) && (left.value == right.value))
+    }
+
+
 }

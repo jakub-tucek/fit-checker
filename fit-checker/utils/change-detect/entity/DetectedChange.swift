@@ -11,7 +11,7 @@ import Foundation
 
 /// Generic struct for keeping detected change.
 struct DetectedChange<T> {
-    let type: ChangeType
+    let type: DetectedChangeType
     let oldValue: T?
     let newValue: T?
 }
