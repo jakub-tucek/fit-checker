@@ -68,6 +68,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard
             let (_, _) = Keechain(service: .edux).getAccount() else
         {
+            // Turn off background fetch
+            UIApplication.shared.setMinimumBackgroundFetchInterval(
+                UIApplicationBackgroundFetchIntervalNever)
+
+            // Show login controller
             window?.rootViewController = LoginViewController(
                 networkController: networkController)
 
@@ -92,8 +97,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         tabBarController.viewControllers = controllers
 
+        // Set interval for background refresh
+        UIApplication.shared.setMinimumBackgroundFetchInterval(
+            RefreshInterval.twentyMinutes.interval)
         window?.rootViewController = UINavigationController(rootViewController:
             tabBarController)
+    }
+
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        completionHandler(.noData)
     }
 
     deinit {
