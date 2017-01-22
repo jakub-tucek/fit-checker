@@ -949,10 +949,10 @@
 		D2352E451E284E3500303424 /* operations */ = {
 			isa = PBXGroup;
 			children = (
+				D2352E521E2A0CDF00303424 /* BaseOperation.swift */,
 				D2352E461E284E5A00303424 /* EduxLoginOperation.swift */,
 				D2352E481E284EA300303424 /* ReadCourseClassificationOperation.swift */,
 				D2352E4A1E284EBC00303424 /* ReadCourseListOperation.swift */,
-				D2352E521E2A0CDF00303424 /* BaseOperation.swift */,
 			);
 			path = operations;
 			sourceTree = "<group>";
