@@ -16,9 +16,9 @@ protocol CourseListParsing {
 
     /// Parses classification from edux homepage.
     ///
-    /// - Parameter json: ajax response containg widget content in json format
+    /// - Parameter json: ajax response containing widget content in json format
     /// - Returns: parsed result
-    func parseClassification(json: [String: Any?]) -> CourseParsedListResult
+    func parse(json: [String: Any?]) -> CourseParsedListResult
 
 
 }

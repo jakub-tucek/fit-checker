@@ -26,7 +26,7 @@ class CourseListParserTest: XCTestCase {
     func testHomepage() {
         let content = FileLoader.readFile(name: "lecture-list", ext: "json")!
 
-        let result = parser.parseClassification(json: convertToDictionary(text: content)!)
+        let result = parser.parse(json: convertToDictionary(text: content)!)
         
         XCTAssertEqual("Semestr: Zimní 2016/2017", result.semesterInfo)
         XCTAssertEqual(8, result.courses.count)

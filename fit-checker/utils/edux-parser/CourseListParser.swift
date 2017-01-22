@@ -37,7 +37,7 @@ class CourseListParser: CourseListParsing {
     ///
     /// - Parameter json: ajax response containing widget content in json format
     /// - Returns: parsed result
-    func parseClassification(json: [String: Any?]) -> CourseParsedListResult {
+    func parse(json: [String: Any?]) -> CourseParsedListResult {
         let result = CourseParsedListResult()
 
         let html = getWidgetContent(json: json)

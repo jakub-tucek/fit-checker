@@ -1,5 +1,5 @@
 //
-//  EduxParserResultRow.swift
+//  ClassificationRow.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 12/01/17.
