@@ -127,15 +127,15 @@ class ClassificationDetect {
     /// - Returns: found change or empty
     private func detectValueChange(oldItem: ClassificationRow?, newItem: ClassificationRow?)
                     -> DetectedChange<ClassificationRow>? {
-        var type: ChangeType?
+        var type: DetectedChangeType?
 
-        type = (oldItem == nil ? ChangeType.added : nil)
+        type = (oldItem == nil ? DetectedChangeType.added : nil)
 
-        type = (newItem == nil ? ChangeType.removed : type)
+        type = (newItem == nil ? DetectedChangeType.removed : type)
 
         if let old = oldItem, let new = newItem {
             if (old.name != new.name || old.value != new.value) {
-                type = ChangeType.modified
+                type = DetectedChangeType.modified
             }
         }
 

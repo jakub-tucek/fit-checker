@@ -57,14 +57,14 @@ class LectureListDetect {
         guard oldValue.semesterInfo != newValue.semesterInfo else {
             return nil
         }
-        var type: ChangeType
+        var type: DetectedChangeType
 
         if oldValue.semesterInfo.isEmpty {
-            type = ChangeType.added
+            type = DetectedChangeType.added
         } else if newValue.semesterInfo.isEmpty {
-            type = ChangeType.removed
+            type = DetectedChangeType.removed
         } else {
-            type = ChangeType.modified
+            type = DetectedChangeType.modified
         }
 
         return DetectedChange(
@@ -116,15 +116,15 @@ class LectureListDetect {
     ///   - newValue: new value of Lecture
     /// - Returns: Change entity or empty if no change detected
     private func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> DetectedChange<Lecture>? {
-        var type: ChangeType?
+        var type: DetectedChangeType?
 
-        type = (oldItem == nil ? ChangeType.added : nil)
+        type = (oldItem == nil ? DetectedChangeType.added : nil)
 
-        type = (newItem == nil ? ChangeType.removed : type)
+        type = (newItem == nil ? DetectedChangeType.removed : type)
 
 
         if let old = oldItem, let new = newItem, old.name != new.name {
-            type = ChangeType.modified
+            type = DetectedChangeType.modified
         }
 
         if let type = type {

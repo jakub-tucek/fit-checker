@@ -54,7 +54,7 @@ class ClassificationDetectTest: XCTestCase {
 
         XCTAssertEqual(0, res.sizeDifference)
         XCTAssertEqual(2, res.changes.count)
-        XCTAssertEqual(ChangeType.modified, res.changes[0].type)
+        XCTAssertEqual(DetectedChangeType.modified, res.changes[0].type)
         XCTAssertEqual("Value", res.changes[0].oldValue!.name)
         XCTAssertEqual("22", res.changes[0].oldValue!.value)
         XCTAssertEqual("Value", res.changes[0].newValue!.name)
@@ -73,7 +73,7 @@ class ClassificationDetectTest: XCTestCase {
 
         XCTAssertEqual(1, res.sizeDifference)
         XCTAssertEqual(2, res.changes.count)
-        XCTAssertEqual(ChangeType.added, res.changes[0].type)
+        XCTAssertEqual(DetectedChangeType.added, res.changes[0].type)
         XCTAssertNil(res.changes[0].oldValue)
         XCTAssertEqual("Value", res.changes[0].newValue!.name)
         XCTAssertEqual("0", res.changes[0].newValue!.value)
@@ -83,7 +83,7 @@ class ClassificationDetectTest: XCTestCase {
     }
 
     private func checkSecondTableChange(res: ResultChange<ClassificationRow>) {
-        XCTAssertEqual(ChangeType.modified, res.changes[1].type)
+        XCTAssertEqual(DetectedChangeType.modified, res.changes[1].type)
         XCTAssertEqual("Sparta", res.changes[1].oldValue!.name)
         XCTAssertEqual("VELKA NULA", res.changes[1].oldValue!.value)
         XCTAssertEqual("Atheny", res.changes[1].newValue!.name)
@@ -98,7 +98,7 @@ class ClassificationDetectTest: XCTestCase {
 
         XCTAssertEqual(-1, res.sizeDifference)
         XCTAssertEqual(2, res.changes.count)
-        XCTAssertEqual(ChangeType.removed, res.changes[0].type)
+        XCTAssertEqual(DetectedChangeType.removed, res.changes[0].type)
         XCTAssertNil(res.changes[0].newValue)
         XCTAssertEqual("Value", res.changes[0].oldValue!.name)
         XCTAssertEqual("0", res.changes[0].oldValue!.value)

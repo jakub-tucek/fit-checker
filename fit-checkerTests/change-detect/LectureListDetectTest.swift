@@ -49,7 +49,7 @@ class LectureListDetectTest: XCTestCase {
 
         XCTAssertEqual("semester info new", detectResult.semesterChange!.newValue)
         XCTAssertEqual("semester info", detectResult.semesterChange!.oldValue)
-        XCTAssertEqual(ChangeType.modified, detectResult.semesterChange!.type)
+        XCTAssertEqual(DetectedChangeType.modified, detectResult.semesterChange!.type)
         XCTAssertTrue(detectResult.changeDetected())
     }
 
@@ -64,7 +64,7 @@ class LectureListDetectTest: XCTestCase {
 
         XCTAssertEqual("", detectResult.semesterChange!.newValue)
         XCTAssertEqual("semester info", detectResult.semesterChange!.oldValue)
-        XCTAssertEqual(ChangeType.removed, detectResult.semesterChange!.type)
+        XCTAssertEqual(DetectedChangeType.removed, detectResult.semesterChange!.type)
         XCTAssertTrue(detectResult.changeDetected())
     }
 
@@ -78,7 +78,7 @@ class LectureListDetectTest: XCTestCase {
 
         XCTAssertEqual("", detectResult.semesterChange!.oldValue)
         XCTAssertEqual("semester info", detectResult.semesterChange!.newValue)
-        XCTAssertEqual(ChangeType.added, detectResult.semesterChange!.type)
+        XCTAssertEqual(DetectedChangeType.added, detectResult.semesterChange!.type)
         XCTAssertTrue(detectResult.changeDetected())
     }
 
@@ -99,7 +99,7 @@ class LectureListDetectTest: XCTestCase {
 
         XCTAssertEqual("Diff name", detectResult.changes[0].newValue!.name)
         XCTAssertEqual("SP2", detectResult.changes[0].oldValue!.name)
-        XCTAssertEqual(ChangeType.modified, detectResult.changes[0].type)
+        XCTAssertEqual(DetectedChangeType.modified, detectResult.changes[0].type)
 
         XCTAssertTrue(detectResult.changeDetected())
     }
@@ -116,7 +116,7 @@ class LectureListDetectTest: XCTestCase {
 
         XCTAssertNil(detectResult.changes[0].newValue)
         XCTAssertEqual("SI3.0", detectResult.changes[0].oldValue!.name)
-        XCTAssertEqual(ChangeType.removed, detectResult.changes[0].type)
+        XCTAssertEqual(DetectedChangeType.removed, detectResult.changes[0].type)
 
         XCTAssertTrue(detectResult.changeDetected())
     }
@@ -132,7 +132,7 @@ class LectureListDetectTest: XCTestCase {
 
         XCTAssertNil(detectResult.changes[0].oldValue)
         XCTAssertEqual("SI3.0", detectResult.changes[0].newValue!.name)
-        XCTAssertEqual(ChangeType.added, detectResult.changes[0].type)
+        XCTAssertEqual(DetectedChangeType.added, detectResult.changes[0].type)
 
         XCTAssertTrue(detectResult.changeDetected())
     }

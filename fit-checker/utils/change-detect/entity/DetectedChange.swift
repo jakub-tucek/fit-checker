@@ -1,5 +1,5 @@
 //
-//  Change.swift
+//  DetectedChange.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 21/01/17.

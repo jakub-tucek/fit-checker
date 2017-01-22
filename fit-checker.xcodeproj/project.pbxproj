@@ -12,10 +12,10 @@
 		4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */; };
 		4D490EE51E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */; };
 		4D490EE71E34135700BE6EE8 /* ClassificationDetectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */; };
-		4D4DB8F41E33AE5100A8CCB3 /* ChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */; };
-		4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */; };
-		4D4DB8F71E33B03700A8CCB3 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* Change.swift */; };
-		4D4DB8F81E33B03700A8CCB3 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* Change.swift */; };
+		4D4DB8F41E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */; };
+		4D4DB8F51E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */; };
+		4D4DB8F71E33B03700A8CCB3 /* DetectedChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */; };
+		4D4DB8F81E33B03700A8CCB3 /* DetectedChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */; };
 		4D4DB8FA1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */; };
 		4D4DB8FB1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */; };
 		4D4DB8FD1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */; };
@@ -108,8 +108,8 @@
 		4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClasificationParsing.swift; sourceTree = "<group>"; };
 		4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationDetect.swift; sourceTree = "<group>"; };
 		4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationDetectTest.swift; sourceTree = "<group>"; };
-		4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeType.swift; sourceTree = "<group>"; };
-		4D4DB8F61E33B03700A8CCB3 /* Change.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
+		4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedChangeType.swift; sourceTree = "<group>"; };
+		4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedChange.swift; sourceTree = "<group>"; };
 		4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListResultChange.swift; sourceTree = "<group>"; };
 		4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtils.swift; sourceTree = "<group>"; };
 		4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListDetectTest.swift; sourceTree = "<group>"; };
@@ -527,8 +527,8 @@
 			isa = PBXGroup;
 			children = (
 				4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */,
-				4D4DB8F31E33AE5100A8CCB3 /* ChangeType.swift */,
-				4D4DB8F61E33B03700A8CCB3 /* Change.swift */,
+				4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */,
+				4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */,
 				4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */,
 			);
 			path = entity;
@@ -1139,7 +1139,7 @@
 				4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */,
 				4D5296821E2A27F4007677BA /* LectureListParser.swift in Sources */,
 				4D4DB9021E33DEC400A8CCB3 /* LectureListDetectTest.swift in Sources */,
-				4D4DB8F51E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
+				4D4DB8F51E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */,
 				4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */,
 				4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
 				4D490EE51E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
@@ -1150,7 +1150,7 @@
 				4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */,
 				4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */,
 				4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */,
-				4D4DB8F81E33B03700A8CCB3 /* Change.swift in Sources */,
+				4D4DB8F81E33B03700A8CCB3 /* DetectedChange.swift in Sources */,
 				4D4DB8FE1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */,
 				4D5296851E2A27F4007677BA /* ClassificationParserTest.swift in Sources */,
 			);
@@ -1166,13 +1166,13 @@
 				D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */,
 				D245B3271E30309B0074CB5B /* Lecture.swift in Sources */,
 				D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */,
-				4D4DB8F71E33B03700A8CCB3 /* Change.swift in Sources */,
+				4D4DB8F71E33B03700A8CCB3 /* DetectedChange.swift in Sources */,
 				D245B3291E3030A50074CB5B /* LectureListParser.swift in Sources */,
 				D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */,
 				4DFAB2F61E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
-				4D4DB8F41E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
+				4D4DB8F41E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */,
 				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
 				4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,

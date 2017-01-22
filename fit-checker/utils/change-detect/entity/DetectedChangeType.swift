@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  DetectedChangeType.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 21/01/17.
@@ -14,7 +14,7 @@ import Foundation
 /// - removed: item was removed in newe data
 /// - added: item was added in new data
 /// - modified: item was modified in new data
-enum ChangeType {
+enum DetectedChangeType {
     case removed
     case added
     case modified
