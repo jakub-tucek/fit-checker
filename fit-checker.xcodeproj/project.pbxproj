@@ -16,25 +16,25 @@
 		4D4DB8F51E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */; };
 		4D4DB8F71E33B03700A8CCB3 /* DetectedChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */; };
 		4D4DB8F81E33B03700A8CCB3 /* DetectedChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */; };
-		4D4DB8FA1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */; };
-		4D4DB8FB1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */; };
+		4D4DB8FA1E33B35000A8CCB3 /* CourseListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* CourseListResultChange.swift */; };
+		4D4DB8FB1E33B35000A8CCB3 /* CourseListResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F91E33B35000A8CCB3 /* CourseListResultChange.swift */; };
 		4D4DB8FD1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */; };
 		4D4DB8FE1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */; };
-		4D4DB9021E33DEC400A8CCB3 /* LectureListDetectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */; };
+		4D4DB9021E33DEC400A8CCB3 /* CouseListDetectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB9001E33DEC400A8CCB3 /* CouseListDetectTest.swift */; };
 		4D5296791E2A274A007677BA /* biomo.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D62FF401E29562400E8C793 /* biomo.html */; };
 		4D52967A1E2A274A007677BA /* bipst.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A681E2A199000542E0B /* bipst.html */; };
 		4D52967B1E2A274A007677BA /* bisp2.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D279A6A1E2A1B3700542E0B /* bisp2.html */; };
 		4D52967E1E2A27F4007677BA /* ClassificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2E1E27EFDF00303424 /* ClassificationResult.swift */; };
 		4D52967F1E2A27F4007677BA /* ClassificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2F1E27EFDF00303424 /* ClassificationRow.swift */; };
 		4D5296801E2A27F4007677BA /* ClassificationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E301E27EFDF00303424 /* ClassificationTable.swift */; };
-		4D5296811E2A27F4007677BA /* LectureListParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* LectureListParsing.swift */; };
-		4D5296821E2A27F4007677BA /* LectureListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* LectureListParser.swift */; };
+		4D5296811E2A27F4007677BA /* CourseListParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* CourseListParsing.swift */; };
+		4D5296821E2A27F4007677BA /* CourseListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* CourseListParser.swift */; };
 		4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */; };
 		4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */; };
 		4D5296851E2A27F4007677BA /* ClassificationParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */; };
-		4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* LectureListResult.swift */; };
-		4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* Lecture.swift */; };
-		4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */; };
+		4D5296881E2A2AF2007677BA /* CourseParsedListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* CourseParsedListResult.swift */; };
+		4D52968B1E2A2AFF007677BA /* CourseParsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* CourseParsed.swift */; };
+		4D52968D1E2A4B00007677BA /* CourseListParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968C1E2A4B00007677BA /* CourseListParserTest.swift */; };
 		4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968E1E2A4C28007677BA /* FileLoader.swift */; };
 		4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D52968E1E2A4C28007677BA /* FileLoader.swift */; };
 		4D5296921E2A53AA007677BA /* lecture-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5296911E2A53AA007677BA /* lecture-list.json */; };
@@ -44,8 +44,8 @@
 		4D6201461E295D0E00E8C793 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3A1E27F37100303424 /* Realm.framework */; };
 		4D6201471E295D0E00E8C793 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2352E3B1E27F37100303424 /* RealmSwift.framework */; };
 		4D62FF331E2955B100E8C793 /* fit_checkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */; };
-		4DFAB2EF1E33847100CBD3D2 /* LectureListDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */; };
-		4DFAB2F01E33847100CBD3D2 /* LectureListDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */; };
+		4DFAB2EF1E33847100CBD3D2 /* CourseListDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2EE1E33847100CBD3D2 /* CourseListDetect.swift */; };
+		4DFAB2F01E33847100CBD3D2 /* CourseListDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2EE1E33847100CBD3D2 /* CourseListDetect.swift */; };
 		4DFAB2F61E33A99E00CBD3D2 /* ResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */; };
 		4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */; };
 		D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E081E27EC9C00303424 /* AppDelegate.swift */; };
@@ -73,10 +73,10 @@
 		D245B3211E3021F20074CB5B /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3201E3021F20074CB5B /* Course.swift */; };
 		D245B3241E3025040074CB5B /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B3231E3025040074CB5B /* UITableViewCell+Reusable.swift */; };
 		D245B3251E3030920074CB5B /* ClassificationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E2E1E27EFDF00303424 /* ClassificationResult.swift */; };
-		D245B3261E3030980074CB5B /* LectureListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* LectureListResult.swift */; };
-		D245B3271E30309B0074CB5B /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* Lecture.swift */; };
-		D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* LectureListParsing.swift */; };
-		D245B3291E3030A50074CB5B /* LectureListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* LectureListParser.swift */; };
+		D245B3261E3030980074CB5B /* CourseParsedListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296861E2A2AF2007677BA /* CourseParsedListResult.swift */; };
+		D245B3271E30309B0074CB5B /* CourseParsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5296891E2A2AFF007677BA /* CourseParsed.swift */; };
+		D245B3281E3030A20074CB5B /* CourseListParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2352E311E27EFDF00303424 /* CourseListParsing.swift */; };
+		D245B3291E3030A50074CB5B /* CourseListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62FF151E2942BA00E8C793 /* CourseListParser.swift */; };
 		D245B32B1E317D410074CB5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32A1E317D410074CB5B /* SettingsViewController.swift */; };
 		D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32C1E3181530074CB5B /* KeychainAccess+Keechain.swift */; };
 		D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */; };
@@ -119,12 +119,12 @@
 		4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassificationDetectTest.swift; sourceTree = "<group>"; };
 		4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedChangeType.swift; sourceTree = "<group>"; };
 		4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedChange.swift; sourceTree = "<group>"; };
-		4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListResultChange.swift; sourceTree = "<group>"; };
+		4D4DB8F91E33B35000A8CCB3 /* CourseListResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListResultChange.swift; sourceTree = "<group>"; };
 		4D4DB8FC1E33BFA000A8CCB3 /* ArrayUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtils.swift; sourceTree = "<group>"; };
-		4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListDetectTest.swift; sourceTree = "<group>"; };
-		4D5296861E2A2AF2007677BA /* LectureListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListResult.swift; path = entity/LectureListResult.swift; sourceTree = "<group>"; };
-		4D5296891E2A2AFF007677BA /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = entity/Lecture.swift; sourceTree = "<group>"; };
-		4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureListParserTest.swift; path = "utils/edux-parser/LectureListParserTest.swift"; sourceTree = "<group>"; };
+		4D4DB9001E33DEC400A8CCB3 /* CouseListDetectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouseListDetectTest.swift; sourceTree = "<group>"; };
+		4D5296861E2A2AF2007677BA /* CourseParsedListResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseParsedListResult.swift; path = entity/CourseParsedListResult.swift; sourceTree = "<group>"; };
+		4D5296891E2A2AFF007677BA /* CourseParsed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseParsed.swift; path = entity/CourseParsed.swift; sourceTree = "<group>"; };
+		4D52968C1E2A4B00007677BA /* CourseListParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseListParserTest.swift; path = "utils/edux-parser/CourseListParserTest.swift"; sourceTree = "<group>"; };
 		4D52968E1E2A4C28007677BA /* FileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileLoader.swift; path = "utils/edux-parser/FileLoader.swift"; sourceTree = "<group>"; };
 		4D5296911E2A53AA007677BA /* lecture-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "lecture-list.json"; path = "resources/lecture-list.json"; sourceTree = "<group>"; };
 		4D6200001E295C6500E8C793 /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
@@ -198,7 +198,7 @@
 		4D6200441E295C6600E8C793 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = DEVELOPER_DIR; };
 		4D6200451E295C6600E8C793 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		4D6200461E295C6600E8C793 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4D62FF151E2942BA00E8C793 /* LectureListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListParser.swift; sourceTree = "<group>"; };
+		4D62FF151E2942BA00E8C793 /* CourseListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListParser.swift; sourceTree = "<group>"; };
 		4D62FF301E2955B100E8C793 /* fit-checkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fit_checkerTests.swift; sourceTree = "<group>"; };
 		4D62FF341E2955B100E8C793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -385,7 +385,7 @@
 		4D62FFFD1E295C6500E8C793 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		4D62FFFE1E295C6500E8C793 /* libsysdiagnose.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsysdiagnose.tbd; path = usr/lib/libsysdiagnose.tbd; sourceTree = SDKROOT; };
 		4D62FFFF1E295C6500E8C793 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
-		4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListDetect.swift; sourceTree = "<group>"; };
+		4DFAB2EE1E33847100CBD3D2 /* CourseListDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListDetect.swift; sourceTree = "<group>"; };
 		4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultChange.swift; sourceTree = "<group>"; };
 		D2352E051E27EC9C00303424 /* fit-checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fit-checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2352E081E27EC9C00303424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -397,7 +397,7 @@
 		D2352E2E1E27EFDF00303424 /* ClassificationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassificationResult.swift; path = entity/ClassificationResult.swift; sourceTree = "<group>"; };
 		D2352E2F1E27EFDF00303424 /* ClassificationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassificationRow.swift; path = entity/ClassificationRow.swift; sourceTree = "<group>"; };
 		D2352E301E27EFDF00303424 /* ClassificationTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassificationTable.swift; path = entity/ClassificationTable.swift; sourceTree = "<group>"; };
-		D2352E311E27EFDF00303424 /* LectureListParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListParsing.swift; sourceTree = "<group>"; };
+		D2352E311E27EFDF00303424 /* CourseListParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListParsing.swift; sourceTree = "<group>"; };
 		D2352E381E27F37100303424 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D2352E391E27F37100303424 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		D2352E3A1E27F37100303424 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 		4D4DB8FF1E33DE7500A8CCB3 /* change-detect */ = {
 			isa = PBXGroup;
 			children = (
-				4D4DB9001E33DEC400A8CCB3 /* LectureListDetectTest.swift */,
+				4D4DB9001E33DEC400A8CCB3 /* CouseListDetectTest.swift */,
 				4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */,
 			);
 			path = "change-detect";
@@ -485,8 +485,8 @@
 				D2352E2E1E27EFDF00303424 /* ClassificationResult.swift */,
 				D2352E2F1E27EFDF00303424 /* ClassificationRow.swift */,
 				D2352E301E27EFDF00303424 /* ClassificationTable.swift */,
-				4D5296861E2A2AF2007677BA /* LectureListResult.swift */,
-				4D5296891E2A2AFF007677BA /* Lecture.swift */,
+				4D5296861E2A2AF2007677BA /* CourseParsedListResult.swift */,
+				4D5296891E2A2AFF007677BA /* CourseParsed.swift */,
 			);
 			name = entity;
 			sourceTree = "<group>";
@@ -515,7 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				4D62FF3D1E29561500E8C793 /* ClassificationParserTest.swift */,
-				4D52968C1E2A4B00007677BA /* LectureListParserTest.swift */,
+				4D52968C1E2A4B00007677BA /* CourseListParserTest.swift */,
 				4D52968E1E2A4C28007677BA /* FileLoader.swift */,
 			);
 			name = "edux-parser";
@@ -536,7 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				4DFAB2F41E33A95400CBD3D2 /* entity */,
-				4DFAB2EE1E33847100CBD3D2 /* LectureListDetect.swift */,
+				4DFAB2EE1E33847100CBD3D2 /* CourseListDetect.swift */,
 				4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */,
 			);
 			path = "change-detect";
@@ -548,7 +548,7 @@
 				4DFAB2F51E33A99E00CBD3D2 /* ResultChange.swift */,
 				4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */,
 				4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */,
-				4D4DB8F91E33B35000A8CCB3 /* LectureListResultChange.swift */,
+				4D4DB8F91E33B35000A8CCB3 /* CourseListResultChange.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -657,8 +657,8 @@
 			isa = PBXGroup;
 			children = (
 				4D62FF171E2943DD00E8C793 /* entity */,
-				D2352E311E27EFDF00303424 /* LectureListParsing.swift */,
-				4D62FF151E2942BA00E8C793 /* LectureListParser.swift */,
+				D2352E311E27EFDF00303424 /* CourseListParsing.swift */,
+				4D62FF151E2942BA00E8C793 /* CourseListParser.swift */,
 				4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */,
 				4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */,
 			);
@@ -1194,22 +1194,22 @@
 				4D52967E1E2A27F4007677BA /* ClassificationResult.swift in Sources */,
 				4D52967F1E2A27F4007677BA /* ClassificationRow.swift in Sources */,
 				4D5296801E2A27F4007677BA /* ClassificationTable.swift in Sources */,
-				4D5296811E2A27F4007677BA /* LectureListParsing.swift in Sources */,
-				4D52968B1E2A2AFF007677BA /* Lecture.swift in Sources */,
-				4D5296821E2A27F4007677BA /* LectureListParser.swift in Sources */,
-				4D4DB9021E33DEC400A8CCB3 /* LectureListDetectTest.swift in Sources */,
+				4D5296811E2A27F4007677BA /* CourseListParsing.swift in Sources */,
+				4D52968B1E2A2AFF007677BA /* CourseParsed.swift in Sources */,
+				4D5296821E2A27F4007677BA /* CourseListParser.swift in Sources */,
+				4D4DB9021E33DEC400A8CCB3 /* CouseListDetectTest.swift in Sources */,
 				4D4DB8F51E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */,
 				4D5296901E2A4C28007677BA /* FileLoader.swift in Sources */,
 				4DFAB2F71E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
 				4D490EE51E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
-				4D4DB8FB1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */,
-				4D52968D1E2A4B00007677BA /* LectureListParserTest.swift in Sources */,
+				4D4DB8FB1E33B35000A8CCB3 /* CourseListResultChange.swift in Sources */,
+				4D52968D1E2A4B00007677BA /* CourseListParserTest.swift in Sources */,
 				4D490EE71E34135700BE6EE8 /* ClassificationDetectTest.swift in Sources */,
-				4DFAB2F01E33847100CBD3D2 /* LectureListDetect.swift in Sources */,
+				4DFAB2F01E33847100CBD3D2 /* CourseListDetect.swift in Sources */,
 				4D5296831E2A27F4007677BA /* ClassificationParser.swift in Sources */,
 				4D5296841E2A27F4007677BA /* ClasificationParsing.swift in Sources */,
 				D28F22141E3413A000D5ADF5 /* Logger.swift in Sources */,
-				4D5296881E2A2AF2007677BA /* LectureListResult.swift in Sources */,
+				4D5296881E2A2AF2007677BA /* CourseParsedListResult.swift in Sources */,
 				4D4DB8F81E33B03700A8CCB3 /* DetectedChange.swift in Sources */,
 				4D4DB8FE1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */,
 				4D5296851E2A27F4007677BA /* ClassificationParserTest.swift in Sources */,
@@ -1225,22 +1225,22 @@
 				D245B3181E2E7D620074CB5B /* Keechain.swift in Sources */,
 				D245B31B1E2E939A0074CB5B /* Notifications+Extension.swift in Sources */,
 				D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */,
-				D245B3271E30309B0074CB5B /* Lecture.swift in Sources */,
+				D245B3271E30309B0074CB5B /* CourseParsed.swift in Sources */,
 				D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */,
 				4D4DB8F71E33B03700A8CCB3 /* DetectedChange.swift in Sources */,
-				D245B3291E3030A50074CB5B /* LectureListParser.swift in Sources */,
+				D245B3291E3030A50074CB5B /* CourseListParser.swift in Sources */,
 				D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */,
 				4DFAB2F61E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				4D18A9411E34A126002E57C9 /* DetectedChangeType.swift in Sources */,
 				D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */,
-				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
+				D245B3281E3030A20074CB5B /* CourseListParsing.swift in Sources */,
 				4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
 				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
-				D245B3261E3030980074CB5B /* LectureListResult.swift in Sources */,
+				D245B3261E3030980074CB5B /* CourseParsedListResult.swift in Sources */,
 				D2352E341E27EFDF00303424 /* ClassificationTable.swift in Sources */,
 				D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */,
 				D28F220D1E3389D200D5ADF5 /* ClassificationRecord.swift in Sources */,
@@ -1254,10 +1254,10 @@
 				4D4DB8FD1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */,
 				D2352E471E284E5A00303424 /* EduxLoginOperation.swift in Sources */,
 				D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */,
-				4DFAB2EF1E33847100CBD3D2 /* LectureListDetect.swift in Sources */,
+				4DFAB2EF1E33847100CBD3D2 /* CourseListDetect.swift in Sources */,
 				D245B3241E3025040074CB5B /* UITableViewCell+Reusable.swift in Sources */,
 				D245B32B1E317D410074CB5B /* SettingsViewController.swift in Sources */,
-				4D4DB8FA1E33B35000A8CCB3 /* LectureListResultChange.swift in Sources */,
+				4D4DB8FA1E33B35000A8CCB3 /* CourseListResultChange.swift in Sources */,
 				D2352E421E28481200303424 /* NetworkController.swift in Sources */,
 				4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */,
 				D28F221E1E341AEC00D5ADF5 /* Localization.Generated.swift in Sources */,

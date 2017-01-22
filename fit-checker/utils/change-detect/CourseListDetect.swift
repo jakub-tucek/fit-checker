@@ -9,38 +9,38 @@
 import Foundation
 
 
-/// Detects changes in lecture list
-class LectureListDetect {
+/// Detects changes in course list
+class CourseListDetect {
 
-    /// Compares two inputs and returns LectureListResultChange that
+    /// Compares two inputs and returns CourseListResultChange that
     /// contains detected changes.
     ///
     /// - Parameters:
-    ///   - oldValue: old value of type LectureListResult
-    ///   - newValue: new value of type LectureListResult
+    ///   - oldValue: old value of type CourseParsedListResult
+    ///   - newValue: new value of type CourseParsedListResult
     /// - Returns: detected change
-    func detect(oldValue: LectureListResult, newValue: LectureListResult)
-                    -> LectureListResultChange {
+    func detect(oldValue: CourseParsedListResult, newValue: CourseParsedListResult)
+                    -> CourseListResultChange {
 
         let sizeDiff = detectSizeDiff(oldValue: oldValue, newValue: newValue)
         let semesterChange = detectSemesterChange(oldValue: oldValue, newValue: newValue)
         let valuesChange = detectValuesChange(oldValue: oldValue, newValue: newValue)
 
-        return LectureListResultChange(
+        return CourseListResultChange(
                 changes: valuesChange,
                 sizeDifference: sizeDiff,
                 semesterChange: semesterChange
         )
     }
 
-    /// Returns size difference in parsed lectures
+    /// Returns size difference in parsed courses
     ///
     /// - Parameters:
-    ///   - oldValue: old value of LectureListResult
-    ///   - newValue: new value of LectureListResult
+    ///   - oldValue: old value of CourseParsedListResult
+    ///   - newValue: new value of CourseParsedListResult
     /// - Returns: size difference
-    private func detectSizeDiff(oldValue: LectureListResult, newValue: LectureListResult) -> Int {
-        return newValue.lectures.count - oldValue.lectures.count
+    private func detectSizeDiff(oldValue: CourseParsedListResult, newValue: CourseParsedListResult) -> Int {
+        return newValue.courses.count - oldValue.courses.count
     }
 
 
@@ -48,10 +48,10 @@ class LectureListDetect {
     /// Detects semester label change.
     ///
     /// - Parameters:
-    ///   - oldValue: old value of LectureListResult
-    ///   - newValue: new value of LectureListResult
+    ///   - oldValue: old value of CourseParsedListResult
+    ///   - newValue: new value of CourseParsedListResult
     /// - Returns: Change entity or empty if no change detected
-    private func detectSemesterChange(oldValue: LectureListResult, newValue: LectureListResult)
+    private func detectSemesterChange(oldValue: CourseParsedListResult, newValue: CourseParsedListResult)
                     -> DetectedChange<String>? {
 
         guard oldValue.semesterInfo != newValue.semesterInfo else {
@@ -78,21 +78,21 @@ class LectureListDetect {
     /// Iterates over all values and returns changes for each index.
     ///
     /// - Parameters:
-    ///   - oldValue: old value of LectureListResult
-    ///   - newValue: new value of LectureListResult
+    ///   - oldValue: old value of CourseParsedListResult
+    ///   - newValue: new value of CourseParsedListResult
     /// - Returns: Change entity array or empty array if no change detected
-    private func detectValuesChange(oldValue: LectureListResult, newValue: LectureListResult)
-                    -> [DetectedChange<Lecture>] {
-        var changes = [DetectedChange<Lecture>]()
-        let oldLectures = oldValue.lectures
-        let newLectures = newValue.lectures
+    private func detectValuesChange(oldValue: CourseParsedListResult, newValue: CourseParsedListResult)
+                    -> [DetectedChange<CourseParsed>] {
+        var changes = [DetectedChange<CourseParsed>]()
+        let oldLectures = oldValue.courses
+        let newLectures = newValue.courses
 
         var oldIndex = 0
         var newIndex = 0
 
         while oldIndex < oldLectures.count || newIndex < newLectures.count {
-            let oldItem = ArrayUtils<Lecture>.getItemSafely(array: oldLectures, i: oldIndex)
-            let newItem = ArrayUtils<Lecture>.getItemSafely(array: newLectures, i: newIndex)
+            let oldItem = ArrayUtils<CourseParsed>.getItemSafely(array: oldLectures, i: oldIndex)
+            let newItem = ArrayUtils<CourseParsed>.getItemSafely(array: newLectures, i: newIndex)
 
             let change = detectValueChange(oldItem: oldItem, newItem: newItem)
             if let change = change {
@@ -115,7 +115,7 @@ class LectureListDetect {
     ///   - oldValue: old value of Lecture
     ///   - newValue: new value of Lecture
     /// - Returns: Change entity or empty if no change detected
-    private func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> DetectedChange<Lecture>? {
+    private func detectValueChange(oldItem: CourseParsed?, newItem: CourseParsed?) -> DetectedChange<CourseParsed>? {
         var type: DetectedChangeType?
 
         type = (oldItem == nil ? DetectedChangeType.added : nil)
@@ -128,7 +128,7 @@ class LectureListDetect {
         }
 
         if let type = type {
-            return DetectedChange<Lecture>(
+            return DetectedChange<CourseParsed>(
                     type: type,
                     oldValue: oldItem,
                     newValue: newItem

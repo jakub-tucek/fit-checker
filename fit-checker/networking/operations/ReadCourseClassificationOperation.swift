@@ -55,7 +55,7 @@ class ReadCourseClassificationOperation: BaseOperation {
         switch response.result {
         case let .success(html):
             let parser = ClassificationParser()
-            let tables = parser.parseEdux(html: html).tables.map { table -> CourseTable in
+            let tables = parser.parse(html: html).tables.map { table -> CourseTable in
                 let classification = table.rows.map({ row in
                     return ClassificationRecord(name: row.name, score: row.value)
                 })

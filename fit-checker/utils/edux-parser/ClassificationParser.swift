@@ -1,5 +1,5 @@
 //
-//  EduxParser.swift
+//  ClassificationParser.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 13/01/17.
@@ -13,7 +13,7 @@ import Kanna
 /// ClassificationParser is implementation of ClassificaitonParsing protocol.
 /// With help of Kanna framework and simple xpath selectors parses classification
 /// page. Result is returned in ClassificationResult object.
-class ClassificationParser: ClasificationParsing {
+class ClassificationParser: ClassificationParsing {
 
 
     struct Consts {
@@ -39,7 +39,7 @@ class ClassificationParser: ClasificationParsing {
     ///
     /// - Parameter html: html to parse
     /// - Returns: result of parsing
-    func parseEdux(html: String) -> ClassificationResult {
+    func parse(html: String) -> ClassificationResult {
         let result = ClassificationResult()
 
         if let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
