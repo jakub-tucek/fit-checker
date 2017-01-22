@@ -14,11 +14,11 @@ import Foundation
 /// was detected.
 class ResultChange<T: AnyObject> {
 
-    var changes: [Change<T>]
+    var changes: [DetectedChange<T>]
 
     var sizeDifference: Int
 
-    init(changes: [Change<T>], sizeDifference: Int) {
+    init(changes: [DetectedChange<T>], sizeDifference: Int) {
         self.changes = changes
         self.sizeDifference = sizeDifference
     }

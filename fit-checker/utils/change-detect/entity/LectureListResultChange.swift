@@ -13,9 +13,9 @@ import Foundation
 /// semester change.
 class LectureListResultChange: ResultChange<Lecture> {
 
-    var semesterChange: Change<String>?
+    var semesterChange: DetectedChange<String>?
 
-    init(changes: [Change<Lecture>], sizeDifference: Int, semesterChange: Change<String>?) {
+    init(changes: [DetectedChange<Lecture>], sizeDifference: Int, semesterChange: DetectedChange<String>?) {
         super.init(changes: changes, sizeDifference: sizeDifference)
         self.semesterChange = semesterChange
     }

@@ -52,7 +52,7 @@ class LectureListDetect {
     ///   - newValue: new value of LectureListResult
     /// - Returns: Change entity or empty if no change detected
     private func detectSemesterChange(oldValue: LectureListResult, newValue: LectureListResult)
-                    -> Change<String>? {
+                    -> DetectedChange<String>? {
 
         guard oldValue.semesterInfo != newValue.semesterInfo else {
             return nil
@@ -67,7 +67,7 @@ class LectureListDetect {
             type = ChangeType.modified
         }
 
-        return Change(
+        return DetectedChange(
                 type: type,
                 oldValue: oldValue.semesterInfo,
                 newValue: newValue.semesterInfo
@@ -82,8 +82,8 @@ class LectureListDetect {
     ///   - newValue: new value of LectureListResult
     /// - Returns: Change entity array or empty array if no change detected
     private func detectValuesChange(oldValue: LectureListResult, newValue: LectureListResult)
-                    -> [Change<Lecture>] {
-        var changes = [Change<Lecture>]()
+                    -> [DetectedChange<Lecture>] {
+        var changes = [DetectedChange<Lecture>]()
         let oldLectures = oldValue.lectures
         let newLectures = newValue.lectures
 
@@ -115,7 +115,7 @@ class LectureListDetect {
     ///   - oldValue: old value of Lecture
     ///   - newValue: new value of Lecture
     /// - Returns: Change entity or empty if no change detected
-    private func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> Change<Lecture>? {
+    private func detectValueChange(oldItem: Lecture?, newItem: Lecture?) -> DetectedChange<Lecture>? {
         var type: ChangeType?
 
         type = (oldItem == nil ? ChangeType.added : nil)
@@ -128,7 +128,7 @@ class LectureListDetect {
         }
 
         if let type = type {
-            return Change<Lecture>(
+            return DetectedChange<Lecture>(
                     type: type,
                     oldValue: oldItem,
                     newValue: newItem

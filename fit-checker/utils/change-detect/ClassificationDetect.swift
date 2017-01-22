@@ -50,10 +50,10 @@ class ClassificationDetect {
     ///   - newValue: ClassificationResult
     /// - Returns: changes
     private func detectValuesChange(oldValue: ClassificationResult, newValue: ClassificationResult)
-                    -> [Change<ClassificationRow>] {
+                    -> [DetectedChange<ClassificationRow>] {
         let oldTables = oldValue.tables
         let newTables = newValue.tables
-        var changes = [Change<ClassificationRow>]()
+        var changes = [DetectedChange<ClassificationRow>]()
 
         var oldIndex = 0
         var newIndex = 0
@@ -81,10 +81,10 @@ class ClassificationDetect {
     ///   - newTable: ClassificationTable?
     /// - Returns: changes
     private func detectChangeForTable(oldTable: ClassificationTable?, newTable: ClassificationTable?)
-                    -> [Change<ClassificationRow>] {
+                    -> [DetectedChange<ClassificationRow>] {
         let oldRows = getRowsSafely(table: oldTable)
         let newRows = getRowsSafely(table: newTable)
-        var tableChanges = [Change<ClassificationRow>]()
+        var tableChanges = [DetectedChange<ClassificationRow>]()
 
         var oldRowIndex = 0
         var newRowIndex = 0
@@ -126,7 +126,7 @@ class ClassificationDetect {
     ///   - newItem: ClassificationRow
     /// - Returns: found change or empty
     private func detectValueChange(oldItem: ClassificationRow?, newItem: ClassificationRow?)
-                    -> Change<ClassificationRow>? {
+                    -> DetectedChange<ClassificationRow>? {
         var type: ChangeType?
 
         type = (oldItem == nil ? ChangeType.added : nil)
@@ -140,7 +140,7 @@ class ClassificationDetect {
         }
 
         if let type = type {
-            return Change<ClassificationRow>(
+            return DetectedChange<ClassificationRow>(
                     type: type,
                     oldValue: oldItem,
                     newValue: newItem
