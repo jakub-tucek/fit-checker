@@ -87,10 +87,10 @@
 		D28F220D1E3389D200D5ADF5 /* ClassificationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F220C1E3389D200D5ADF5 /* ClassificationRecord.swift */; };
 		D28F220F1E34096000D5ADF5 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */; };
 		D28F22121E3409C700D5ADF5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F22111E3409C700D5ADF5 /* Logger.swift */; };
-		D28F22191E34187600D5ADF5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D28F221B1E34187600D5ADF5 /* Localizable.strings */; };
-		D28F221E1E341AEC00D5ADF5 /* Localization.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */; };
 		D28F22131E34139500D5ADF5 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F220E1E34096000D5ADF5 /* SwiftyBeaver.framework */; };
 		D28F22141E3413A000D5ADF5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F22111E3409C700D5ADF5 /* Logger.swift */; };
+		D28F22191E34187600D5ADF5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D28F221B1E34187600D5ADF5 /* Localizable.strings */; };
+		D28F221E1E341AEC00D5ADF5 /* Localization.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,7 +199,6 @@
 		4D6200451E295C6600E8C793 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		4D6200461E295C6600E8C793 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4D62FF151E2942BA00E8C793 /* LectureListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectureListParser.swift; sourceTree = "<group>"; };
-		4D62FF2A1E29555300E8C793 /* fit-checkerUITests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "fit-checkerUITests copy-Info.plist"; path = "/Users/jakubtucek/Documents/fit-checker-2.0/fit-checkerUITests copy-Info.plist"; sourceTree = "<absolute>"; };
 		4D62FF301E2955B100E8C793 /* fit-checkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fit_checkerTests.swift; sourceTree = "<group>"; };
 		4D62FF341E2955B100E8C793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -562,7 +561,6 @@
 				4D62FF311E2955B100E8C793 /* fit-checkerTests */,
 				D2352E061E27EC9C00303424 /* Products */,
 				D2352E371E27F37100303424 /* Frameworks */,
-				4D62FF2A1E29555300E8C793 /* fit-checkerUITests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
