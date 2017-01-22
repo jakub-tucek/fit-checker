@@ -31,6 +31,12 @@ class LectureListParserTest: XCTestCase {
         XCTAssertEqual("Semestr: Zimní 2016/2017", result.semesterInfo)
         XCTAssertEqual(8, result.lectures.count)
 
+        XCTAssertEqual("BI-SP2", result.lectures[6].name)
+        XCTAssertEqual(true, result.lectures[6].classification)
+
+        XCTAssertEqual("TVV0", result.lectures[7].name)
+        XCTAssertEqual(false, result.lectures[7].classification)
+
     }
 
 }

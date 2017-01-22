@@ -27,6 +27,9 @@ class LectureListParser: LectureListParsing {
         /// Select lecture in list containing
         static let lectureSelector
                 = "//ul/li"
+
+        static let lectureLinkSelector
+                = "a"
     }
 
 
@@ -86,8 +89,14 @@ class LectureListParser: LectureListParsing {
     private func parseLectures(widgetDocument: HTMLDocument) -> [Lecture] {
         var lectures = [Lecture]()
         for lectureNode in widgetDocument.xpath(Consts.lectureSelector) {
+            let linkNodeCount
+                    = lectureNode.xpath(Consts.lectureLinkSelector).count
+
+            //no link found
+            let classification = (linkNodeCount > 0)
+
             if let name = lectureNode.text {
-                lectures.append(Lecture(name: name))
+                lectures.append(Lecture(name: name, classification: classification))
             }
         }
 

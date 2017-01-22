@@ -14,13 +14,17 @@ class Lecture {
 
     let name: String
 
-    init(name: String) {
+    /// True if lecture has classification page
+    let classification: Bool
+
+    init(name: String, classification: Bool = true) {
         self.name = name
+        self.classification = classification
     }
 
 
     static func !=(left:Lecture, right: Lecture) -> Bool {
-        return !(left.name == right.name)
+        return !((left.name == right.name) && (left.classification == right.classification))
     }
 
 }
