@@ -99,6 +99,13 @@ extension CoursesTableViewController {
 
         if let course = courses?[indexPath.row] {
             cell.textLabel?.text = course.name.uppercased()
+
+            cell.selectionStyle = course.classificationAvailable
+                ? .default
+                : .none
+            cell.accessoryType = course.classificationAvailable
+                ? .disclosureIndicator
+                : .none
         }
 
         return cell
@@ -112,11 +119,8 @@ extension CoursesTableViewController {
 
         guard
             let course = courses?[indexPath.row],
-            let (student, _) = keychain.getAccount() else {
-
-                Logger.shared.error("Daaamn man, user selected unselectable row!")
-            return
-        }
+            let (student, _) = keychain.getAccount(),
+            course.classificationAvailable == true else { return }
 
         let controller = CourseClassificationTableViewController(
             student: student,

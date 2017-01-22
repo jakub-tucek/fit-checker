@@ -61,7 +61,8 @@ class ReadCourseListOperation: BaseOperation {
             let parser = LectureListParser()
             let parsedCourses = parser.parseClassification(json: json)
             let courses = parsedCourses.lectures.map({ lecture -> Course in
-                return Course(id: lecture.name, name: lecture.name)
+                return Course(id: lecture.name, name: lecture.name,
+                              classificationAvailable: lecture.classification)
             })
 
             do {
