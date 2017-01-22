@@ -105,7 +105,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        completionHandler(.noData)
+        guard
+            let account = Keechain(service: .edux).getAccount(),
+            let realm = try? contextManager.createContext() else { return }
+
+        // Try to refresh only courses with classification on Edux
+        let courses: [Course] = realm.objects(Course.self)
+            .filter("classificationAvailable = %@", true)
+            .map({ $0 })
+
+        let promise = networkController.loadCoursesClasification(
+            courses: courses,
+            student: account.username
+        )
+
+        promise.success = { completionHandler(.newData) }
+        promise.failure = { completionHandler(.failed) }
     }
 
     deinit {
@@ -113,4 +128,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
