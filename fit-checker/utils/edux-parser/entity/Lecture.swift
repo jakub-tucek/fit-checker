@@ -24,7 +24,7 @@ class Lecture {
 
 
     static func !=(left:Lecture, right: Lecture) -> Bool {
-        return !(left.name == right.name)
+        return !((left.name == right.name) && (left.classification == right.classification))
     }
 
 }
