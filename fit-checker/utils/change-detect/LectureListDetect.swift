@@ -53,24 +53,25 @@ class LectureListDetect {
     /// - Returns: Change entity or empty if no change detected
     private func detectSemesterChange(oldValue: LectureListResult, newValue: LectureListResult)
                     -> Change<String>? {
-        if oldValue.semesterInfo != newValue.semesterInfo {
-            var type: ChangeType
 
-            if oldValue.semesterInfo.isEmpty {
-                type = ChangeType.added
-            } else if newValue.semesterInfo.isEmpty {
-                type = ChangeType.removed
-            } else {
-                type = ChangeType.modified
-            }
-
-            return Change(
-                    type: type,
-                    oldValue: oldValue.semesterInfo,
-                    newValue: newValue.semesterInfo
-            )
+        guard oldValue.semesterInfo != newValue.semesterInfo else {
+            return nil
         }
-        return nil
+        var type: ChangeType
+
+        if oldValue.semesterInfo.isEmpty {
+            type = ChangeType.added
+        } else if newValue.semesterInfo.isEmpty {
+            type = ChangeType.removed
+        } else {
+            type = ChangeType.modified
+        }
+
+        return Change(
+                type: type,
+                oldValue: oldValue.semesterInfo,
+                newValue: newValue.semesterInfo
+        )
     }
 
 
