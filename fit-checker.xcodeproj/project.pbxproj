@@ -199,7 +199,6 @@
 		4D6200451E295C6600E8C793 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		4D6200461E295C6600E8C793 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4D62FF151E2942BA00E8C793 /* CourseListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListParser.swift; sourceTree = "<group>"; };
-		4D62FF2A1E29555300E8C793 /* fit-checkerUITests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "fit-checkerUITests copy-Info.plist"; path = "/Users/jakubtucek/Documents/fit-checker-2.0/fit-checkerUITests copy-Info.plist"; sourceTree = "<absolute>"; };
 		4D62FF301E2955B100E8C793 /* fit-checkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fit-checkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D62FF321E2955B100E8C793 /* fit_checkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fit_checkerTests.swift; sourceTree = "<group>"; };
 		4D62FF341E2955B100E8C793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -562,7 +561,6 @@
 				4D62FF311E2955B100E8C793 /* fit-checkerTests */,
 				D2352E061E27EC9C00303424 /* Products */,
 				D2352E371E27F37100303424 /* Frameworks */,
-				4D62FF2A1E29555300E8C793 /* fit-checkerUITests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
