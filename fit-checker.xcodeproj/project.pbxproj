@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D18A9411E34A126002E57C9 /* DetectedChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */; };
 		4D279A6D1E2A21BB00542E0B /* ClassificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6C1E2A21BB00542E0B /* ClassificationParser.swift */; };
 		4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D279A6F1E2A21CB00542E0B /* ClasificationParsing.swift */; };
 		4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */; };
 		4D490EE51E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE31E340A0800BE6EE8 /* ClassificationDetect.swift */; };
 		4D490EE71E34135700BE6EE8 /* ClassificationDetectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D490EE61E34135700BE6EE8 /* ClassificationDetectTest.swift */; };
-		4D4DB8F41E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */; };
 		4D4DB8F51E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F31E33AE5100A8CCB3 /* DetectedChangeType.swift */; };
 		4D4DB8F71E33B03700A8CCB3 /* DetectedChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */; };
 		4D4DB8F81E33B03700A8CCB3 /* DetectedChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DB8F61E33B03700A8CCB3 /* DetectedChange.swift */; };
@@ -1202,12 +1202,8 @@
 				4DFAB2F61E33A99E00CBD3D2 /* ResultChange.swift in Sources */,
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
-<<<<<<< HEAD
-				4D4DB8F41E33AE5100A8CCB3 /* DetectedChangeType.swift in Sources */,
-=======
-				4D4DB8F41E33AE5100A8CCB3 /* ChangeType.swift in Sources */,
+				4D18A9411E34A126002E57C9 /* DetectedChangeType.swift in Sources */,
 				D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */,
->>>>>>> e6a8635ca8ce2a13332edfc4de961f191d5eb267
 				D245B3281E3030A20074CB5B /* LectureListParsing.swift in Sources */,
 				4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
