@@ -38,7 +38,7 @@ class LogoutOperation: Operation {
                 realm.deleteAll()
             }
         } catch {
-            print("Logout error: \(error)")
+            Logger.shared.error("Logout error: \(error)")
         }
     }
 }

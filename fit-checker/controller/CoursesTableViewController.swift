@@ -13,10 +13,10 @@ import RealmSwift
 class CoursesTableViewController: UITableViewController {
 
     /// Database context manager dependency
-    private let contextManager: ContextManager
+    fileprivate let contextManager: ContextManager
 
     /// Network controller dependency
-    private let networkController: NetworkController
+    fileprivate let networkController: NetworkController
 
     /// List of stored courses
     fileprivate var courses: Results<Course>?
@@ -37,8 +37,8 @@ class CoursesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView()
         loadData()
+        configureView()
         refreshData()
     }
 
@@ -58,6 +58,7 @@ class CoursesTableViewController: UITableViewController {
     private func configureView() {
         let refreshControl = UIRefreshControl()
 
+        title = "Courses"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier:
             UITableViewCell.identifier)
         tableView.addSubview(refreshControl)
@@ -77,7 +78,7 @@ class CoursesTableViewController: UITableViewController {
                 self?.tableView.reloadData()
             }
         } catch {
-            print("\(error)")
+            Logger.shared.error("\(error)")
         }
     }
 
@@ -96,10 +97,34 @@ extension CoursesTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier:
             UITableViewCell.identifier, for: indexPath)
 
-        if let courses = courses {
-            cell.textLabel?.text = courses[indexPath.row].name.uppercased()
+        if let course = courses?[indexPath.row] {
+            cell.textLabel?.text = course.name.uppercased()
         }
 
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension CoursesTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let keychain = Keechain(service: .edux)
+
+        guard
+            let course = courses?[indexPath.row],
+            let (student, _) = keychain.getAccount() else {
+
+                Logger.shared.error("Daaamn man, user selected unselectable row!")
+            return
+        }
+
+        let controller = CourseClassificationTableViewController(
+            student: student,
+            courseId: course.id,
+            networkController: networkController,
+            contextManager: contextManager
+        )
+
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

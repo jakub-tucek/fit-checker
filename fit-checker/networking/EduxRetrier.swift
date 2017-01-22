@@ -40,7 +40,7 @@ class EduxRetrier: RequestRetrier {
                        with error: Error,
                        completion: @escaping RequestRetryCompletion) {
 
-        print("Ooops, request failed")
+        Logger.shared.info("Ooops, request failed")
 
         // Run validation on serial queue
         accessQueue.async { [weak self] in
@@ -50,7 +50,7 @@ class EduxRetrier: RequestRetrier {
             guard
                 case EduxValidators.ValidationError.badCredentials = error else {
 
-                print("Unrecognized error, not retrying.")
+                Logger.shared.info("Unrecognized error, not retrying.")
                 completion(false, 0.0)
                 return
             }
@@ -61,7 +61,7 @@ class EduxRetrier: RequestRetrier {
                 let (username, password) = keychain.getAccount() else { return }
 
 
-            print("Retrying request")
+            Logger.shared.info("Retrying request")
 
             self?.isRefreshing = true
 

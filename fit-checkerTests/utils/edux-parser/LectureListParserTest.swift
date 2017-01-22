@@ -17,7 +17,7 @@ class LectureListParserTest: XCTestCase {
             do {
                 return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any?]
             } catch {
-                print(error.localizedDescription)
+                Logger.shared.error(error.localizedDescription)
             }
         }
         return nil

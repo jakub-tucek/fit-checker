@@ -17,7 +17,7 @@ class BaseOperation: Operation {
         didSet {
             // Print the error if occures
             if let error = error {
-                print("\(classForCoder): \(error)")
+                Logger.shared.error("\(classForCoder): \(error)")
             }
         }
     }
