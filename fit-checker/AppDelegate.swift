@@ -68,6 +68,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard
             let (_, _) = Keechain(service: .edux).getAccount() else
         {
+            // Turn off background fetch
+            UIApplication.shared.setMinimumBackgroundFetchInterval(
+                UIApplicationBackgroundFetchIntervalNever)
+
+            // Show login controller
             window?.rootViewController = LoginViewController(
                 networkController: networkController)
 
@@ -92,8 +97,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         tabBarController.viewControllers = controllers
 
+        // Set interval for background refresh
+        UIApplication.shared.setMinimumBackgroundFetchInterval(
+            RefreshInterval.twentyMinutes.interval)
         window?.rootViewController = UINavigationController(rootViewController:
             tabBarController)
+    }
+
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        guard
+            let account = Keechain(service: .edux).getAccount(),
+            let realm = try? contextManager.createContext() else { return }
+
+        // Try to refresh only courses with classification on Edux
+        let courses: [Course] = realm.objects(Course.self)
+            .filter("classificationAvailable = %@", true)
+            .map({ $0 })
+
+        let promise = networkController.loadCoursesClasification(
+            courses: courses,
+            student: account.username
+        )
+
+        promise.success = { completionHandler(.newData) }
+        promise.failure = { completionHandler(.failed) }
     }
 
     deinit {
@@ -101,4 +128,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

@@ -80,6 +80,7 @@
 		D245B32B1E317D410074CB5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32A1E317D410074CB5B /* SettingsViewController.swift */; };
 		D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32C1E3181530074CB5B /* KeychainAccess+Keechain.swift */; };
 		D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */; };
+		D270F4C01E351E100065D7D5 /* RefreshInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270F4BF1E351E100065D7D5 /* RefreshInterval.swift */; };
 		D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */; };
 		D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56711E32C0F700EC9C40 /* EduxValidators.swift */; };
 		D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */; };
@@ -420,6 +421,7 @@
 		D245B32A1E317D410074CB5B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D245B32C1E3181530074CB5B /* KeychainAccess+Keechain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Keechain.swift"; sourceTree = "<group>"; };
 		D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutOperation.swift; sourceTree = "<group>"; };
+		D270F4BF1E351E100065D7D5 /* RefreshInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshInterval.swift; sourceTree = "<group>"; };
 		D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxRetrier.swift; sourceTree = "<group>"; };
 		D27C56711E32C0F700EC9C40 /* EduxValidators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxValidators.swift; sourceTree = "<group>"; };
 		D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseClassificationTableViewController.swift; sourceTree = "<group>"; };
@@ -945,10 +947,10 @@
 		D2352E451E284E3500303424 /* operations */ = {
 			isa = PBXGroup;
 			children = (
+				D2352E521E2A0CDF00303424 /* BaseOperation.swift */,
 				D2352E461E284E5A00303424 /* EduxLoginOperation.swift */,
 				D2352E481E284EA300303424 /* ReadCourseClassificationOperation.swift */,
 				D2352E4A1E284EBC00303424 /* ReadCourseListOperation.swift */,
-				D2352E521E2A0CDF00303424 /* BaseOperation.swift */,
 			);
 			path = operations;
 			sourceTree = "<group>";
@@ -974,6 +976,7 @@
 			isa = PBXGroup;
 			children = (
 				D245B31A1E2E939A0074CB5B /* Notifications+Extension.swift */,
+				D270F4BF1E351E100065D7D5 /* RefreshInterval.swift */,
 			);
 			path = constants;
 			sourceTree = "<group>";
@@ -1087,6 +1090,11 @@
 					D2352E041E27EC9C00303424 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D2352E181E27EC9D00303424 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1237,6 +1245,7 @@
 				D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */,
 				D245B3281E3030A20074CB5B /* CourseListParsing.swift in Sources */,
 				4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
+				D270F4C01E351E100065D7D5 /* RefreshInterval.swift in Sources */,
 				D245B3211E3021F20074CB5B /* Course.swift in Sources */,
 				D2352E091E27EC9C00303424 /* AppDelegate.swift in Sources */,
 				4D52968F1E2A4C28007677BA /* FileLoader.swift in Sources */,
@@ -1442,6 +1451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1461,6 +1471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
