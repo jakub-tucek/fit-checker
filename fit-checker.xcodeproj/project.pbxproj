@@ -81,6 +81,7 @@
 		D245B32D1E3181530074CB5B /* KeychainAccess+Keechain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32C1E3181530074CB5B /* KeychainAccess+Keechain.swift */; };
 		D245B3301E3183CA0074CB5B /* LogoutOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */; };
 		D270F4C01E351E100065D7D5 /* RefreshInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270F4BF1E351E100065D7D5 /* RefreshInterval.swift */; };
+		D270F4C51E378FA30065D7D5 /* UITableViewController+Deselect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270F4C41E378FA30065D7D5 /* UITableViewController+Deselect.swift */; };
 		D27C56701E32B0BA00EC9C40 /* EduxRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */; };
 		D27C56721E32C0F700EC9C40 /* EduxValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56711E32C0F700EC9C40 /* EduxValidators.swift */; };
 		D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */; };
@@ -422,6 +423,7 @@
 		D245B32C1E3181530074CB5B /* KeychainAccess+Keechain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeychainAccess+Keechain.swift"; sourceTree = "<group>"; };
 		D245B32F1E3183CA0074CB5B /* LogoutOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutOperation.swift; sourceTree = "<group>"; };
 		D270F4BF1E351E100065D7D5 /* RefreshInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshInterval.swift; sourceTree = "<group>"; };
+		D270F4C41E378FA30065D7D5 /* UITableViewController+Deselect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Deselect.swift"; sourceTree = "<group>"; };
 		D27C566F1E32B0BA00EC9C40 /* EduxRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxRetrier.swift; sourceTree = "<group>"; };
 		D27C56711E32C0F700EC9C40 /* EduxValidators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EduxValidators.swift; sourceTree = "<group>"; };
 		D27C56731E337B7D00EC9C40 /* CourseClassificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseClassificationTableViewController.swift; sourceTree = "<group>"; };
@@ -621,6 +623,7 @@
 		D2352E2A1E27ECCA00303424 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				D270F4C31E378F600065D7D5 /* extensions */,
 				D245B32E1E31839F0074CB5B /* tasks */,
 				D2352E4F1E29820900303424 /* LoginViewController.swift */,
 				D245B31E1E3021BE0074CB5B /* CoursesTableViewController.swift */,
@@ -997,6 +1000,14 @@
 			path = tasks;
 			sourceTree = "<group>";
 		};
+		D270F4C31E378F600065D7D5 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D270F4C41E378FA30065D7D5 /* UITableViewController+Deselect.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		D28F22101E3409A900D5ADF5 /* logs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1089,6 +1100,7 @@
 					};
 					D2352E041E27EC9C00303424 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VQH57LJ236;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1260,6 +1272,7 @@
 				D245B31F1E3021BE0074CB5B /* CoursesTableViewController.swift in Sources */,
 				D2352E441E28487700303424 /* EduxRouter.swift in Sources */,
 				D245B3251E3030920074CB5B /* ClassificationResult.swift in Sources */,
+				D270F4C51E378FA30065D7D5 /* UITableViewController+Deselect.swift in Sources */,
 				4D4DB8FD1E33BFA000A8CCB3 /* ArrayUtils.swift in Sources */,
 				D2352E471E284E5A00303424 /* EduxLoginOperation.swift in Sources */,
 				D2352E4B1E284EBC00303424 /* ReadCourseListOperation.swift in Sources */,
@@ -1451,7 +1464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VQH57LJ236;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1471,7 +1484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VQH57LJ236;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

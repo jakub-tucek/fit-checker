@@ -12,6 +12,12 @@ import RealmSwift
 /// Courses list controller.
 class CoursesTableViewController: UITableViewController {
 
+    /// Defines mutualy exclusive controller states
+    enum ControllerState {
+        case refreshing
+        case idle
+    }
+
     /// Database context manager dependency
     fileprivate let contextManager: ContextManager
 
@@ -21,7 +27,12 @@ class CoursesTableViewController: UITableViewController {
     /// List of stored courses
     fileprivate var courses: Results<Course>?
 
+    /// Realm notification token for course list changes
     private var token: NotificationToken?
+
+    /// Current controller state (default: .idle), indicates whether controller
+    /// is refreshing data or is idle
+    private var controllerState = ControllerState.idle
 
     init(contextManager: ContextManager, networkController: NetworkController) {
         self.contextManager = contextManager
@@ -34,6 +45,12 @@ class CoursesTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        animateRowsDeselect()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,11 +61,16 @@ class CoursesTableViewController: UITableViewController {
 
     /// Download new data
     func refreshData() {
-        refreshControl?.beginRefreshing()
+        // Fixes refresh controller glitch which,
+        // when the controller is loading, data are refreshed silentely
+        guard controllerState != .refreshing else { return }
+
+        controllerState = .refreshing
 
         networkController.loadCourseList {
             // Stop refresh control when download is comleted
             DispatchQueue.main.async { [weak self] in
+                self?.controllerState = .idle
                 self?.refreshControl?.endRefreshing()
             }
         }
@@ -63,9 +85,10 @@ class CoursesTableViewController: UITableViewController {
             UITableViewCell.identifier)
         tableView.addSubview(refreshControl)
 
-        self.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshData),
                                  for: .valueChanged)
+
+        self.refreshControl = refreshControl
     }
 
     /// Load stored data into view
