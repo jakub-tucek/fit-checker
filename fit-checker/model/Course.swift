@@ -19,7 +19,7 @@ class Course: Object {
     /// Course name
     dynamic var name = ""
 
-    /// Indicates wheter classification for this course is available
+    /// Indicates whether classification for this course is available
     dynamic var classificationAvailable = false
 
     //MARK: - Initializers
