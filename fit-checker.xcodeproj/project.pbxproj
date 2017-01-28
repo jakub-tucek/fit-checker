@@ -93,6 +93,7 @@
 		D28F22141E3413A000D5ADF5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F22111E3409C700D5ADF5 /* Logger.swift */; };
 		D28F22191E34187600D5ADF5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D28F221B1E34187600D5ADF5 /* Localizable.strings */; };
 		D28F221E1E341AEC00D5ADF5 /* Localization.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */; };
+		D2B47F541E3D562C00D1558F /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B47F531E3D562C00D1558F /* ResponseType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,6 +437,7 @@
 		D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.Generated.swift; sourceTree = "<group>"; };
 		D28F221F1E341B6F00D5ADF5 /* cs-CZ */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "cs-CZ"; path = "cs-CZ.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		D28F22201E341B6F00D5ADF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2B47F531E3D562C00D1558F /* ResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -938,6 +940,7 @@
 		D2352E401E2847E500303424 /* networking */ = {
 			isa = PBXGroup;
 			children = (
+				D2B47F521E3D561000D1558F /* response */,
 				D2352E451E284E3500303424 /* operations */,
 				D2352E411E28481200303424 /* NetworkController.swift */,
 				D2352E431E28487700303424 /* EduxRouter.swift */,
@@ -1023,6 +1026,14 @@
 				D28F221D1E341AEC00D5ADF5 /* Localization.Generated.swift */,
 			);
 			path = localization;
+			sourceTree = "<group>";
+		};
+		D2B47F521E3D561000D1558F /* response */ = {
+			isa = PBXGroup;
+			children = (
+				D2B47F531E3D562C00D1558F /* ResponseType.swift */,
+			);
+			path = response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1254,6 +1265,7 @@
 				4D279A701E2A21CB00542E0B /* ClasificationParsing.swift in Sources */,
 				D2352E331E27EFDF00303424 /* ClassificationRow.swift in Sources */,
 				4D18A9411E34A126002E57C9 /* DetectedChangeType.swift in Sources */,
+				D2B47F541E3D562C00D1558F /* ResponseType.swift in Sources */,
 				D27C56741E337B7D00EC9C40 /* CourseClassificationTableViewController.swift in Sources */,
 				D245B3281E3030A20074CB5B /* CourseListParsing.swift in Sources */,
 				4D490EE41E340A0800BE6EE8 /* ClassificationDetect.swift in Sources */,
