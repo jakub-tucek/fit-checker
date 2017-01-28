@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 /// Handles user login to Edux.
-class EduxLoginOperation: BaseOperation {
+class EduxLoginOperation: BaseOperation, ResponseType {
 
     /// Completion promise
     var promise: OperationPromise<Void>?
@@ -49,30 +49,16 @@ class EduxLoginOperation: BaseOperation {
         _ = sessionManager.request(EduxRouter.login(query: queryParameters,
                                                     body: bodyParameters))
             .validate().validate(EduxValidators.validCredentials)
-            .response(completionHandler: handle)
+            .responseString(completionHandler: handle)
     }
 
-    /// Finishes operation based on validation results.
+    /// Authorization success callback
     ///
-    /// - Parameter response: Server response
-    func handle(response: DefaultDataResponse) {
-        defer {
-            isFinished = true
-        }
+    /// - Parameter result: Downloaded HTML
+    func success(result: String) {
+        let keychain = Keechain(service: .edux)
 
-        if isCancelled {
-            return
-        }
-
-        switch response.error == nil {
-        case true:
-            let keychain = Keechain(service: .edux)
-
-            keychain.saveAccount(username: username, password: password)
-            promise?.success()
-        case false:
-            self.error = response.error
-            promise?.failure()
-        }
+        keychain.saveAccount(username: username, password: password)
+        promise?.success()
     }
 }
