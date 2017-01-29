@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 /// Read user course list request operation.
-class ReadCourseListOperation: BaseOperation {
+class ReadCourseListOperation: BaseOperation, ResponseType {
 
     /// Parameters presented in request query string
     private static let query: Parameters = ["dashboard_current_lang": "cs"]
@@ -42,42 +42,27 @@ class ReadCourseListOperation: BaseOperation {
             .responseJSON(completionHandler: handle)
     }
 
-    /// Handle server response data and parse course list
+    /// Course list request success callback
     ///
-    /// - Parameter response: Remote server response
-    func handle(response: DataResponse<Any>) {
-        defer {
-            isFinished = true
-        }
+    /// - Parameter result: Response JSON
+    func success(result: Any) {
+        guard let json = result as? [String: Any?] else { return }
 
-        if isCancelled {
-            return
-        }
+        let parser = CourseListParser()
+        let parsedCourses = parser.parse(json: json)
+        let courses = parsedCourses.courses.map({ course -> Course in
+            return Course(id: course.name, name: course.name,
+                          classificationAvailable: course.classification)
+        })
 
-        switch response.result {
-        case let .success(json):
-            guard let json = json as? [String: Any?] else { return }
+        do {
+            let realm = try contextManager.createContext()
 
-            let parser = CourseListParser()
-            let parsedCourses = parser.parse(json: json)
-            let courses = parsedCourses.courses.map({ course -> Course in
-                return Course(id: course.name, name: course.name,
-                        classificationAvailable: course.classification)
-            })
-
-            do {
-                let realm = try contextManager.createContext()
-
-                try realm.write() {
-                    realm.add(courses, update: true)
-                }
-            } catch {
-                self.error = error
+            try realm.write() {
+                realm.add(courses, update: true)
             }
-
-        case .failure:
+        } catch {
             self.error = error
         }
     }
-
 }

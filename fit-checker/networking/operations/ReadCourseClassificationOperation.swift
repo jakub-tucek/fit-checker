@@ -11,7 +11,7 @@ import Alamofire
 
 
 /// Downloads HTML page for course classification.
-class ReadCourseClassificationOperation: BaseOperation {
+class ReadCourseClassificationOperation: BaseOperation, ResponseType {
 
     /// Edux course id
     private let courseId: String
@@ -40,43 +40,31 @@ class ReadCourseClassificationOperation: BaseOperation {
             .responseString(completionHandler: handle)
     }
 
-    /// Handle HTML response
+    /// Classification request success callback
     ///
-    /// - Parameter response: Server response
-    func handle(response: DataResponse<String>) {
-        defer {
-            isFinished = true
+    /// - Parameter result: Downloaded HTML
+    func success(result: String) {
+        let parser = ClassificationParser()
+        let tables = parser.parse(html: result).tables.map { table -> CourseTable in
+            let classification = table.rows.map({ row in
+                return ClassificationRecord(name: row.name, score: row.value)
+            })
+
+            return CourseTable(name: table.name, courseId: courseId,
+                               classification: classification)
         }
 
-        if isCancelled {
-            return
-        }
+        do {
+            let realm = try contextManager.createContext()
+            let oldTables = realm.objects(CourseTable.self)
+                .filter("courseId = %@", courseId)
 
-        switch response.result {
-        case let .success(html):
-            let parser = ClassificationParser()
-            let tables = parser.parse(html: html).tables.map { table -> CourseTable in
-                let classification = table.rows.map({ row in
-                    return ClassificationRecord(name: row.name, score: row.value)
-                })
-
-                return CourseTable(name: table.name, courseId: courseId,
-                                   classification: classification)
+            try realm.write {
+                realm.delete(oldTables)
+                realm.add(tables)
             }
-
-            do {
-                let realm = try contextManager.createContext()
-                let oldTables = realm.objects(CourseTable.self)
-                    .filter("courseId = %@", courseId)
-
-                try realm.write {
-                    realm.delete(oldTables)
-                    realm.add(tables)
-                }
-            } catch {
-                self.error = error
-            }
-        case .failure: self.error = error
+        } catch {
+            self.error = error
         }
     }
 }
