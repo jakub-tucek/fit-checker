@@ -13,7 +13,7 @@ class ObjectConvert: ObjectConverting {
     ///
     /// - Parameter courseList: array of db courses
     /// - Returns: parsed result entity
-    func convert(courseList: [Course]) -> CourseParsedListResult {
+    static func convert(courseList: [Course]) -> CourseParsedListResult {
         let courseParsedList = courseList.map {
             CourseParsed(name: $0.name, classification: $0.classificationAvailable)
         }
@@ -25,7 +25,7 @@ class ObjectConvert: ObjectConverting {
     ///
     /// - Parameter courseParsed: parsed course result
     /// - Returns: array of db courses
-    func convert(courseParsed: CourseParsedListResult) -> [Course] {
+    static func convert(courseParsed: CourseParsedListResult) -> [Course] {
         return courseParsed.courses.map {
             Course(id: $0.name, name: $0.name, classificationAvailable: $0.classification)
         }
@@ -35,7 +35,7 @@ class ObjectConvert: ObjectConverting {
     ///
     /// - Parameter parsedTableList: parsed result
     /// - Returns: array of db objects
-    func convert(parsedTableList: ClassificationResult) -> [CourseTable] {
+    static func convert(parsedTableList: ClassificationResult) -> [CourseTable] {
         return parsedTableList.tables.map {
             convert(parsedTable: $0)
         }
@@ -45,7 +45,7 @@ class ObjectConvert: ObjectConverting {
     ///
     /// - Parameter tableList: database courseTable list
     /// - Returns: classification result
-    func convert(tableList: [CourseTable]) -> ClassificationResult {
+    static func convert(tableList: [CourseTable]) -> ClassificationResult {
         let res = ClassificationResult()
 
         res.tables = tableList.map {
@@ -55,7 +55,7 @@ class ObjectConvert: ObjectConverting {
         return ClassificationResult()
     }
 
-    func convert(parsedTable: CourseParsedTable) -> CourseTable {
+    static func convert(parsedTable: CourseParsedTable) -> CourseTable {
         let courses = parsedTable.rows.map {
             ClassificationRecord(name: $0.name, score: $0.value)
         }
@@ -66,7 +66,7 @@ class ObjectConvert: ObjectConverting {
                 classification: courses)
     }
 
-    func convert(records: RealmSwift.List<ClassificationRecord>) -> [ClassificationParsedRecord] {
+    static func convert(records: RealmSwift.List<ClassificationRecord>) -> [ClassificationParsedRecord] {
         return Array(records).map {
             ClassificationParsedRecord(name: $0.name, value: $0.score)
         }
