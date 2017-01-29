@@ -20,11 +20,11 @@ class ClassificationDetect {
     ///   - newValue: new value of type ClassificationResult
     /// - Returns: detected change
     func detect(oldValue: ClassificationResult, newValue: ClassificationResult)
-                    -> ResultChange<ClassificationRow> {
+                    -> ResultChange<ClassificationParsedRecod> {
         let sizeDiff = detectSizeDiff(oldValue: oldValue, newValue: newValue)
         let changes = detectValuesChange(oldValue: oldValue, newValue: newValue)
 
-        return ResultChange<ClassificationRow>(
+        return ResultChange<ClassificationParsedRecod>(
                 changes: changes,
                 sizeDifference: sizeDiff
         )
@@ -50,17 +50,17 @@ class ClassificationDetect {
     ///   - newValue: ClassificationResult
     /// - Returns: changes
     private func detectValuesChange(oldValue: ClassificationResult, newValue: ClassificationResult)
-                    -> [DetectedChange<ClassificationRow>] {
+                    -> [DetectedChange<ClassificationParsedRecod>] {
         let oldTables = oldValue.tables
         let newTables = newValue.tables
-        var changes = [DetectedChange<ClassificationRow>]()
+        var changes = [DetectedChange<ClassificationParsedRecod>]()
 
         var oldIndex = 0
         var newIndex = 0
 
         while oldIndex < oldTables.count || newIndex < newTables.count {
-            let oldTable = ArrayUtils<ClassificationTable>.getItemSafely(array: oldTables, i: oldIndex)
-            let newTable = ArrayUtils<ClassificationTable>.getItemSafely(array: newTables, i: newIndex)
+            let oldTable = ArrayUtils<CourseParsedTable>.getItemSafely(array: oldTables, i: oldIndex)
+            let newTable = ArrayUtils<CourseParsedTable>.getItemSafely(array: newTables, i: newIndex)
 
             let tableChanges = detectChangeForTable(oldTable: oldTable, newTable: newTable)
 
@@ -80,18 +80,18 @@ class ClassificationDetect {
     ///   - oldTable: ClassificationTable?
     ///   - newTable: ClassificationTable?
     /// - Returns: changes
-    private func detectChangeForTable(oldTable: ClassificationTable?, newTable: ClassificationTable?)
-                    -> [DetectedChange<ClassificationRow>] {
+    private func detectChangeForTable(oldTable: CourseParsedTable?, newTable: CourseParsedTable?)
+                    -> [DetectedChange<ClassificationParsedRecod>] {
         let oldRows = getRowsSafely(table: oldTable)
         let newRows = getRowsSafely(table: newTable)
-        var tableChanges = [DetectedChange<ClassificationRow>]()
+        var tableChanges = [DetectedChange<ClassificationParsedRecod>]()
 
         var oldRowIndex = 0
         var newRowIndex = 0
 
         while oldRowIndex < oldRows.count || newRowIndex < newRows.count {
-            let oldRow = ArrayUtils<ClassificationRow>.getItemSafely(array: oldRows, i: oldRowIndex)
-            let newRow = ArrayUtils<ClassificationRow>.getItemSafely(array: newRows, i: newRowIndex)
+            let oldRow = ArrayUtils<ClassificationParsedRecod>.getItemSafely(array: oldRows, i: oldRowIndex)
+            let newRow = ArrayUtils<ClassificationParsedRecod>.getItemSafely(array: newRows, i: newRowIndex)
 
             let change = detectValueChange(oldItem: oldRow, newItem: newRow)
             if let change = change {
@@ -110,11 +110,11 @@ class ClassificationDetect {
     ///
     /// - Parameter table: table with rows
     /// - Returns: rows or empty array
-    private func getRowsSafely(table: ClassificationTable?) -> [ClassificationRow] {
+    private func getRowsSafely(table: CourseParsedTable?) -> [ClassificationParsedRecod] {
         if let table = table {
             return table.rows
         } else {
-            return [ClassificationRow]()
+            return [ClassificationParsedRecod]()
         }
     }
 
@@ -125,8 +125,8 @@ class ClassificationDetect {
     ///   - oldItem: ClassificationRow
     ///   - newItem: ClassificationRow
     /// - Returns: found change or empty
-    private func detectValueChange(oldItem: ClassificationRow?, newItem: ClassificationRow?)
-                    -> DetectedChange<ClassificationRow>? {
+    private func detectValueChange(oldItem: ClassificationParsedRecod?, newItem: ClassificationParsedRecod?)
+                    -> DetectedChange<ClassificationParsedRecod>? {
         var type: DetectedChangeType?
 
         type = (oldItem == nil ? DetectedChangeType.added : nil)
@@ -138,7 +138,7 @@ class ClassificationDetect {
         }
 
         if let type = type {
-            return DetectedChange<ClassificationRow>(
+            return DetectedChange<ClassificationParsedRecod>(
                     type: type,
                     oldValue: oldItem,
                     newValue: newItem

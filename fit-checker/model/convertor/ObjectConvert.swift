@@ -7,6 +7,14 @@ import Foundation
 
 class ObjectConvert: ObjectConverting {
 
+    func convert(parsedTableList: ClassificationResult) -> [CourseTable] {
+        return [CourseTable]()
+    }
+
+    func convert(tableList: [CourseTable]) -> ClassificationResult {
+        return ClassificationResult()
+    }
+
     func convert(courseList: [Course]) -> CourseParsedListResult {
         let courseParsedList = courseList.map {
             CourseParsed(name: $0.name, classification: $0.classificationAvailable)

@@ -82,15 +82,15 @@ class ClassificationParser: ClassificationParsing {
     ///   - tableNode: tbody node
     ///   - name: name of table - empty String if has no name
     /// - Returns: parsed table
-    private func parseTable(tableNode: XMLElement, name: String) -> ClassificationTable {
-        var rows = [ClassificationRow]()
+    private func parseTable(tableNode: XMLElement, name: String) -> CourseParsedTable {
+        var rows = [ClassificationParsedRecod]()
         for rowNode in tableNode.xpath(Consts.rowSelector) {
             if let row = parseRow(rowNode: rowNode) {
                 rows.append(row)
             }
         }
 
-        return ClassificationTable(name: name, rows: rows)
+        return CourseParsedTable(name: name, rows: rows)
     }
 
 
@@ -100,9 +100,9 @@ class ClassificationParser: ClassificationParsing {
     ///
     /// - Parameter node: main div
     /// - Returns: array of table objects
-    private func parseTables(node: XMLElement) -> [ClassificationTable] {
+    private func parseTables(node: XMLElement) -> [CourseParsedTable] {
         var tableCounter = 0
-        var tables = [ClassificationTable]()
+        var tables = [CourseParsedTable]()
         let names = parseTableNames(node: node)
 
         for tableNode in node.xpath(Consts.tableSelector) {
@@ -126,7 +126,7 @@ class ClassificationParser: ClassificationParsing {
     ///
     /// - Parameter rowNode: row (tr) node
     /// - Returns: optional of row object | empty if row has < 2 collumns
-    private func parseRow(rowNode: XMLElement) -> ClassificationRow? {
+    private func parseRow(rowNode: XMLElement) -> ClassificationParsedRecod? {
         var orderedCol = [String]()
         var limit = 0
 
@@ -148,7 +148,7 @@ class ClassificationParser: ClassificationParsing {
         if (limit != 2) {
             return nil
         } else {
-            return ClassificationRow(name: orderedCol[0], value: orderedCol[1])
+            return ClassificationParsedRecod(name: orderedCol[0], value: orderedCol[1])
         }
     }
 

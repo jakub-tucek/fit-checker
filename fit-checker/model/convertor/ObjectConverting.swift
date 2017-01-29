@@ -11,8 +11,8 @@ protocol ObjectConverting {
 
     func convert(courseParsed: CourseParsedListResult) -> [Course]
 
-    func convert(parsedTableList: [ClassificationTable]) -> [CourseTable]
+    func convert(parsedTableList: ClassificationResult) -> [CourseTable]
 
-    func convert(tableList: [CourseTable]) -> [ClassificationTable]
+    func convert(tableList: [CourseTable]) -> ClassificationResult
 
 }

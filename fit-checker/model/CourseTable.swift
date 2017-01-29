@@ -1,5 +1,5 @@
 //
-//  CourseTable.swift
+//  CourseParsedTable.swift
 //  fit-checker
 //
 //  Created by Josef Dolezal on 21/01/2017.

@@ -1,5 +1,5 @@
 //
-//  ClassificationRow.swift
+//  ClassificationParsedRecord.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 12/01/17.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// EduxParserResultRow is class storing data of one row.
-class ClassificationRow {
+class ClassificationParsedRecod {
 
     /// Represents first column in table
     let name: String
@@ -23,7 +23,7 @@ class ClassificationRow {
     }
 
 
-    static func !=(left: ClassificationRow, right: ClassificationRow) -> Bool {
+    static func !=(left: ClassificationParsedRecod, right: ClassificationParsedRecod) -> Bool {
         return !((left.name == right.name) && (left.value == right.value))
     }
 
