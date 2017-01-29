@@ -68,7 +68,8 @@ extension DataRequest {
             }
         }
 
-        return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
+        return response(queue: queue, responseSerializer: responseSerializer,
+                        completionHandler: completionHandler)
     }
 
     /// Creates Collection of objects representation of JSON response
@@ -106,6 +107,27 @@ extension DataRequest {
             }
         }
 
-        return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
+        return response(responseSerializer: responseSerializer,
+                        completionHandler: completionHandler)
+    }
+
+    /// Creates empty response, used when only response status is needed
+    /// not entire body data
+    ///
+    /// - Parameters:
+    ///   - queue: Dispatch queue
+    ///   - completionHandler: Completion handler
+    /// - Returns: Void response on success, failure with error otherwise
+    func responseVoid(queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DataResponse<Void>) -> Void) -> Self
+    {
+        let responseSerializer = DataResponseSerializer<Void> { _, _, _, error in
+            if let error = error { return .failure(error) }
+
+            return .success(())
+        }
+
+        return response(responseSerializer: responseSerializer,
+                        completionHandler: completionHandler)
     }
 }
