@@ -49,13 +49,13 @@ class EduxLoginOperation: BaseOperation, ResponseType {
         _ = sessionManager.request(EduxRouter.login(query: queryParameters,
                                                     body: bodyParameters))
             .validate().validate(EduxValidators.validCredentials)
-            .responseString(completionHandler: handle)
+            .responseVoid(completionHandler: handle)
     }
 
     /// Authorization success callback
     ///
     /// - Parameter result: Downloaded HTML
-    func success(result: String) {
+    func success(result: Void) {
         let keychain = Keechain(service: .edux)
 
         keychain.saveAccount(username: username, password: password)
