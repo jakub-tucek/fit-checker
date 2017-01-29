@@ -9,7 +9,7 @@
 import Foundation
 
 /// EduxParserResultRow is class storing data of one row.
-class ClassificationParsedRecod {
+class ClassificationParsedRecord {
 
     /// Represents first column in table
     let name: String
@@ -23,7 +23,7 @@ class ClassificationParsedRecod {
     }
 
 
-    static func !=(left: ClassificationParsedRecod, right: ClassificationParsedRecod) -> Bool {
+    static func !=(left: ClassificationParsedRecord, right: ClassificationParsedRecord) -> Bool {
         return !((left.name == right.name) && (left.value == right.value))
     }
 

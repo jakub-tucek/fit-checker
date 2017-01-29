@@ -20,11 +20,11 @@ class ClassificationDetect {
     ///   - newValue: new value of type ClassificationResult
     /// - Returns: detected change
     func detect(oldValue: ClassificationResult, newValue: ClassificationResult)
-                    -> ResultChange<ClassificationParsedRecod> {
+                    -> ResultChange<ClassificationParsedRecord> {
         let sizeDiff = detectSizeDiff(oldValue: oldValue, newValue: newValue)
         let changes = detectValuesChange(oldValue: oldValue, newValue: newValue)
 
-        return ResultChange<ClassificationParsedRecod>(
+        return ResultChange<ClassificationParsedRecord>(
                 changes: changes,
                 sizeDifference: sizeDiff
         )
@@ -50,10 +50,10 @@ class ClassificationDetect {
     ///   - newValue: ClassificationResult
     /// - Returns: changes
     private func detectValuesChange(oldValue: ClassificationResult, newValue: ClassificationResult)
-                    -> [DetectedChange<ClassificationParsedRecod>] {
+                    -> [DetectedChange<ClassificationParsedRecord>] {
         let oldTables = oldValue.tables
         let newTables = newValue.tables
-        var changes = [DetectedChange<ClassificationParsedRecod>]()
+        var changes = [DetectedChange<ClassificationParsedRecord>]()
 
         var oldIndex = 0
         var newIndex = 0
@@ -81,17 +81,17 @@ class ClassificationDetect {
     ///   - newTable: ClassificationTable?
     /// - Returns: changes
     private func detectChangeForTable(oldTable: CourseParsedTable?, newTable: CourseParsedTable?)
-                    -> [DetectedChange<ClassificationParsedRecod>] {
+                    -> [DetectedChange<ClassificationParsedRecord>] {
         let oldRows = getRowsSafely(table: oldTable)
         let newRows = getRowsSafely(table: newTable)
-        var tableChanges = [DetectedChange<ClassificationParsedRecod>]()
+        var tableChanges = [DetectedChange<ClassificationParsedRecord>]()
 
         var oldRowIndex = 0
         var newRowIndex = 0
 
         while oldRowIndex < oldRows.count || newRowIndex < newRows.count {
-            let oldRow = ArrayUtils<ClassificationParsedRecod>.getItemSafely(array: oldRows, i: oldRowIndex)
-            let newRow = ArrayUtils<ClassificationParsedRecod>.getItemSafely(array: newRows, i: newRowIndex)
+            let oldRow = ArrayUtils<ClassificationParsedRecord>.getItemSafely(array: oldRows, i: oldRowIndex)
+            let newRow = ArrayUtils<ClassificationParsedRecord>.getItemSafely(array: newRows, i: newRowIndex)
 
             let change = detectValueChange(oldItem: oldRow, newItem: newRow)
             if let change = change {
@@ -110,11 +110,11 @@ class ClassificationDetect {
     ///
     /// - Parameter table: table with rows
     /// - Returns: rows or empty array
-    private func getRowsSafely(table: CourseParsedTable?) -> [ClassificationParsedRecod] {
+    private func getRowsSafely(table: CourseParsedTable?) -> [ClassificationParsedRecord] {
         if let table = table {
             return table.rows
         } else {
-            return [ClassificationParsedRecod]()
+            return [ClassificationParsedRecord]()
         }
     }
 
@@ -125,8 +125,8 @@ class ClassificationDetect {
     ///   - oldItem: ClassificationRow
     ///   - newItem: ClassificationRow
     /// - Returns: found change or empty
-    private func detectValueChange(oldItem: ClassificationParsedRecod?, newItem: ClassificationParsedRecod?)
-                    -> DetectedChange<ClassificationParsedRecod>? {
+    private func detectValueChange(oldItem: ClassificationParsedRecord?, newItem: ClassificationParsedRecord?)
+                    -> DetectedChange<ClassificationParsedRecord>? {
         var type: DetectedChangeType?
 
         type = (oldItem == nil ? DetectedChangeType.added : nil)
@@ -138,7 +138,7 @@ class ClassificationDetect {
         }
 
         if let type = type {
-            return DetectedChange<ClassificationParsedRecod>(
+            return DetectedChange<ClassificationParsedRecord>(
                     type: type,
                     oldValue: oldItem,
                     newValue: newItem

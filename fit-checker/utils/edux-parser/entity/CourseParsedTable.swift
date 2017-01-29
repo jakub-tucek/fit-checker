@@ -17,9 +17,9 @@ class CourseParsedTable {
     var name: String?
 
     // All rows in table
-    var rows: [ClassificationParsedRecod]
+    var rows: [ClassificationParsedRecord]
 
-    init(name: String, rows: [ClassificationParsedRecod]) {
+    init(name: String?, rows: [ClassificationParsedRecord]) {
         self.name = name
         self.rows = rows
     }
