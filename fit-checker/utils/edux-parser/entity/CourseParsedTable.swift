@@ -1,5 +1,5 @@
 //
-//  ClassificationTable.swift
+//  CourseParsedTable.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 12/01/17.
@@ -10,16 +10,16 @@ import Foundation
 
 
 /// EduxParserResultTable is class keeping array of rows.
-class ClassificationTable {
+class CourseParsedTable {
 
 
     /// Name of table if present
     var name: String?
 
     // All rows in table
-    var rows: [ClassificationRow]
+    var rows: [ClassificationParsedRecord]
 
-    init(name: String, rows: [ClassificationRow]) {
+    init(name: String?, rows: [ClassificationParsedRecord]) {
         self.name = name
         self.rows = rows
     }

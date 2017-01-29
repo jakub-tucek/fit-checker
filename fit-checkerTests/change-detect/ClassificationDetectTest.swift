@@ -24,13 +24,13 @@ class ClassificationDetectTest: XCTestCase {
 
     private func initResult() -> ClassificationResult {
         let res = ClassificationResult()
-        let table1 = ClassificationTable(
+        let table1 = CourseParsedTable(
                 name: "big table",
-                rows: [ClassificationRow(name: "Value", value: "22"), ClassificationRow(name: "Value", value: "0")]
+                rows: [ClassificationParsedRecord(name: "Value", value: "22"), ClassificationParsedRecord(name: "Value", value: "0")]
         )
-        let table2 = ClassificationTable(
+        let table2 = CourseParsedTable(
                 name: "small table",
-                rows: [ClassificationRow(name: "Sparta", value: "VELKA NULA")]
+                rows: [ClassificationParsedRecord(name: "Sparta", value: "VELKA NULA")]
         )
         res.tables = [table1, table2]
 
@@ -47,8 +47,8 @@ class ClassificationDetectTest: XCTestCase {
     }
 
     public func testRowChange() {
-        newRes.tables[0].rows[0] = ClassificationRow(name: "Value", value: "0")
-        newRes.tables[1].rows[0] = ClassificationRow(name: "Atheny", value: "VELKA NULA")
+        newRes.tables[0].rows[0] = ClassificationParsedRecord(name: "Value", value: "0")
+        newRes.tables[1].rows[0] = ClassificationParsedRecord(name: "Atheny", value: "VELKA NULA")
 
         let res = detect.detect(oldValue: oldRes, newValue: newRes)
 
@@ -66,8 +66,8 @@ class ClassificationDetectTest: XCTestCase {
     }
 
     public func testRowAdded() {
-        newRes.tables[0].rows.append(ClassificationRow(name: "Value", value: "0"))
-        newRes.tables[1].rows[0] = ClassificationRow(name: "Atheny", value: "VELKA NULA")
+        newRes.tables[0].rows.append(ClassificationParsedRecord(name: "Value", value: "0"))
+        newRes.tables[1].rows[0] = ClassificationParsedRecord(name: "Atheny", value: "VELKA NULA")
 
         let res = detect.detect(oldValue: oldRes, newValue: newRes)
 
@@ -82,7 +82,7 @@ class ClassificationDetectTest: XCTestCase {
         XCTAssertTrue(res.changeDetected())
     }
 
-    private func checkSecondTableChange(res: ResultChange<ClassificationRow>) {
+    private func checkSecondTableChange(res: ResultChange<ClassificationParsedRecord>) {
         XCTAssertEqual(DetectedChangeType.modified, res.changes[1].type)
         XCTAssertEqual("Sparta", res.changes[1].oldValue!.name)
         XCTAssertEqual("VELKA NULA", res.changes[1].oldValue!.value)
@@ -92,7 +92,7 @@ class ClassificationDetectTest: XCTestCase {
 
     public func testRowRemoved() {
         newRes.tables[0].rows.removeLast()
-        newRes.tables[1].rows[0] = ClassificationRow(name: "Atheny", value: "VELKA NULA")
+        newRes.tables[1].rows[0] = ClassificationParsedRecord(name: "Atheny", value: "VELKA NULA")
 
         let res = detect.detect(oldValue: oldRes, newValue: newRes)
 

@@ -20,4 +20,12 @@ class CourseParsedListResult {
 
     var courses = [CourseParsed]()
 
+    init() {
+        //empty
+    }
+    init(courses: [CourseParsed]) {
+        self.courses = courses
+    }
+
+
 }

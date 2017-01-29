@@ -14,7 +14,7 @@ class ClassificationResult {
 
 
     /// All Tables
-    var tables = [ClassificationTable]()
+    var tables = [CourseParsedTable]()
 
 
     /// Timestamp when result was created
