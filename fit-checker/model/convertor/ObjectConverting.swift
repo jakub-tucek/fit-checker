@@ -5,6 +5,7 @@
 
 import Foundation
 
+//Protocol for converting between internal and database objects.
 protocol ObjectConverting {
 
     func convert(courseList: [Course]) -> CourseParsedListResult
