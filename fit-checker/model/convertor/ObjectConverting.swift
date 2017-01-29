@@ -5,11 +5,14 @@
 
 import Foundation
 
-protocol CourseTableConverting {
+protocol ObjectConverting {
 
     func convert(courseList: [Course]) -> CourseParsedListResult
 
     func convert(courseParsed: CourseParsedListResult) -> [Course]
 
+    func convert(parsedTableList: [ClassificationTable]) -> [CourseTable]
+
+    func convert(tableList: [CourseTable]) -> [ClassificationTable]
 
 }

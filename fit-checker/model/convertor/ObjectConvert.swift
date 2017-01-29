@@ -5,7 +5,7 @@
 
 import Foundation
 
-class CourseTableConvertor {
+class ObjectConvert: ObjectConverting {
 
     func convert(courseList: [Course]) -> CourseParsedListResult {
         let courseParsedList = courseList.map {
