@@ -64,6 +64,18 @@ please create a new issue if it's not already created.
 * KOS integration
 * Deeper Edux integration
 
+## Project dependencies
+We use external libraries to for a faster development, here is the list:
+
+* [Kanna](https://github.com/tid-kijyun/Kanna) - XML and HTML parser, [MIT](https://github.com/tid-kijyun/Kanna/blob/master/LICENSE)
+* [Realm](https://github.com/realm/realm-cocoa) - Mobile database, [Apache 2.0](https://github.com/realm/realm-core/blob/master/LICENSE)
+* [Alamofire](https://github.com/Alamofire/Alamofire) - Networking library, [MIT](https://github.com/Alamofire/Alamofire/blob/master/LICENSE)
+* [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) - Keychain wrapper, [MIT](https://github.com/kishikawakatsumi/KeychainAccess/blob/master/LICENSE)
+* [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) - Advanced logging platform, [MIT](https://github.com/SwiftyBeaver/SwiftyBeaver/blob/master/LICENSE)
+
+We would like to thank the community for such a great work. Big thanks goes to all
+the contributors of mentioned libraries.
+
 ## Help needed!
 While we are busy maintaining current features and adding new, the UI and UX
 are kinda neglected. We are looking for someone who can help us with some
