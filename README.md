@@ -10,6 +10,17 @@ with your latest classification._
 * Build the project with XCode: <kbd>cmd ⌘</kbd> + <kbd>r</kbd>
 * :tada: Have fun! :tada:
 
+## Content
+* [What is FIT-Checker](#what-is-fit-checker-for-ios)
+* [Quick setup](#tl-dr-quick-setup)
+* [Installation](#installation)
+* Features
+  * [Supported](#supported-features)
+  * [Upcoming](#roadmap--upcoming-features)
+* [Dependencies](#project-dependencies)
+* [Contribution](#help-needed)
+* [License](#license)
+
 ## Installation
 Ok, quick setup is not that descriptive, lets make a tear down.
 
