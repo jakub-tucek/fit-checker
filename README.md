@@ -49,7 +49,6 @@ Now you should be ready to run the app without any problem. If the app cannot be
 please create a new issue if it's not already created.
 
 ## Supported features
-
 * Download list of your courses for current semester
 * Preview detail of course classification
 * Background refresh (download data while the app is in background, **but not killed!**)
@@ -80,3 +79,6 @@ the contributors of mentioned libraries.
 While we are busy maintaining current features and adding new, the UI and UX
 are kinda neglected. We are looking for someone who can help us with some
 design improvements. Feel free to contact us or create an issue!
+
+## License
+This repository is licensed under [MIT](LICENSE).
