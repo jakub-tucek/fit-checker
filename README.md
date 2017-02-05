@@ -4,6 +4,7 @@ with your latest classification._
 
 ## tl; dr Quick setup
 * Clone the repo `git clone https://github.com/jakub-tucek/fit-checker`
+* .. take a coffee :coffee:
 * Install [Carthage](https://github.com/Carthage/Carthage) dependency manager
 * Install [SwiftGen](https://github.com/AliSoftware/SwiftGen) for automated code generation
 * Download and build dependencies: `carthage bootstrap --platform iOS --no-use-binaries`
@@ -13,15 +14,16 @@ with your latest classification._
 ## Content
 * [What is FIT-Checker](#what-is-fit-checker-for-ios)
 * [Quick setup](#tl-dr-quick-setup)
-* [Installation](#installation)
+* [Setup](#setup)
 * Features
   * [Supported](#supported-features)
   * [Upcoming](#roadmap--upcoming-features)
+* [How it works](#how-it-works)
 * [Dependencies](#project-dependencies)
 * [Contribution](#help-needed)
 * [License](#license)
 
-## Installation
+## Setup
 Ok, quick setup is not that descriptive, lets make a tear down.
 
 First things first,
@@ -73,6 +75,13 @@ please create a new issue if it's not already created.
 * ISIC account balance
 * KOS integration
 * Deeper Edux integration
+
+## How it works
+How the app works under the hood? For classification and courses informations we use Edux as main (eh, the only one) source. Since Edux does not have any APIs, FIT-Checker browse the web in background and parse HTML into model objects.
+
+Login credentials **stays** on your device, FIT-Checker only uses it to obtain access tokens (usually once per session) to sign network requests.
+
+Because iOS does not allow app to run itself periodically, local notifications are not supported yet but will be added in one of the future releases.
 
 ## Project dependencies
 We use external libraries to for a faster development, here is the list:
