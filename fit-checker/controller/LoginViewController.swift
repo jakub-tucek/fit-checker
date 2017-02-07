@@ -15,6 +15,12 @@ class LoginViewController: UIViewController {
 
     /// Holds UI layout constants
     struct Layout {
+        /// Top offset of logo
+        static let logoOffset: CGFloat = 65
+
+        /// Top offset of login view from logo
+        static let loginOffset: CGFloat = 70
+
         /// Width of fields view wrapper
         static let loginViewWidth: CGFloat = 280
 
@@ -29,6 +35,7 @@ class LoginViewController: UIViewController {
 
         /// Login button height
         static let buttonHeight: CGFloat = 33
+
     }
 
     /// View with username and password fields
@@ -44,6 +51,8 @@ class LoginViewController: UIViewController {
 
         return button
     }()
+
+    private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "cvut-logo"))
 
     //MARK: Properties
 
@@ -93,7 +102,7 @@ class LoginViewController: UIViewController {
 
     /// Configures all subviews layouts
     private func configureView() {
-        let views = [loginView, loginButton]
+        let views = [logoImageView, loginView, loginButton]
 
         view.backgroundColor = UIColor.CVUT.blue
         loginView.backgroundColor = .white
@@ -111,8 +120,12 @@ class LoginViewController: UIViewController {
         }
 
         let constraints = [
+            logoImageView.topAnchor.constraint(equalTo:
+                view.topAnchor, constant: Layout.logoOffset),
+            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginView.topAnchor.constraint(equalTo:
+                logoImageView.bottomAnchor, constant: Layout.loginOffset),
             loginView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loginView.widthAnchor.constraint(equalToConstant:
                 Layout.loginViewWidth),
             loginView.heightAnchor.constraint(equalToConstant:
