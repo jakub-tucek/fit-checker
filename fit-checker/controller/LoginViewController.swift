@@ -15,32 +15,32 @@ class LoginViewController: UIViewController {
 
     /// Holds UI layout constants
     struct Layout {
-        static let spacing: CGFloat = 15
-        static let inputWidth: CGFloat = 200
-        static let buttonWidth: CGFloat = 80
-        static let fieldHeight: CGFloat = 22
+        /// Width of fields view wrapper
+        static let loginViewWidth: CGFloat = 280
+
+        /// Height of fields view wrapper
+        static let loginViewHeight: CGFloat = 80
+
+        /// Spacing between login view and button
+        static let viewsSpacing: CGFloat = 12
+
+        /// Button x axis offset from login view
+        static let buttonOffset: CGFloat = 20
+
+        /// Login button height
+        static let buttonHeight: CGFloat = 33
     }
 
-    /// Username input field
-    private let usernameField: UITextField = {
-        let field = UITextField()
-        field.placeholder = tr(.username)
-
-        return field
-    }()
-
-    /// Password input field
-    private let passwordField: UITextField = {
-        let field = UITextField()
-        field.placeholder = tr(.password)
-
-        return field
-    }()
+    /// View with username and password fields
+    private let loginView = LoginView()
 
     /// Login action button
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(tr(.login), for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor.CVUT.activeButton
+        button.addTarget(self, action: #selector(login), for: .touchUpInside)
 
         return button
     }()
@@ -75,8 +75,8 @@ class LoginViewController: UIViewController {
     /// Handles user login action
     public func login() {
         guard
-            let username = usernameField.text,
-            let password = passwordField.text,
+            let username = loginView.usernameTextField.text,
+            let password = loginView.passwordTextField.text,
             username.characters.count > 0,
             password.characters.count > 0 else { return }
 
@@ -93,7 +93,17 @@ class LoginViewController: UIViewController {
 
     /// Configures all subviews layouts
     private func configureView() {
-        let views = [usernameField, passwordField, loginButton]
+        let views = [loginView, loginButton]
+
+        view.backgroundColor = UIColor.CVUT.blue
+        loginView.backgroundColor = .white
+        loginView.layer.masksToBounds = true
+        loginView.layer.cornerRadius = 3
+        loginButton.layer.masksToBounds = true
+        loginButton.layer.cornerRadius = 3
+
+        loginView.usernameTextField.placeholder = tr(.username)
+        loginView.passwordTextField.placeholder = tr(.password)
 
         views.forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -101,34 +111,22 @@ class LoginViewController: UIViewController {
         }
 
         let constraints = [
-            usernameField.topAnchor.constraint(equalTo:
-                view.topAnchor, constant: Layout.spacing * 5.0),
-            usernameField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            usernameField.widthAnchor.constraint(equalToConstant:
-                Layout.inputWidth),
-            usernameField.heightAnchor.constraint(equalToConstant:
-                Layout.fieldHeight),
-            passwordField.topAnchor.constraint(equalTo:
-                usernameField.bottomAnchor, constant: Layout.spacing),
-            passwordField.centerXAnchor.constraint(equalTo:
-                usernameField.centerXAnchor),
-            passwordField.widthAnchor.constraint(equalTo:
-                usernameField.widthAnchor),
-            passwordField.heightAnchor.constraint(equalTo:
-                usernameField.heightAnchor),
+            loginView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loginView.widthAnchor.constraint(equalToConstant:
+                Layout.loginViewWidth),
+            loginView.heightAnchor.constraint(equalToConstant:
+                Layout.loginViewHeight),
             loginButton.topAnchor.constraint(equalTo:
-                passwordField.bottomAnchor, constant: Layout.spacing),
-            loginButton.centerXAnchor.constraint(equalTo:
-                passwordField.centerXAnchor),
-            loginButton.widthAnchor.constraint(equalToConstant:
-                Layout.buttonWidth),
-            loginButton.heightAnchor.constraint(equalTo:
-                passwordField.heightAnchor)
+                loginView.bottomAnchor, constant: Layout.viewsSpacing),
+            loginButton.leadingAnchor.constraint(equalTo:
+                loginView.leadingAnchor, constant: Layout.buttonOffset),
+            loginButton.trailingAnchor.constraint(equalTo:
+                loginView.trailingAnchor, constant: -Layout.buttonOffset),
+            loginButton.heightAnchor.constraint(equalToConstant:
+                Layout.buttonHeight)
         ]
 
-        constraints.forEach { $0.isActive = true }
-        
-        loginButton.addTarget(self, action: #selector(login),
-                              for: .touchUpInside)
+        constraints.forEach{ $0.isActive = true }
     }
 }
