@@ -1,3 +1,6 @@
+# fit-checker
+ Fit-checker 2.0 for CTU FIT
+
 ## What is FIT-Checker for iOS
 _**FIT-Checker** for iOS is a simple app which helps you to stay up to date
 with your latest classification._
@@ -102,3 +105,4 @@ design improvements. Feel free to contact us or create an issue!
 
 ## License
 This repository is licensed under [MIT](LICENSE).
+
