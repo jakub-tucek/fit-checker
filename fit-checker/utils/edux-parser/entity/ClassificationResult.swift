@@ -1,5 +1,5 @@
 //
-//  EduxParserResult.swift
+//  ClassificationResult.swift
 //  fit-checker
 //
 //  Created by Jakub Tucek on 12/01/17.
@@ -14,7 +14,7 @@ class ClassificationResult {
 
 
     /// All Tables
-    var tables = [ClassificationTable]()
+    var tables = [CourseParsedTable]()
 
 
     /// Timestamp when result was created

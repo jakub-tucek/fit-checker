@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  fit-checker
+
+  Created by Josef Dolezal on 21/01/2017.
+  Copyright © 2017 Josef Dolezal. All rights reserved.
+*/
+
+// Constants
+"logout" = "Odhlásit se.";
+"html_logout_verifier" = "Odhlásit se";
+"json_logout_verifier" = "Studuji:";
+"lang_code" = "cs";
+
+// Controllers
+"courses" = "Courses";
+"settings" = "Settings";
+
+// Login
+"username" = "Username";
+"password" = "Password";
+"login" = "Login";
+
+// Settings
+"logout" = "Logout";
+

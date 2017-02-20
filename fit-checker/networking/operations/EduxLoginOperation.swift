@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 /// Handles user login to Edux.
-class EduxLoginOperation: BaseOperation {
+class EduxLoginOperation: BaseOperation, ResponseType {
 
     /// Completion promise
     var promise: OperationPromise<Void>?
@@ -26,9 +26,6 @@ class EduxLoginOperation: BaseOperation {
 
     /// Current user password
     private let password: String
-
-    /// Element which determines whether the user is logged in or not
-    private static let loginIdentifier = "Odhlásit se."
 
     init(username: String, password: String, sessionManager: SessionManager) {
 
@@ -51,63 +48,17 @@ class EduxLoginOperation: BaseOperation {
     override func start() {
         _ = sessionManager.request(EduxRouter.login(query: queryParameters,
                                                     body: bodyParameters))
-            .validate().validate(EduxLoginOperation.validateLogin)
-            .response(completionHandler: handle)
+            .validate().validate(EduxValidators.validCredentials)
+            .responseVoid(completionHandler: handle)
     }
 
-    /// Checks whether user login was successfull.
+    /// Authorization success callback
     ///
-    /// - Parameters:
-    ///   - request: Original URL request
-    ///   - response: Server response
-    ///   - data: Response data
-    /// - Returns: Failure if login was not successfull, success otherwise
-    static func validateLogin(request: URLRequest?,
-                              response: HTTPURLResponse, data: Data?)
-        -> Request.ValidationResult {
+    /// - Parameter result: Downloaded HTML
+    func success(result: Void) {
+        let keychain = Keechain(service: .edux)
 
-            guard
-                let data = data,
-                let html = String(data: data, encoding: .utf8) else {
-
-                return .failure(EduxLoginOperationError.generalError)
-            }
-
-            return html.contains(EduxLoginOperation.loginIdentifier)
-                ? .failure(EduxLoginOperationError.badCredentials)
-                : .success
+        keychain.saveAccount(username: username, password: password)
+        promise?.success()
     }
-
-    /// Finishes operation based on validation results.
-    ///
-    /// - Parameter response: Server response
-    func handle(response: DefaultDataResponse) {
-        defer {
-            isFinished = true
-        }
-
-        if isCancelled {
-            return
-        }
-
-        switch response.error == nil {
-        case true:
-            let keychain = Keechain(service: .edux)
-
-            keychain.saveAccount(username: username, password: password)
-            promise?.success()
-        case false:
-            self.error = response.error
-            promise?.failure()
-        }
-    }
-}
-
-/// Possible Edux login error.
-///
-/// - generalError: Occures when server response is not valid html or has bad response code
-/// - badCredentials: Thrown when user credentials are not valid
-enum EduxLoginOperationError: Error {
-    case generalError
-    case badCredentials
 }

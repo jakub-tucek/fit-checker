@@ -16,7 +16,7 @@ class ClassificationParserTest: XCTestCase {
     func testOMO() {
         let omoPage = FileLoader.readFile(name: "biomo")!
 
-        let result = parser.parseEdux(html: omoPage)
+        let result = parser.parse(html: omoPage)
 
         XCTAssertEqual(1, result.tables.count)
 
@@ -47,7 +47,7 @@ class ClassificationParserTest: XCTestCase {
     func testPST() {
         let pstPage = FileLoader.readFile(name: "bipst")!
 
-        let result = parser.parseEdux(html: pstPage)
+        let result = parser.parse(html: pstPage)
 
         XCTAssertEqual(2, result.tables.count)
 
@@ -71,7 +71,7 @@ class ClassificationParserTest: XCTestCase {
     func testSPTwo() {
         let pstPage = FileLoader.readFile(name: "bisp2")!
 
-        let result = parser.parseEdux(html: pstPage)
+        let result = parser.parse(html: pstPage)
 
         XCTAssertEqual(0, result.tables.count)
     }

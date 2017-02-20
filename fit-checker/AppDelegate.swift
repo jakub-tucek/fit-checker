@@ -13,7 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private let networkController = NetworkController()
+    /// Shared database context manager
+    private let contextManager = ContextManager()
+
+    /// Shared network request controller
+    private let networkController: NetworkController = {
+        let contextManager = ContextManager()
+
+        return NetworkController(contextManager: contextManager)
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
 
         window.makeKeyAndVisible()
+        window.backgroundColor = .white
         self.window = window
 
         NotificationCenter.default.addObserver(self, selector:
@@ -59,13 +68,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard
             let (_, _) = Keechain(service: .edux).getAccount() else
         {
+            // Turn off background fetch
+            UIApplication.shared.setMinimumBackgroundFetchInterval(
+                UIApplicationBackgroundFetchIntervalNever)
+
+            // Show login controller
             window?.rootViewController = LoginViewController(
                 networkController: networkController)
 
             return
         }
 
-        window?.rootViewController = ViewController()
+        let tabBarController = UITabBarController()
+        let coursesController = CoursesTableViewController(contextManager:
+            contextManager, networkController: networkController)
+        let settingsController = SettingsViewController(
+            contextManager: contextManager)
+
+        coursesController.tabBarItem = UITabBarItem(title: tr(.courses), image:
+            nil, selectedImage: nil)
+        settingsController.tabBarItem = UITabBarItem(title: tr(.settings), image:
+            nil, selectedImage: nil)
+
+        let controllers = [
+            coursesController,
+            settingsController
+        ]
+
+        tabBarController.viewControllers = controllers
+
+        // Set interval for background refresh
+        UIApplication.shared.setMinimumBackgroundFetchInterval(
+            RefreshInterval.twentyMinutes.interval)
+        window?.rootViewController = UINavigationController(rootViewController:
+            tabBarController)
+    }
+
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        guard
+            let account = Keechain(service: .edux).getAccount(),
+            let realm = try? contextManager.createContext() else { return }
+
+        // Try to refresh only courses with classification on Edux
+        let courses: [Course] = realm.objects(Course.self)
+            .filter("classificationAvailable = %@", true)
+            .map({ $0 })
+
+        let promise = networkController.loadCoursesClasification(
+            courses: courses,
+            student: account.username
+        )
+
+        promise.success = { completionHandler(.newData) }
+        promise.failure = { completionHandler(.failed) }
     }
 
     deinit {
@@ -73,4 +128,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

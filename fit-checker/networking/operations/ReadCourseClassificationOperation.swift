@@ -11,7 +11,7 @@ import Alamofire
 
 
 /// Downloads HTML page for course classification.
-class ReadCourseClassificationOperation: BaseOperation {
+class ReadCourseClassificationOperation: BaseOperation, ResponseType {
 
     /// Edux course id
     private let courseId: String
@@ -19,9 +19,15 @@ class ReadCourseClassificationOperation: BaseOperation {
     /// Student username
     private let student: String
 
-    init(courseId: String, student: String, sessionManager: SessionManager) {
+    /// Database context manager
+    private let contextManager: ContextManager
+
+    init(courseId: String, student: String, sessionManager: SessionManager,
+         contextManager: ContextManager) {
+
         self.courseId = courseId
         self.student = student
+        self.contextManager = contextManager
 
         super.init(sessionManager: sessionManager)
     }
@@ -29,26 +35,36 @@ class ReadCourseClassificationOperation: BaseOperation {
     override func start() {
         _ = sessionManager.request(EduxRouter.courseClassification(
             courseId: courseId, student: student))
-            .validate().responseString(
-                completionHandler: handle)
+            .validate()
+            .validate(EduxValidators.authorizedHTML)
+            .responseString(completionHandler: handle)
     }
 
-    /// Handle HTML response
+    /// Classification request success callback
     ///
-    /// - Parameter response: Server response
-    func handle(response: DataResponse<String>) {
-        defer {
-            isFinished = true
+    /// - Parameter result: Downloaded HTML
+    func success(result: String) {
+        let parser = ClassificationParser()
+        let tables = parser.parse(html: result).tables.map { table -> CourseTable in
+            let classification = table.rows.map({ row in
+                return ClassificationRecord(name: row.name, score: row.value)
+            })
+
+            return CourseTable(name: table.name, courseId: courseId,
+                               classification: classification)
         }
 
-        if isCancelled {
-            return
-        }
+        do {
+            let realm = try contextManager.createContext()
+            let oldTables = realm.objects(CourseTable.self)
+                .filter("courseId = %@", courseId)
 
-        switch response.result {
-        case let .success(html):
-            print(html)
-        case .failure: self.error = error
+            try realm.write {
+                realm.delete(oldTables)
+                realm.add(tables)
+            }
+        } catch {
+            self.error = error
         }
     }
 }

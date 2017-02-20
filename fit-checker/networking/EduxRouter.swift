@@ -21,7 +21,7 @@ enum EduxRouter {
 
     case login(query: Parameters, body: Parameters)
     case courseClassification(courseId: String, student: String)
-    case courseList(parameters: Parameters)
+    case courseList(query: Parameters, body: Parameters)
 
     /// Edux site base URL
     static let baseURLString = "https://edux.fit.cvut.cz/"
@@ -33,8 +33,8 @@ enum EduxRouter {
             return .multiEncoded(method: .post, path: "start", query: query, body: body)
         case let .courseClassification(courseId, student):
             return .singleEncoded(method: .get, path: "courses/\(courseId)/classification/student/\(student)/start", parameters: nil)
-        case let .courseList(parameters):
-            return .singleEncoded(method: .post, path: "lib/exe/ajax.php", parameters: parameters)
+        case let .courseList(query, body):
+            return .multiEncoded(method: .post, path: "lib/exe/ajax.php", query: query, body: body)
         }
     }
 }
